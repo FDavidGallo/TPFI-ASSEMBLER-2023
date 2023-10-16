@@ -12,7 +12,7 @@
  .INCLUDE "ApartadoGraficoCodes.inc"
 .INCLUDE "Configuraciones.inc"
 .INCLUDE "VariablesEnSram.inc"
-
+.INCLUDE "AtendimientoDeInterrupciones.inc"
 
 ;Esto lo tenemos que ver si lo dejamos o no, sólo prende leds 
 .cseg
@@ -43,32 +43,6 @@ rjmp EE_RDY ; EEPROM Ready Handler
 rjmp ANA_COMP ; Analog Comparator Handler
 rjmp TWI ; 2-wire Serial Interface Handler
 rjmp SPM_RDY ; Store Program Memory Ready Handler
-EXT_INT0:
-EXT_INT1:
-PC_INT0:
-PC_INT1:
-PC_INT2:
-WDT:
-TIM2_COMPA:
-TIM2_COMPB:
-TIM2_OVF:
-TIM1_CAPT:
-TIM1_COMPA:
-TIM1_COMPB:
-TIM1_OVF:
-TIM0_COMPA:
-TIM0_COMPB:
-TIM0_OVF:
-SPI_STC:
-USART_RXC:
-USART_UDRE:
-USART_TXC:
-ADC_RDY:
-EE_RDY:
-ANA_COMP:
-TWI:
-SPM_RDY:
-reti
 
 CONFIGURAR:
     LDI R16, HIGH(RAMEND)	

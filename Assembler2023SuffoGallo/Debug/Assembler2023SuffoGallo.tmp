@@ -15,6 +15,7 @@
   <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE>
   <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\Configuraciones.inc</FILE>
   <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE>
+  <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
   <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\Debug\Assembler2023SuffoGallo.obj</FILE>
@@ -204,31 +205,32 @@
   <TemperaturaLCCMaximaH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>36</LINE></TemperaturaLCCMaximaH>
   <TemperaturaLCCMaximaL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>37</LINE></TemperaturaLCCMaximaL>
   <Separador4><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>38</LINE></Separador4>
-  <CONFIGURAR><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>73</LINE></CONFIGURAR>
-  <EXT_INT0><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>46</LINE></EXT_INT0>
-  <EXT_INT1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>47</LINE></EXT_INT1>
-  <PC_INT0><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>48</LINE></PC_INT0>
-  <PC_INT1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>49</LINE></PC_INT1>
-  <PC_INT2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>50</LINE></PC_INT2>
-  <WDT><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>51</LINE></WDT>
-  <TIM2_COMPA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>52</LINE></TIM2_COMPA>
-  <TIM2_COMPB><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>53</LINE></TIM2_COMPB>
-  <TIM2_OVF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>54</LINE></TIM2_OVF>
-  <TIM1_CAPT><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>55</LINE></TIM1_CAPT>
-  <TIM1_COMPA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>56</LINE></TIM1_COMPA>
-  <TIM1_COMPB><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>57</LINE></TIM1_COMPB>
-  <TIM1_OVF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>58</LINE></TIM1_OVF>
-  <TIM0_COMPA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>59</LINE></TIM0_COMPA>
-  <TIM0_COMPB><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>60</LINE></TIM0_COMPB>
-  <TIM0_OVF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>61</LINE></TIM0_OVF>
-  <SPI_STC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>62</LINE></SPI_STC>
-  <USART_RXC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>63</LINE></USART_RXC>
-  <USART_UDRE><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>64</LINE></USART_UDRE>
-  <USART_TXC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>65</LINE></USART_TXC>
-  <ADC_RDY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>66</LINE></ADC_RDY>
-  <EE_RDY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>67</LINE></EE_RDY>
-  <ANA_COMP><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>68</LINE></ANA_COMP>
-  <TWI><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>69</LINE></TWI>
-  <SPM_RDY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>70</LINE></SPM_RDY>
+  <EXT_INT0><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>2</LINE></EXT_INT0>
+  <EntroUnFlanco><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>29</LINE></EntroUnFlanco>
+  <EXT_INT1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>4</LINE></EXT_INT1>
+  <PC_INT0><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>5</LINE></PC_INT0>
+  <PC_INT1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>6</LINE></PC_INT1>
+  <PC_INT2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>7</LINE></PC_INT2>
+  <WDT><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>8</LINE></WDT>
+  <TIM2_COMPA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>9</LINE></TIM2_COMPA>
+  <TIM2_COMPB><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>10</LINE></TIM2_COMPB>
+  <TIM2_OVF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>11</LINE></TIM2_OVF>
+  <TIM1_CAPT><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>12</LINE></TIM1_CAPT>
+  <TIM1_COMPA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>13</LINE></TIM1_COMPA>
+  <TIM1_COMPB><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>14</LINE></TIM1_COMPB>
+  <TIM1_OVF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>15</LINE></TIM1_OVF>
+  <TIM0_COMPA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>16</LINE></TIM0_COMPA>
+  <TIM0_COMPB><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>17</LINE></TIM0_COMPB>
+  <TIM0_OVF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>18</LINE></TIM0_OVF>
+  <SPI_STC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>19</LINE></SPI_STC>
+  <USART_RXC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>20</LINE></USART_RXC>
+  <USART_UDRE><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>21</LINE></USART_UDRE>
+  <USART_TXC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>22</LINE></USART_TXC>
+  <ADC_RDY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>23</LINE></ADC_RDY>
+  <EE_RDY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>24</LINE></EE_RDY>
+  <ANA_COMP><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>25</LINE></ANA_COMP>
+  <TWI><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>26</LINE></TWI>
+  <SPM_RDY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>27</LINE></SPM_RDY>
+  <CONFIGURAR><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>47</LINE></CONFIGURAR>
  </LABELS>
 </ASSEMBLER_INFO>
