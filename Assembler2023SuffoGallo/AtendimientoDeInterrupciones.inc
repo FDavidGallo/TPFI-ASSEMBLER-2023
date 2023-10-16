@@ -32,3 +32,43 @@ EntroUnFlanco:
 	ld r16, Z
 	inc r16 
     st Z, r16
+	Cpi r16,10
+	breq SumarQuinto
+	Reti
+	SumarQuinto:
+	ldi ZH, high(QuintoDeSegundo)
+    ldi ZL, low(QuintoDeSegundo)
+	ld r16, Z
+	inc r16 
+    st Z, r16
+	Cpi r16,5
+	breq SumarSegundo
+	RETI
+	SumarSegundo:
+	ldi ZH, high(UnidadSegundo)
+    ldi ZL, low(UnidadSegundo)
+	ld r16, Z
+	inc r16 
+    st Z, r16
+	Cpi r16,10
+	breq SumarSegundo2
+	RETI
+	SumarSegundo2:
+	ldi ZH, high(DecenaSegundo)
+    ldi ZL, low(DecenaSegundo)
+	ld r16, Z
+	inc r16 
+    st Z, r16
+	Cpi r16,6
+	breq SumarMinuto
+	RETI
+	SumarMinuto:
+	ldi ZH, high(UnidadMinuto)
+    ldi ZL, low(UnidadMinuto)
+	ld r16, Z
+	inc r16 
+    st Z, r16
+	Cpi r16,6
+	breq SumarMinuto2
+	RETI
+	SumarMinuto2:

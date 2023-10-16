@@ -12,11 +12,12 @@ UnidadMinuto: .byte 1 ;org 0x104
 SeparadorMinuto: .byte 1 ;org 0x105
 DecenaSegundo: .byte 1 ;org 0x106
 UnidadSegundo: .byte 1 ;org 0x107
-C50GesimoDeSegundoo: .byte 2 ;org 0x108
-MedTemperaturaExterior: .byte 2 ;org 0x110
-MedTemperaturaLCC: .byte 2 ;org 0x112
-MedTemperaturaDormitorio: .byte 2 ;org 0x114
-MedLuzExterior: .byte 2 ;org 0x116
+QuintoDeSegundo: .BYTE 1; ORGX0108
+C50GesimoDeSegundoo: .byte 1 ;org 0x109
+MedTemperaturaExterior: .byte 2 ;org 0x111
+MedTemperaturaLCC: .byte 2 ;org 0x113
+MedTemperaturaDormitorio: .byte 2 ;org 0x115
+MedLuzExterior: .byte 2 ;org 0x117
 
 
 ;=================================================

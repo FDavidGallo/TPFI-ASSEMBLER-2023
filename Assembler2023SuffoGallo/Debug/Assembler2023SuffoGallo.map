@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Sun Oct 15 21:59:48 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Sun Oct 15 22:36:24 2023
 
 
 EQU  SIGNATURE_000 0000001e
@@ -855,7 +855,8 @@ DSEG UnidadMinuto 00000103
 DSEG SeparadorMinuto 00000104
 DSEG DecenaSegundo 00000105
 DSEG UnidadSegundo 00000106
-DSEG C50GesimoDeSegundoo 00000107
+DSEG QuintoDeSegundo 00000107
+DSEG C50GesimoDeSegundoo 00000108
 DSEG MedTemperaturaExterior 00000109
 DSEG MedTemperaturaLCC 0000010b
 DSEG MedTemperaturaDormitorio 0000010d
@@ -898,4 +899,9 @@ CSEG EE_RDY       00000637
 CSEG ANA_COMP     00000637
 CSEG TWI          00000637
 CSEG SPM_RDY      00000637
+CSEG SumarQuinto  00000640
+CSEG SumarSegundo 00000648
+CSEG SumarSegundo2 00000650
+CSEG SumarMinuto  00000658
+CSEG SumarMinuto2 00000660
 CSEG CONFIGURAR   00000023
