@@ -1,20 +1,20 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm Sun Oct 15 21:10:25 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Sun Oct 15 21:42:05 2023
 
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(11): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(12): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(13): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\Configuraciones.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(14): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(11): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(12): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(13): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\Configuraciones.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(14): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\VariablesEnSram.inc'
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(11): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(12): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(13): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\Configuraciones.inc'
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(14): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(11): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(12): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(13): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\Configuraciones.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(14): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\VariablesEnSram.inc'
                                  
                                  ;
                                  
@@ -1234,8 +1234,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 000210 4f49
 000211 2052
 000212 0a0d
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(10): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(10): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 000213 0002                      TABLA_ROM_OPT2: .DB 0b00001010,"Hora de las mediciones __:__",0b00001010," Temperatura Exterior: _ _",0b00001010," Temperatura Living/Comedor/Cocina: __ ",0b00001010," Temperatura Dormitorio: __ ",0b00001010," Luz Dormitorio: __0  "," Luz Exterior: __0 ",000214 2a0a
 000215 2a2a
 000216 5320
@@ -1255,8 +1255,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 000224 7261
 000225 2a20
 000226 2a2a
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(11): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(11): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 000227 000a                      " Luz Living/Cocina/Comedor: __0 ",0b00001010,"	1-Refrescarar Valores... 5-VOLVER AL MENU ANTERIOR ", 13, 10,2
 000228 090a
 000229 5409
@@ -1296,8 +1296,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 00024a 2061
 00024b 5f5f
 00024c 0d20
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(14): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(14): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 00024d 000a                      	;ACA VA LA TEMPERATURA EXTER
 00024e 2d42
 00024f 6554
@@ -1316,8 +1316,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 00025c 2061
 00025d 5f5f
 00025e 0d20
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(15): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(15): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 00025f 000a                      Menu2_2: .DB "A-Temperatura Exterior Minima __ ", 13,10
 000260 2d43
 000261 6554
@@ -1366,8 +1366,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 00028c 616d
 00028d 5f20
 00028e 0d5f
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(17): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(17): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 00028f 000a                      Menu2_4: .DB "C-Temperatura Living/Comedor/Cocina Minima __ ", 13,10
 000290 2d45
 000291 6948
@@ -1418,8 +1418,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 0002be 2061
 0002bf 5f5f
 0002c0 0d20
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(19): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(19): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 0002c1 000a                      Menu2_6: .DB "E-Histerisis de la temperatura del Living/Comedor/Cocina: __", 13, 10
 0002c2 2d47
 0002c3 6554
@@ -1464,8 +1464,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 0002ea 6f69
 0002eb 5f20
 0002ec 0d5f
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(21): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(21): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 0002ed 000a                      Menu2_8: .DB "G-Temperatura Dormitorio Minima __", 13, 10
 0002ee 754c
 0002ef 6563
@@ -1514,8 +1514,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 000319 5f20
 00031a 305f
 00031b 0d20
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(25): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(25): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 00031c 000a                      Menu2_B: .DB "I-Luz Exterior Minima __0 ", 13, 10
 00031d 2d4b
 00031e 6948
@@ -1617,8 +1617,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 00037d 4f49
 00037e 2052
 00037f 0a0d
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(32): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(32): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 000380 0002                      Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj __:__ ", 13, 10
                                  Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10,2
 000381 4309
@@ -1671,8 +1671,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 0003b0 6f69
 0003b1 2072
 0003b2 0a0d
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(34): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(34): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
 0003b3 0002                      CambioDeValor:
                                  .DB "	Cambiado! Desea cambiar algo mas?", 13, 10, "5-NO, Volver Al menu principal", 13, 10, "2-Si, volver al menu anterior ", 13, 10,2
                                  
@@ -1688,8 +1688,8 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
 0003bd 6c61
 0003be 726f                       .INCLUDE "division.inc"
 0003bf 093a
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc(1): warning: .cseg .db misalignment - padding zero byte
-C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(11): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc' included form here
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc(1): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(11): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc' included form here
 0003c0 0002                      
                                  ; DIVIDENDO -> R24:R25
                                  ; DIVISOR   -> R23:R22
@@ -2657,21 +2657,73 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAA
                                  ;Esto lo tenemos que ver si lo dejamos o no, sólo prende leds 
                                  .cseg
                                  .ORG 0x00
-000000 c000                      RJMP CONFIGURAR
+000000 940c 0024                 JMP CONFIGURAR
+000002 940c 0023                 jmp EXT_INT0 ; IRQ0 Handler
+000004 940c 0023                 jmp EXT_INT1 ; IRQ1 Handler
+000006 940c 0023                 jmp PC_INT0 ; PCINT0 Handler
+000008 940c 0023                 jmp PC_INT1 ; PCINT1 Handler
+00000a 940c 0023                 jmp PC_INT2 ; PCINT2 Handler
+00000c 940c 0023                 jmp WDT ; Watchdog Timer Handler
+00000e 940c 0023                 jmp TIM2_COMPA ; Timer2 Compare A Handler
+000010 940c 0023                 jmp TIM2_COMPB ; Timer2 Compare B Handler
+000012 c010                      rjmp TIM2_OVF ; Timer2 Overflow Handler
+000013 c00f                      rjmp TIM1_CAPT ; Timer1 Capture Handler
+000014 c00e                      rjmp TIM1_COMPA ; Timer1 Compare A Handler
+000015 c00d                      rjmp TIM1_COMPB ; Timer1 Compare B Handler
+000016 c00c                      rjmp TIM1_OVF ; Timer1 Overflow Handler
+000017 c00b                      rjmp TIM0_COMPA ; Timer0 Compare A Handler
+000018 c00a                      rjmp TIM0_COMPB ; Timer0 Compare B Handler
+000019 c009                      rjmp TIM0_OVF ; Timer0 Overflow Handler
+00001a c008                      rjmp SPI_STC ; SPI Transfer Complete Handler
+00001b c007                      rjmp USART_RXC ; USART, RX Complete Handler
+00001c c006                      rjmp USART_UDRE ; USART, UDR Empty Handler
+00001d c005                      rjmp USART_TXC ; USART, TX Complete Handler
+00001e c004                      rjmp ADC_RDY ; ADC Conversion Complete Handler
+00001f c003                      rjmp EE_RDY ; EEPROM Ready Handler
+000020 c002                      rjmp ANA_COMP ; Analog Comparator Handler
+000021 c001                      rjmp TWI ; 2-wire Serial Interface Handler
+000022 c000                      rjmp SPM_RDY ; Store Program Memory Ready Handler
+                                 EXT_INT0:
+                                 EXT_INT1:
+                                 PC_INT0:
+                                 PC_INT1:
+                                 PC_INT2:
+                                 WDT:
+                                 TIM2_COMPA:
+                                 TIM2_COMPB:
+                                 TIM2_OVF:
+                                 TIM1_CAPT:
+                                 TIM1_COMPA:
+                                 TIM1_COMPB:
+                                 TIM1_OVF:
+                                 TIM0_COMPA:
+                                 TIM0_COMPB:
+                                 TIM0_OVF:
+                                 SPI_STC:
+                                 USART_RXC:
+                                 USART_UDRE:
+                                 USART_TXC:
+                                 ADC_RDY:
+                                 EE_RDY:
+                                 ANA_COMP:
+                                 TWI:
+                                 SPM_RDY:
+000023 9518                      reti
                                  
                                  CONFIGURAR:
-000001 e008                          LDI R16, HIGH(RAMEND)	
-000002 bf0e                      	OUT SPH, R16
-000003 ef0f                      	LDI R16, LOW(RAMEND)
-000004 bf0d                      	OUT SPL, R16
-000005 ef0f                      	LDI R16, 0xFF
-000006 e10c                      	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
-000007 9300 00c1                 	STS UCSR0B, R16
-000009 e004                      	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
-00000a 9300 00c2                 	STS UCSR0C, R16
-00000c e607                      	LDI R16, 103	; Baud Rate = 9600
-00000d 9300 00c4                 	STS UBRR0L, R16
-00000f c3b1                      	RJMP MAIN
+000024 e008                          LDI R16, HIGH(RAMEND)	
+000025 bf0e                      	OUT SPH, R16
+000026 ef0f                      	LDI R16, LOW(RAMEND)
+000027 bf0d                      	OUT SPL, R16
+000028 ef0f                      	LDI R16, 0xFF
+000029 e10c                      	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
+00002a 9300 00c1                 	STS UCSR0B, R16
+00002c e004                      	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
+00002d 9300 00c2                 	STS UCSR0C, R16
+00002f e607                      	LDI R16, 103	; Baud Rate = 9600
+000030 9300 00c4                 	STS UBRR0L, R16
+000032 9478                      	SEI
+000033 c38d                      	RJMP MAIN
 
 
 RESOURCE USE INFORMATION
@@ -2706,22 +2758,22 @@ brvs  :   0 bset  :   0 bst   :   0 call  :   4 cbi   :   0 cbr   :   0
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
 cpi   :  36 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   0 jmp   :  37 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   0 jmp   :  46 
 ld    :   0 ldd   :   0 ldi   :  45 lds   :  77 lpm   :  17 lsl   :   0 
 lsr   :   0 mov   :   2 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   2 pop   :   0 
-push  :   0 rcall :   0 ret   :   3 reti  :   0 rjmp  :  93 rol   :   0 
+push  :   0 rcall :   0 ret   :   3 reti  :   1 rjmp  : 109 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  48 sec   :   0 seh   :   0 
-sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
+sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
 sez   :   0 sleep :   0 spm   :   2 st    :  25 std   :   0 sts   :  50 
 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
-Instructions used: 15 out of 113 (13.3%)
+Instructions used: 17 out of 113 (15.0%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000c6a   1288   1250   2538   32768   7.7%
+[.cseg] 0x000000 0x000c6a   1360   1250   2610   32768   8.0%
 [.dseg] 0x000100 0x000188      0     41     41    2048   2.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
