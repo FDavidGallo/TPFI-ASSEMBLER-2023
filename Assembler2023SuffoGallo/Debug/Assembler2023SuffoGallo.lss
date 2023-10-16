@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Sun Oct 15 22:36:24 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Mon Oct 16 03:13:33 2023
 
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
@@ -2685,7 +2685,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  SPM_RDY:
 000637 9518                      reti
                                  EntroUnFlanco:
-000638 e0f1                      	ldi ZH, high(C50GesimoDeSegundoo)
+000638 e0f1                      	ldi ZH, high(C50GesimoDeSegundoo) ;por cada flanco suma un 50°mo de segundo
 000639 e0e8                          ldi ZL, low(C50GesimoDeSegundoo)
 00063a 8100                      	ld r16, Z
 00063b 9503                      	inc r16 
@@ -2694,41 +2694,89 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 00063e f009                      	breq SumarQuinto
 00063f 9518                      	Reti
                                  	SumarQuinto:
-000640 e0f1                      	ldi ZH, high(QuintoDeSegundo)
-000641 e0e7                          ldi ZL, low(QuintoDeSegundo)
-000642 8100                      	ld r16, Z
-000643 9503                      	inc r16 
-000644 8300                          st Z, r16
-000645 3005                      	Cpi r16,5
-000646 f009                      	breq SumarSegundo
-000647 9518                      	RETI
+000640 e000                      	ldi r16,0x00  ; Reiciamos los 50°mos de segundo
+000641 8300                          st Z, r16
+000642 e0f1                      	ldi ZH, high(QuintoDeSegundo)
+000643 e0e7                          ldi ZL, low(QuintoDeSegundo)
+000644 8100                      	ld r16, Z
+000645 9503                      	inc r16 
+000646 8300                          st Z, r16
+000647 3005                      	Cpi r16,5
+000648 f009                      	breq SumarSegundo
+000649 9518                      	RETI
                                  	SumarSegundo:
-000648 e0f1                      	ldi ZH, high(UnidadSegundo)
-000649 e0e6                          ldi ZL, low(UnidadSegundo)
-00064a 8100                      	ld r16, Z
-00064b 9503                      	inc r16 
-00064c 8300                          st Z, r16
-00064d 300a                      	Cpi r16,10
-00064e f009                      	breq SumarSegundo2
-00064f 9518                      	RETI
+00064a e000                      	ldi r16,0x00  ; Reiciamos los 5°tos de segundo
+00064b 8300                          st Z, r16
+00064c e0f1                      	ldi ZH, high(UnidadSegundo)
+00064d e0e6                          ldi ZL, low(UnidadSegundo)
+00064e 8100                      	ld r16, Z
+00064f 3309                      	Cpi r16,'9'
+000650 f019                      	breq SumarSegundo2
+000651 9503                      	inc r16 
+000652 8300                          st Z, r16
+000653 9518                      	RETI
                                  	SumarSegundo2:
-000650 e0f1                      	ldi ZH, high(DecenaSegundo)
-000651 e0e5                          ldi ZL, low(DecenaSegundo)
-000652 8100                      	ld r16, Z
-000653 9503                      	inc r16 
-000654 8300                          st Z, r16
-000655 3006                      	Cpi r16,6
-000656 f009                      	breq SumarMinuto
-000657 9518                      	RETI
-                                 	SumarMinuto:
-000658 e0f1                      	ldi ZH, high(UnidadMinuto)
-000659 e0e3                          ldi ZL, low(UnidadMinuto)
-00065a 8100                      	ld r16, Z
+000654 e300                      	ldi r16,'0'  ; Reiciamos las unidades de segundo
+000655 8300                          st Z, r16
+000656 e0f1                      	ldi ZH, high(DecenaSegundo)
+000657 e0e5                          ldi ZL, low(DecenaSegundo)
+000658 8100                      	ld r16, Z
+000659 3306                      	Cpi r16,'6'
+00065a f019                      	breq SumarMinuto
 00065b 9503                      	inc r16 
 00065c 8300                          st Z, r16
-00065d 3006                      	Cpi r16,6
-00065e f009                      	breq SumarMinuto2
-00065f 9518                      	RETI
+00065d 9518                      	RETI
+                                 	SumarMinuto:
+00065e e300                      	ldi r16,'0'  ; Reiciamos los  segundos
+00065f 8300                          st Z, r16
+000660 e0f1                      	ldi ZH, high(UnidadMinuto)
+000661 e0e3                          ldi ZL, low(UnidadMinuto)
+000662 8300                      	 st Z, r16
+000663 3309                      	Cpi r16,'9'
+000664 8100                      	ld r16, Z
+000665 9503                      	inc r16 
+000666 f009                      	breq SumarMinuto2
+000667 9518                      	RETI
+                                 	SumarMinuto2:
+000668 e300                      	ldi r16,'0'  ; Reiciamos las unidades de minuto
+000669 8300                          st Z, r16
+00066a e0f1                      	ldi ZH, high(DecenaMinuto)
+00066b e0e2                          ldi ZL, low(DecenaMinuto)
+00066c 8100                      	ld r16, Z
+00066d 8300                      	st Z, r16
+00066e 3306                      	Cpi r16,'6'
+00066f f011                      	breq SumarHora
+000670 9503                      	inc r16 
+000671 9518                      	RETI
+                                 	SumarHora:
+000672 e300                      	ldi r16,'0'  ; Reiciamos los minutos
+000673 e0f1                      	ldi ZH, high(UnidadHora)
+000674 e0e1                          ldi ZL, low(UnidadHora)
+000675 8100                      	ld r16, Z
+000676 300a                      	Cpi r16,10
+000677 f019                      	breq SumarHora2
+000678 9503                      	inc r16 
+000679 8300                          st Z, r16
+00067a 9518                      	RETI
+                                 	SumarHora2:
+00067b e0f1                      	ldi ZH, high(DecenaHora)
+00067c e0e0                          ldi ZL, low(DecenaHora)
+00067d 8120                      	ld R18, Z
+00067e 3322                      	CpI R18,'2'
+00067f f019                      	breq PreguntaDia
+000680 9523                      	inc r18 
+000681 8320                          st Z, r18
+000682 9518                      	RETI
+                                 	 PreguntaDia:
+000683 3004                      	 cpi r16,4
+000684 f009                      	 BREQ TerminoElDia
+000685 9518                      	 RETI
+                                 	 TerminoElDia:
+000686 e0f1                      	 ldi ZH, high(DecenaHora)
+000687 e0e0                          ldi ZL, low(DecenaHora)
+000688 e300                          ldi r16,'0'  ; Reiciamos los 50°mos de segundo
+000689 8300                          st Z, r16
+00068a 9508                      	 RET
                                  
                                  ;Esto lo tenemos que ver si lo dejamos o no, sólo prende leds 
                                  .cseg
@@ -2791,39 +2839,39 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   0 y  :  25 z  :  27 r0 :   1 r1 :   1 r2 :   0 r3 :   0 r4 :   0 
+x  :   0 y  :  25 z  :  39 r0 :   1 r1 :   1 r2 :   0 r3 :   0 r4 :   0 
 r5 :  85 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16: 127 r17:  51 r18:  20 r19:   0 r20:   1 
+r13:   0 r14:   0 r15:   0 r16: 149 r17:  51 r18:  24 r19:   0 r20:   1 
 r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
-r29:   0 r30:  24 r31:  24 
+r29:   0 r30:  28 r31:  28 
 Registers used: 11 out of 35 (31.4%)
 
 "ATmega328P" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :  41 brge  :   0 brhc  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :  45 brge  :   0 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :   0 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   4 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
-cpi   :  41 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   5 jmp   :  47 
-ld    :   5 ldd   :   0 ldi   :  55 lds   :  77 lpm   :  17 lsl   :   0 
+cpi   :  45 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   8 jmp   :  47 
+ld    :   8 ldd   :   0 ldi   :  70 lds   :  77 lpm   :  17 lsl   :   0 
 lsr   :   0 mov   :   2 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   2 pop   :   0 
-push  :   0 rcall :   0 ret   :   3 reti  :   6 rjmp  : 109 rol   :   0 
+push  :   0 rcall :   0 ret   :   4 reti  :  10 rjmp  : 109 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  48 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
-sez   :   0 sleep :   0 spm   :   2 st    :  30 std   :   0 sts   :  50 
+sez   :   0 sleep :   0 spm   :   2 st    :  39 std   :   0 sts   :  50 
 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
 Instructions used: 19 out of 113 (16.8%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000cc0   1444   1250   2694   32768   8.2%
+[.cseg] 0x000000 0x000d16   1530   1250   2780   32768   8.5%
 [.dseg] 0x000100 0x000188      0     41     41    2048   2.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 

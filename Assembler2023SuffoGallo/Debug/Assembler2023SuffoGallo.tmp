@@ -233,10 +233,14 @@
   <TWI><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>26</LINE></TWI>
   <SPM_RDY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>27</LINE></SPM_RDY>
   <SumarQuinto><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>38</LINE></SumarQuinto>
-  <SumarSegundo><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>47</LINE></SumarSegundo>
-  <SumarSegundo2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>56</LINE></SumarSegundo2>
-  <SumarMinuto><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>65</LINE></SumarMinuto>
-  <SumarMinuto2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>74</LINE></SumarMinuto2>
+  <SumarSegundo><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>49</LINE></SumarSegundo>
+  <SumarSegundo2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>60</LINE></SumarSegundo2>
+  <SumarMinuto><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>71</LINE></SumarMinuto>
+  <SumarMinuto2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>82</LINE></SumarMinuto2>
+  <SumarHora><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>93</LINE></SumarHora>
+  <SumarHora2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>103</LINE></SumarHora2>
+  <PreguntaDia><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>112</LINE></PreguntaDia>
+  <TerminoElDia><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\AtendimientoDeInterrupciones.inc</FILE><LINE>116</LINE></TerminoElDia>
   <CONFIGURAR><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm</FILE><LINE>47</LINE></CONFIGURAR>
  </LABELS>
 </ASSEMBLER_INFO>

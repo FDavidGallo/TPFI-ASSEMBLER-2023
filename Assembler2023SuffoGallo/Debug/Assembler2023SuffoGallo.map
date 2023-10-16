@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Sun Oct 15 22:36:24 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Mon Oct 16 03:13:33 2023
 
 
 EQU  SIGNATURE_000 0000001e
@@ -900,8 +900,12 @@ CSEG ANA_COMP     00000637
 CSEG TWI          00000637
 CSEG SPM_RDY      00000637
 CSEG SumarQuinto  00000640
-CSEG SumarSegundo 00000648
-CSEG SumarSegundo2 00000650
-CSEG SumarMinuto  00000658
-CSEG SumarMinuto2 00000660
+CSEG SumarSegundo 0000064a
+CSEG SumarSegundo2 00000654
+CSEG SumarMinuto  0000065e
+CSEG SumarMinuto2 00000668
+CSEG SumarHora    00000672
+CSEG SumarHora2   0000067b
+CSEG PreguntaDia  00000683
+CSEG TerminoElDia 00000686
 CSEG CONFIGURAR   00000023
