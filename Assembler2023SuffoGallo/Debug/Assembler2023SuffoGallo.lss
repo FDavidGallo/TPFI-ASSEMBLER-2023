@@ -1,0 +1,2728 @@
+
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm Sun Oct 15 21:10:25 2023
+
+[builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(11): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(12): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(13): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\Configuraciones.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(14): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc'
+[builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(11): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(12): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(13): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\Configuraciones.inc'
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(14): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc'
+                                 
+                                 ;
+                                 
+                                 ;***** Created: 2011-02-09 12:03 ******* Source: ATmega328P.xml **********
+                                 ;*************************************************************************
+                                 ;* A P P L I C A T I O N   N O T E   F O R   T H E   A V R   F A M I L Y
+                                 ;* 
+                                 ;* Number            : AVR000
+                                 ;* File Name         : "m328Pdef.inc"
+                                 ;* Title             : Register/Bit Definitions for the ATmega328P
+                                 ;* Date              : 2011-02-09
+                                 ;* Version           : 2.35
+                                 ;* Support E-mail    : avr@atmel.com
+                                 ;* Target MCU        : ATmega328P
+                                 ;* 
+                                 ;* DESCRIPTION
+                                 ;* When including this file in the assembly program file, all I/O register 
+                                 ;* names and I/O register bit names appearing in the data book can be used.
+                                 ;* In addition, the six registers forming the three data pointers X, Y and 
+                                 ;* Z have been assigned names XL - ZH. Highest RAM address for Internal 
+                                 ;* SRAM is also defined 
+                                 ;* 
+                                 ;* The Register names are represented by their hexadecimal address.
+                                 ;* 
+                                 ;* The Register Bit names are represented by their bit number (0-7).
+                                 ;* 
+                                 ;* Please observe the difference in using the bit names with instructions
+                                 ;* such as "sbr"/"cbr" (set/clear bit in register) and "sbrs"/"sbrc"
+                                 ;* (skip if bit in register set/cleared). The following example illustrates
+                                 ;* this:
+                                 ;* 
+                                 ;* in    r16,PORTB             ;read PORTB latch
+                                 ;* sbr   r16,(1<<PB6)+(1<<PB5) ;set PB6 and PB5 (use masks, not bit#)
+                                 ;* out   PORTB,r16             ;output to PORTB
+                                 ;* 
+                                 ;* in    r16,TIFR              ;read the Timer Interrupt Flag Register
+                                 ;* sbrc  r16,TOV0              ;test the overflow flag (use bit#)
+                                 ;* rjmp  TOV0_is_set           ;jump if set
+                                 ;* ...                         ;otherwise do something else
+                                 ;*************************************************************************
+                                 
+                                 #ifndef _M328PDEF_INC_
+                                 #define _M328PDEF_INC_
+                                 
+                                 
+                                 #pragma partinc 0
+                                 
+                                 ; ***** SPECIFY DEVICE ***************************************************
+                                 .device ATmega328P
+                                 #pragma AVRPART ADMIN PART_NAME ATmega328P
+                                 .equ	SIGNATURE_000	= 0x1e
+                                 .equ	SIGNATURE_001	= 0x95
+                                 .equ	SIGNATURE_002	= 0x0f
+                                 
+                                 #pragma AVRPART CORE CORE_VERSION V2E
+                                 
+                                 
+                                 ; ***** I/O REGISTER DEFINITIONS *****************************************
+                                 ; NOTE:
+                                 ; Definitions marked "MEMORY MAPPED"are extended I/O ports
+                                 ; and cannot be used with IN/OUT instructions
+                                 .equ	UDR0	= 0xc6	; MEMORY MAPPED
+                                 .equ	UBRR0L	= 0xc4	; MEMORY MAPPED
+                                 .equ	UBRR0H	= 0xc5	; MEMORY MAPPED
+                                 .equ	UCSR0C	= 0xc2	; MEMORY MAPPED
+                                 .equ	UCSR0B	= 0xc1	; MEMORY MAPPED
+                                 .equ	UCSR0A	= 0xc0	; MEMORY MAPPED
+                                 .equ	TWAMR	= 0xbd	; MEMORY MAPPED
+                                 .equ	TWCR	= 0xbc	; MEMORY MAPPED
+                                 .equ	TWDR	= 0xbb	; MEMORY MAPPED
+                                 .equ	TWAR	= 0xba	; MEMORY MAPPED
+                                 .equ	TWSR	= 0xb9	; MEMORY MAPPED
+                                 .equ	TWBR	= 0xb8	; MEMORY MAPPED
+                                 .equ	ASSR	= 0xb6	; MEMORY MAPPED
+                                 .equ	OCR2B	= 0xb4	; MEMORY MAPPED
+                                 .equ	OCR2A	= 0xb3	; MEMORY MAPPED
+                                 .equ	TCNT2	= 0xb2	; MEMORY MAPPED
+                                 .equ	TCCR2B	= 0xb1	; MEMORY MAPPED
+                                 .equ	TCCR2A	= 0xb0	; MEMORY MAPPED
+                                 .equ	OCR1BL	= 0x8a	; MEMORY MAPPED
+                                 .equ	OCR1BH	= 0x8b	; MEMORY MAPPED
+                                 .equ	OCR1AL	= 0x88	; MEMORY MAPPED
+                                 .equ	OCR1AH	= 0x89	; MEMORY MAPPED
+                                 .equ	ICR1L	= 0x86	; MEMORY MAPPED
+                                 .equ	ICR1H	= 0x87	; MEMORY MAPPED
+                                 .equ	TCNT1L	= 0x84	; MEMORY MAPPED
+                                 .equ	TCNT1H	= 0x85	; MEMORY MAPPED
+                                 .equ	TCCR1C	= 0x82	; MEMORY MAPPED
+                                 .equ	TCCR1B	= 0x81	; MEMORY MAPPED
+                                 .equ	TCCR1A	= 0x80	; MEMORY MAPPED
+                                 .equ	DIDR1	= 0x7f	; MEMORY MAPPED
+                                 .equ	DIDR0	= 0x7e	; MEMORY MAPPED
+                                 .equ	ADMUX	= 0x7c	; MEMORY MAPPED
+                                 .equ	ADCSRB	= 0x7b	; MEMORY MAPPED
+                                 .equ	ADCSRA	= 0x7a	; MEMORY MAPPED
+                                 .equ	ADCH	= 0x79	; MEMORY MAPPED
+                                 .equ	ADCL	= 0x78	; MEMORY MAPPED
+                                 .equ	TIMSK2	= 0x70	; MEMORY MAPPED
+                                 .equ	TIMSK1	= 0x6f	; MEMORY MAPPED
+                                 .equ	TIMSK0	= 0x6e	; MEMORY MAPPED
+                                 .equ	PCMSK1	= 0x6c	; MEMORY MAPPED
+                                 .equ	PCMSK2	= 0x6d	; MEMORY MAPPED
+                                 .equ	PCMSK0	= 0x6b	; MEMORY MAPPED
+                                 .equ	EICRA	= 0x69	; MEMORY MAPPED
+                                 .equ	PCICR	= 0x68	; MEMORY MAPPED
+                                 .equ	OSCCAL	= 0x66	; MEMORY MAPPED
+                                 .equ	PRR	= 0x64	; MEMORY MAPPED
+                                 .equ	CLKPR	= 0x61	; MEMORY MAPPED
+                                 .equ	WDTCSR	= 0x60	; MEMORY MAPPED
+                                 .equ	SREG	= 0x3f
+                                 .equ	SPL	= 0x3d
+                                 .equ	SPH	= 0x3e
+                                 .equ	SPMCSR	= 0x37
+                                 .equ	MCUCR	= 0x35
+                                 .equ	MCUSR	= 0x34
+                                 .equ	SMCR	= 0x33
+                                 .equ	ACSR	= 0x30
+                                 .equ	SPDR	= 0x2e
+                                 .equ	SPSR	= 0x2d
+                                 .equ	SPCR	= 0x2c
+                                 .equ	GPIOR2	= 0x2b
+                                 .equ	GPIOR1	= 0x2a
+                                 .equ	OCR0B	= 0x28
+                                 .equ	OCR0A	= 0x27
+                                 .equ	TCNT0	= 0x26
+                                 .equ	TCCR0B	= 0x25
+                                 .equ	TCCR0A	= 0x24
+                                 .equ	GTCCR	= 0x23
+                                 .equ	EEARH	= 0x22
+                                 .equ	EEARL	= 0x21
+                                 .equ	EEDR	= 0x20
+                                 .equ	EECR	= 0x1f
+                                 .equ	GPIOR0	= 0x1e
+                                 .equ	EIMSK	= 0x1d
+                                 .equ	EIFR	= 0x1c
+                                 .equ	PCIFR	= 0x1b
+                                 .equ	TIFR2	= 0x17
+                                 .equ	TIFR1	= 0x16
+                                 .equ	TIFR0	= 0x15
+                                 .equ	PORTD	= 0x0b
+                                 .equ	DDRD	= 0x0a
+                                 .equ	PIND	= 0x09
+                                 .equ	PORTC	= 0x08
+                                 .equ	DDRC	= 0x07
+                                 .equ	PINC	= 0x06
+                                 .equ	PORTB	= 0x05
+                                 .equ	DDRB	= 0x04
+                                 .equ	PINB	= 0x03
+                                 
+                                 
+                                 ; ***** BIT DEFINITIONS **************************************************
+                                 
+                                 ; ***** USART0 ***********************
+                                 ; UDR0 - USART I/O Data Register
+                                 .equ	UDR0_0	= 0	; USART I/O Data Register bit 0
+                                 .equ	UDR0_1	= 1	; USART I/O Data Register bit 1
+                                 .equ	UDR0_2	= 2	; USART I/O Data Register bit 2
+                                 .equ	UDR0_3	= 3	; USART I/O Data Register bit 3
+                                 .equ	UDR0_4	= 4	; USART I/O Data Register bit 4
+                                 .equ	UDR0_5	= 5	; USART I/O Data Register bit 5
+                                 .equ	UDR0_6	= 6	; USART I/O Data Register bit 6
+                                 .equ	UDR0_7	= 7	; USART I/O Data Register bit 7
+                                 
+                                 ; UCSR0A - USART Control and Status Register A
+                                 .equ	MPCM0	= 0	; Multi-processor Communication Mode
+                                 .equ	U2X0	= 1	; Double the USART transmission speed
+                                 .equ	UPE0	= 2	; Parity Error
+                                 .equ	DOR0	= 3	; Data overRun
+                                 .equ	FE0	= 4	; Framing Error
+                                 .equ	UDRE0	= 5	; USART Data Register Empty
+                                 .equ	TXC0	= 6	; USART Transmitt Complete
+                                 .equ	RXC0	= 7	; USART Receive Complete
+                                 
+                                 ; UCSR0B - USART Control and Status Register B
+                                 .equ	TXB80	= 0	; Transmit Data Bit 8
+                                 .equ	RXB80	= 1	; Receive Data Bit 8
+                                 .equ	UCSZ02	= 2	; Character Size
+                                 .equ	TXEN0	= 3	; Transmitter Enable
+                                 .equ	RXEN0	= 4	; Receiver Enable
+                                 .equ	UDRIE0	= 5	; USART Data register Empty Interrupt Enable
+                                 .equ	TXCIE0	= 6	; TX Complete Interrupt Enable
+                                 .equ	RXCIE0	= 7	; RX Complete Interrupt Enable
+                                 
+                                 ; UCSR0C - USART Control and Status Register C
+                                 .equ	UCPOL0	= 0	; Clock Polarity
+                                 .equ	UCSZ00	= 1	; Character Size
+                                 .equ	UCPHA0	= UCSZ00	; For compatibility
+                                 .equ	UCSZ01	= 2	; Character Size
+                                 .equ	UDORD0	= UCSZ01	; For compatibility
+                                 .equ	USBS0	= 3	; Stop Bit Select
+                                 .equ	UPM00	= 4	; Parity Mode Bit 0
+                                 .equ	UPM01	= 5	; Parity Mode Bit 1
+                                 .equ	UMSEL00	= 6	; USART Mode Select
+                                 .equ	UMSEL0	= UMSEL00	; For compatibility
+                                 .equ	UMSEL01	= 7	; USART Mode Select
+                                 .equ	UMSEL1	= UMSEL01	; For compatibility
+                                 
+                                 ; UBRR0H - USART Baud Rate Register High Byte
+                                 .equ	UBRR8	= 0	; USART Baud Rate Register bit 8
+                                 .equ	UBRR9	= 1	; USART Baud Rate Register bit 9
+                                 .equ	UBRR10	= 2	; USART Baud Rate Register bit 10
+                                 .equ	UBRR11	= 3	; USART Baud Rate Register bit 11
+                                 
+                                 ; UBRR0L - USART Baud Rate Register Low Byte
+                                 .equ	_UBRR0	= 0	; USART Baud Rate Register bit 0
+                                 .equ	_UBRR1	= 1	; USART Baud Rate Register bit 1
+                                 .equ	UBRR2	= 2	; USART Baud Rate Register bit 2
+                                 .equ	UBRR3	= 3	; USART Baud Rate Register bit 3
+                                 .equ	UBRR4	= 4	; USART Baud Rate Register bit 4
+                                 .equ	UBRR5	= 5	; USART Baud Rate Register bit 5
+                                 .equ	UBRR6	= 6	; USART Baud Rate Register bit 6
+                                 .equ	UBRR7	= 7	; USART Baud Rate Register bit 7
+                                 
+                                 
+                                 ; ***** TWI **************************
+                                 ; TWAMR - TWI (Slave) Address Mask Register
+                                 .equ	TWAM0	= 1	; 
+                                 .equ	TWAMR0	= TWAM0	; For compatibility
+                                 .equ	TWAM1	= 2	; 
+                                 .equ	TWAMR1	= TWAM1	; For compatibility
+                                 .equ	TWAM2	= 3	; 
+                                 .equ	TWAMR2	= TWAM2	; For compatibility
+                                 .equ	TWAM3	= 4	; 
+                                 .equ	TWAMR3	= TWAM3	; For compatibility
+                                 .equ	TWAM4	= 5	; 
+                                 .equ	TWAMR4	= TWAM4	; For compatibility
+                                 .equ	TWAM5	= 6	; 
+                                 .equ	TWAMR5	= TWAM5	; For compatibility
+                                 .equ	TWAM6	= 7	; 
+                                 .equ	TWAMR6	= TWAM6	; For compatibility
+                                 
+                                 ; TWBR - TWI Bit Rate register
+                                 .equ	TWBR0	= 0	; 
+                                 .equ	TWBR1	= 1	; 
+                                 .equ	TWBR2	= 2	; 
+                                 .equ	TWBR3	= 3	; 
+                                 .equ	TWBR4	= 4	; 
+                                 .equ	TWBR5	= 5	; 
+                                 .equ	TWBR6	= 6	; 
+                                 .equ	TWBR7	= 7	; 
+                                 
+                                 ; TWCR - TWI Control Register
+                                 .equ	TWIE	= 0	; TWI Interrupt Enable
+                                 .equ	TWEN	= 2	; TWI Enable Bit
+                                 .equ	TWWC	= 3	; TWI Write Collition Flag
+                                 .equ	TWSTO	= 4	; TWI Stop Condition Bit
+                                 .equ	TWSTA	= 5	; TWI Start Condition Bit
+                                 .equ	TWEA	= 6	; TWI Enable Acknowledge Bit
+                                 .equ	TWINT	= 7	; TWI Interrupt Flag
+                                 
+                                 ; TWSR - TWI Status Register
+                                 .equ	TWPS0	= 0	; TWI Prescaler
+                                 .equ	TWPS1	= 1	; TWI Prescaler
+                                 .equ	TWS3	= 3	; TWI Status
+                                 .equ	TWS4	= 4	; TWI Status
+                                 .equ	TWS5	= 5	; TWI Status
+                                 .equ	TWS6	= 6	; TWI Status
+                                 .equ	TWS7	= 7	; TWI Status
+                                 
+                                 ; TWDR - TWI Data register
+                                 .equ	TWD0	= 0	; TWI Data Register Bit 0
+                                 .equ	TWD1	= 1	; TWI Data Register Bit 1
+                                 .equ	TWD2	= 2	; TWI Data Register Bit 2
+                                 .equ	TWD3	= 3	; TWI Data Register Bit 3
+                                 .equ	TWD4	= 4	; TWI Data Register Bit 4
+                                 .equ	TWD5	= 5	; TWI Data Register Bit 5
+                                 .equ	TWD6	= 6	; TWI Data Register Bit 6
+                                 .equ	TWD7	= 7	; TWI Data Register Bit 7
+                                 
+                                 ; TWAR - TWI (Slave) Address register
+                                 .equ	TWGCE	= 0	; TWI General Call Recognition Enable Bit
+                                 .equ	TWA0	= 1	; TWI (Slave) Address register Bit 0
+                                 .equ	TWA1	= 2	; TWI (Slave) Address register Bit 1
+                                 .equ	TWA2	= 3	; TWI (Slave) Address register Bit 2
+                                 .equ	TWA3	= 4	; TWI (Slave) Address register Bit 3
+                                 .equ	TWA4	= 5	; TWI (Slave) Address register Bit 4
+                                 .equ	TWA5	= 6	; TWI (Slave) Address register Bit 5
+                                 .equ	TWA6	= 7	; TWI (Slave) Address register Bit 6
+                                 
+                                 
+                                 ; ***** TIMER_COUNTER_1 **************
+                                 ; TIMSK1 - Timer/Counter Interrupt Mask Register
+                                 .equ	TOIE1	= 0	; Timer/Counter1 Overflow Interrupt Enable
+                                 .equ	OCIE1A	= 1	; Timer/Counter1 Output CompareA Match Interrupt Enable
+                                 .equ	OCIE1B	= 2	; Timer/Counter1 Output CompareB Match Interrupt Enable
+                                 .equ	ICIE1	= 5	; Timer/Counter1 Input Capture Interrupt Enable
+                                 
+                                 ; TIFR1 - Timer/Counter Interrupt Flag register
+                                 .equ	TOV1	= 0	; Timer/Counter1 Overflow Flag
+                                 .equ	OCF1A	= 1	; Output Compare Flag 1A
+                                 .equ	OCF1B	= 2	; Output Compare Flag 1B
+                                 .equ	ICF1	= 5	; Input Capture Flag 1
+                                 
+                                 ; TCCR1A - Timer/Counter1 Control Register A
+                                 .equ	WGM10	= 0	; Waveform Generation Mode
+                                 .equ	WGM11	= 1	; Waveform Generation Mode
+                                 .equ	COM1B0	= 4	; Compare Output Mode 1B, bit 0
+                                 .equ	COM1B1	= 5	; Compare Output Mode 1B, bit 1
+                                 .equ	COM1A0	= 6	; Comparet Ouput Mode 1A, bit 0
+                                 .equ	COM1A1	= 7	; Compare Output Mode 1A, bit 1
+                                 
+                                 ; TCCR1B - Timer/Counter1 Control Register B
+                                 .equ	CS10	= 0	; Prescaler source of Timer/Counter 1
+                                 .equ	CS11	= 1	; Prescaler source of Timer/Counter 1
+                                 .equ	CS12	= 2	; Prescaler source of Timer/Counter 1
+                                 .equ	WGM12	= 3	; Waveform Generation Mode
+                                 .equ	WGM13	= 4	; Waveform Generation Mode
+                                 .equ	ICES1	= 6	; Input Capture 1 Edge Select
+                                 .equ	ICNC1	= 7	; Input Capture 1 Noise Canceler
+                                 
+                                 ; TCCR1C - Timer/Counter1 Control Register C
+                                 .equ	FOC1B	= 6	; 
+                                 .equ	FOC1A	= 7	; 
+                                 
+                                 ; GTCCR - General Timer/Counter Control Register
+                                 .equ	PSRSYNC	= 0	; Prescaler Reset Timer/Counter1 and Timer/Counter0
+                                 .equ	TSM	= 7	; Timer/Counter Synchronization Mode
+                                 
+                                 
+                                 ; ***** TIMER_COUNTER_2 **************
+                                 ; TIMSK2 - Timer/Counter Interrupt Mask register
+                                 .equ	TOIE2	= 0	; Timer/Counter2 Overflow Interrupt Enable
+                                 .equ	TOIE2A	= TOIE2	; For compatibility
+                                 .equ	OCIE2A	= 1	; Timer/Counter2 Output Compare Match A Interrupt Enable
+                                 .equ	OCIE2B	= 2	; Timer/Counter2 Output Compare Match B Interrupt Enable
+                                 
+                                 ; TIFR2 - Timer/Counter Interrupt Flag Register
+                                 .equ	TOV2	= 0	; Timer/Counter2 Overflow Flag
+                                 .equ	OCF2A	= 1	; Output Compare Flag 2A
+                                 .equ	OCF2B	= 2	; Output Compare Flag 2B
+                                 
+                                 ; TCCR2A - Timer/Counter2 Control Register A
+                                 .equ	WGM20	= 0	; Waveform Genration Mode
+                                 .equ	WGM21	= 1	; Waveform Genration Mode
+                                 .equ	COM2B0	= 4	; Compare Output Mode bit 0
+                                 .equ	COM2B1	= 5	; Compare Output Mode bit 1
+                                 .equ	COM2A0	= 6	; Compare Output Mode bit 1
+                                 .equ	COM2A1	= 7	; Compare Output Mode bit 1
+                                 
+                                 ; TCCR2B - Timer/Counter2 Control Register B
+                                 .equ	CS20	= 0	; Clock Select bit 0
+                                 .equ	CS21	= 1	; Clock Select bit 1
+                                 .equ	CS22	= 2	; Clock Select bit 2
+                                 .equ	WGM22	= 3	; Waveform Generation Mode
+                                 .equ	FOC2B	= 6	; Force Output Compare B
+                                 .equ	FOC2A	= 7	; Force Output Compare A
+                                 
+                                 ; TCNT2 - Timer/Counter2
+                                 .equ	TCNT2_0	= 0	; Timer/Counter 2 bit 0
+                                 .equ	TCNT2_1	= 1	; Timer/Counter 2 bit 1
+                                 .equ	TCNT2_2	= 2	; Timer/Counter 2 bit 2
+                                 .equ	TCNT2_3	= 3	; Timer/Counter 2 bit 3
+                                 .equ	TCNT2_4	= 4	; Timer/Counter 2 bit 4
+                                 .equ	TCNT2_5	= 5	; Timer/Counter 2 bit 5
+                                 .equ	TCNT2_6	= 6	; Timer/Counter 2 bit 6
+                                 .equ	TCNT2_7	= 7	; Timer/Counter 2 bit 7
+                                 
+                                 ; OCR2A - Timer/Counter2 Output Compare Register A
+                                 .equ	OCR2A_0	= 0	; Timer/Counter2 Output Compare Register Bit 0
+                                 .equ	OCR2A_1	= 1	; Timer/Counter2 Output Compare Register Bit 1
+                                 .equ	OCR2A_2	= 2	; Timer/Counter2 Output Compare Register Bit 2
+                                 .equ	OCR2A_3	= 3	; Timer/Counter2 Output Compare Register Bit 3
+                                 .equ	OCR2A_4	= 4	; Timer/Counter2 Output Compare Register Bit 4
+                                 .equ	OCR2A_5	= 5	; Timer/Counter2 Output Compare Register Bit 5
+                                 .equ	OCR2A_6	= 6	; Timer/Counter2 Output Compare Register Bit 6
+                                 .equ	OCR2A_7	= 7	; Timer/Counter2 Output Compare Register Bit 7
+                                 
+                                 ; OCR2B - Timer/Counter2 Output Compare Register B
+                                 .equ	OCR2B_0	= 0	; Timer/Counter2 Output Compare Register Bit 0
+                                 .equ	OCR2B_1	= 1	; Timer/Counter2 Output Compare Register Bit 1
+                                 .equ	OCR2B_2	= 2	; Timer/Counter2 Output Compare Register Bit 2
+                                 .equ	OCR2B_3	= 3	; Timer/Counter2 Output Compare Register Bit 3
+                                 .equ	OCR2B_4	= 4	; Timer/Counter2 Output Compare Register Bit 4
+                                 .equ	OCR2B_5	= 5	; Timer/Counter2 Output Compare Register Bit 5
+                                 .equ	OCR2B_6	= 6	; Timer/Counter2 Output Compare Register Bit 6
+                                 .equ	OCR2B_7	= 7	; Timer/Counter2 Output Compare Register Bit 7
+                                 
+                                 ; ASSR - Asynchronous Status Register
+                                 .equ	TCR2BUB	= 0	; Timer/Counter Control Register2 Update Busy
+                                 .equ	TCR2AUB	= 1	; Timer/Counter Control Register2 Update Busy
+                                 .equ	OCR2BUB	= 2	; Output Compare Register 2 Update Busy
+                                 .equ	OCR2AUB	= 3	; Output Compare Register2 Update Busy
+                                 .equ	TCN2UB	= 4	; Timer/Counter2 Update Busy
+                                 .equ	AS2	= 5	; Asynchronous Timer/Counter2
+                                 .equ	EXCLK	= 6	; Enable External Clock Input
+                                 
+                                 ; GTCCR - General Timer Counter Control register
+                                 .equ	PSRASY	= 1	; Prescaler Reset Timer/Counter2
+                                 .equ	PSR2	= PSRASY	; For compatibility
+                                 ;.equ	TSM	= 7	; Timer/Counter Synchronization Mode
+                                 
+                                 
+                                 ; ***** AD_CONVERTER *****************
+                                 ; ADMUX - The ADC multiplexer Selection Register
+                                 .equ	MUX0	= 0	; Analog Channel and Gain Selection Bits
+                                 .equ	MUX1	= 1	; Analog Channel and Gain Selection Bits
+                                 .equ	MUX2	= 2	; Analog Channel and Gain Selection Bits
+                                 .equ	MUX3	= 3	; Analog Channel and Gain Selection Bits
+                                 .equ	ADLAR	= 5	; Left Adjust Result
+                                 .equ	REFS0	= 6	; Reference Selection Bit 0
+                                 .equ	REFS1	= 7	; Reference Selection Bit 1
+                                 
+                                 ; ADCSRA - The ADC Control and Status register A
+                                 .equ	ADPS0	= 0	; ADC  Prescaler Select Bits
+                                 .equ	ADPS1	= 1	; ADC  Prescaler Select Bits
+                                 .equ	ADPS2	= 2	; ADC  Prescaler Select Bits
+                                 .equ	ADIE	= 3	; ADC Interrupt Enable
+                                 .equ	ADIF	= 4	; ADC Interrupt Flag
+                                 .equ	ADATE	= 5	; ADC  Auto Trigger Enable
+                                 .equ	ADSC	= 6	; ADC Start Conversion
+                                 .equ	ADEN	= 7	; ADC Enable
+                                 
+                                 ; ADCSRB - The ADC Control and Status register B
+                                 .equ	ADTS0	= 0	; ADC Auto Trigger Source bit 0
+                                 .equ	ADTS1	= 1	; ADC Auto Trigger Source bit 1
+                                 .equ	ADTS2	= 2	; ADC Auto Trigger Source bit 2
+                                 .equ	ACME	= 6	; 
+                                 
+                                 ; ADCH - ADC Data Register High Byte
+                                 .equ	ADCH0	= 0	; ADC Data Register High Byte Bit 0
+                                 .equ	ADCH1	= 1	; ADC Data Register High Byte Bit 1
+                                 .equ	ADCH2	= 2	; ADC Data Register High Byte Bit 2
+                                 .equ	ADCH3	= 3	; ADC Data Register High Byte Bit 3
+                                 .equ	ADCH4	= 4	; ADC Data Register High Byte Bit 4
+                                 .equ	ADCH5	= 5	; ADC Data Register High Byte Bit 5
+                                 .equ	ADCH6	= 6	; ADC Data Register High Byte Bit 6
+                                 .equ	ADCH7	= 7	; ADC Data Register High Byte Bit 7
+                                 
+                                 ; ADCL - ADC Data Register Low Byte
+                                 .equ	ADCL0	= 0	; ADC Data Register Low Byte Bit 0
+                                 .equ	ADCL1	= 1	; ADC Data Register Low Byte Bit 1
+                                 .equ	ADCL2	= 2	; ADC Data Register Low Byte Bit 2
+                                 .equ	ADCL3	= 3	; ADC Data Register Low Byte Bit 3
+                                 .equ	ADCL4	= 4	; ADC Data Register Low Byte Bit 4
+                                 .equ	ADCL5	= 5	; ADC Data Register Low Byte Bit 5
+                                 .equ	ADCL6	= 6	; ADC Data Register Low Byte Bit 6
+                                 .equ	ADCL7	= 7	; ADC Data Register Low Byte Bit 7
+                                 
+                                 ; DIDR0 - Digital Input Disable Register
+                                 .equ	ADC0D	= 0	; 
+                                 .equ	ADC1D	= 1	; 
+                                 .equ	ADC2D	= 2	; 
+                                 .equ	ADC3D	= 3	; 
+                                 .equ	ADC4D	= 4	; 
+                                 .equ	ADC5D	= 5	; 
+                                 
+                                 
+                                 ; ***** ANALOG_COMPARATOR ************
+                                 ; ACSR - Analog Comparator Control And Status Register
+                                 .equ	ACIS0	= 0	; Analog Comparator Interrupt Mode Select bit 0
+                                 .equ	ACIS1	= 1	; Analog Comparator Interrupt Mode Select bit 1
+                                 .equ	ACIC	= 2	; Analog Comparator Input Capture Enable
+                                 .equ	ACIE	= 3	; Analog Comparator Interrupt Enable
+                                 .equ	ACI	= 4	; Analog Comparator Interrupt Flag
+                                 .equ	ACO	= 5	; Analog Compare Output
+                                 .equ	ACBG	= 6	; Analog Comparator Bandgap Select
+                                 .equ	ACD	= 7	; Analog Comparator Disable
+                                 
+                                 ; DIDR1 - Digital Input Disable Register 1
+                                 .equ	AIN0D	= 0	; AIN0 Digital Input Disable
+                                 .equ	AIN1D	= 1	; AIN1 Digital Input Disable
+                                 
+                                 
+                                 ; ***** PORTB ************************
+                                 ; PORTB - Port B Data Register
+                                 .equ	PORTB0	= 0	; Port B Data Register bit 0
+                                 .equ	PB0	= 0	; For compatibility
+                                 .equ	PORTB1	= 1	; Port B Data Register bit 1
+                                 .equ	PB1	= 1	; For compatibility
+                                 .equ	PORTB2	= 2	; Port B Data Register bit 2
+                                 .equ	PB2	= 2	; For compatibility
+                                 .equ	PORTB3	= 3	; Port B Data Register bit 3
+                                 .equ	PB3	= 3	; For compatibility
+                                 .equ	PORTB4	= 4	; Port B Data Register bit 4
+                                 .equ	PB4	= 4	; For compatibility
+                                 .equ	PORTB5	= 5	; Port B Data Register bit 5
+                                 .equ	PB5	= 5	; For compatibility
+                                 .equ	PORTB6	= 6	; Port B Data Register bit 6
+                                 .equ	PB6	= 6	; For compatibility
+                                 .equ	PORTB7	= 7	; Port B Data Register bit 7
+                                 .equ	PB7	= 7	; For compatibility
+                                 
+                                 ; DDRB - Port B Data Direction Register
+                                 .equ	DDB0	= 0	; Port B Data Direction Register bit 0
+                                 .equ	DDB1	= 1	; Port B Data Direction Register bit 1
+                                 .equ	DDB2	= 2	; Port B Data Direction Register bit 2
+                                 .equ	DDB3	= 3	; Port B Data Direction Register bit 3
+                                 .equ	DDB4	= 4	; Port B Data Direction Register bit 4
+                                 .equ	DDB5	= 5	; Port B Data Direction Register bit 5
+                                 .equ	DDB6	= 6	; Port B Data Direction Register bit 6
+                                 .equ	DDB7	= 7	; Port B Data Direction Register bit 7
+                                 
+                                 ; PINB - Port B Input Pins
+                                 .equ	PINB0	= 0	; Port B Input Pins bit 0
+                                 .equ	PINB1	= 1	; Port B Input Pins bit 1
+                                 .equ	PINB2	= 2	; Port B Input Pins bit 2
+                                 .equ	PINB3	= 3	; Port B Input Pins bit 3
+                                 .equ	PINB4	= 4	; Port B Input Pins bit 4
+                                 .equ	PINB5	= 5	; Port B Input Pins bit 5
+                                 .equ	PINB6	= 6	; Port B Input Pins bit 6
+                                 .equ	PINB7	= 7	; Port B Input Pins bit 7
+                                 
+                                 
+                                 ; ***** PORTC ************************
+                                 ; PORTC - Port C Data Register
+                                 .equ	PORTC0	= 0	; Port C Data Register bit 0
+                                 .equ	PC0	= 0	; For compatibility
+                                 .equ	PORTC1	= 1	; Port C Data Register bit 1
+                                 .equ	PC1	= 1	; For compatibility
+                                 .equ	PORTC2	= 2	; Port C Data Register bit 2
+                                 .equ	PC2	= 2	; For compatibility
+                                 .equ	PORTC3	= 3	; Port C Data Register bit 3
+                                 .equ	PC3	= 3	; For compatibility
+                                 .equ	PORTC4	= 4	; Port C Data Register bit 4
+                                 .equ	PC4	= 4	; For compatibility
+                                 .equ	PORTC5	= 5	; Port C Data Register bit 5
+                                 .equ	PC5	= 5	; For compatibility
+                                 .equ	PORTC6	= 6	; Port C Data Register bit 6
+                                 .equ	PC6	= 6	; For compatibility
+                                 
+                                 ; DDRC - Port C Data Direction Register
+                                 .equ	DDC0	= 0	; Port C Data Direction Register bit 0
+                                 .equ	DDC1	= 1	; Port C Data Direction Register bit 1
+                                 .equ	DDC2	= 2	; Port C Data Direction Register bit 2
+                                 .equ	DDC3	= 3	; Port C Data Direction Register bit 3
+                                 .equ	DDC4	= 4	; Port C Data Direction Register bit 4
+                                 .equ	DDC5	= 5	; Port C Data Direction Register bit 5
+                                 .equ	DDC6	= 6	; Port C Data Direction Register bit 6
+                                 
+                                 ; PINC - Port C Input Pins
+                                 .equ	PINC0	= 0	; Port C Input Pins bit 0
+                                 .equ	PINC1	= 1	; Port C Input Pins bit 1
+                                 .equ	PINC2	= 2	; Port C Input Pins bit 2
+                                 .equ	PINC3	= 3	; Port C Input Pins bit 3
+                                 .equ	PINC4	= 4	; Port C Input Pins bit 4
+                                 .equ	PINC5	= 5	; Port C Input Pins bit 5
+                                 .equ	PINC6	= 6	; Port C Input Pins bit 6
+                                 
+                                 
+                                 ; ***** PORTD ************************
+                                 ; PORTD - Port D Data Register
+                                 .equ	PORTD0	= 0	; Port D Data Register bit 0
+                                 .equ	PD0	= 0	; For compatibility
+                                 .equ	PORTD1	= 1	; Port D Data Register bit 1
+                                 .equ	PD1	= 1	; For compatibility
+                                 .equ	PORTD2	= 2	; Port D Data Register bit 2
+                                 .equ	PD2	= 2	; For compatibility
+                                 .equ	PORTD3	= 3	; Port D Data Register bit 3
+                                 .equ	PD3	= 3	; For compatibility
+                                 .equ	PORTD4	= 4	; Port D Data Register bit 4
+                                 .equ	PD4	= 4	; For compatibility
+                                 .equ	PORTD5	= 5	; Port D Data Register bit 5
+                                 .equ	PD5	= 5	; For compatibility
+                                 .equ	PORTD6	= 6	; Port D Data Register bit 6
+                                 .equ	PD6	= 6	; For compatibility
+                                 .equ	PORTD7	= 7	; Port D Data Register bit 7
+                                 .equ	PD7	= 7	; For compatibility
+                                 
+                                 ; DDRD - Port D Data Direction Register
+                                 .equ	DDD0	= 0	; Port D Data Direction Register bit 0
+                                 .equ	DDD1	= 1	; Port D Data Direction Register bit 1
+                                 .equ	DDD2	= 2	; Port D Data Direction Register bit 2
+                                 .equ	DDD3	= 3	; Port D Data Direction Register bit 3
+                                 .equ	DDD4	= 4	; Port D Data Direction Register bit 4
+                                 .equ	DDD5	= 5	; Port D Data Direction Register bit 5
+                                 .equ	DDD6	= 6	; Port D Data Direction Register bit 6
+                                 .equ	DDD7	= 7	; Port D Data Direction Register bit 7
+                                 
+                                 ; PIND - Port D Input Pins
+                                 .equ	PIND0	= 0	; Port D Input Pins bit 0
+                                 .equ	PIND1	= 1	; Port D Input Pins bit 1
+                                 .equ	PIND2	= 2	; Port D Input Pins bit 2
+                                 .equ	PIND3	= 3	; Port D Input Pins bit 3
+                                 .equ	PIND4	= 4	; Port D Input Pins bit 4
+                                 .equ	PIND5	= 5	; Port D Input Pins bit 5
+                                 .equ	PIND6	= 6	; Port D Input Pins bit 6
+                                 .equ	PIND7	= 7	; Port D Input Pins bit 7
+                                 
+                                 
+                                 ; ***** TIMER_COUNTER_0 **************
+                                 ; TIMSK0 - Timer/Counter0 Interrupt Mask Register
+                                 .equ	TOIE0	= 0	; Timer/Counter0 Overflow Interrupt Enable
+                                 .equ	OCIE0A	= 1	; Timer/Counter0 Output Compare Match A Interrupt Enable
+                                 .equ	OCIE0B	= 2	; Timer/Counter0 Output Compare Match B Interrupt Enable
+                                 
+                                 ; TIFR0 - Timer/Counter0 Interrupt Flag register
+                                 .equ	TOV0	= 0	; Timer/Counter0 Overflow Flag
+                                 .equ	OCF0A	= 1	; Timer/Counter0 Output Compare Flag 0A
+                                 .equ	OCF0B	= 2	; Timer/Counter0 Output Compare Flag 0B
+                                 
+                                 ; TCCR0A - Timer/Counter  Control Register A
+                                 .equ	WGM00	= 0	; Waveform Generation Mode
+                                 .equ	WGM01	= 1	; Waveform Generation Mode
+                                 .equ	COM0B0	= 4	; Compare Output Mode, Fast PWm
+                                 .equ	COM0B1	= 5	; Compare Output Mode, Fast PWm
+                                 .equ	COM0A0	= 6	; Compare Output Mode, Phase Correct PWM Mode
+                                 .equ	COM0A1	= 7	; Compare Output Mode, Phase Correct PWM Mode
+                                 
+                                 ; TCCR0B - Timer/Counter Control Register B
+                                 .equ	CS00	= 0	; Clock Select
+                                 .equ	CS01	= 1	; Clock Select
+                                 .equ	CS02	= 2	; Clock Select
+                                 .equ	WGM02	= 3	; 
+                                 .equ	FOC0B	= 6	; Force Output Compare B
+                                 .equ	FOC0A	= 7	; Force Output Compare A
+                                 
+                                 ; TCNT0 - Timer/Counter0
+                                 .equ	TCNT0_0	= 0	; 
+                                 .equ	TCNT0_1	= 1	; 
+                                 .equ	TCNT0_2	= 2	; 
+                                 .equ	TCNT0_3	= 3	; 
+                                 .equ	TCNT0_4	= 4	; 
+                                 .equ	TCNT0_5	= 5	; 
+                                 .equ	TCNT0_6	= 6	; 
+                                 .equ	TCNT0_7	= 7	; 
+                                 
+                                 ; OCR0A - Timer/Counter0 Output Compare Register
+                                 .equ	OCR0A_0	= 0	; 
+                                 .equ	OCR0A_1	= 1	; 
+                                 .equ	OCR0A_2	= 2	; 
+                                 .equ	OCR0A_3	= 3	; 
+                                 .equ	OCR0A_4	= 4	; 
+                                 .equ	OCR0A_5	= 5	; 
+                                 .equ	OCR0A_6	= 6	; 
+                                 .equ	OCR0A_7	= 7	; 
+                                 
+                                 ; OCR0B - Timer/Counter0 Output Compare Register
+                                 .equ	OCR0B_0	= 0	; 
+                                 .equ	OCR0B_1	= 1	; 
+                                 .equ	OCR0B_2	= 2	; 
+                                 .equ	OCR0B_3	= 3	; 
+                                 .equ	OCR0B_4	= 4	; 
+                                 .equ	OCR0B_5	= 5	; 
+                                 .equ	OCR0B_6	= 6	; 
+                                 .equ	OCR0B_7	= 7	; 
+                                 
+                                 ; GTCCR - General Timer/Counter Control Register
+                                 ;.equ	PSRSYNC	= 0	; Prescaler Reset Timer/Counter1 and Timer/Counter0
+                                 .equ	PSR10	= PSRSYNC	; For compatibility
+                                 ;.equ	TSM	= 7	; Timer/Counter Synchronization Mode
+                                 
+                                 
+                                 ; ***** EXTERNAL_INTERRUPT ***********
+                                 ; EICRA - External Interrupt Control Register
+                                 .equ	ISC00	= 0	; External Interrupt Sense Control 0 Bit 0
+                                 .equ	ISC01	= 1	; External Interrupt Sense Control 0 Bit 1
+                                 .equ	ISC10	= 2	; External Interrupt Sense Control 1 Bit 0
+                                 .equ	ISC11	= 3	; External Interrupt Sense Control 1 Bit 1
+                                 
+                                 ; EIMSK - External Interrupt Mask Register
+                                 .equ	INT0	= 0	; External Interrupt Request 0 Enable
+                                 .equ	INT1	= 1	; External Interrupt Request 1 Enable
+                                 
+                                 ; EIFR - External Interrupt Flag Register
+                                 .equ	INTF0	= 0	; External Interrupt Flag 0
+                                 .equ	INTF1	= 1	; External Interrupt Flag 1
+                                 
+                                 ; PCICR - Pin Change Interrupt Control Register
+                                 .equ	PCIE0	= 0	; Pin Change Interrupt Enable 0
+                                 .equ	PCIE1	= 1	; Pin Change Interrupt Enable 1
+                                 .equ	PCIE2	= 2	; Pin Change Interrupt Enable 2
+                                 
+                                 ; PCMSK2 - Pin Change Mask Register 2
+                                 .equ	PCINT16	= 0	; Pin Change Enable Mask 16
+                                 .equ	PCINT17	= 1	; Pin Change Enable Mask 17
+                                 .equ	PCINT18	= 2	; Pin Change Enable Mask 18
+                                 .equ	PCINT19	= 3	; Pin Change Enable Mask 19
+                                 .equ	PCINT20	= 4	; Pin Change Enable Mask 20
+                                 .equ	PCINT21	= 5	; Pin Change Enable Mask 21
+                                 .equ	PCINT22	= 6	; Pin Change Enable Mask 22
+                                 .equ	PCINT23	= 7	; Pin Change Enable Mask 23
+                                 
+                                 ; PCMSK1 - Pin Change Mask Register 1
+                                 .equ	PCINT8	= 0	; Pin Change Enable Mask 8
+                                 .equ	PCINT9	= 1	; Pin Change Enable Mask 9
+                                 .equ	PCINT10	= 2	; Pin Change Enable Mask 10
+                                 .equ	PCINT11	= 3	; Pin Change Enable Mask 11
+                                 .equ	PCINT12	= 4	; Pin Change Enable Mask 12
+                                 .equ	PCINT13	= 5	; Pin Change Enable Mask 13
+                                 .equ	PCINT14	= 6	; Pin Change Enable Mask 14
+                                 
+                                 ; PCMSK0 - Pin Change Mask Register 0
+                                 .equ	PCINT0	= 0	; Pin Change Enable Mask 0
+                                 .equ	PCINT1	= 1	; Pin Change Enable Mask 1
+                                 .equ	PCINT2	= 2	; Pin Change Enable Mask 2
+                                 .equ	PCINT3	= 3	; Pin Change Enable Mask 3
+                                 .equ	PCINT4	= 4	; Pin Change Enable Mask 4
+                                 .equ	PCINT5	= 5	; Pin Change Enable Mask 5
+                                 .equ	PCINT6	= 6	; Pin Change Enable Mask 6
+                                 .equ	PCINT7	= 7	; Pin Change Enable Mask 7
+                                 
+                                 ; PCIFR - Pin Change Interrupt Flag Register
+                                 .equ	PCIF0	= 0	; Pin Change Interrupt Flag 0
+                                 .equ	PCIF1	= 1	; Pin Change Interrupt Flag 1
+                                 .equ	PCIF2	= 2	; Pin Change Interrupt Flag 2
+                                 
+                                 
+                                 ; ***** SPI **************************
+                                 ; SPDR - SPI Data Register
+                                 .equ	SPDR0	= 0	; SPI Data Register bit 0
+                                 .equ	SPDR1	= 1	; SPI Data Register bit 1
+                                 .equ	SPDR2	= 2	; SPI Data Register bit 2
+                                 .equ	SPDR3	= 3	; SPI Data Register bit 3
+                                 .equ	SPDR4	= 4	; SPI Data Register bit 4
+                                 .equ	SPDR5	= 5	; SPI Data Register bit 5
+                                 .equ	SPDR6	= 6	; SPI Data Register bit 6
+                                 .equ	SPDR7	= 7	; SPI Data Register bit 7
+                                 
+                                 ; SPSR - SPI Status Register
+                                 .equ	SPI2X	= 0	; Double SPI Speed Bit
+                                 .equ	WCOL	= 6	; Write Collision Flag
+                                 .equ	SPIF	= 7	; SPI Interrupt Flag
+                                 
+                                 ; SPCR - SPI Control Register
+                                 .equ	SPR0	= 0	; SPI Clock Rate Select 0
+                                 .equ	SPR1	= 1	; SPI Clock Rate Select 1
+                                 .equ	CPHA	= 2	; Clock Phase
+                                 .equ	CPOL	= 3	; Clock polarity
+                                 .equ	MSTR	= 4	; Master/Slave Select
+                                 .equ	DORD	= 5	; Data Order
+                                 .equ	SPE	= 6	; SPI Enable
+                                 .equ	SPIE	= 7	; SPI Interrupt Enable
+                                 
+                                 
+                                 ; ***** WATCHDOG *********************
+                                 ; WDTCSR - Watchdog Timer Control Register
+                                 .equ	WDP0	= 0	; Watch Dog Timer Prescaler bit 0
+                                 .equ	WDP1	= 1	; Watch Dog Timer Prescaler bit 1
+                                 .equ	WDP2	= 2	; Watch Dog Timer Prescaler bit 2
+                                 .equ	WDE	= 3	; Watch Dog Enable
+                                 .equ	WDCE	= 4	; Watchdog Change Enable
+                                 .equ	WDP3	= 5	; Watchdog Timer Prescaler Bit 3
+                                 .equ	WDIE	= 6	; Watchdog Timeout Interrupt Enable
+                                 .equ	WDIF	= 7	; Watchdog Timeout Interrupt Flag
+                                 
+                                 
+                                 ; ***** CPU **************************
+                                 ; SREG - Status Register
+                                 .equ	SREG_C	= 0	; Carry Flag
+                                 .equ	SREG_Z	= 1	; Zero Flag
+                                 .equ	SREG_N	= 2	; Negative Flag
+                                 .equ	SREG_V	= 3	; Two's Complement Overflow Flag
+                                 .equ	SREG_S	= 4	; Sign Bit
+                                 .equ	SREG_H	= 5	; Half Carry Flag
+                                 .equ	SREG_T	= 6	; Bit Copy Storage
+                                 .equ	SREG_I	= 7	; Global Interrupt Enable
+                                 
+                                 ; OSCCAL - Oscillator Calibration Value
+                                 .equ	CAL0	= 0	; Oscillator Calibration Value Bit0
+                                 .equ	CAL1	= 1	; Oscillator Calibration Value Bit1
+                                 .equ	CAL2	= 2	; Oscillator Calibration Value Bit2
+                                 .equ	CAL3	= 3	; Oscillator Calibration Value Bit3
+                                 .equ	CAL4	= 4	; Oscillator Calibration Value Bit4
+                                 .equ	CAL5	= 5	; Oscillator Calibration Value Bit5
+                                 .equ	CAL6	= 6	; Oscillator Calibration Value Bit6
+                                 .equ	CAL7	= 7	; Oscillator Calibration Value Bit7
+                                 
+                                 ; CLKPR - Clock Prescale Register
+                                 .equ	CLKPS0	= 0	; Clock Prescaler Select Bit 0
+                                 .equ	CLKPS1	= 1	; Clock Prescaler Select Bit 1
+                                 .equ	CLKPS2	= 2	; Clock Prescaler Select Bit 2
+                                 .equ	CLKPS3	= 3	; Clock Prescaler Select Bit 3
+                                 .equ	CLKPCE	= 7	; Clock Prescaler Change Enable
+                                 
+                                 ; SPMCSR - Store Program Memory Control and Status Register
+                                 .equ    SELFPRGEN = 0; Added for backwards compatibility
+                                 .equ	SPMEN	= 0	; Store Program Memory
+                                 .equ	PGERS	= 1	; Page Erase
+                                 .equ	PGWRT	= 2	; Page Write
+                                 .equ	BLBSET	= 3	; Boot Lock Bit Set
+                                 .equ	RWWSRE	= 4	; Read-While-Write section read enable
+                                 .equ    SIGRD   = 5 ; Signature Row Read
+                                 .equ	RWWSB	= 6	; Read-While-Write Section Busy
+                                 .equ	SPMIE	= 7	; SPM Interrupt Enable
+                                 
+                                 ; MCUCR - MCU Control Register
+                                 .equ	IVCE	= 0	; 
+                                 .equ	IVSEL	= 1	; 
+                                 .equ	PUD	= 4	; 
+                                 .equ	BODSE	= 5	; BOD Sleep Enable
+                                 .equ	BODS	= 6	; BOD Sleep
+                                 
+                                 ; MCUSR - MCU Status Register
+                                 .equ	PORF	= 0	; Power-on reset flag
+                                 .equ	EXTRF	= 1	; External Reset Flag
+                                 .equ	EXTREF	= EXTRF	; For compatibility
+                                 .equ	BORF	= 2	; Brown-out Reset Flag
+                                 .equ	WDRF	= 3	; Watchdog Reset Flag
+                                 
+                                 ; SMCR - Sleep Mode Control Register
+                                 .equ	SE	= 0	; Sleep Enable
+                                 .equ	SM0	= 1	; Sleep Mode Select Bit 0
+                                 .equ	SM1	= 2	; Sleep Mode Select Bit 1
+                                 .equ	SM2	= 3	; Sleep Mode Select Bit 2
+                                 
+                                 ; GPIOR2 - General Purpose I/O Register 2
+                                 .equ	GPIOR20	= 0	; 
+                                 .equ	GPIOR21	= 1	; 
+                                 .equ	GPIOR22	= 2	; 
+                                 .equ	GPIOR23	= 3	; 
+                                 .equ	GPIOR24	= 4	; 
+                                 .equ	GPIOR25	= 5	; 
+                                 .equ	GPIOR26	= 6	; 
+                                 .equ	GPIOR27	= 7	; 
+                                 
+                                 ; GPIOR1 - General Purpose I/O Register 1
+                                 .equ	GPIOR10	= 0	; 
+                                 .equ	GPIOR11	= 1	; 
+                                 .equ	GPIOR12	= 2	; 
+                                 .equ	GPIOR13	= 3	; 
+                                 .equ	GPIOR14	= 4	; 
+                                 .equ	GPIOR15	= 5	; 
+                                 .equ	GPIOR16	= 6	; 
+                                 .equ	GPIOR17	= 7	; 
+                                 
+                                 ; GPIOR0 - General Purpose I/O Register 0
+                                 .equ	GPIOR00	= 0	; 
+                                 .equ	GPIOR01	= 1	; 
+                                 .equ	GPIOR02	= 2	; 
+                                 .equ	GPIOR03	= 3	; 
+                                 .equ	GPIOR04	= 4	; 
+                                 .equ	GPIOR05	= 5	; 
+                                 .equ	GPIOR06	= 6	; 
+                                 .equ	GPIOR07	= 7	; 
+                                 
+                                 ; PRR - Power Reduction Register
+                                 .equ	PRADC	= 0	; Power Reduction ADC
+                                 .equ	PRUSART0	= 1	; Power Reduction USART
+                                 .equ	PRSPI	= 2	; Power Reduction Serial Peripheral Interface
+                                 .equ	PRTIM1	= 3	; Power Reduction Timer/Counter1
+                                 .equ	PRTIM0	= 5	; Power Reduction Timer/Counter0
+                                 .equ	PRTIM2	= 6	; Power Reduction Timer/Counter2
+                                 .equ	PRTWI	= 7	; Power Reduction TWI
+                                 
+                                 
+                                 ; ***** EEPROM ***********************
+                                 ; EEARL - EEPROM Address Register Low Byte
+                                 .equ	EEAR0	= 0	; EEPROM Read/Write Access Bit 0
+                                 .equ	EEAR1	= 1	; EEPROM Read/Write Access Bit 1
+                                 .equ	EEAR2	= 2	; EEPROM Read/Write Access Bit 2
+                                 .equ	EEAR3	= 3	; EEPROM Read/Write Access Bit 3
+                                 .equ	EEAR4	= 4	; EEPROM Read/Write Access Bit 4
+                                 .equ	EEAR5	= 5	; EEPROM Read/Write Access Bit 5
+                                 .equ	EEAR6	= 6	; EEPROM Read/Write Access Bit 6
+                                 .equ	EEAR7	= 7	; EEPROM Read/Write Access Bit 7
+                                 
+                                 ; EEARH - EEPROM Address Register High Byte
+                                 .equ	EEAR8	= 0	; EEPROM Read/Write Access Bit 8
+                                 .equ	EEAR9	= 1	; EEPROM Read/Write Access Bit 9
+                                 
+                                 ; EEDR - EEPROM Data Register
+                                 .equ	EEDR0	= 0	; EEPROM Data Register bit 0
+                                 .equ	EEDR1	= 1	; EEPROM Data Register bit 1
+                                 .equ	EEDR2	= 2	; EEPROM Data Register bit 2
+                                 .equ	EEDR3	= 3	; EEPROM Data Register bit 3
+                                 .equ	EEDR4	= 4	; EEPROM Data Register bit 4
+                                 .equ	EEDR5	= 5	; EEPROM Data Register bit 5
+                                 .equ	EEDR6	= 6	; EEPROM Data Register bit 6
+                                 .equ	EEDR7	= 7	; EEPROM Data Register bit 7
+                                 
+                                 ; EECR - EEPROM Control Register
+                                 .equ	EERE	= 0	; EEPROM Read Enable
+                                 .equ	EEPE	= 1	; EEPROM Write Enable
+                                 .equ	EEMPE	= 2	; EEPROM Master Write Enable
+                                 .equ	EERIE	= 3	; EEPROM Ready Interrupt Enable
+                                 .equ	EEPM0	= 4	; EEPROM Programming Mode Bit 0
+                                 .equ	EEPM1	= 5	; EEPROM Programming Mode Bit 1
+                                 
+                                 
+                                 
+                                 ; ***** LOCKSBITS ********************************************************
+                                 .equ	LB1	= 0	; Lock bit
+                                 .equ	LB2	= 1	; Lock bit
+                                 .equ	BLB01	= 2	; Boot Lock bit
+                                 .equ	BLB02	= 3	; Boot Lock bit
+                                 .equ	BLB11	= 4	; Boot lock bit
+                                 .equ	BLB12	= 5	; Boot lock bit
+                                 
+                                 
+                                 ; ***** FUSES ************************************************************
+                                 ; LOW fuse bits
+                                 .equ	CKSEL0	= 0	; Select Clock Source
+                                 .equ	CKSEL1	= 1	; Select Clock Source
+                                 .equ	CKSEL2	= 2	; Select Clock Source
+                                 .equ	CKSEL3	= 3	; Select Clock Source
+                                 .equ	SUT0	= 4	; Select start-up time
+                                 .equ	SUT1	= 5	; Select start-up time
+                                 .equ	CKOUT	= 6	; Clock output
+                                 .equ	CKDIV8	= 7	; Divide clock by 8
+                                 
+                                 ; HIGH fuse bits
+                                 .equ	BOOTRST	= 0	; Select reset vector
+                                 .equ	BOOTSZ0	= 1	; Select boot size
+                                 .equ	BOOTSZ1	= 2	; Select boot size
+                                 .equ	EESAVE	= 3	; EEPROM memory is preserved through chip erase
+                                 .equ	WDTON	= 4	; Watchdog Timer Always On
+                                 .equ	SPIEN	= 5	; Enable Serial programming and Data Downloading
+                                 .equ	DWEN	= 6	; debugWIRE Enable
+                                 .equ	RSTDISBL	= 7	; External reset disable
+                                 
+                                 ; EXTENDED fuse bits
+                                 .equ	BODLEVEL0	= 0	; Brown-out Detector trigger level
+                                 .equ	BODLEVEL1	= 1	; Brown-out Detector trigger level
+                                 .equ	BODLEVEL2	= 2	; Brown-out Detector trigger level
+                                 
+                                 
+                                 
+                                 ; ***** CPU REGISTER DEFINITIONS *****************************************
+                                 .def	XH	= r27
+                                 .def	XL	= r26
+                                 .def	YH	= r29
+                                 .def	YL	= r28
+                                 .def	ZH	= r31
+                                 .def	ZL	= r30
+                                 
+                                 
+                                 
+                                 ; ***** DATA MEMORY DECLARATIONS *****************************************
+                                 .equ	FLASHEND	= 0x3fff	; Note: Word address
+                                 .equ	IOEND	= 0x00ff
+                                 .equ	SRAM_START	= 0x0100
+                                 .equ	SRAM_SIZE	= 2048
+                                 .equ	RAMEND	= 0x08ff
+                                 .equ	XRAMEND	= 0x0000
+                                 .equ	E2END	= 0x03ff
+                                 .equ	EEPROMEND	= 0x03ff
+                                 .equ	EEADRBITS	= 10
+                                 #pragma AVRPART MEMORY PROG_FLASH 32768
+                                 #pragma AVRPART MEMORY EEPROM 1024
+                                 #pragma AVRPART MEMORY INT_SRAM SIZE 2048
+                                 #pragma AVRPART MEMORY INT_SRAM START_ADDR 0x100
+                                 
+                                 
+                                 
+                                 ; ***** BOOTLOADER DECLARATIONS ******************************************
+                                 .equ	NRWW_START_ADDR	= 0x3800
+                                 .equ	NRWW_STOP_ADDR	= 0x3fff
+                                 .equ	RWW_START_ADDR	= 0x0
+                                 .equ	RWW_STOP_ADDR	= 0x37ff
+                                 .equ	PAGESIZE	= 64
+                                 .equ	FIRSTBOOTSTART	= 0x3f00
+                                 .equ	SECONDBOOTSTART	= 0x3e00
+                                 .equ	THIRDBOOTSTART	= 0x3c00
+                                 .equ	FOURTHBOOTSTART	= 0x3800
+                                 .equ	SMALLBOOTSTART	= FIRSTBOOTSTART
+                                 .equ	LARGEBOOTSTART	= FOURTHBOOTSTART
+                                 
+                                 
+                                 
+                                 ; ***** INTERRUPT VECTORS ************************************************
+                                 .equ	INT0addr	= 0x0002	; External Interrupt Request 0
+                                 .equ	INT1addr	= 0x0004	; External Interrupt Request 1
+                                 .equ	PCI0addr	= 0x0006	; Pin Change Interrupt Request 0
+                                 .equ	PCI1addr	= 0x0008	; Pin Change Interrupt Request 0
+                                 .equ	PCI2addr	= 0x000a	; Pin Change Interrupt Request 1
+                                 .equ	WDTaddr	= 0x000c	; Watchdog Time-out Interrupt
+                                 .equ	OC2Aaddr	= 0x000e	; Timer/Counter2 Compare Match A
+                                 .equ	OC2Baddr	= 0x0010	; Timer/Counter2 Compare Match A
+                                 .equ	OVF2addr	= 0x0012	; Timer/Counter2 Overflow
+                                 .equ	ICP1addr	= 0x0014	; Timer/Counter1 Capture Event
+                                 .equ	OC1Aaddr	= 0x0016	; Timer/Counter1 Compare Match A
+                                 .equ	OC1Baddr	= 0x0018	; Timer/Counter1 Compare Match B
+                                 .equ	OVF1addr	= 0x001a	; Timer/Counter1 Overflow
+                                 .equ	OC0Aaddr	= 0x001c	; TimerCounter0 Compare Match A
+                                 .equ	OC0Baddr	= 0x001e	; TimerCounter0 Compare Match B
+                                 .equ	OVF0addr	= 0x0020	; Timer/Couner0 Overflow
+                                 .equ	SPIaddr	= 0x0022	; SPI Serial Transfer Complete
+                                 .equ	URXCaddr	= 0x0024	; USART Rx Complete
+                                 .equ	UDREaddr	= 0x0026	; USART, Data Register Empty
+                                 .equ	UTXCaddr	= 0x0028	; USART Tx Complete
+                                 .equ	ADCCaddr	= 0x002a	; ADC Conversion Complete
+                                 .equ	ERDYaddr	= 0x002c	; EEPROM Ready
+                                 .equ	ACIaddr	= 0x002e	; Analog Comparator
+                                 .equ	TWIaddr	= 0x0030	; Two-wire Serial Interface
+                                 .equ	SPMRaddr	= 0x0032	; Store Program Memory Read
+                                 
+                                 .equ	INT_VECTORS_SIZE	= 52	; size in words
+                                 
+                                 #endif  /* _M328PDEF_INC_ */
+                                 
+                                 ; ***** END OF FILE ******************************************************
+                                 
+                                 ; arrreglate.asm
+                                 ;
+                                 ; Created: 7/10/2023 15:22:21
+                                 ; Author : Usuario
+                                 ;
+                                 ;Incluimos nuestras librerias
+                                 .cseg
+                                  .INCLUDE "division.inc"
+                                 
+                                 ; DIVIDENDO -> R24:R25
+                                 ; DIVISOR   -> R23:R22
+                                 ; RESTO		-> R27:R26
+                                 ; COCIENTE	-> A lo largo del algoritmo se modifica el DIVIDENDO y el COCIENTE queda en R24:R25
+                                 ; R21 también es modificado en el desarrollo de la operación
+                                 /*DIVISION16:
+                                 		SUB		R26,R26		
+                                 		SUB		R27,R27		
+                                 		LDI		R21,0x11		 
+                                 		RJMP	SEGUIR16		 
+                                 VOLVER16:		
+                                 		ROL		R26		
+                                 		ROL		R27		
+                                 		CP		R26,R22		 
+                                 		CPC		R27,R23		 
+                                 		BRCS	SEGUIR16		
+                                 		SUB		R26,R22		 
+                                 		SBC		R27,R23		 
+                                 SEGUIR16:
+                                 		ROL		R24		 
+                                 		ROL		R25		 
+                                 		DEC		R21		 
+                                 		BRNE	VOLVER16		 
+                                 		COM		R24		 
+                                 		COM		R25		 
+                                 		RET 	*/
+                                  .INCLUDE "ApartadoGraficoText.inc"
+                                 
+                                 ; Definir una cadena en la ROM, son constantes
+                                 
+                                 .cseg
+                                 .ORG 0X150
+000150 2a0a
+000151 2a2a
+000152 2020
+000153 6553
+000154 656c
+000155 6363
+000156 6f69
+000157 656e
+000158 6c20
+000159 2061
+00015a 6361
+00015b 6963
+00015c 6e6f
+00015d 6120
+00015e 7220
+00015f 6165
+000160 696c
+000161 617a
+000162 2072
+000163 2a2a
+000164 0a2a                      TABLA_ROM_MSJ: .DB 0b00001010, "***  Seleccione la accion a realizar ***", 0b00001010
+000165 310a
+000166 4d2d
+000167 736f
+000168 7274
+000169 7261
+00016a 5620
+00016b 6c61
+00016c 726f
+00016d 7365
+00016e 2e2e
+00016f 0d2e
+000170 200a
+000171 2d32
+000172 6f43
+000173 666e
+000174 6769
+000175 7275
+000176 7261
+000177 5620
+000178 6c61
+000179 726f
+00017a 7365
+00017b 2e2e
+00017c 0d2e
+00017d 330a
+00017e 442d
+00017f 7461
+000180 736f
+000181 4420
+000182 6c65
+000183 7020
+000184 6f72
+000185 6579
+000186 7463
+000187 2e6f
+000188 2e2e
+000189 0220                      TABLA_ROM_OPT: .DB 0b00001010, "1-Mostrar Valores...", 13,0b00001010 , " 2-Configurar Valores...", 13, 0b00001010, "3-Datos Del proyecto... ",2
+                                 
+00018a 2a0a
+00018b 2a2a
+00018c 4d20
+00018d 4445
+00018e 4349
+00018f 4f49
+000190 454e
+000191 2053
+000192 2a2a
+000193 0a2a                      TABLA_ROM_MSJ2: .DB 0b00001010, "*** MEDICIONES ***", 0b00001010
+000194 480a
+000195 726f
+000196 2061
+000197 6564
+000198 6c20
+000199 7361
+00019a 6d20
+00019b 6465
+00019c 6369
+00019d 6f69
+00019e 656e
+00019f 2073
+0001a0 5f5f
+0001a1 5f3a
+0001a2 0a5f
+0001a3 5420
+0001a4 6d65
+0001a5 6570
+0001a6 6172
+0001a7 7574
+0001a8 6172
+0001a9 4520
+0001aa 7478
+0001ab 7265
+0001ac 6f69
+0001ad 3a72
+0001ae 5f20
+0001af 5f20
+0001b0 200a
+0001b1 6554
+0001b2 706d
+0001b3 7265
+0001b4 7461
+0001b5 7275
+0001b6 2061
+0001b7 694c
+0001b8 6976
+0001b9 676e
+0001ba 432f
+0001bb 6d6f
+0001bc 6465
+0001bd 726f
+0001be 432f
+0001bf 636f
+0001c0 6e69
+0001c1 3a61
+0001c2 5f20
+0001c3 205f
+0001c4 200a
+0001c5 6554
+0001c6 706d
+0001c7 7265
+0001c8 7461
+0001c9 7275
+0001ca 2061
+0001cb 6f44
+0001cc 6d72
+0001cd 7469
+0001ce 726f
+0001cf 6f69
+0001d0 203a
+0001d1 5f5f
+0001d2 0a20
+0001d3 4c20
+0001d4 7a75
+0001d5 4420
+0001d6 726f
+0001d7 696d
+0001d8 6f74
+0001d9 6972
+0001da 3a6f
+0001db 5f20
+0001dc 305f
+0001dd 2020
+0001de 4c20
+0001df 7a75
+0001e0 4520
+0001e1 7478
+0001e2 7265
+0001e3 6f69
+0001e4 3a72
+0001e5 5f20
+0001e6 305f
+0001e7 2020
+0001e8 754c
+0001e9 207a
+0001ea 694c
+0001eb 6976
+0001ec 676e
+0001ed 432f
+0001ee 636f
+0001ef 6e69
+0001f0 2f61
+0001f1 6f43
+0001f2 656d
+0001f3 6f64
+0001f4 3a72
+0001f5 5f20
+0001f6 305f
+0001f7 0a20
+0001f8 3109
+0001f9 522d
+0001fa 6665
+0001fb 6572
+0001fc 6373
+0001fd 7261
+0001fe 7261
+0001ff 5620
+000200 6c61
+000201 726f
+000202 7365
+000203 2e2e
+000204 202e
+000205 2d35
+000206 4f56
+000207 564c
+000208 5245
+000209 4120
+00020a 204c
+00020b 454d
+00020c 554e
+00020d 4120
+00020e 544e
+00020f 5245
+000210 4f49
+000211 2052
+000212 0a0d
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(10): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+000213 0002                      TABLA_ROM_OPT2: .DB 0b00001010,"Hora de las mediciones __:__",0b00001010," Temperatura Exterior: _ _",0b00001010," Temperatura Living/Comedor/Cocina: __ ",0b00001010," Temperatura Dormitorio: __ ",0b00001010," Luz Dormitorio: __0  "," Luz Exterior: __0 ",000214 2a0a
+000215 2a2a
+000216 5320
+000217 6c65
+000218 6365
+000219 6963
+00021a 6e6f
+00021b 2065
+00021c 6c65
+00021d 7620
+00021e 6c61
+00021f 726f
+000220 6120
+000221 6320
+000222 6d61
+000223 6962
+000224 7261
+000225 2a20
+000226 2a2a
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(11): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+000227 000a                      " Luz Living/Cocina/Comedor: __0 ",0b00001010,"	1-Refrescarar Valores... 5-VOLVER AL MENU ANTERIOR ", 13, 10,2
+000228 090a
+000229 5409
+00022a 6d65
+00022b 6570
+00022c 6172
+00022d 7574
+00022e 6172
+00022f 2073
+000230 6e65
+000231 4720
+000232 6172
+000233 6f64
+000234 2073
+000235 6543
+000236 746e
+000237 6769
+000238 6172
+000239 6f64
+00023a 0973
+00023b 0a09                      TABLA_ROM_MSJ3: .DB 0b00001010, "*** Seleccione el valor a cambiar ***", 0b00001010
+                                 Menu2_1: .DB 0b00001010, "		Temperaturas en Grados Centigrados		", 0b00001010
+00023c 2d41
+00023d 6554
+00023e 706d
+00023f 7265
+000240 7461
+000241 7275
+000242 2061
+000243 7845
+000244 6574
+000245 6972
+000246 726f
+000247 4d20
+000248 6e69
+000249 6d69
+00024a 2061
+00024b 5f5f
+00024c 0d20
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(14): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+00024d 000a                      	;ACA VA LA TEMPERATURA EXTER
+00024e 2d42
+00024f 6554
+000250 706d
+000251 7265
+000252 7461
+000253 7275
+000254 2061
+000255 7845
+000256 6574
+000257 6972
+000258 726f
+000259 4d20
+00025a 7861
+00025b 6d69
+00025c 2061
+00025d 5f5f
+00025e 0d20
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(15): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+00025f 000a                      Menu2_2: .DB "A-Temperatura Exterior Minima __ ", 13,10
+000260 2d43
+000261 6554
+000262 706d
+000263 7265
+000264 7461
+000265 7275
+000266 2061
+000267 694c
+000268 6976
+000269 676e
+00026a 432f
+00026b 6d6f
+00026c 6465
+00026d 726f
+00026e 432f
+00026f 636f
+000270 6e69
+000271 2061
+000272 694d
+000273 696e
+000274 616d
+000275 5f20
+000276 205f
+000277 0a0d                      Menu2_3: .DB "B-Temperatura Exterior Maxima __ ", 13,10
+000278 2d44
+000279 6554
+00027a 706d
+00027b 7265
+00027c 7461
+00027d 7275
+00027e 2061
+00027f 694c
+000280 6976
+000281 676e
+000282 432f
+000283 6d6f
+000284 6465
+000285 726f
+000286 432f
+000287 636f
+000288 6e69
+000289 2061
+00028a 614d
+00028b 6978
+00028c 616d
+00028d 5f20
+00028e 0d5f
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(17): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+00028f 000a                      Menu2_4: .DB "C-Temperatura Living/Comedor/Cocina Minima __ ", 13,10
+000290 2d45
+000291 6948
+000292 7473
+000293 7265
+000294 7369
+000295 7369
+000296 6420
+000297 2065
+000298 616c
+000299 7420
+00029a 6d65
+00029b 6570
+00029c 6172
+00029d 7574
+00029e 6172
+00029f 6420
+0002a0 6c65
+0002a1 4c20
+0002a2 7669
+0002a3 6e69
+0002a4 2f67
+0002a5 6f43
+0002a6 656d
+0002a7 6f64
+0002a8 2f72
+0002a9 6f43
+0002aa 6963
+0002ab 616e
+0002ac 203a
+0002ad 5f5f
+0002ae 0a0d                      Menu2_5: .DB "D-Temperatura Living/Comedor/Cocina Maxima __", 13,10 
+0002af 2d46
+0002b0 6554
+0002b1 706d
+0002b2 7265
+0002b3 7461
+0002b4 7275
+0002b5 2061
+0002b6 6f44
+0002b7 6d72
+0002b8 7469
+0002b9 726f
+0002ba 6f69
+0002bb 4d20
+0002bc 7861
+0002bd 6d69
+0002be 2061
+0002bf 5f5f
+0002c0 0d20
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(19): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+0002c1 000a                      Menu2_6: .DB "E-Histerisis de la temperatura del Living/Comedor/Cocina: __", 13, 10
+0002c2 2d47
+0002c3 6554
+0002c4 706d
+0002c5 7265
+0002c6 7461
+0002c7 7275
+0002c8 2061
+0002c9 6f44
+0002ca 6d72
+0002cb 7469
+0002cc 726f
+0002cd 6f69
+0002ce 4d20
+0002cf 6e69
+0002d0 6d69
+0002d1 2061
+0002d2 5f5f
+0002d3 0a0d                      Menu2_7: .DB "F-Temperatura Dormitorio Maxima __ ", 13, 10
+0002d4 4820
+0002d5 482d
+0002d6 7369
+0002d7 6574
+0002d8 6972
+0002d9 6973
+0002da 2073
+0002db 6564
+0002dc 6c20
+0002dd 2061
+0002de 6574
+0002df 706d
+0002e0 7265
+0002e1 7461
+0002e2 7275
+0002e3 2061
+0002e4 6564
+0002e5 206c
+0002e6 6f44
+0002e7 6d72
+0002e8 7469
+0002e9 726f
+0002ea 6f69
+0002eb 5f20
+0002ec 0d5f
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(21): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+0002ed 000a                      Menu2_8: .DB "G-Temperatura Dormitorio Minima __", 13, 10
+0002ee 754c
+0002ef 6563
+0002f0 2073
+0002f1 6e65
+0002f2 4c20
+0002f3 7875
+0002f4 3a73
+0002f5 0a0d                      Menu2_9: .db " H-Histerisis de la temperatura del Dormitorio __", 13, 10
+                                 Menu2_A: .DB "Luces en Luxs:", 13, 10
+0002f6 2d49
+0002f7 754c
+0002f8 207a
+0002f9 7845
+0002fa 6574
+0002fb 6972
+0002fc 726f
+0002fd 4d20
+0002fe 6e69
+0002ff 6d69
+000300 2061
+000301 5f5f
+000302 2030
+000303 0a0d                      	;ACA VAN LOS VALORES DE LA LUZ
+000304 2d4a
+000305 6156
+000306 6f6c
+000307 2072
+000308 6564
+000309 6573
+00030a 6461
+00030b 206f
+00030c 6564
+00030d 6c20
+00030e 2061
+00030f 6c49
+000310 6d75
+000311 6e69
+000312 6361
+000313 6f69
+000314 206e
+000315 6e49
+000316 6574
+000317 6972
+000318 726f
+000319 5f20
+00031a 305f
+00031b 0d20
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(25): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+00031c 000a                      Menu2_B: .DB "I-Luz Exterior Minima __0 ", 13, 10
+00031d 2d4b
+00031e 6948
+00031f 7473
+000320 7265
+000321 7369
+000322 7369
+000323 6420
+000324 2065
+000325 616c
+000326 6c20
+000327 7a75
+000328 6920
+000329 746e
+00032a 7265
+00032b 6f69
+00032c 2072
+00032d 5f20
+00032e 305f
+00032f 0a0d                      Menu2_C: .DB "J-Valor deseado de la Iluminacion Interior __0 ",13, 10
+000330 7345
+000331 7571
+000332 6d65
+000333 2061
+000334 6f68
+000335 6172
+000336 6972
+000337 3a6f
+000338 0a0d                      Menu2_D: .DB "K-Histerisis de la luz interior  __0", 13, 10
+                                  Menu2_E: .DB "Esquema horario:", 13, 10
+000339 4c20
+00033a 482d
+00033b 726f
+00033c 2061
+00033d 6564
+00033e 4920
+00033f 696e
+000340 6963
+000341 206f
+000342 6564
+000343 206c
+000344 6944
+000345 2061
+000346 5f5f
+000347 5f3a
+000348 205f
+000349 0a0d                      	;ACA VAN LOS VALORES DE LOS HORARIOS
+00034a 2d4d
+00034b 6f48
+00034c 6172
+00034d 6420
+00034e 2065
+00034f 6946
+000350 206e
+000351 6564
+000352 206c
+000353 6944
+000354 2061
+000355 5f5f
+000356 5f3a
+000357 205f
+000358 0a0d                      Menu2_F: .DB " L-Hora de Inicio del Dia __:__ ", 13, 10
+000359 2d4f
+00035a 6f43
+00035b 666e
+00035c 6769
+00035d 7275
+00035e 7261
+00035f 4820
+000360 726f
+000361 2061
+000362 6341
+000363 7574
+000364 6c61
+000365 412f
+000366 7463
+000367 6175
+000368 696c
+000369 617a
+00036a 2072
+00036b 6552
+00036c 6f6c
+00036d 206a
+00036e 5f5f
+00036f 5f3a
+000370 205f
+000371 0a0d                      Menu2_10: .DB "M-Hora de Fin del Dia __:__ ", 13, 10
+000372 2d35
+000373 4f56
+000374 564c
+000375 5245
+000376 4120
+000377 204c
+000378 454d
+000379 554e
+00037a 4120
+00037b 544e
+00037c 5245
+00037d 4f49
+00037e 2052
+00037f 0a0d
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(32): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+000380 0002                      Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj __:__ ", 13, 10
+                                 Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10,2
+000381 4309
+000382 6d61
+000383 6962
+000384 6461
+000385 216f
+000386 4420
+000387 7365
+000388 6165
+000389 6320
+00038a 6d61
+00038b 6962
+00038c 7261
+00038d 6120
+00038e 676c
+00038f 206f
+000390 616d
+000391 3f73
+000392 0a0d
+000393 2d35
+000394 4f4e
+000395 202c
+000396 6f56
+000397 766c
+000398 7265
+000399 4120
+00039a 206c
+00039b 656d
+00039c 756e
+00039d 7020
+00039e 6972
+00039f 636e
+0003a0 7069
+0003a1 6c61
+0003a2 0a0d
+0003a3 2d32
+0003a4 6953
+0003a5 202c
+0003a6 6f76
+0003a7 766c
+0003a8 7265
+0003a9 6120
+0003aa 206c
+0003ab 656d
+0003ac 756e
+0003ad 6120
+0003ae 746e
+0003af 7265
+0003b0 6f69
+0003b1 2072
+0003b2 0a0d
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc(34): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
+0003b3 0002                      CambioDeValor:
+                                 .DB "	Cambiado! Desea cambiar algo mas?", 13, 10, "5-NO, Volver Al menu principal", 13, 10, "2-Si, volver al menu anterior ", 13, 10,2
+                                 
+0003b4 6e49
+0003b5 7267
+0003b6 7365
+0003b7 2065
+0003b8 6c65
+0003b9 6e20
+0003ba 6575
+0003bb 6f76
+0003bc 7620
+0003bd 6c61
+0003be 726f                       .INCLUDE "division.inc"
+0003bf 093a
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc(1): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm(11): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc' included form here
+0003c0 0002                      
+                                 ; DIVIDENDO -> R24:R25
+                                 ; DIVISOR   -> R23:R22
+                                 ; RESTO		-> R27:R26
+                                 ; COCIENTE	-> A lo largo del algoritmo se modifica el DIVIDENDO y el COCIENTE queda en R24:R25
+                                 ; R21 también es modificado en el desarrollo de la operación
+                                 /*DIVISION16:
+                                 		SUB		R26,R26		
+                                 		SUB		R27,R27		
+                                 		LDI		R21,0x11		 
+                                 		RJMP	SEGUIR16		 
+                                 VOLVER16:		
+                                 		ROL		R26		
+                                 		ROL		R27		
+                                 		CP		R26,R22		 
+                                 		CPC		R27,R23		 
+                                 		BRCS	SEGUIR16		
+                                 		SUB		R26,R22		 
+                                 		SBC		R27,R23		 
+                                 SEGUIR16:
+                                 		ROL		R24		 
+                                 		ROL		R25		 
+                                 		DEC		R21		 
+                                 		BRNE	VOLVER16		 
+                                 		COM		R24		 
+                                 		COM		R25		 
+                                 		RET 	*/
+                                  .INCLUDE "ApartadoGraficoCodes.inc"
+                                 
+                                 .CSEG
+                                 MAIN:
+0003c1 e0f2                      	LDI ZH, HIGH(TABLA_ROM_MSJ <<1)	;Apunto hacia la tabla con MENSAJE
+0003c2 eae0                      	LDI ZL, LOW(TABLA_ROM_MSJ <<1)
+                                 
+                                 
+                                 LOOP:
+0003c3 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0003c4 3012                      	CPI R17, 2	;Se compara con el caracter final
+0003c5 f041                      	BREQ END_MESSAGE	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT:
+0003c6 9100 00c0                 	LDS R16,UCSR0A
+0003c8 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0003c9 cffc                      	RJMP TRANSMIT		;Si no lo esta, se espera
+0003ca 9310 00c6                 	STS UDR0,R17	
+0003cc cff6                      	RJMP LOOP	
+0003cd 9508                      	RET
+                                 END_MESSAGE:
+                                 
+                                 
+                                 READ:
+0003ce 9100 00c0                 	LDS R16,UCSR0A  
+0003d0 ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
+0003d1 cffc                      	RJMP READ			
+                                 OPTIONS:                
+0003d2 9120 00c6                 	LDS R18,UDR0        ;Leo el dato recibido y comparo
+0003d4 3321                      	CPI R18, 0x31			
+0003d5 f129                      	BREQ ENCENDER_UNO		
+0003d6 3322                      	CPI R18, 0x32			
+0003d7 f129                      	BREQ ENCENDER_DOS		
+0003d8 3323                      	CPI R18, 0x33			
+0003d9 f129                      	BREQ ENCENDER_TRES	
+0003da 3324                      	CPI R18, 0x34			
+0003db f129                      	BREQ ENCENDER_CUATRO	
+0003dc 3325                      	CPI R18, 0x35			
+0003dd f319                      	BREQ MAIN
+0003de 3421                      	CPI R18,'A'
+0003df f119                      	BREQ PresionoA
+0003e0 3422                      	CPI R18,'B'
+0003e1 f119                      	BREQ PresionoB
+0003e2 3423                      	CPI R18,'C'
+0003e3 f119                      	BREQ PresionoC
+0003e4 3424                      	CPI R18,'D'
+0003e5 f119                      	BREQ PresionoD
+0003e6 3425                      	CPI R18,'E'
+0003e7 f119                      	BREQ PresionoE
+0003e8 3426                      	CPI R18,'F'
+0003e9 f119                      	BREQ PresionoF
+0003ea 3427                      	CPI R18,'G'
+0003eb f119                      	BREQ PresionoG
+0003ec 3428                      	CPI R18,'H'
+0003ed f119                      	BREQ PresionoH
+0003ee 3429                      	CPI R18,'I'
+0003ef f119                      	BREQ PresionoI
+0003f0 342a                      	CPI R18,'J'
+0003f1 f119                      	BREQ PresionoJ
+0003f2 342b                      	CPI R18,'K'
+0003f3 f119                      	BREQ PresionoK
+0003f4 342d                      	CPI R18,'M'
+0003f5 f119                      	BREQ PresionoM
+0003f6 342c                      	CPI R18,'L'
+0003f7 f119                      	BREQ PresionoL
+0003f8 342f                      	CPI R18,'O'
+0003f9 f119                      	BREQ PresionoO
+0003fa cfd3                      	RJMP READ			
+                                 	ENCENDER_UNO:
+0003fb 940c 0421                 	JMP ENCENDER_UNOLEJOS	
+                                 	ENCENDER_DOS:
+0003fd 940c 0431                 	JMP ENCENDER_DOSLEJOS
+                                 	ENCENDER_TRES:
+0003ff 940c 0439                 	JMP ENCENDER_TRESLejos
+                                 	ENCENDER_CUATRO:
+000401 940c 042d                 	JMP ENCENDER_CUATROLEJOS
+                                 	PresionoA:
+000403 940c 0441                 	JMP PresionoALejos
+                                 	PresionoB:
+000405 940c 0464                 	JMP PresionoBLejos
+                                 	PresionoC:
+000407 940c 0485                 	JMP PresionoCLejos
+                                 	PresionoD:
+000409 940c 04a6                 	JMP PresionoDLejos
+                                 	PresionoE:
+00040b 940c 04c7                 	JMP PresionoELejos
+                                 	PresionoF:
+00040d 940c 04e8                 	JMP PresionoFLejos
+                                 	PresionoG:
+00040f 940c 0509                 	JMP PresionoGLejos
+                                 	PresionoH:
+000411 940c 052a                 	JMP PresionoHLejos
+                                 	PresionoI:
+000413 940c 054b                 	JMP PresionoILejos
+                                 	PresionoJ:
+000415 940c 056c                 	JMP PresionoJLejos
+                                 	PresionoK:
+000417 940c 058d                 	JMP PresionoKLejos
+                                 	PresionoM:
+000419 940c 05ae                 	JMP PresionoMLejos
+                                 	PresionoL:
+00041b 940c 05cf                 	JMP PresionoLLejos
+                                 	PresionoO:
+00041d 940c 05f0                 	JMP PresionoOLejos
+                                 	END_MESSAGE1:
+00041f 940c 03d2                 	JMP Options
+                                 ENCENDER_UNOLEJOS:	
+000421 e0f3                      	LDI ZH, HIGH(TABLA_ROM_MSJ2 <<1)	;Apunto hacia la tabla con MENSAJE
+000422 e1e4                      	LDI ZL, LOW(TABLA_ROM_MSJ2 <<1)
+                                 	
+                                 LOOP_1:
+000423 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000424 3012                      	CPI R17, 2	;Se compara con el caracter final
+000425 f3c9                      	BREQ END_MESSAGE1	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT1:
+000426 9100 00c0                 	LDS R16,UCSR0A
+000428 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000429 cffc                      	RJMP TRANSMIT1		;Si no lo esta, se espera
+00042a 9310 00c6                 	STS UDR0,R17	
+00042c cff6                      	RJMP LOOP_1	
+                                 	
+                                 
+                                 ENCENDER_CUATROLEJOS:
+00042d 940c 0629                 	JMP ENCENDER4		
+00042f 940c 062c                 	JMP APAGAR4
+                                 
+                                 ENCENDER_DOSLEJOS:
+000431 e0f4                          LDI ZH, HIGH(TABLA_ROM_MSJ3 <<1)	;Apunto hacia la tabla con MENSAJE
+000432 e2e8                      	LDI ZL, LOW(TABLA_ROM_MSJ3 <<1)
+000433 940e 03c3                 	CALL LOOP
+000435 c001                      	RJMP ENCENDER2		
+000436 c001                      	RJMP APAGAR2
+                                 ENCENDER2:
+000437 cf96                      	RJMP READ
+                                 APAGAR2:
+000438 cf95                      	RJMP READ
+                                 
+                                 ENCENDER_TRESLejos:	
+000439 c001                      	RJMP ENCENDER3			
+00043a c003                      	RJMP APAGAR3
+                                 ENCENDER3:
+00043b 940e 0633                 	CALL DELAY
+00043d cf90                      	RJMP READ
+                                 APAGAR3:
+00043e 940e 0633                 	CALL DELAY
+000440 cf8d                      	RJMP READ
+                                 PresionoALejos:
+000441 e0f7                      LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000442 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+000443 c000                      	RJMP LOOPA
+                                 
+                                 LOOPA:
+000444 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000445 3012                      	CPI R17, 2	;Se compara con el caracter final
+000446 f039                      	BREQ END_MESSAGE2A	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2:
+000447 9100 00c0                 	LDS R16,UCSR0A
+000449 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+00044a cffc                      	RJMP TRANSMIT2		;Si no lo esta, se espera
+00044b 9310 00c6                 	STS UDR0,R17	
+00044d cff6                      	RJMP LOOPA
+                                 	
+                                 END_MESSAGE2A: ;despues de mandar ese adorno:
+                                 READPresionoAL: ; leeemos
+00044e 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000450 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000451 cffc                          RJMP READPresionoAL   ; Si no se ha recibido, espera.
+000452 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000454 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+                                 ; Configura Z para apuntar a la dirección de memoria 0x0157.
+000456 9250 0157                 STS 0x0157, R5 ; Almacena el valor de R5 en la dirección de memoria 0x0157.
+                                 
+                                 
+                                 READPresionoAH:
+000458 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+00045a ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00045b cffc                          RJMP READPresionoAH   ; Si no se ha recibido, espera.
+00045c 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00045e 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000460 9250 0158                 STS 0x0158, R5 ; Almacena el valor de R5 en la dirección de memoria 0x0157.
+                                 
+000462 940c 0615                 JMP MensajeFinalDeCambiodevalor
+                                 PresionoBLejos:
+000464 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000465 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+000466 c000                      	RJMP LOOP3
+                                 
+                                 LOOP3:
+000467 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000468 3012                      	CPI R17, 2	;Se compara con el caracter final
+000469 f039                      	BREQ END_MESSAGE2B	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT_A:
+00046a 9100 00c0                 	LDS R16,UCSR0A
+00046c ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+00046d cffc                      	RJMP TRANSMIT_A		;Si no lo esta, se espera
+00046e 9310 00c6                 	STS UDR0,R17	
+000470 cff6                      	RJMP LOOP3	
+                                 END_MESSAGE2B:	
+                                  ;despues de mandar ese adorno:
+                                 READPresionoBL: ; leeemos
+000471 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000473 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000474 cffc                          RJMP READPresionoBL   ; Si no se ha recibido, espera.
+000475 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000477 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000479 8258                      ST Y, R5
+                                 READPresionoBH:
+00047a 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+00047c ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00047d cffc                          RJMP READPresionoBH   ; Si no se ha recibido, espera.
+00047e 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000480 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000482 8258                      	ST Y, R5
+000483 940c 0615                 	JMP MensajeFinalDeCambiodevalor
+                                 	PresionoCLejos:
+000485 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000486 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+000487 c000                      	RJMP LOOPC
+                                 
+                                 LOOPC:
+000488 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000489 3012                      	CPI R17, 2	;Se compara con el caracter final
+00048a f039                      	BREQ END_MESSAGE2C	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2C:
+00048b 9100 00c0                 	LDS R16,UCSR0A
+00048d ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+00048e cfb8                      	RJMP TRANSMIT2		;Si no lo esta, se espera
+00048f 9310 00c6                 	STS UDR0,R17	
+000491 cff6                      	RJMP LOOPC
+                                 	
+                                 END_MESSAGE2C: ;despues de mandar ese adorno:
+                                 READPresionoCL: ; leeemos
+000492 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000494 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000495 cffc                          RJMP READPresionoCL   ; Si no se ha recibido, espera.
+000496 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000498 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+00049a 8258                      ST Y, R5
+                                 READPresionoCH:
+00049b 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+00049d ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00049e cfb9                          RJMP READPresionoAH   ; Si no se ha recibido, espera.
+00049f 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004a1 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0004a3 8258                      ST Y, R5
+0004a4 940c 0615                 JMP MensajeFinalDeCambiodevalor
+                                 PresionoDLejos:
+0004a6 e0f7                      LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0004a7 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+0004a8 c000                      	RJMP LOOPD
+                                 
+                                 LOOPD:
+0004a9 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0004aa 3012                      	CPI R17, 2	;Se compara con el caracter final
+0004ab f039                      	BREQ END_MESSAGE2D	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMITD:
+0004ac 9100 00c0                 	LDS R16,UCSR0A
+0004ae ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0004af cffc                      	RJMP TRANSMITD		;Si no lo esta, se espera
+0004b0 9310 00c6                 	STS UDR0,R17	
+0004b2 cff6                      	RJMP LOOPD
+                                 	
+                                 END_MESSAGE2D: ;despues de mandar ese adorno:
+                                 READPresionoDL: ; leeemos
+0004b3 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0004b5 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004b6 cf97                          RJMP READPresionoAL   ; Si no se ha recibido, espera.
+0004b7 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004b9 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0004bb 8258                      ST Y, R5
+                                 READPresionoDH:
+0004bc 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0004be ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004bf cf98                          RJMP READPresionoAH   ; Si no se ha recibido, espera.
+0004c0 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004c2 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0004c4 8258                      ST Y, R5
+0004c5 940c 0615                 JMP MensajeFinalDeCambiodevalor
+                                 PresionoELejos:
+0004c7 e0f7                      LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0004c8 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+0004c9 c000                      	RJMP LOOPE
+                                 
+                                 LOOPE:
+0004ca 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0004cb 3012                      	CPI R17, 2	;Se compara con el caracter final
+0004cc f039                      	BREQ END_MESSAGE2E	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2E:
+0004cd 9100 00c0                 	LDS R16,UCSR0A
+0004cf ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0004d0 cffc                      	RJMP TRANSMIT2E		;Si no lo esta, se espera
+0004d1 9310 00c6                 	STS UDR0,R17	
+0004d3 cff6                      	RJMP LOOPE
+                                 	
+                                 END_MESSAGE2E: ;despues de mandar ese adorno:
+                                 READPresionoEL: ; leeemos
+0004d4 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0004d6 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004d7 cffc                          RJMP READPresionoEL   ; Si no se ha recibido, espera.
+0004d8 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004da 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0004dc 8258                      ST Y, R5
+                                 READPresionoEH:
+0004dd 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0004df ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004e0 cffc                          RJMP READPresionoEH   ; Si no se ha recibido, espera.
+0004e1 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004e3 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0004e5 8258                      ST Y, R5
+0004e6 940c 0615                 JMP MensajeFinalDeCambiodevalor
+                                 PresionoFLejos:
+0004e8 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0004e9 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+0004ea c000                      	RJMP LOOPF
+                                 
+                                 LOOPF:
+0004eb 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0004ec 3012                      	CPI R17, 2	;Se compara con el caracter final
+0004ed f039                      	BREQ END_MESSAGE2F	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMITF:
+0004ee 9100 00c0                 	LDS R16,UCSR0A
+0004f0 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0004f1 cffc                      	RJMP TRANSMITF		;Si no lo esta, se espera
+0004f2 9310 00c6                 	STS UDR0,R17	
+0004f4 cff6                      	RJMP LOOPF
+                                 	
+                                 END_MESSAGE2F: ;despues de mandar ese adorno:
+                                 READPresionoFL: ; leeemos
+0004f5 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0004f7 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004f8 cf55                          RJMP READPresionoAL   ; Si no se ha recibido, espera.
+0004f9 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004fb 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0004fd 8258                      ST Y, R5
+                                 READPresionoFH:
+0004fe 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000500 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000501 cffc                          RJMP READPresionoFH   ; Si no se ha recibido, espera.
+000502 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000504 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000506 8258                      ST Y, R5
+000507 940c 0615                 JMP MensajeFinalDeCambiodevalor
+                                 PresionoGLejos:
+000509 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+00050a e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+00050b c000                      	RJMP LOOPG
+                                 
+                                 LOOPG:
+00050c 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00050d 3012                      	CPI R17, 2	;Se compara con el caracter final
+00050e f039                      	BREQ END_MESSAGE2G	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMITG:
+00050f 9100 00c0                 	LDS R16,UCSR0A
+000511 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000512 cffc                      	RJMP TRANSMITG		;Si no lo esta, se espera
+000513 9310 00c6                 	STS UDR0,R17	
+000515 cff6                      	RJMP LOOPG
+                                 	
+                                 END_MESSAGE2G: ;despues de mandar ese adorno:
+                                 READPresionoGL: ; leeemos
+000516 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000518 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000519 cffc                          RJMP READPresionoGL   ; Si no se ha recibido, espera.
+00051a 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00051c 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+00051e 8258                      ST Y, R5
+                                 READPresionoGH:
+00051f 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000521 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000522 cffc                          RJMP READPresionoGH   ; Si no se ha recibido, espera.
+000523 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000525 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000527 8258                      ST Y, R5
+000528 940c 0615                 JMP MensajeFinalDeCambiodevalor
+                                 PresionoHLejos:
+00052a e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+00052b e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+00052c c000                      	RJMP LOOPH
+                                 
+                                 LOOPH:
+00052d 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00052e 3012                      	CPI R17, 2	;Se compara con el caracter final
+00052f f039                      	BREQ END_MESSAGE2H	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMITH:
+000530 9100 00c0                 	LDS R16,UCSR0A
+000532 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000533 cffc                      	RJMP TRANSMITH		;Si no lo esta, se espera
+000534 9310 00c6                 	STS UDR0,R17	
+000536 cff6                      	RJMP LOOPH
+                                 	
+                                 END_MESSAGE2H: ;despues de mandar ese adorno:
+                                 READPresionoHL: ; leeemos
+000537 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000539 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00053a cffc                          RJMP READPresionoHL   ; Si no se ha recibido, espera.
+00053b 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00053d 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+00053f 8258                      ST Y, R5
+                                 READPresionoHH:
+000540 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000542 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000543 cffc                          RJMP READPresionoHH   ; Si no se ha recibido, espera.
+000544 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000546 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000548 8258                      ST Y, R5
+000549 940c 0615                 JMP MensajeFinalDeCambiodevalor
+                                 PresionoILejos:
+00054b e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+00054c e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+00054d c000                      	RJMP LOOPI
+                                 
+                                 LOOPI:
+00054e 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00054f 3012                      	CPI R17, 2	;Se compara con el caracter final
+000550 f039                      	BREQ END_MESSAGE2I	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2I:
+000551 9100 00c0                 	LDS R16,UCSR0A
+000553 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000554 cffc                      	RJMP TRANSMIT2I		;Si no lo esta, se espera
+000555 9310 00c6                 	STS UDR0,R17	
+000557 cff6                      	RJMP LOOPI
+                                 	
+                                 END_MESSAGE2I: ;despues de mandar ese adorno:
+                                 READPresionoIL: ; leeemos
+000558 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+00055a ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00055b cffc                          RJMP READPresionoIL   ; Si no se ha recibido, espera.
+00055c 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00055e 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000560 8258                      	ST Y, R5
+                                 READPresionoIH:
+000561 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000563 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000564 cffc                          RJMP READPresionoIH   ; Si no se ha recibido, espera.
+000565 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000567 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000569 8258                      	ST Y, R5
+00056a 940c 0615                 	JMP MensajeFinalDeCambiodevalor
+                                 PresionoJLejos:
+00056c e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+00056d e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+00056e c000                      	RJMP LOOPJ
+                                 LOOPJ:
+00056f 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000570 3012                      	CPI R17, 2	;Se compara con el caracter final
+000571 f039                      	BREQ END_MESSAGE2J	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2J:
+000572 9100 00c0                 	LDS R16,UCSR0A
+000574 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000575 cffc                      	RJMP TRANSMIT2J		;Si no lo esta, se espera
+000576 9310 00c6                 	STS UDR0,R17	
+000578 cff6                      	RJMP LOOPJ
+                                 	
+                                 END_MESSAGE2J: ;despues de mandar ese adorno:
+                                 READPresionoJL: ; leeemos
+000579 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+00057b ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00057c cffc                          RJMP READPresionoJL   ; Si no se ha recibido, espera.
+00057d 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00057f 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000581 8258                      	ST Y, R5
+                                 READPresionoJH:
+000582 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000584 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000585 cffc                          RJMP READPresionoJH   ; Si no se ha recibido, espera.
+000586 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000588 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+00058a 8258                      	ST Y, R5
+00058b 940c 0615                 	JMP MensajeFinalDeCambiodevalor
+                                 PresionoKLejos:
+00058d e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+00058e e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+00058f cfbe                      	RJMP LOOPI
+                                 
+                                 LOOPK:
+000590 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000591 3012                      	CPI R17, 2	;Se compara con el caracter final
+000592 f039                      	BREQ END_MESSAGE2K	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2K:
+000593 9100 00c0                 	LDS R16,UCSR0A
+000595 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000596 cffc                      	RJMP TRANSMIT2K		;Si no lo esta, se espera
+000597 9310 00c6                 	STS UDR0,R17	
+000599 cff6                      	RJMP LOOPK
+                                 	
+                                 END_MESSAGE2K: ;despues de mandar ese adorno:
+                                 READPresionoKL: ; leeemos
+00059a 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+00059c ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00059d cffc                          RJMP READPresionoKL   ; Si no se ha recibido, espera.
+00059e 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005a0 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0005a2 8258                      	ST Y, R5
+                                 READPresionoKH:
+0005a3 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0005a5 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005a6 cffc                          RJMP READPresionoKH   ; Si no se ha recibido, espera.
+0005a7 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005a9 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0005ab 8258                      	ST Y, R5
+0005ac 940c 0615                 	JMP MensajeFinalDeCambiodevalor
+                                 PresionoMLejos:
+0005ae e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0005af e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+0005b0 c000                      	RJMP LOOPM
+                                 
+                                 LOOPM:
+0005b1 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0005b2 3012                      	CPI R17, 2	;Se compara con el caracter final
+0005b3 f039                      	BREQ END_MESSAGE2M	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2M:
+0005b4 9100 00c0                 	LDS R16,UCSR0A
+0005b6 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0005b7 cffc                      	RJMP TRANSMIT2M		;Si no lo esta, se espera
+0005b8 9310 00c6                 	STS UDR0,R17	
+0005ba cff6                      	RJMP LOOPM
+                                 	
+                                 END_MESSAGE2M: ;despues de mandar ese adorno:
+                                 READPresionoML: ; leeemos
+0005bb 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0005bd ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005be cffc                          RJMP READPresionoML   ; Si no se ha recibido, espera.
+0005bf 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005c1 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0005c3 8258                      	ST Y, R5
+                                 READPresionoMH:
+0005c4 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0005c6 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005c7 cffc                          RJMP READPresionoMH   ; Si no se ha recibido, espera.
+0005c8 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005ca 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0005cc 8258                      	ST Y, R5
+0005cd 940c 0615                 	JMP MensajeFinalDeCambiodevalor
+                                 PresionoLLejos:
+0005cf e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0005d0 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+0005d1 c000                      	RJMP LOOPL
+                                 
+                                 LOOPL:
+0005d2 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0005d3 3012                      	CPI R17, 2	;Se compara con el caracter final
+0005d4 f039                      	BREQ END_MESSAGE2L	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2L:
+0005d5 9100 00c0                 	LDS R16,UCSR0A
+0005d7 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0005d8 cffc                      	RJMP TRANSMIT2L		;Si no lo esta, se espera
+0005d9 9310 00c6                 	STS UDR0,R17	
+0005db cff6                      	RJMP LOOPL
+                                 	
+                                 END_MESSAGE2L: ;despues de mandar ese adorno:
+                                 READPresionoLL: ; leeemos
+0005dc 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0005de ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005df cffc                          RJMP READPresionoLL   ; Si no se ha recibido, espera.
+0005e0 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005e2 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0005e4 8258                      	ST Y, R5
+                                 READPresionoLH:
+0005e5 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0005e7 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005e8 cffc                          RJMP READPresionoLH   ; Si no se ha recibido, espera.
+0005e9 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005eb 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+0005ed 8258                      	ST Y, R5
+0005ee 940c 0615                 	JMP MensajeFinalDeCambiodevalor
+                                 PresionoOLejos:
+0005f0 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0005f1 e6e8                      	LDI ZL, LOW(CTEXTO <<1)
+0005f2 c000                      	RJMP LOOPO
+                                 
+                                 LOOPO:
+0005f3 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0005f4 3012                      	CPI R17, 2	;Se compara con el caracter final
+0005f5 f039                      	BREQ END_MESSAGE2O	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT2O:
+0005f6 9100 00c0                 	LDS R16,UCSR0A
+0005f8 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0005f9 cffc                      	RJMP TRANSMIT2O		;Si no lo esta, se espera
+0005fa 9310 00c6                 	STS UDR0,R17	
+0005fc cff6                      	RJMP LOOPO
+                                 	
+                                 END_MESSAGE2O: ;despues de mandar ese adorno:
+                                 READPresionoOL: ; leeemos
+0005fd 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0005ff ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000600 cf57                          RJMP READPresionoIL   ; Si no se ha recibido, espera.
+000601 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000603 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+                                 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+000605 8258                      	ST Y, R5
+                                 READPresionoOH:
+000606 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000608 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000609 cffc                          RJMP READPresionoOH   ; Si no se ha recibido, espera.
+00060a 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00060c 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+                                 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
+                                 ; Guardar R5 en la dirección de memoria 0x312.
+00060e e0f3                      	LDI ZH, 0x03    ; Carga el byte alto (0x03) en el registro ZH
+00060f e7e8                          LDI ZL, 0x78    ; Carga el byte bajo (0x78) en el registro ZL
+000610 2c05                      	MOV R0,R5
+000611 2c15                      	MOV R1,R5
+000612 95e8                      	SPM
+                                 
+000613 940c 0615                 	JMP MensajeFinalDeCambiodevalor
+                                 END_MESSAGE2:
+                                 MensajeFinalDeCambiodevalor:
+000615 e0f7                      	LDI ZH, HIGH(CambioDeValor <<1)	;Apunto hacia la tabla con MENSAJEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+000616 e0e2                      	LDI ZL, LOW(CambioDeValor <<1)
+000617 c000                      	RJMP LOOP4
+                                 
+                                 LOOP4:
+000618 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000619 3012                      	CPI R17, 2	;Se compara con el caracter final
+00061a f091                      	BREQ END_MESSAGE3	;Si termino la lectura se manda el siguiente mensaje
+                                 
+                                 TRANSMIT3:
+00061b 9100 00c0                 	LDS R16,UCSR0A
+00061d ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+00061e cffc                      	RJMP TRANSMIT3		;Si no lo esta, se espera
+00061f 9310 00c6                 	STS UDR0,R17	
+000621 cff6                      	RJMP LOOP4
+000622 9508                      	RET
+                                 READ4:
+000623 9100 00c0                 	LDS R16,UCSR0A  
+000625 ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
+000626 cffc                      	RJMP READ4			
+000627 940c 03d2                 	JMP Options
+                                 
+                                 ENCENDER4:
+000629 940e 0633                     CALL DELAY
+00062b cda2                      	RJMP READ
+                                 APAGAR4:
+00062c cda1                      	RJMP READ
+                                 	END_MESSAGE3:
+00062d 9100 00c0                 	LDS R16,UCSR0A  
+00062f ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
+000630 cffc                      	RJMP END_MESSAGE3			
+000631 940c 03d2                 	JMP Options
+                                 
+                                 DELAY:
+                                 ; Delay 60 000 cycles
+                                 ; 3.75ms at 16.0 MHz
+000633 e34c                         LDI  R20, 60
+000634 9508                         RET
+                                 
+                                 .INCLUDE "Configuraciones.inc"
+                                 
+                                 ;CONFIGURACION DE LA INTERRUPCION EXTERNA (cruce por cero) - CONFIGURACION DE LA INTERRUPCION EXTERNA (pulsador SET)
+                                 	CONFIGURACION_INT0:
+                                 	   LDI  R16,(1<<ISC01)|(1<<ISC00)|(0<<ISC11)|(0<<ISC10)
+                                 	   STS  EICRA,R16						; flanco ascendente INT0, nivel bajo INT1
+                                 	   LDI  R16,(1<<INT0)|(1<<INT1)
+                                 	   OUT  EIMSK,R16						;activo la INT0 y la INT1
+                                 	   SEI									;habilitacion general de interrupciones
+                                 	RET
+                                 	
+                                 ;CONFIGURACION DEL PERIFERICO UART
+                                 	CONFIGURACION_UART:
+                                 	   ;Configuracion de la velocidad a 9.600db
+                                 	   LDI  R16,103
+                                 	   STS  UBRR0L,R16
+                                 	   LDI  R16,0
+                                 	   STS  UBRR0H,R16
+                                 	   ;Configuracion del registro A
+                                 	   LDI  R16,0
+                                 	   STS  UCSR0A,R16 
+                                 	   ;Configuracion del registro B
+                                 	   LDI  R16,(1<<TXEN0)|(1<<RXEN0)|(1<<RXCIE0)
+                                 	   STS  UCSR0B,R16
+                                 	   ;Configuracion del registro C 
+                                 	   LDI  R16,(1<<UCSZ01)|(1<<UCSZ00); 8 bit
+                                 	   STS  UCSR0C,R16
+                                 	RET
+                                 
+                                 ;CONGIGURACION VALORES INICIALES DEL RELOJ
+                                 	CONFIGURACION_VALORES_INICIALES_RELOJ:
+                                        LDI  R20,0
+                                 	   STS  CONTADOR_DE_PULSOS,R20
+                                 	   LDI  R17,0
+                                 	   STS  SEGUNDOS,R17
+                                 	   STS  MINUTOS,R17
+                                 	   STS  HORAS,R17
+                                 	   LDI  R17,'R'
+                                 	   STS  CARACTER_ENTRADA_UART,R17
+                                 	   LDI  R17,0
+                                 	   STS  BOTON_DE_SETEO,R17
+                                 	   LDI  R17,0
+                                 	   STS  ALARMA,R17
+                                 	   LDI  R17,1
+                                 	   STS  TIEMPO_DEL_LED,R17
+                                 	RET
+                                 
+                                 ;CONFIGURACION DEL ADC
+                                 	CONFIGURACION_ADC:
+                                 	   LDI	R16,(1<<REFS0)|(1<<MUX0)|(1<<ADLAR);tension de referencia de alimentacion / selecionamos como entrada ADC1 / resolucion del conversor (8 bits)
+                                 	   STS	ADMUX,R16
+                                 	   LDI	R16,(1<<ADEN)|(1<<ADSC)|(1<<ADPS2)|(1<<ADPS1);encendemos el periferico / inicio de conversion (manual) / prescaler en 64    
+                                 	   STS	ADCSRA,R16
+                                        LDI	R16,0
+                                 	   STS	ADCSRB,R16
+                                 	   LDI	R16,(1<<ADC1D);desactiva el buffer digital del pin que se esta utilizando
+                                 	   STS	DIDR0,R16
+                                 	RET
+                                 
+                                 ;CONFIGURACION SETEO RELOJ	 
+                                 	CONFIGURACION_SETEO_RELOJ:
+                                       LDI  R16,(1<<PORTD3)
+                                 	  OUT  PORTD,R16; configuro como entrada el pulsador SETEAR
+                                 	  LDI  R16,(1<<PORTB0)
+                                 	  OUT  PORTB,R16; configuro como entrada el pulsador SUBIR
+                                 	  LDI  R16,(1<<PORTB1)
+                                 	  OUT  PORTB,R16; configuro como entrada el pulsador BAJAR
+                                 	  LDI  R16,(1<<DDB5);led alarma
+                                 	  OUT  DDRB,R16
+                                 	RET
+                                 
+                                 ;CONFIGURACION TIMER 1
+                                 	CONFIGURACION_TIMER1:
+                                 	   LDI  R16,0
+                                 	   STS  TCCR1A,R16 ;modo normal
+                                 	   LDI  R16,(1<<CS12)
+                                 	   STS  TCCR1B,R16 ;prescaler 256
+                                 	   LDI  R16,0
+                                 	   STS  TCCR1C,R16
+                                 	   LDI  R16,0
+                                 	   STS  TIMSK1,R16
+                                 	   LDI  R16,HIGH(3036)
+                                 	   STS  TCNT1H,R16
+                                 	   LDI  R16,LOW(3036)
+                                 	   STS  TCNT1L,R16
+                                 	RET
+                                 
+                                 ;Configuraciones Seteo de H M S
+                                 
+                                 	  UART_RELOJ:
+                                 	  LDI R20, 'R'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'e'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'l'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'o'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'j'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, ':'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, ' '
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, ' '
+                                 	  RET
+                                 
+                                 	  UART_MOSTRAR_ALARMA:
+                                 	  LDI R20, 'A'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'l'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'a'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'r'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'm'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'a'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, ':'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, ' '
+                                 	  CALL ESPERAR_TX
+                                 	  RET
+                                 
+                                 	 UART_MOSTRAR_SET:
+                                 	 LDI R20, 'S'
+                                 	 CALL ESPERAR_TX
+                                 	 LDI R20, 'e'
+                                 	 CALL ESPERAR_TX
+                                 	 LDI R20, 't'
+                                 	 CALL ESPERAR_TX
+                                 	 LDI R20, ' '
+                                 	 CALL ESPERAR_TX
+                                 	 RET
+                                 
+                                 
+                                 	;Configuracion Inicio SDIV
+                                 	  UART_MOSTRAR_INICIO:
+                                 	  LDI R20, 'R'
+                                 	  CALL ESPERAR_TX	  	
+                                 	  LDI R20, 'e'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'l'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'o'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'j'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, ' '
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'S'
+                                       CALL ESPERAR_TX
+                                 	  LDI R20, 'D'
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, ' '
+                                 	  CALL ESPERAR_TX
+                                 	  LDI R20, 'I'
+                                 	  CALL ESPERAR_TX
+                                   	  LDI R20, 'V'
+                                 	  CALL ESPERAR_TX
+                                 	  
+                                   	  LDI R20, 13
+                                 	  CALL ESPERAR_TX
+                                 	  RET
+                                 .INCLUDE "VariablesEnSram.inc"
+                                 
+                                 ; Definir las variables que usaremos en la RAM
+                                 ;=================================================
+                                 ;|	   INCIO DE LAS VARIABLES DE MEDICIONES      |
+                                 ;=================================================
+                                 .dseg
+                                 .org 0x0100
+000100                           DecenaHora: .byte 1 ;org 0x101
+000101                           UnidadHora: .byte 1	;org 0x102
+000102                           DecenaMinuto: .byte 1 ;org 0x103
+000103                           UnidadMinuto: .byte 1 ;org 0x104
+000104                           SeparadorMinuto: .byte 1 ;org 0x105
+000105                           DecenaSegundo: .byte 1 ;org 0x106
+000106                           UnidadSegundo: .byte 1 ;org 0x107
+000107                           C50GesimoDeSegundoo: .byte 2 ;org 0x108
+000109                           MedTemperaturaExterior: .byte 2 ;org 0x110
+00010b                           MedTemperaturaLCC: .byte 2 ;org 0x112
+00010d                           MedTemperaturaDormitorio: .byte 2 ;org 0x114
+00010f                           MedLuzExterior: .byte 2 ;org 0x116
+                                 
+                                 
+                                 ;=================================================
+                                 ;|	  INCIO DE LAS VARIABLES DE CONFIGURACIÓN    |
+                                 ;=================================================
+                                 .org 0x0170
+                                 
+000170                           TemperaturaExteriorMinimaH: .byte 2 ;org 0x172
+000172                           TemperaturaExteriorMinimaL: .byte 2 ;org 0x174
+000174                           Separador1: .BYTE 2 ;org 0x176
+000176                           TemperaturaExteriorMaximaH: .byte 2;org 0x178
+000178                           TemperaturaExteriorMaximaL: .byte 2 ;org 0x180
+00017a                           Separador2: .BYTE 2 ;org 0x182
+00017c                           TemperaturaLCCMinimaH:.byte 2 ;org 0x184
+00017e                           TemperaturaLCCMinimaL:.byte 2 ;org 0x186
+000180                           Separador3: .BYTE 2 ;org 0x188
+000182                           TemperaturaLCCMaximaH: .byte 2 ;org 0x190 
+000184                           TemperaturaLCCMaximaL: .byte 2 ;org 0x192
+000186                           Separador4: .byte 2 ;org 0x194
+                                 /*
+                                 Menu2_6: .DB "E-Histerisis de la temperatura del Living/Comedor/Cocina: __", 13, 10
+                                 Menu2_7: .DB "F-Temperatura Dormitorio Maxima __ ", 13, 10
+                                 Menu2_8: .DB "G-Temperatura Dormitorio Minima __", 13, 10
+                                 Menu2_9: .db " H-Histerisis de la temperatura del Dormitorio __", 13, 10
+                                 Menu2_A: .DB "Luces en Luxs:", 13, 10
+                                 	;ACA VAN LOS VALORES DE LA LUZ
+                                 Menu2_B: .DB "I-Luz Exterior Minima __0 ", 13, 10
+                                 Menu2_C: .DB "J-Valor deseado de la Iluminacion Interior __0 ",13, 10
+                                 Menu2_D: .DB "K-Histerisis de la luz interior  __0", 13, 10
+                                  Menu2_E: .DB "Esquema horario:", 13, 10
+                                 	;ACA VAN LOS VALORES DE LOS HORARIOS
+                                 Menu2_F: .DB " L-Hora de Inicio del Dia __:__ ", 13, 10
+                                 Menu2_10: .DB "M-Hora de Fin del Dia __:__ ", 13, 10
+                                 Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj __:__ ", 13, 10
+                                 Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10,2
+                                 
+                                 
+                                 ;Esto lo tenemos que ver si lo dejamos o no, sólo prende leds 
+                                 .cseg
+                                 .ORG 0x00
+000000 c000                      RJMP CONFIGURAR
+                                 
+                                 CONFIGURAR:
+000001 e008                          LDI R16, HIGH(RAMEND)	
+000002 bf0e                      	OUT SPH, R16
+000003 ef0f                      	LDI R16, LOW(RAMEND)
+000004 bf0d                      	OUT SPL, R16
+000005 ef0f                      	LDI R16, 0xFF
+000006 e10c                      	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
+000007 9300 00c1                 	STS UCSR0B, R16
+000009 e004                      	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
+00000a 9300 00c2                 	STS UCSR0C, R16
+00000c e607                      	LDI R16, 103	; Baud Rate = 9600
+00000d 9300 00c4                 	STS UBRR0L, R16
+00000f c3b1                      	RJMP MAIN
+
+
+RESOURCE USE INFORMATION
+------------------------
+
+Notice:
+The register and instruction counts are symbol table hit counts,
+and hence implicitly used resources are not counted, eg, the
+'lpm' instruction without operands implicitly uses r0 and z,
+none of which are counted.
+
+x,y,z are separate entities in the symbol table and are
+counted separately from r26..r31 here.
+
+.dseg memory usage only counts static data declared with .byte
+
+"ATmega328P" register use summary:
+x  :   0 y  :  25 z  :  17 r0 :   1 r1 :   1 r2 :   0 r3 :   0 r4 :   0 
+r5 :  85 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
+r13:   0 r14:   0 r15:   0 r16: 107 r17:  51 r18:  20 r19:   0 r20:   1 
+r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
+r29:   0 r30:  19 r31:  19 
+Registers used: 11 out of 35 (31.4%)
+
+"ATmega328P" instruction use summary:
+.lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
+andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :  36 brge  :   0 brhc  :   0 
+brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
+brne  :   0 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
+brvs  :   0 bset  :   0 bst   :   0 call  :   4 cbi   :   0 cbr   :   0 
+clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
+clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
+cpi   :  36 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   0 jmp   :  37 
+ld    :   0 ldd   :   0 ldi   :  45 lds   :  77 lpm   :  17 lsl   :   0 
+lsr   :   0 mov   :   2 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
+neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   2 pop   :   0 
+push  :   0 rcall :   0 ret   :   3 reti  :   0 rjmp  :  93 rol   :   0 
+ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
+sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  48 sec   :   0 seh   :   0 
+sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
+sez   :   0 sleep :   0 spm   :   2 st    :  25 std   :   0 sts   :  50 
+sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
+Instructions used: 15 out of 113 (13.3%)
+
+"ATmega328P" memory use summary [bytes]:
+Segment   Begin    End      Code   Data   Used    Size   Use%
+---------------------------------------------------------------
+[.cseg] 0x000000 0x000c6a   1288   1250   2538   32768   7.7%
+[.dseg] 0x000100 0x000188      0     41     41    2048   2.0%
+[.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
+
+Assembly complete, 0 errors, 11 warnings

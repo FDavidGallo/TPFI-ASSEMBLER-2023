@@ -1,0 +1,235 @@
+	;VARIABLES:
+	  .DSEG
+		 CONTADOR_DE_PULSOS:        .DB 0
+		 SEGUNDOS:			        .DB 0
+	     MINUTOS:					.DB 0
+	     HORAS:						.DB 0
+		 HORA_DE_ALARMA:			.DB 0
+		 MINUTO_DE_ALARMA:			.DB 0
+		 CARACTER_ENTRADA_UART:		.DB 0
+		 BOTON_DE_SETEO:			.DB 0
+		 TIEMPO_DEL_LED:			.DB 0
+		 ALARMA:					.DB 0
+      .CSEG
+
+	  .ORG  0X0000
+	   JMP  INICIO
+	  .ORG  0X0002
+	   JMP  ISR_INT0
+	  .ORG  0X0004
+	   JMP  ISR_INT1
+	  .ORG  0x0024
+	   JMP  ISR_RX
+	  .INCLUDE "division.inc"
+	  .INCLUDE "desarme.inc"
+	  .INCLUDE "alarma.inc"
+	  .INCLUDE "Ajuste_Del_Reloj.inc"
+	  .INCLUDE "Configuraciones.inc"
+
+
+INICIO:
+		;Configuramos la pila
+       LDI  R16,HIGH(RAMEND)
+	   OUT  SPH,R16
+	   LDI  R16,LOW(RAMEND)
+	   OUT  SPL,R16 
+
+	   ;Llamamos todas las congfiguraciones:
+	   CALL CONFIGURACION_INT0
+	   CALL CONFIGURACION_UART
+	   CALL CONFIGURACION_VALORES_INICIALES_RELOJ
+	   CALL CONFIGURACION_ADC
+	   CALL CONFIGURACION_SETEO_RELOJ
+	   CALL CONFIGURACION_TIMER1
+	   CALL UART_MOSTRAR_INICIO
+
+;PROGRAMA PRINCIPAL
+VOLVER:
+       LDS  R20,BOTON_DE_SETEO		
+	   LDI  R21,0
+	   CPSE R20,R21
+	   CALL SETEO_RELOJ
+;comparacion alarma con reloj
+       LDS  R16, ALARMA              ;Esto asegura que el led no se prenda antes de que se haya tocado algun boton, ya que se carga 1 luego de la INT_RX       
+	   LDI  R17, 1
+	   CPSE R16, R17
+	   RJMP FIN_DE_COMPARACION_DE_ALARMA
+       LDS  R16,HORAS
+	   LDS  R17,HORA_DE_ALARMA
+	   CPSE R16,R17
+	   RJMP FIN_DE_COMPARACION_DE_ALARMA
+	   LDS  R16,MINUTOS
+	   LDS  R17,MINUTO_DE_ALARMA
+	   CPSE R16,R17
+	   RJMP FIN_DE_COMPARACION_DE_ALARMA
+	   LDS  R16,SEGUNDOS
+	   LDI  R17,0
+	   CPSE R16,R17
+	   RJMP FIN_DE_COMPARACION_DE_ALARMA
+       LDI  R18,(1<<PORTB5)
+	   OUT  PORTB,R18
+	   LDI  R18,0
+	   STS  TIEMPO_DEL_LED,R18
+
+FIN_DE_COMPARACION_DE_ALARMA:
+       
+       LDS  R20,CONTADOR_DE_PULSOS
+	   CPI  R20,100
+	   BREQ INCREMENTAR_SEGUNDOS
+
+VOLVER_SEGUNDOS:
+	   LDS  R20,SEGUNDOS
+	   CPI  R20,60
+	   BREQ INCREMENTAR_MINUTOS
+
+VOLVER_MINUTOS:
+	   LDS  R20,MINUTOS
+	   LDI  R21,60
+	   CPSE R20,R21
+	   RJMP VOLVER_HORAS
+	   RJMP INCREMENTAR_HORAS
+	   
+VOLVER_HORAS:
+	   LDS  R20,HORAS
+	   LDI  R21,24
+	   CPSE R20,R21
+	   RJMP VOLVER
+	   RJMP REINICIAR_RELOJ
+
+       RJMP VOLVER
+
+ISR_INT0:;incremento del contador de pulsos
+      PUSH R20
+	  IN   R20,SREG
+	  PUSH R20
+	  LDS  R20,CONTADOR_DE_PULSOS
+	  INC  R20
+	  STS  CONTADOR_DE_PULSOS,R20
+	  POP  R20
+	  OUT  SREG,R20
+	  POP  R20
+	  RETI
+
+
+INCREMENTAR_SEGUNDOS:
+      PUSH R20
+	  IN   R20,SREG
+	  PUSH R20 `
+	  CALL ENVIO_DEL_RELOJ					;envia la hs del reloj
+	  CALL ISR_ADC							;envia la hs de la alarma
+	  
+	  LDS  R20,SEGUNDOS						;se incrementan los segundos
+	  INC  R20
+	  STS  SEGUNDOS,R20
+
+	  LDI  R20,0
+	  STS  CONTADOR_DE_PULSOS,R20			;reinicia el valor de pulsos
+
+	  LDS  R18,TIEMPO_DEL_LED				;Encendido y apagado del led
+	  CPI  R18,4
+	  BREQ APAGAR_LED						
+	  INC  R18
+	  STS  TIEMPO_DEL_LED,R18
+	  RJMP NO_APAGA_LED
+APAGAR_LED:
+       LDI  R18,0
+	   OUT  PORTB,R18
+
+NO_APAGA_LED:
+	  POP  R20
+	  OUT  SREG,R20
+	  POP  R20
+	  RJMP VOLVER_SEGUNDOS
+
+INCREMENTAR_MINUTOS:;incremento minutos
+      PUSH R20
+	  IN   R20,SREG
+	  PUSH R20
+
+	  LDS  R20,MINUTOS
+	  INC  R20
+	  STS  MINUTOS,R20
+	  
+	  LDI  R20,0
+	  STS  SEGUNDOS,R20			;reinicia el valor de segundos
+	  
+	  POP  R20
+	  OUT  SREG,R20
+	  POP  R20
+	  RJMP VOLVER_MINUTOS
+	  
+INCREMENTAR_HORAS:							;incremento hora
+      PUSH R20
+	  IN   R20,SREG
+	  PUSH R20
+
+	  LDS  R20,HORAS
+	  INC  R20
+	  STS  HORAS,R20
+	  
+	  LDI  R20,0
+	  STS  MINUTOS,R20			;reinicia el valor de minutos
+	  
+	  POP  R20
+	  OUT  SREG,R20
+	  POP  R20
+	  RJMP VOLVER_HORAS
+
+REINICIAR_RELOJ:						;reinicia el reloj
+      PUSH R20
+	  IN   R20,SREG
+	  PUSH R20
+
+	  LDI  R20,0
+	  STS  HORAS,R20			;reinicia el valor de segundos
+	  
+	  POP  R20
+	  OUT  SREG,R20
+	  POP  R20
+	  RJMP VOLVER
+	  //////////////////////////////////////////
+ENVIO_DEL_RELOJ:				//?? NO SE ENTIENDE ESTA SUBRUTINA
+	  LDS  R20,CARACTER_ENTRADA_UART
+	  LDI  R16,'R'				//SI ARRANCAMOS EL PROGRAMA, TEORICAMENTE EN CARACTER_ENTRADA_UART NO HAY NADA
+	  CPSE R20,R16				//ACA COMPARA Y SALTA SI ES IGUAL, PERO SI NO HAY NADA NO PUEDE SER IGUAL A R
+	  RJMP SALTAR
+	  CALL UART_RELOJ
+	  CALL DESARMAR_ENVIAR_HORAS
+	  CALL DESARMAR_ENVIAR_MINUTOS
+	  CALL DESARMAR_ENVIAR_SEGUNDOS
+SALTAR:
+	  RET
+	  ///////////////////////////////////////////////
+ISR_RX:;toma el digito A o R y lo guarda en la RAM
+	  LDS  R17,UDR0
+	  LDI  R16,'R'
+      CPSE R17,R16
+	  RJMP SIGUIENTE_COMPARACION
+	  STS  CARACTER_ENTRADA_UART,R17
+	  CALL ENVIO_DEL_RELOJ
+
+SIGUIENTE_COMPARACION:
+	  LDI  R16,'A'
+	  CPSE R17,R16
+	  RJMP FIN_DE_COMPARACION
+	  STS  CARACTER_ENTRADA_UART,R17
+	  CALL ISR_ADC
+	  LDI  R21,1
+	  STS  ALARMA,R21
+
+
+FIN_DE_COMPARACION:
+	  RETI
+
+	  ;INTERRUPCIÓN DEL AJUSTE/SETEO
+ISR_INT1:
+      PUSH R16
+	  IN   R16,SREG
+	  PUSH R16
+      LDS  R16,BOTON_DE_SETEO
+	  INC  R16
+	  STS  BOTON_DE_SETEO,R16
+	  POP  R16
+	  OUT  SREG,R16
+	  POP  R16
+      RETI

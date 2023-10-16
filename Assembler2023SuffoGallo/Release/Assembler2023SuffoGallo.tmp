@@ -1,0 +1,208 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\Release</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\division.inc</FILE>
+  <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE>
+  <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE>
+  <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\Configuraciones.inc</FILE>
+  <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\Release\Assembler2023SuffoGallo.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Assembler2023SuffoGallo.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Assembler2023SuffoGallo.map</FILE>
+  <FILE>Assembler2023SuffoGallo.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <TABLA_ROM_MSJ><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>6</LINE></TABLA_ROM_MSJ>
+  <TABLA_ROM_OPT><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>7</LINE></TABLA_ROM_OPT>
+  <TABLA_ROM_MSJ2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>9</LINE></TABLA_ROM_MSJ2>
+  <TABLA_ROM_OPT2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>10</LINE></TABLA_ROM_OPT2>
+  <TABLA_ROM_MSJ3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>11</LINE></TABLA_ROM_MSJ3>
+  <Menu2_1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>12</LINE></Menu2_1>
+  <Menu2_2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>14</LINE></Menu2_2>
+  <Menu2_3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>15</LINE></Menu2_3>
+  <Menu2_4><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>16</LINE></Menu2_4>
+  <Menu2_5><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>17</LINE></Menu2_5>
+  <Menu2_6><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>18</LINE></Menu2_6>
+  <Menu2_7><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>19</LINE></Menu2_7>
+  <Menu2_8><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>20</LINE></Menu2_8>
+  <Menu2_9><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>21</LINE></Menu2_9>
+  <Menu2_A><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>22</LINE></Menu2_A>
+  <Menu2_B><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>24</LINE></Menu2_B>
+  <Menu2_C><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>25</LINE></Menu2_C>
+  <Menu2_D><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>26</LINE></Menu2_D>
+  <Menu2_E><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>27</LINE></Menu2_E>
+  <Menu2_F><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>29</LINE></Menu2_F>
+  <Menu2_10><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>30</LINE></Menu2_10>
+  <Menu2_11><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>31</LINE></Menu2_11>
+  <Menu2_12><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>32</LINE></Menu2_12>
+  <CambioDeValor><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>33</LINE></CambioDeValor>
+  <CTEXTO><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoText.inc</FILE><LINE>36</LINE></CTEXTO>
+  <MAIN><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>3</LINE></MAIN>
+  <LOOP><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>8</LINE></LOOP>
+  <END_MESSAGE><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>20</LINE></END_MESSAGE>
+  <TRANSMIT><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>13</LINE></TRANSMIT>
+  <READ><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>23</LINE></READ>
+  <OPTIONS><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>27</LINE></OPTIONS>
+  <ENCENDER_UNO><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>68</LINE></ENCENDER_UNO>
+  <ENCENDER_DOS><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>70</LINE></ENCENDER_DOS>
+  <ENCENDER_TRES><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>72</LINE></ENCENDER_TRES>
+  <ENCENDER_CUATRO><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>74</LINE></ENCENDER_CUATRO>
+  <PresionoA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>76</LINE></PresionoA>
+  <PresionoB><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>78</LINE></PresionoB>
+  <PresionoC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>80</LINE></PresionoC>
+  <PresionoD><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>82</LINE></PresionoD>
+  <PresionoE><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>84</LINE></PresionoE>
+  <PresionoF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>86</LINE></PresionoF>
+  <PresionoG><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>88</LINE></PresionoG>
+  <PresionoH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>90</LINE></PresionoH>
+  <PresionoI><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>92</LINE></PresionoI>
+  <PresionoJ><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>94</LINE></PresionoJ>
+  <PresionoK><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>96</LINE></PresionoK>
+  <PresionoM><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>98</LINE></PresionoM>
+  <PresionoL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>100</LINE></PresionoL>
+  <PresionoO><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>102</LINE></PresionoO>
+  <ENCENDER_UNOLEJOS><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>105</LINE></ENCENDER_UNOLEJOS>
+  <ENCENDER_DOSLEJOS><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>122</LINE></ENCENDER_DOSLEJOS>
+  <ENCENDER_TRESLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>133</LINE></ENCENDER_TRESLejos>
+  <ENCENDER_CUATROLEJOS><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>118</LINE></ENCENDER_CUATROLEJOS>
+  <PresionoALejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>142</LINE></PresionoALejos>
+  <PresionoBLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>183</LINE></PresionoBLejos>
+  <PresionoCLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>220</LINE></PresionoCLejos>
+  <PresionoDLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>257</LINE></PresionoDLejos>
+  <PresionoELejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>294</LINE></PresionoELejos>
+  <PresionoFLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>331</LINE></PresionoFLejos>
+  <PresionoGLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>368</LINE></PresionoGLejos>
+  <PresionoHLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>405</LINE></PresionoHLejos>
+  <PresionoILejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>442</LINE></PresionoILejos>
+  <PresionoJLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>479</LINE></PresionoJLejos>
+  <PresionoKLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>515</LINE></PresionoKLejos>
+  <PresionoMLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>552</LINE></PresionoMLejos>
+  <PresionoLLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>589</LINE></PresionoLLejos>
+  <PresionoOLejos><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>626</LINE></PresionoOLejos>
+  <ENCENDER1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>111</LINE></ENCENDER1>
+  <APAGAR1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>114</LINE></APAGAR1>
+  <DELAY><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>703</LINE></DELAY>
+  <ENCENDER4><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>692</LINE></ENCENDER4>
+  <APAGAR4><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>695</LINE></APAGAR4>
+  <ENCENDER2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>128</LINE></ENCENDER2>
+  <APAGAR2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>130</LINE></APAGAR2>
+  <ENCENDER3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>136</LINE></ENCENDER3>
+  <APAGAR3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>139</LINE></APAGAR3>
+  <LOOPA><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>147</LINE></LOOPA>
+  <END_MESSAGE2A><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>159</LINE></END_MESSAGE2A>
+  <TRANSMIT2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>152</LINE></TRANSMIT2>
+  <READPresionoAL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>160</LINE></READPresionoAL>
+  <READPresionoAH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>172</LINE></READPresionoAH>
+  <MensajeFinalDeCambiodevalor><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>669</LINE></MensajeFinalDeCambiodevalor>
+  <LOOP3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>188</LINE></LOOP3>
+  <END_MESSAGE2B><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>199</LINE></END_MESSAGE2B>
+  <TRANSMIT_A><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>193</LINE></TRANSMIT_A>
+  <READPresionoBL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>201</LINE></READPresionoBL>
+  <READPresionoBH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>210</LINE></READPresionoBH>
+  <LOOPC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>225</LINE></LOOPC>
+  <END_MESSAGE2C><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>237</LINE></END_MESSAGE2C>
+  <TRANSMIT2C><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>230</LINE></TRANSMIT2C>
+  <READPresionoCL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>238</LINE></READPresionoCL>
+  <READPresionoCH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>247</LINE></READPresionoCH>
+  <LOOPD><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>262</LINE></LOOPD>
+  <END_MESSAGE2D><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>274</LINE></END_MESSAGE2D>
+  <TRANSMITD><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>267</LINE></TRANSMITD>
+  <READPresionoDL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>275</LINE></READPresionoDL>
+  <READPresionoDH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>284</LINE></READPresionoDH>
+  <LOOPE><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>299</LINE></LOOPE>
+  <END_MESSAGE2E><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>311</LINE></END_MESSAGE2E>
+  <TRANSMIT2E><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>304</LINE></TRANSMIT2E>
+  <READPresionoEL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>312</LINE></READPresionoEL>
+  <READPresionoEH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>321</LINE></READPresionoEH>
+  <LOOPF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>336</LINE></LOOPF>
+  <END_MESSAGE2F><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>348</LINE></END_MESSAGE2F>
+  <TRANSMITF><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>341</LINE></TRANSMITF>
+  <READPresionoFL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>349</LINE></READPresionoFL>
+  <READPresionoFH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>358</LINE></READPresionoFH>
+  <LOOPG><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>373</LINE></LOOPG>
+  <END_MESSAGE2G><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>385</LINE></END_MESSAGE2G>
+  <TRANSMITG><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>378</LINE></TRANSMITG>
+  <READPresionoGL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>386</LINE></READPresionoGL>
+  <READPresionoGH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>395</LINE></READPresionoGH>
+  <LOOPH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>410</LINE></LOOPH>
+  <END_MESSAGE2H><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>422</LINE></END_MESSAGE2H>
+  <TRANSMITH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>415</LINE></TRANSMITH>
+  <READPresionoHL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>423</LINE></READPresionoHL>
+  <READPresionoHH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>432</LINE></READPresionoHH>
+  <LOOPI><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>447</LINE></LOOPI>
+  <END_MESSAGE2I><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>459</LINE></END_MESSAGE2I>
+  <TRANSMIT2I><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>452</LINE></TRANSMIT2I>
+  <READPresionoIL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>460</LINE></READPresionoIL>
+  <READPresionoIH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>469</LINE></READPresionoIH>
+  <LOOPJ><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>483</LINE></LOOPJ>
+  <END_MESSAGE2J><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>495</LINE></END_MESSAGE2J>
+  <TRANSMIT2J><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>488</LINE></TRANSMIT2J>
+  <READPresionoJL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>496</LINE></READPresionoJL>
+  <READPresionoJH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>505</LINE></READPresionoJH>
+  <LOOPK><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>520</LINE></LOOPK>
+  <END_MESSAGE2K><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>532</LINE></END_MESSAGE2K>
+  <TRANSMIT2K><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>525</LINE></TRANSMIT2K>
+  <READPresionoKL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>533</LINE></READPresionoKL>
+  <READPresionoKH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>542</LINE></READPresionoKH>
+  <LOOPM><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>557</LINE></LOOPM>
+  <END_MESSAGE2M><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>569</LINE></END_MESSAGE2M>
+  <TRANSMIT2M><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>562</LINE></TRANSMIT2M>
+  <READPresionoML><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>570</LINE></READPresionoML>
+  <READPresionoMH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>579</LINE></READPresionoMH>
+  <LOOPL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>594</LINE></LOOPL>
+  <END_MESSAGE2L><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>606</LINE></END_MESSAGE2L>
+  <TRANSMIT2L><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>599</LINE></TRANSMIT2L>
+  <READPresionoLL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>607</LINE></READPresionoLL>
+  <READPresionoLH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>616</LINE></READPresionoLH>
+  <LOOPO><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>631</LINE></LOOPO>
+  <END_MESSAGE2O><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>643</LINE></END_MESSAGE2O>
+  <TRANSMIT2O><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>636</LINE></TRANSMIT2O>
+  <READPresionoOL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>644</LINE></READPresionoOL>
+  <READPresionoOH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>653</LINE></READPresionoOH>
+  <END_MESSAGE2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>668</LINE></END_MESSAGE2>
+  <LOOP4><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>674</LINE></LOOP4>
+  <END_MESSAGE3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>697</LINE></END_MESSAGE3>
+  <TRANSMIT3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>679</LINE></TRANSMIT3>
+  <READ4><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\ApartadoGraficoCodes.inc</FILE><LINE>686</LINE></READ4>
+  <DecenaHora><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>8</LINE></DecenaHora>
+  <UnidadHora><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>9</LINE></UnidadHora>
+  <DecenaMinuto><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>10</LINE></DecenaMinuto>
+  <UnidadMinuto><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>11</LINE></UnidadMinuto>
+  <SeparadorMinuto><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>12</LINE></SeparadorMinuto>
+  <DecenaSegundo><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>13</LINE></DecenaSegundo>
+  <UnidadSegundo><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>14</LINE></UnidadSegundo>
+  <C50GesimoDeSegundoo><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>15</LINE></C50GesimoDeSegundoo>
+  <MedTemperaturaExterior><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>16</LINE></MedTemperaturaExterior>
+  <MedTemperaturaLCC><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>17</LINE></MedTemperaturaLCC>
+  <MedTemperaturaDormitorio><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>18</LINE></MedTemperaturaDormitorio>
+  <MedLuzExterior><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>19</LINE></MedLuzExterior>
+  <TemperaturaExteriorMinimaH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>27</LINE></TemperaturaExteriorMinimaH>
+  <TemperaturaExteriorMinimaL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>28</LINE></TemperaturaExteriorMinimaL>
+  <Separador1><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>29</LINE></Separador1>
+  <TemperaturaExteriorMaximaH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>30</LINE></TemperaturaExteriorMaximaH>
+  <TemperaturaExteriorMaximaL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>31</LINE></TemperaturaExteriorMaximaL>
+  <Separador2><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>32</LINE></Separador2>
+  <TemperaturaLCCMinimaH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>33</LINE></TemperaturaLCCMinimaH>
+  <TemperaturaLCCMinimaL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>34</LINE></TemperaturaLCCMinimaL>
+  <Separador3><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>35</LINE></Separador3>
+  <TemperaturaLCCMaximaH><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>36</LINE></TemperaturaLCCMaximaH>
+  <TemperaturaLCCMaximaL><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>37</LINE></TemperaturaLCCMaximaL>
+  <Separador4><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\VariablesEnSram.inc</FILE><LINE>38</LINE></Separador4>
+  <CONFIGURAR><FILE>C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\AAAAAAAAAAAAAAAAAAAAAAAA\Assembler2023SuffoGallo\main.asm</FILE><LINE>22</LINE></CONFIGURAR>
+ </LABELS>
+</ASSEMBLER_INFO>
