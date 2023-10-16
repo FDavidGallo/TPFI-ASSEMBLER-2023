@@ -19,17 +19,17 @@ MedTemperaturaLCC: .byte 2 ;org 0x113
 MedTemperaturaDormitorio: .byte 2 ;org 0x115
 MedLuzExterior: .byte 2 ;org 0x117
 
-
+.dseg
 ;=================================================
 ;|	  INCIO DE LAS VARIABLES DE CONFIGURACIÓN    |
 ;=================================================
-.org 0x0170
-
-TemperaturaExteriorMinimaH: .byte 2 ;org 0x172
-TemperaturaExteriorMinimaL: .byte 2 ;org 0x174
-Separador1: .BYTE 2 ;org 0x176
-TemperaturaExteriorMaximaH: .byte 2;org 0x178
-TemperaturaExteriorMaximaL: .byte 2 ;org 0x180
+.org 0x0169
+Separador0: .BYTE 1 ;org 0x176
+TemperaturaExteriorMinimaH: .byte 1 ;org 0x171
+TemperaturaExteriorMinimaL: .byte 1 ;org 0x172
+Separador1: .BYTE 1 ;org 0x173
+TemperaturaExteriorMaximaH: .byte 1;org 0x174
+TemperaturaExteriorMaximaL: .byte 1 ;org 0x175
 Separador2: .BYTE 2 ;org 0x182
 TemperaturaLCCMinimaH:.byte 2 ;org 0x184
 TemperaturaLCCMinimaL:.byte 2 ;org 0x186
@@ -37,8 +37,14 @@ Separador3: .BYTE 2 ;org 0x188
 TemperaturaLCCMaximaH: .byte 2 ;org 0x190 
 TemperaturaLCCMaximaL: .byte 2 ;org 0x192
 Separador4: .byte 2 ;org 0x194
+HisterisisTemperaturaLCCH: .byte 1
+HisterisisTemperaturaLCCL: .byte 1
+TemperaturaDormitorioMinimaH: .byte 1
+TemperaturaDormitorioMinimaL: .byte 1
+TemperaturaDormitorioMaximaH: .byte 1
+TemperaturaDormitorioMaximaL:.byte 1
+
 /*
-Menu2_6: .DB "E-Histerisis de la temperatura del Living/Comedor/Cocina: __", 13, 10
 Menu2_7: .DB "F-Temperatura Dormitorio Maxima __ ", 13, 10
 Menu2_8: .DB "G-Temperatura Dormitorio Minima __", 13, 10
 Menu2_9: .db " H-Histerisis de la temperatura del Dormitorio __", 13, 10
@@ -54,3 +60,6 @@ Menu2_10: .DB "M-Hora de Fin del Dia __:__ ", 13, 10
 Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj __:__ ", 13, 10
 Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10,2
 */
+;================================================
+;|			INCIO	  DE   	EQUIVALENCIAS  	    |
+;================================================

@@ -127,14 +127,116 @@ ENCENDER_CUATROLEJOS:
 ENCENDER_DOSLEJOS:
     LDI ZH, HIGH(TABLA_ROM_MSJ3 <<1)	;Apunto hacia la tabla con MENSAJE
 	LDI ZL, LOW(TABLA_ROM_MSJ3 <<1)
-	CALL LOOP
-	RJMP ENCENDER2		
-	RJMP APAGAR2
-ENCENDER2:
+	CALL LOOP2
+LOOP2:
+	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+	CPI R17, 2	;Se compara con el caracter final
+	BREQ MostrarConfiguraciones	;Si termino la lectura se manda el siguiente mensaje
+TRANSMI2T:
+	LDS R16,UCSR0A
+	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+	RJMP TRANSMI2T		;Si no lo esta, se espera
+	STS UDR0,R17	
+	RJMP LOOP2
+MostrarConfiguraciones:
+	 LDI R20, 'A'; Hasta aca bien
+	 CALL ESPERAR_TX
+	 LDI R20, '_'
+	 CALL ESPERAR_TX
+	 ldi ZH, high(TemperaturaExteriorMinimaH)
+     ldi ZL, low(TemperaturaExteriorMinimaH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ldi ZH, high(TemperaturaExteriorMinimaL)
+     ldi ZL, low(TemperaturaExteriorMinimaL)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 LDI R20, 13
+	 CALL ESPERAR_TX
+	 LDI R20, 10
+	 CALL ESPERAR_TX
+	 LDI R20, 'B'; Hasta aca bien
+	 CALL ESPERAR_TX
+	 LDI R20, '_'
+	 CALL ESPERAR_TX
+	 ldi ZH, high(TemperaturaExteriorMaximaH)
+     ldi ZL, low(TemperaturaExteriorMaximaH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ldi ZH, high(TemperaturaExteriorMaximaL)
+     ldi ZL, low(TemperaturaExteriorMaximaL)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ; SEGUIMOS CON EL RESTo (?)
+	 LDI R20, 32 
+	 CALL ESPERAR_TX
+	 LDI R20, 32
+	 CALL ESPERAR_TX
+	 LDI R20, 'C'; Hasta aca bien                                   BIEN
+	 CALL ESPERAR_TX
+	 LDI R20, '_'
+	 CALL ESPERAR_TX
+	ldi ZH, high(TemperaturaLCCMinimaH)
+     ldi ZL, low(TemperaturaLCCMinimaH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ldi ZH, high(TemperaturaLCCMinimaL)
+     ldi ZL, low(TemperaturaLCCMinimaL)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ; SEGUIMOS CON EL RESTo (?)
+	 LDI R20, 32 
+	 CALL ESPERAR_TX
+	 LDI R20, 32
+	 CALL ESPERAR_TX
+	  LDI R20, 'D'; Hasta aca bien                                   BIEN
+	 CALL ESPERAR_TX
+	 LDI R20, '_'
+	 CALL ESPERAR_TX
+	ldi ZH, high(TemperaturaLCCMaximaH)
+     ldi ZL, low(TemperaturaLCCMaximaH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ldi ZH, high(TemperaturaLCCMaximaL)
+     ldi ZL, low(TemperaturaLCCMaximaL)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 jmp READ
+ESPERAR_TX:
+	  LDS  R16,UCSR0A
+	  SBRS R16,UDRE0
+	  RJMP ESPERAR_TX
+	  STS  UDR0,R20
+	  RET
+
+/*ENCENDER2:
 	RJMP READ
 APAGAR2:
-	RJMP READ
-
+	RJMP READ*/
+	/*MostrarConfiguracion:
+	 LDI R20, 'A'
+	 CALL ESPERAR_TX
+	 LDI R20, '_'
+	 CALL ESPERAR_TX
+	 ldi ZH, high(TemperaturaExteriorMinimaH)
+     ldi ZL, low(TemperaturaExteriorMinimaH)
+	 ld r16, Z
+	 sts UDR0, r16
+	 CALL TRANSMMITF
+	 ldi ZH, high(TemperaturaExteriorMinimaL)
+     ldi ZL, low(TemperaturaExteriorMinimaL)
+	 ld r16, Z
+	 sts UDR0, r16
+	 CALL TRANSMMITF
+	 ; SEGUIMOS CON EL RESTo (?)*/
 ENCENDER_TRESLejos:	
 	RJMP ENCENDER3			
 	RJMP APAGAR3
@@ -145,7 +247,7 @@ APAGAR3:
 	CALL DELAY
 	RJMP READ
 PresionoALejos:
-LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
 	LDI ZL, LOW(CTEXTO <<1)
 	RJMP LOOPA
 
@@ -171,8 +273,9 @@ READPresionoAL: ; leeemos
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 ; Configura Z para apuntar a la dirección de memoria 0x0157.
-STS 0x0157, R5 ; Almacena el valor de R5 en la dirección de memoria 0x0157.
-
+ ldi ZH, high(TemperaturaExteriorMinimaH)
+ ldi ZL, low(TemperaturaExteriorMinimaH)
+ st Z, r5; Almacena el valor de R5 en la dirección de memoria 0x0157.
 
 READPresionoAH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
@@ -182,8 +285,9 @@ READPresionoAH:
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
-STS 0x0158, R5 ; Almacena el valor de R5 en la dirección de memoria 0x0157.
-
+ldi ZH, high(TemperaturaExteriorMinimaL)
+ ldi ZL, low(TemperaturaExteriorMinimaL)
+ st Z, r5
 JMP MensajeFinalDeCambiodevalor
 PresionoBLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -211,7 +315,9 @@ READPresionoBL: ; leeemos
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
-ST Y, R5
+ldi ZH, high(TemperaturaExteriorMaximaH)
+ ldi ZL, low(TemperaturaExteriorMaximaH)
+ st Z, r5
 READPresionoBH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -220,7 +326,9 @@ READPresionoBH:
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
-	ST Y, R5
+	ldi ZH, high(TemperaturaExteriorMaximaL)
+	ldi ZL, low(TemperaturaExteriorMaximaL)
+	st Z, r5
 	JMP MensajeFinalDeCambiodevalor
 	PresionoCLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -248,17 +356,21 @@ READPresionoCL: ; leeemos
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
-ST Y, R5
+	ldi ZH, high(TemperaturaLCCMinimaH)
+	ldi ZL, low(TemperaturaLCCMinimaH)
+	st Z, r5
 READPresionoCH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-    RJMP READPresionoAH   ; Si no se ha recibido, espera.
+    RJMP READPresionoCH   ; Si no se ha recibido, espera.
     LDS R5, UDR0      ; Cargar el byte recibido en R5.
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
-ST Y, R5
-JMP MensajeFinalDeCambiodevalor
+	ldi ZH, high(TemperaturaLCCMinimaL)
+	ldi ZL, low(TemperaturaLCCMinimaL)
+	st Z, r5
+	JMP MensajeFinalDeCambiodevalor
 PresionoDLejos:
 LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
 	LDI ZL, LOW(CTEXTO <<1)
@@ -280,21 +392,25 @@ END_MESSAGE2D: ;despues de mandar ese adorno:
 READPresionoDL: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-    RJMP READPresionoAL   ; Si no se ha recibido, espera.
+    RJMP READPresionoDL   ; Si no se ha recibido, espera.
     LDS R5, UDR0      ; Cargar el byte recibido en R5.
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
-ST Y, R5
+ldi ZH, high(TemperaturaLCCMaximaH)
+ldi ZL, low(TemperaturaLCCMaximaH)
+ st Z, r5
 READPresionoDH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-    RJMP READPresionoAH   ; Si no se ha recibido, espera.
+    RJMP READPresionoDH   ; Si no se ha recibido, espera.
     LDS R5, UDR0      ; Cargar el byte recibido en R5.
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
-ST Y, R5
+ldi ZH, high(TemperaturaLCCMaximaL)
+ldi ZL, low(TemperaturaLCCMaximaL)
+ st Z, r5
 JMP MensajeFinalDeCambiodevalor
 PresionoELejos:
 LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
