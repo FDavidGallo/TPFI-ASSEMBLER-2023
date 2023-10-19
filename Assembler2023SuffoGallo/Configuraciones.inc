@@ -1,3 +1,86 @@
+
+CONFIGURAR:
+    LDI R16, HIGH(RAMEND)	
+	OUT SPH, R16
+	LDI R16, LOW(RAMEND)
+	OUT SPL, R16
+	LDI R16, 0xFF
+	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
+	STS UCSR0B, R16
+	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
+	STS UCSR0C, R16
+	LDI R16, 103	; Baud Rate = 9600
+	STS UBRR0L, R16
+	; Configurar el ADC para 10 bits
+	ldi r16, (1<<REFS0) ; Establecer referencia AVCC
+	STS ADMUX, R16
+	ldi r16, (1<<ADEN)|(1<<ADATE)|(1<<ADPS2)|(1<<ADPS1) ; Habilitar ADC, prescaler a 64
+	STS ADCSRA, R16
+	;-------------------------------------------------------------------------
+	;| INICIO DE LA CONDIGURACIÓN PREDETERMINADA DE FUNCIONAMIENTO           |
+	;-------------------------------------------------------------------------
+	;A
+	LDI R20, '1'
+	STS TemperaturaExteriorMinimaH,R20
+    
+	LDI R20, '2'
+	ldi ZH, high(TemperaturaExteriorMinimaL)
+    ldi ZL, low(TemperaturaExteriorMinimaL)
+	ST Z, R20
+	;B
+	LDI R20, '3'
+	ldi ZH, high(TemperaturaExteriorMaximaH)
+    ldi ZL, low(TemperaturaExteriorMaximaH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(TemperaturaExteriorMaximaL)
+    ldi ZL, low(TemperaturaExteriorMaximaL)
+	ST Z, R20
+	;C
+	LDI R20, '1'
+	ldi ZH, high(TemperaturaLCCMinimaH)
+    ldi ZL, low(TemperaturaLCCMinimaH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(TemperaturaLCCMinimaL)
+    ldi ZL, low(TemperaturaLCCMinimaL)
+	ST Z, R20
+	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  ATENDIMIENTODEINTERRUPCIONES.INC
+	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 ;CONFIGURACION DE LA INTERRUPCION EXTERNA (cruce por cero) - CONFIGURACION DE LA INTERRUPCION EXTERNA (pulsador SET)
 	CONFIGURACION_INT0:

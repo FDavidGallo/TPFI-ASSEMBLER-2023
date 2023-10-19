@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Mon Oct 16 19:16:59 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Thu Oct 19 19:33:13 2023
 
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
@@ -1042,655 +1042,656 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  .ORG 0X150
 000150 2a0a
 000151 2a2a
-000152 2020
-000153 6553
-000154 656c
-000155 6363
-000156 6f69
-000157 656e
-000158 6c20
-000159 2061
-00015a 6361
-00015b 6963
-00015c 6e6f
-00015d 6120
-00015e 7220
-00015f 6165
-000160 696c
-000161 617a
-000162 2072
-000163 2a2a
-000164 0a2a                      TABLA_ROM_MSJ: .DB 0b00001010, "***  Seleccione la accion a realizar ***", 0b00001010
-000165 3e0a
-000166 313e
-000167 4d2d
-000168 736f
-000169 7274
-00016a 7261
-00016b 5620
-00016c 6c61
-00016d 726f
-00016e 7365
-00016f 2e2e
-000170 0d2e
-000171 200a
-000172 2d32
-000173 6f43
-000174 666e
-000175 6769
-000176 7275
-000177 7261
-000178 5620
-000179 6c61
-00017a 726f
-00017b 7365
-00017c 2e2e
-00017d 0d2e
-00017e 330a
-00017f 442d
-000180 7461
-000181 736f
-000182 4420
-000183 6c65
-000184 7020
-000185 6f72
-000186 6579
-000187 7463
-000188 2e6f
-000189 2e2e
-00018a 0220                      TABLA_ROM_OPT: .DB 0b00001010, ">>1-Mostrar Valores...", 13,0b00001010 , " 2-Configurar Valores...", 13, 0b00001010, "3-Datos Del proyecto... ",2
-00018b 2a0a
-00018c 2a2a
-00018d 4d20
-00018e 4445
-00018f 4349
-000190 4f49
-000191 454e
-000192 2053
-000193 2a2a
-000194 0a2a                      TABLA_ROM_MSJ2: .DB 0b00001010, "*** MEDICIONES ***", 0b00001010
-000195 480a
-000196 726f
-000197 2061
-000198 6564
-000199 6c20
-00019a 7361
-00019b 6d20
-00019c 6465
-00019d 6369
-00019e 6f69
-00019f 656e
-0001a0 2073
-0001a1 5f5f
-0001a2 0a3a
-0001a3 5420
-0001a4 6d65
-0001a5 6570
-0001a6 6172
-0001a7 7574
-0001a8 6172
-0001a9 4520
-0001aa 7478
-0001ab 7265
-0001ac 6f69
-0001ad 3a72
-0001ae 5f20
+000152 3e3e
+000153 533e
+000154 6c65
+000155 6365
+000156 6963
+000157 6e6f
+000158 2065
+000159 616c
+00015a 6120
+00015b 6363
+00015c 6f69
+00015d 206e
+00015e 2061
+00015f 6572
+000160 6c61
+000161 7a69
+000162 7261
+000163 3c3c
+000164 203c
+000165 2a2a
+000166 0a2a                      TABLA_ROM_MSJ: .DB 0b00001010, "***>>>Seleccione la accion a realizar<<< ***", 0b00001010
+000167 310a
+000168 4d2d
+000169 736f
+00016a 7274
+00016b 7261
+00016c 5620
+00016d 6c61
+00016e 726f
+00016f 7365
+000170 2e2e
+000171 0d2e
+000172 200a
+000173 2d32
+000174 6f43
+000175 666e
+000176 6769
+000177 7275
+000178 7261
+000179 5620
+00017a 6c61
+00017b 726f
+00017c 7365
+00017d 2e2e
+00017e 0d2e
+00017f 330a
+000180 442d
+000181 7461
+000182 736f
+000183 4420
+000184 6c65
+000185 7020
+000186 6f72
+000187 6579
+000188 7463
+000189 2e6f
+00018a 2e2e
+00018b 0220                      TABLA_ROM_OPT: .DB 0b00001010, "1-Mostrar Valores...", 13,0b00001010 , " 2-Configurar Valores...", 13, 0b00001010, "3-Datos Del proyecto... ",2
+00018c 2a0a
+00018d 2a2a
+00018e 4d20
+00018f 4445
+000190 4349
+000191 4f49
+000192 454e
+000193 2053
+000194 2a2a
+000195 0a2a                      TABLA_ROM_MSJ2: .DB 0b00001010, "*** MEDICIONES ***", 0b00001010
+000196 480a
+000197 726f
+000198 2061
+000199 6564
+00019a 6c20
+00019b 7361
+00019c 6d20
+00019d 6465
+00019e 6369
+00019f 6f69
+0001a0 656e
+0001a1 2073
+0001a2 5f5f
+0001a3 0a3a
+0001a4 5420
+0001a5 6d65
+0001a6 6570
+0001a7 6172
+0001a8 7574
+0001a9 6172
+0001aa 4520
+0001ab 7478
+0001ac 7265
+0001ad 6f69
+0001ae 3a72
 0001af 5f20
-0001b0 200a
-0001b1 6554
-0001b2 706d
-0001b3 7265
-0001b4 7461
-0001b5 7275
-0001b6 2061
-0001b7 694c
-0001b8 6976
-0001b9 676e
-0001ba 432f
-0001bb 6d6f
-0001bc 6465
-0001bd 726f
-0001be 432f
-0001bf 636f
-0001c0 6e69
-0001c1 3a61
-0001c2 5f20
-0001c3 205f
-0001c4 200a
-0001c5 6554
-0001c6 706d
-0001c7 7265
-0001c8 7461
-0001c9 7275
-0001ca 2061
-0001cb 6f44
-0001cc 6d72
-0001cd 7469
-0001ce 726f
-0001cf 6f69
-0001d0 203a
-0001d1 5f5f
-0001d2 0a20
-0001d3 4c20
-0001d4 7a75
-0001d5 4420
-0001d6 726f
-0001d7 696d
-0001d8 6f74
-0001d9 6972
-0001da 3a6f
-0001db 5f20
-0001dc 305f
-0001dd 2020
-0001de 4c20
-0001df 7a75
-0001e0 4520
-0001e1 7478
-0001e2 7265
-0001e3 6f69
-0001e4 3a72
-0001e5 5f20
-0001e6 305f
-0001e7 2020
-0001e8 754c
-0001e9 207a
-0001ea 694c
-0001eb 6976
-0001ec 676e
-0001ed 432f
-0001ee 636f
-0001ef 6e69
-0001f0 2f61
-0001f1 6f43
-0001f2 656d
-0001f3 6f64
-0001f4 3a72
-0001f5 5f20
-0001f6 305f
-0001f7 0a20
-0001f8 3109
-0001f9 522d
-0001fa 6665
-0001fb 6572
-0001fc 6373
-0001fd 7261
+0001b0 5f20
+0001b1 200a
+0001b2 6554
+0001b3 706d
+0001b4 7265
+0001b5 7461
+0001b6 7275
+0001b7 2061
+0001b8 694c
+0001b9 6976
+0001ba 676e
+0001bb 432f
+0001bc 6d6f
+0001bd 6465
+0001be 726f
+0001bf 432f
+0001c0 636f
+0001c1 6e69
+0001c2 3a61
+0001c3 5f20
+0001c4 205f
+0001c5 200a
+0001c6 6554
+0001c7 706d
+0001c8 7265
+0001c9 7461
+0001ca 7275
+0001cb 2061
+0001cc 6f44
+0001cd 6d72
+0001ce 7469
+0001cf 726f
+0001d0 6f69
+0001d1 203a
+0001d2 5f5f
+0001d3 0a20
+0001d4 4c20
+0001d5 7a75
+0001d6 4420
+0001d7 726f
+0001d8 696d
+0001d9 6f74
+0001da 6972
+0001db 3a6f
+0001dc 5f20
+0001dd 305f
+0001de 2020
+0001df 4c20
+0001e0 7a75
+0001e1 4520
+0001e2 7478
+0001e3 7265
+0001e4 6f69
+0001e5 3a72
+0001e6 5f20
+0001e7 305f
+0001e8 2020
+0001e9 754c
+0001ea 207a
+0001eb 694c
+0001ec 6976
+0001ed 676e
+0001ee 432f
+0001ef 636f
+0001f0 6e69
+0001f1 2f61
+0001f2 6f43
+0001f3 656d
+0001f4 6f64
+0001f5 3a72
+0001f6 5f20
+0001f7 305f
+0001f8 0a20
+0001f9 3109
+0001fa 522d
+0001fb 6665
+0001fc 6572
+0001fd 6373
 0001fe 7261
-0001ff 5620
-000200 6c61
-000201 726f
-000202 7365
-000203 2e2e
-000204 202e
-000205 2d35
-000206 4f56
-000207 564c
-000208 5245
-000209 4120
-00020a 204c
-00020b 454d
-00020c 554e
-00020d 4120
-00020e 544e
-00020f 5245
-000210 4f49
-000211 2052
-000212 0a0d
+0001ff 7261
+000200 5620
+000201 6c61
+000202 726f
+000203 7365
+000204 2e2e
+000205 202e
+000206 2d35
+000207 4f56
+000208 564c
+000209 5245
+00020a 4120
+00020b 204c
+00020c 454d
+00020d 554e
+00020e 4120
+00020f 544e
+000210 5245
+000211 4f49
+000212 2052
+000213 0a0d
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(9): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-000213 0002                      TABLA_ROM_OPT2: .DB 0b00001010,"Hora de las mediciones __:",0b00001010," Temperatura Exterior: _ _",0b00001010," Temperatura Living/Comedor/Cocina: __ ",0b00001010," Temperatura Dormitorio: __ ",0b00001010," Luz Dormitorio: __0  "," Luz Exterior: __0 "," 000214 2a0a
-000215 2a2a
-000216 5320
-000217 6c65
-000218 6365
-000219 6963
-00021a 6e6f
-00021b 2065
-00021c 6c65
-00021d 7620
-00021e 6c61
-00021f 726f
-000220 6120
-000221 6320
-000222 6d61
-000223 6962
-000224 7261
-000225 2a20
-000226 2a2a
+000214 0002                      TABLA_ROM_OPT2: .DB 0b00001010,"Hora de las mediciones __:",0b00001010," Temperatura Exterior: _ _",0b00001010," Temperatura Living/Comedor/Cocina: __ ",0b00001010," Temperatura Dormitorio: __ ",0b00001010," Luz Dormitorio: __0  "," Luz Exterior: __0 "," 000215 2a0a
+000216 2a2a
+000217 5320
+000218 6c65
+000219 6365
+00021a 6963
+00021b 6e6f
+00021c 2065
+00021d 6c65
+00021e 7620
+00021f 6c61
+000220 726f
+000221 6120
+000222 6320
+000223 6d61
+000224 6962
+000225 7261
+000226 2a20
+000227 2a2a
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(10): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-000227 000a                      Luz Living/Cocina/Comedor: __0 ",0b00001010,"	1-Refrescarar Valores... 5-VOLVER AL MENU ANTERIOR ", 13, 10,2
-000228 090a
-000229 5409
-00022a 6d65
-00022b 6570
-00022c 6172
-00022d 7574
-00022e 6172
-00022f 2073
-000230 6e65
-000231 4720
-000232 6172
-000233 6f64
-000234 2073
-000235 6543
-000236 746e
-000237 6769
-000238 6172
-000239 6f64
-00023a 0973
-00023b 0a09                      TABLA_ROM_MSJ3: .DB 0b00001010, "*** Seleccione el valor a cambiar ***", 0b00001010
+000228 000a                      Luz Living/Cocina/Comedor: __0 ",0b00001010,"	1-Refrescarar Valores... 5-VOLVER AL MENU ANTERIOR ", 13, 10,2
+000229 090a
+00022a 5409
+00022b 6d65
+00022c 6570
+00022d 6172
+00022e 7574
+00022f 6172
+000230 2073
+000231 6e65
+000232 4720
+000233 6172
+000234 6f64
+000235 2073
+000236 6543
+000237 746e
+000238 6769
+000239 6172
+00023a 6f64
+00023b 0973
+00023c 0a09                      TABLA_ROM_MSJ3: .DB 0b00001010, "*** Seleccione el valor a cambiar ***", 0b00001010
                                  Menu2_1: .DB 0b00001010, "		Temperaturas en Grados Centigrados		", 0b00001010
-00023c 2d41
-00023d 6554
-00023e 706d
-00023f 7265
-000240 7461
-000241 7275
-000242 2061
-000243 7845
-000244 6574
-000245 6972
-000246 726f
-000247 4d20
-000248 6e69
-000249 6d69
-00024a 0d61
+00023d 2d41
+00023e 6554
+00023f 706d
+000240 7265
+000241 7461
+000242 7275
+000243 2061
+000244 7845
+000245 6574
+000246 6972
+000247 726f
+000248 4d20
+000249 6e69
+00024a 6d69
+00024b 0d61
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(13): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-00024b 000a                      	;ACA VA LA TEMPERATURA EXTER
-00024c 2d42
-00024d 6554
-00024e 706d
-00024f 7265
-000250 7461
-000251 7275
-000252 2061
-000253 7845
-000254 6574
-000255 6972
-000256 726f
-000257 4d20
-000258 7861
-000259 6d69
-00025a 0d61
+00024c 000a                      ; ACA VAN LOS VALORES DE TEMPERATURA
+00024d 2d42
+00024e 6554
+00024f 706d
+000250 7265
+000251 7461
+000252 7275
+000253 2061
+000254 7845
+000255 6574
+000256 6972
+000257 726f
+000258 4d20
+000259 7861
+00025a 6d69
+00025b 0d61
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(14): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-00025b 000a                      Menu2_2: .DB "A-Temperatura Exterior Minima", 13,10
-00025c 2d43
-00025d 6554
-00025e 706d
-00025f 7265
-000260 7461
-000261 7275
-000262 2061
-000263 694c
-000264 6976
-000265 676e
-000266 432f
-000267 6d6f
-000268 6465
-000269 726f
-00026a 432f
-00026b 636f
-00026c 6e69
-00026d 2061
-00026e 694d
-00026f 696e
-000270 616d
-000271 0a0d                      Menu2_3: .DB "B-Temperatura Exterior Maxima", 13,10
-000272 2d44
-000273 6554
-000274 706d
-000275 7265
-000276 7461
-000277 7275
-000278 2061
-000279 694c
-00027a 6976
-00027b 676e
-00027c 432f
-00027d 6d6f
-00027e 6465
-00027f 726f
-000280 432f
-000281 636f
-000282 6e69
-000283 2061
-000284 614d
-000285 6978
-000286 616d
-000287 0a0d                      Menu2_4: .DB "C-Temperatura Living/Comedor/Cocina Minima", 13,10
-000288 2d45
-000289 6948
-00028a 7473
-00028b 7265
-00028c 7369
+00025c 000a                      Menu2_2: .DB "A-Temperatura Exterior Minima", 13,10
+00025d 2d43
+00025e 6554
+00025f 706d
+000260 7265
+000261 7461
+000262 7275
+000263 2061
+000264 694c
+000265 6976
+000266 676e
+000267 432f
+000268 6d6f
+000269 6465
+00026a 726f
+00026b 432f
+00026c 636f
+00026d 6e69
+00026e 2061
+00026f 694d
+000270 696e
+000271 616d
+000272 0a0d                      Menu2_3: .DB "B-Temperatura Exterior Maxima", 13,10
+000273 2d44
+000274 6554
+000275 706d
+000276 7265
+000277 7461
+000278 7275
+000279 2061
+00027a 694c
+00027b 6976
+00027c 676e
+00027d 432f
+00027e 6d6f
+00027f 6465
+000280 726f
+000281 432f
+000282 636f
+000283 6e69
+000284 2061
+000285 614d
+000286 6978
+000287 616d
+000288 0a0d                      Menu2_4: .DB "C-Temperatura Living/Comedor/Cocina Minima", 13,10
+000289 2d45
+00028a 6948
+00028b 7473
+00028c 7265
 00028d 7369
-00028e 6420
-00028f 2065
-000290 616c
-000291 7420
-000292 6d65
-000293 6570
-000294 6172
-000295 7574
-000296 6172
-000297 6420
-000298 6c65
-000299 4c20
-00029a 7669
-00029b 6e69
-00029c 2f67
-00029d 6f43
-00029e 656d
-00029f 6f64
-0002a0 2f72
-0002a1 6f43
-0002a2 6963
-0002a3 616e
-0002a4 0d3a
+00028e 7369
+00028f 6420
+000290 2065
+000291 616c
+000292 7420
+000293 6d65
+000294 6570
+000295 6172
+000296 7574
+000297 6172
+000298 6420
+000299 6c65
+00029a 4c20
+00029b 7669
+00029c 6e69
+00029d 2f67
+00029e 6f43
+00029f 656d
+0002a0 6f64
+0002a1 2f72
+0002a2 6f43
+0002a3 6963
+0002a4 616e
+0002a5 0d3a
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(17): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-0002a5 000a                      Menu2_5: .DB "D-Temperatura Living/Comedor/Cocina Maxima", 13,10 
-0002a6 2d46
-0002a7 6554
-0002a8 706d
-0002a9 7265
-0002aa 7461
-0002ab 7275
-0002ac 2061
-0002ad 6f44
-0002ae 6d72
-0002af 7469
-0002b0 726f
-0002b1 6f69
-0002b2 4d20
-0002b3 7861
-0002b4 6d69
-0002b5 0d61
+0002a6 000a                      Menu2_5: .DB "D-Temperatura Living/Comedor/Cocina Maxima", 13,10 
+0002a7 2d46
+0002a8 6554
+0002a9 706d
+0002aa 7265
+0002ab 7461
+0002ac 7275
+0002ad 2061
+0002ae 6f44
+0002af 6d72
+0002b0 7469
+0002b1 726f
+0002b2 6f69
+0002b3 4d20
+0002b4 7861
+0002b5 6d69
+0002b6 0d61
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(18): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-0002b6 000a                      Menu2_6: .DB "E-Histerisis de la temperatura del Living/Comedor/Cocina:", 13, 10
-0002b7 2d47
-0002b8 6554
-0002b9 706d
-0002ba 7265
-0002bb 7461
-0002bc 7275
-0002bd 2061
-0002be 6f44
-0002bf 6d72
-0002c0 7469
-0002c1 726f
-0002c2 6f69
-0002c3 4d20
-0002c4 6e69
-0002c5 6d69
-0002c6 0d61
+0002b7 000a                      Menu2_6: .DB "E-Histerisis de la temperatura del Living/Comedor/Cocina:", 13, 10
+0002b8 2d47
+0002b9 6554
+0002ba 706d
+0002bb 7265
+0002bc 7461
+0002bd 7275
+0002be 2061
+0002bf 6f44
+0002c0 6d72
+0002c1 7469
+0002c2 726f
+0002c3 6f69
+0002c4 4d20
+0002c5 6e69
+0002c6 6d69
+0002c7 0d61
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(19): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-0002c7 000a                      Menu2_7: .DB "F-Temperatura Dormitorio Maxima", 13, 10
-0002c8 4820
-0002c9 482d
-0002ca 7369
-0002cb 6574
-0002cc 6972
-0002cd 6973
-0002ce 2073
-0002cf 6564
-0002d0 6c20
-0002d1 2061
-0002d2 6574
-0002d3 706d
-0002d4 7265
-0002d5 7461
-0002d6 7275
-0002d7 2061
-0002d8 6564
-0002d9 206c
-0002da 6f44
-0002db 6d72
-0002dc 7469
-0002dd 726f
-0002de 6f69
-0002df 0a0d                      Menu2_8: .DB "G-Temperatura Dormitorio Minima", 13, 10
-0002e0 754c
-0002e1 6563
-0002e2 2073
-0002e3 6e65
-0002e4 4c20
-0002e5 7875
-0002e6 3a73
-0002e7 0a0d                      Menu2_9: .db " H-Histerisis de la temperatura del Dormitorio", 13, 10
+0002c8 000a                      Menu2_7: .DB "F-Temperatura Dormitorio Maxima", 13, 10
+0002c9 4820
+0002ca 482d
+0002cb 7369
+0002cc 6574
+0002cd 6972
+0002ce 6973
+0002cf 2073
+0002d0 6564
+0002d1 6c20
+0002d2 2061
+0002d3 6574
+0002d4 706d
+0002d5 7265
+0002d6 7461
+0002d7 7275
+0002d8 2061
+0002d9 6564
+0002da 206c
+0002db 6f44
+0002dc 6d72
+0002dd 7469
+0002de 726f
+0002df 6f69
+0002e0 0a0d                      Menu2_8: .DB "G-Temperatura Dormitorio Minima", 13, 10
+0002e1 754c
+0002e2 6563
+0002e3 2073
+0002e4 6e65
+0002e5 4c20
+0002e6 7875
+0002e7 3a73
+0002e8 0a0d                      Menu2_9: .db " H-Histerisis de la temperatura del Dormitorio", 13, 10
                                  Menu2_A: .DB "Luces en Luxs:", 13, 10
-0002e8 2d49
-0002e9 754c
-0002ea 207a
-0002eb 7845
-0002ec 6574
-0002ed 6972
-0002ee 726f
-0002ef 4d20
-0002f0 6e69
-0002f1 6d69
-0002f2 0d61
+0002e9 2d49
+0002ea 754c
+0002eb 207a
+0002ec 7845
+0002ed 6574
+0002ee 6972
+0002ef 726f
+0002f0 4d20
+0002f1 6e69
+0002f2 6d69
+0002f3 0d61
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(23): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-0002f3 000a                      	;ACA VAN LOS VALORES DE LA LUZ
-0002f4 2d4a
-0002f5 6156
-0002f6 6f6c
-0002f7 2072
-0002f8 6564
-0002f9 6573
-0002fa 6461
-0002fb 206f
-0002fc 6564
-0002fd 6c20
-0002fe 2061
-0002ff 6c49
-000300 6d75
-000301 6e69
-000302 6361
-000303 6f69
-000304 206e
-000305 6e49
-000306 6574
-000307 6972
-000308 726f
-000309 0d20
+0002f4 000a                      	;ACA VAN LOS VALORES DE LA LUZ
+0002f5 2d4a
+0002f6 6156
+0002f7 6f6c
+0002f8 2072
+0002f9 6564
+0002fa 6573
+0002fb 6461
+0002fc 206f
+0002fd 6564
+0002fe 6c20
+0002ff 2061
+000300 6c49
+000301 6d75
+000302 6e69
+000303 6361
+000304 6f69
+000305 206e
+000306 6e49
+000307 6574
+000308 6972
+000309 726f
+00030a 0d20
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(24): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-00030a 000a                      Menu2_B: .DB "I-Luz Exterior Minima", 13, 10
-00030b 2d4b
-00030c 6948
-00030d 7473
-00030e 7265
-00030f 7369
+00030b 000a                      Menu2_B: .DB "I-Luz Exterior Minima", 13, 10
+00030c 2d4b
+00030d 6948
+00030e 7473
+00030f 7265
 000310 7369
-000311 6420
-000312 2065
-000313 616c
-000314 6c20
-000315 7a75
-000316 6920
-000317 746e
-000318 7265
-000319 6f69
-00031a 0d72
+000311 7369
+000312 6420
+000313 2065
+000314 616c
+000315 6c20
+000316 7a75
+000317 6920
+000318 746e
+000319 7265
+00031a 6f69
+00031b 0d72
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(25): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-00031b 000a                      Menu2_C: .DB "J-Valor deseado de la Iluminacion Interior ",13, 10
-00031c 7345
-00031d 7571
-00031e 6d65
-00031f 2061
-000320 6f68
-000321 6172
-000322 6972
-000323 3a6f
-000324 0a0d                      Menu2_D: .DB "K-Histerisis de la luz interior", 13, 10
+00031c 000a                      Menu2_C: .DB "J-Valor deseado de la Iluminacion Interior ",13, 10
+00031d 7345
+00031e 7571
+00031f 6d65
+000320 2061
+000321 6f68
+000322 6172
+000323 6972
+000324 3a6f
+000325 0a0d                      Menu2_D: .DB "K-Histerisis de la luz interior", 13, 10
                                   Menu2_E: .DB "Esquema horario:", 13, 10
-000325 4c20
-000326 482d
-000327 726f
-000328 2061
-000329 6564
-00032a 4920
-00032b 696e
-00032c 6963
-00032d 206f
-00032e 6564
-00032f 206c
-000330 6944
-000331 0d61
+000326 4c20
+000327 482d
+000328 726f
+000329 2061
+00032a 6564
+00032b 4920
+00032c 696e
+00032d 6963
+00032e 206f
+00032f 6564
+000330 206c
+000331 6944
+000332 0d61
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(28): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-000332 000a                      	;ACA VAN LOS VALORES DE LOS HORARIOS
-000333 2d4d
-000334 6f48
-000335 6172
-000336 6420
-000337 2065
-000338 6946
-000339 206e
-00033a 6564
-00033b 206c
-00033c 6944
-00033d 0d61
+000333 000a                      	;ACA VAN LOS VALORES DE LOS HORARIOS
+000334 2d4d
+000335 6f48
+000336 6172
+000337 6420
+000338 2065
+000339 6946
+00033a 206e
+00033b 6564
+00033c 206c
+00033d 6944
+00033e 0d61
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(29): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-00033e 000a                      Menu2_F: .DB " L-Hora de Inicio del Dia", 13, 10
-00033f 2d4f
-000340 6f43
-000341 666e
-000342 6769
-000343 7275
-000344 7261
-000345 4820
-000346 726f
-000347 2061
-000348 6341
-000349 7574
-00034a 6c61
-00034b 412f
-00034c 7463
-00034d 6175
-00034e 696c
-00034f 617a
-000350 2072
-000351 6552
-000352 6f6c
-000353 0d6a
+00033f 000a                      Menu2_F: .DB " L-Hora de Inicio del Dia", 13, 10
+000340 2d4f
+000341 6f43
+000342 666e
+000343 6769
+000344 7275
+000345 7261
+000346 4820
+000347 726f
+000348 2061
+000349 6341
+00034a 7574
+00034b 6c61
+00034c 412f
+00034d 7463
+00034e 6175
+00034f 696c
+000350 617a
+000351 2072
+000352 6552
+000353 6f6c
+000354 0d6a
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(30): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-000354 000a                      Menu2_10: .DB "M-Hora de Fin del Dia", 13, 10
-000355 2d35
-000356 4f56
-000357 564c
-000358 5245
-000359 4120
-00035a 204c
-00035b 454d
-00035c 554e
-00035d 4120
-00035e 544e
-00035f 5245
-000360 4f49
-000361 2052
-000362 0a0d                      Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj", 13, 10
-000363 6156
-000364 6f6c
-000365 6572
-000366 2073
-000367 6341
-000368 7574
-000369 6c61
-00036a 7365
-00036b 203a
-00036c 5328
-00036d 6765
-00036e 6e75
-00036f 6320
-000370 6461
-000371 2061
-000372 656c
-000373 7274
-000374 2961
+000355 000a                      Menu2_10: .DB "M-Hora de Fin del Dia", 13, 10
+000356 2d35
+000357 4f56
+000358 564c
+000359 5245
+00035a 4120
+00035b 204c
+00035c 454d
+00035d 554e
+00035e 4120
+00035f 544e
+000360 5245
+000361 4f49
+000362 2052
+000363 0a0d                      Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj", 13, 10
+000364 6156
+000365 6f6c
+000366 6572
+000367 2073
+000368 6341
+000369 7574
+00036a 6c61
+00036b 7365
+00036c 203a
+00036d 5328
+00036e 6765
+00036f 6e75
+000370 6320
+000371 6461
+000372 2061
+000373 656c
+000374 7274
+000375 2961
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(32): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-000375 0002                      Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10
+000376 0002                      Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10
                                  Menu2_13: .db "Valores Actuales: (Segun cada letra)",2
-000376 4309
-000377 6d61
-000378 6962
-000379 6461
-00037a 216f
-00037b 4420
-00037c 7365
-00037d 6165
-00037e 6320
-00037f 6d61
-000380 6962
-000381 7261
-000382 6120
-000383 676c
-000384 206f
-000385 616d
-000386 3f73
-000387 0a0d
-000388 2d35
-000389 4f4e
-00038a 202c
-00038b 6f56
-00038c 766c
-00038d 7265
-00038e 4120
-00038f 206c
-000390 656d
-000391 756e
-000392 7020
-000393 6972
-000394 636e
-000395 7069
-000396 6c61
-000397 0a0d
-000398 2d32
-000399 6953
-00039a 202c
-00039b 6f76
-00039c 766c
-00039d 7265
-00039e 6120
-00039f 206c
-0003a0 656d
-0003a1 756e
-0003a2 6120
-0003a3 746e
-0003a4 7265
-0003a5 6f69
-0003a6 2072
-0003a7 0a0d
+000377 4309
+000378 6d61
+000379 6962
+00037a 6461
+00037b 216f
+00037c 4420
+00037d 7365
+00037e 6165
+00037f 6320
+000380 6d61
+000381 6962
+000382 7261
+000383 6120
+000384 676c
+000385 206f
+000386 616d
+000387 3f73
+000388 0a0d
+000389 2d35
+00038a 4f4e
+00038b 202c
+00038c 6f56
+00038d 766c
+00038e 7265
+00038f 4120
+000390 206c
+000391 656d
+000392 756e
+000393 7020
+000394 6972
+000395 636e
+000396 7069
+000397 6c61
+000398 0a0d
+000399 2d32
+00039a 6953
+00039b 202c
+00039c 6f76
+00039d 766c
+00039e 7265
+00039f 6120
+0003a0 206c
+0003a1 656d
+0003a2 756e
+0003a3 6120
+0003a4 746e
+0003a5 7265
+0003a6 6f69
+0003a7 2072
+0003a8 0a0d
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc(34): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(10): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc' included form here
-0003a8 0002                      CambioDeValor:
+0003a9 0002                      CambioDeValor:
                                  .DB "	Cambiado! Desea cambiar algo mas?", 13, 10, "5-NO, Volver Al menu principal", 13, 10, "2-Si, volver al menu anterior ", 13, 10,2
                                  
-0003a9 6e49
-0003aa 7267
-0003ab 7365
-0003ac 2065
-0003ad 6c65
-0003ae 6e20
-0003af 6575
-0003b0 6f76
-0003b1 7620
-0003b2 6c61
-0003b3 726f                       .INCLUDE "division.inc"
-0003b4 093a
+0003aa 6e49
+0003ab 7267
+0003ac 7365
+0003ad 2065
+0003ae 6c65
+0003af 6e20
+0003b0 6575
+0003b1 6f76
+0003b2 7620
+0003b3 6c61
+0003b4 726f                       .INCLUDE "division.inc"
+0003b5 093a
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc(1): warning: .cseg .db misalignment - padding zero byte
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(11): 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc' included form here
-0003b5 0002                      
+0003b6 0002                      
                                  ; DIVIDENDO -> R24:R25
                                  ; DIVISOR   -> R23:R22
                                  ; RESTO		-> R27:R26
@@ -1721,221 +1722,223 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  
                                  .CSEG
                                  MAIN:
-0003b6 e0f2                      	LDI ZH, HIGH(TABLA_ROM_MSJ <<1)	;Apunto hacia la tabla con MENSAJE
-0003b7 eae0                      	LDI ZL, LOW(TABLA_ROM_MSJ <<1)
+0003b7 e0f2                      	LDI ZH, HIGH(TABLA_ROM_MSJ <<1)	;Apunto hacia la tabla con MENSAJE
+0003b8 eae0                      	LDI ZL, LOW(TABLA_ROM_MSJ <<1)
                                  
                                  
                                  LOOP:
-0003b8 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-0003b9 3012                      	CPI R17, 2	;Se compara con el caracter final
-0003ba f041                      	BREQ END_MESSAGE	;Si termino la lectura se manda el siguiente mensaje
+0003b9 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0003ba 3012                      	CPI R17, 2	;Se compara con el caracter final
+0003bb f041                      	BREQ END_MESSAGE	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT:
-0003bb 9100 00c0                 	LDS R16,UCSR0A
-0003bd ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-0003be cffc                      	RJMP TRANSMIT		;Si no lo esta, se espera
-0003bf 9310 00c6                 	STS UDR0,R17	
-0003c1 cff6                      	RJMP LOOP	
-0003c2 9508                      	RET
+0003bc 9100 00c0                 	LDS R16,UCSR0A
+0003be ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0003bf cffc                      	RJMP TRANSMIT		;Si no lo esta, se espera
+0003c0 9310 00c6                 	STS UDR0,R17	
+0003c2 cff6                      	RJMP LOOP	
+0003c3 9508                      	RET
                                  END_MESSAGE:
                                  
                                  
                                  READ:
-0003c3 9100 00c0                 	LDS R16,UCSR0A  
-0003c5 ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
-0003c6 cffc                      	RJMP READ			
+0003c4 9100 00c0                 	LDS R16,UCSR0A  
+0003c6 ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
+0003c7 cffc                      	RJMP READ			
                                  OPTIONS:                
-0003c7 9120 00c6                 	LDS R18,UDR0        ;Leo el dato recibido y comparo
-0003c9 3321                      	CPI R18, 0x31			
-0003ca f129                      	BREQ ENCENDER_UNO		
-0003cb 3322                      	CPI R18, 0x32			
-0003cc f129                      	BREQ ENCENDER_DOS		
-0003cd 3323                      	CPI R18, 0x33			
-0003ce f129                      	BREQ ENCENDER_TRES	
-0003cf 3324                      	CPI R18, 0x34			
-0003d0 f129                      	BREQ ENCENDER_CUATRO	
-0003d1 3325                      	CPI R18, 0x35			
-0003d2 f319                      	BREQ MAIN
-0003d3 3421                      	CPI R18,'A'
-0003d4 f119                      	BREQ PresionoA
-0003d5 3422                      	CPI R18,'B'
-0003d6 f119                      	BREQ PresionoB
-0003d7 3423                      	CPI R18,'C'
-0003d8 f119                      	BREQ PresionoC
-0003d9 3424                      	CPI R18,'D'
-0003da f119                      	BREQ PresionoD
-0003db 3425                      	CPI R18,'E'
-0003dc f119                      	BREQ PresionoE
-0003dd 3426                      	CPI R18,'F'
-0003de f119                      	BREQ PresionoF
-0003df 3427                      	CPI R18,'G'
-0003e0 f119                      	BREQ PresionoG
-0003e1 3428                      	CPI R18,'H'
-0003e2 f119                      	BREQ PresionoH
-0003e3 3429                      	CPI R18,'I'
-0003e4 f119                      	BREQ PresionoI
-0003e5 342a                      	CPI R18,'J'
-0003e6 f119                      	BREQ PresionoJ
-0003e7 342b                      	CPI R18,'K'
-0003e8 f119                      	BREQ PresionoK
-0003e9 342d                      	CPI R18,'M'
-0003ea f119                      	BREQ PresionoM
-0003eb 342c                      	CPI R18,'L'
-0003ec f119                      	BREQ PresionoL
-0003ed 342f                      	CPI R18,'O'
-0003ee f119                      	BREQ PresionoO
-0003ef cfd3                      	RJMP READ			
+0003c8 9120 00c6                 	LDS R18,UDR0        ;Leo el dato recibido y comparo
+0003ca e011                      	LDI R17,1
+0003cb 9310 00c0                 	STS UCSR0A,R17
+0003cd 3321                      	CPI R18, 0x31			
+0003ce f129                      	BREQ ENCENDER_UNO		
+0003cf 3322                      	CPI R18, 0x32			
+0003d0 f129                      	BREQ ENCENDER_DOS		
+0003d1 3323                      	CPI R18, 0x33			
+0003d2 f129                      	BREQ ENCENDER_TRES	
+0003d3 3324                      	CPI R18, 0x34			
+0003d4 f129                      	BREQ ENCENDER_CUATRO	
+0003d5 3325                      	CPI R18, 0x35			
+0003d6 f301                      	BREQ MAIN
+0003d7 3421                      	CPI R18,'A'
+0003d8 f119                      	BREQ PresionoA
+0003d9 3422                      	CPI R18,'B'
+0003da f119                      	BREQ PresionoB
+0003db 3423                      	CPI R18,'C'
+0003dc f119                      	BREQ PresionoC
+0003dd 3424                      	CPI R18,'D'
+0003de f119                      	BREQ PresionoD
+0003df 3425                      	CPI R18,'E'
+0003e0 f119                      	BREQ PresionoE
+0003e1 3426                      	CPI R18,'F'
+0003e2 f119                      	BREQ PresionoF
+0003e3 3427                      	CPI R18,'G'
+0003e4 f119                      	BREQ PresionoG
+0003e5 3428                      	CPI R18,'H'
+0003e6 f119                      	BREQ PresionoH
+0003e7 3429                      	CPI R18,'I'
+0003e8 f119                      	BREQ PresionoI
+0003e9 342a                      	CPI R18,'J'
+0003ea f119                      	BREQ PresionoJ
+0003eb 342b                      	CPI R18,'K'
+0003ec f119                      	BREQ PresionoK
+0003ed 342d                      	CPI R18,'M'
+0003ee f119                      	BREQ PresionoM
+0003ef 342c                      	CPI R18,'L'
+0003f0 f119                      	BREQ PresionoL
+0003f1 342f                      	CPI R18,'O'
+0003f2 f119                      	BREQ PresionoO
+0003f3 cfd0                      	RJMP READ			
                                  	ENCENDER_UNO:
-0003f0 940c 0416                 	JMP ENCENDER_UNOLEJOS	
+0003f4 940c 041a                 	JMP ENCENDER_UNOLEJOS	
                                  	ENCENDER_DOS:
-0003f2 940c 0426                 	JMP ENCENDER_DOSLEJOS
+0003f6 940c 042a                 	JMP ENCENDER_DOSLEJOS
                                  	ENCENDER_TRES:
-0003f4 940c 049f                 	JMP ENCENDER_TRESLejos
+0003f8 940c 04a3                 	JMP ENCENDER_TRESLejos
                                  	ENCENDER_CUATRO:
-0003f6 940c 0422                 	JMP ENCENDER_CUATROLEJOS
+0003fa 940c 0426                 	JMP ENCENDER_CUATROLEJOS
                                  	PresionoA:
-0003f8 940c 04a7                 	JMP PresionoALejos
+0003fc 940c 04ab                 	JMP PresionoALejos
                                  	PresionoB:
-0003fa 940c 04cc                 	JMP PresionoBLejos
+0003fe 940c 04d0                 	JMP PresionoBLejos
                                  	PresionoC:
-0003fc 940c 04f1                 	JMP PresionoCLejos
+000400 940c 04f5                 	JMP PresionoCLejos
                                  	PresionoD:
-0003fe 940c 0516                 	JMP PresionoDLejos
+000402 940c 051a                 	JMP PresionoDLejos
                                  	PresionoE:
-000400 940c 053b                 	JMP PresionoELejos
+000404 940c 053f                 	JMP PresionoELejos
                                  	PresionoF:
-000402 940c 055c                 	JMP PresionoFLejos
+000406 940c 0560                 	JMP PresionoFLejos
                                  	PresionoG:
-000404 940c 057d                 	JMP PresionoGLejos
+000408 940c 0581                 	JMP PresionoGLejos
                                  	PresionoH:
-000406 940c 059e                 	JMP PresionoHLejos
+00040a 940c 05a2                 	JMP PresionoHLejos
                                  	PresionoI:
-000408 940c 05bf                 	JMP PresionoILejos
+00040c 940c 05c3                 	JMP PresionoILejos
                                  	PresionoJ:
-00040a 940c 05e0                 	JMP PresionoJLejos
+00040e 940c 05e4                 	JMP PresionoJLejos
                                  	PresionoK:
-00040c 940c 0601                 	JMP PresionoKLejos
+000410 940c 0605                 	JMP PresionoKLejos
                                  	PresionoM:
-00040e 940c 0622                 	JMP PresionoMLejos
+000412 940c 0626                 	JMP PresionoMLejos
                                  	PresionoL:
-000410 940c 0643                 	JMP PresionoLLejos
+000414 940c 0647                 	JMP PresionoLLejos
                                  	PresionoO:
-000412 940c 0664                 	JMP PresionoOLejos
+000416 940c 0668                 	JMP PresionoOLejos
                                  	END_MESSAGE1:
-000414 940c 03c7                 	JMP Options
+000418 940c 03c8                 	JMP Options
                                  ENCENDER_UNOLEJOS:	
-000416 e0f3                      	LDI ZH, HIGH(TABLA_ROM_MSJ2 <<1)	;Apunto hacia la tabla con MENSAJE
-000417 e1e6                      	LDI ZL, LOW(TABLA_ROM_MSJ2 <<1)
+00041a e0f3                      	LDI ZH, HIGH(TABLA_ROM_MSJ2 <<1)	;Apunto hacia la tabla con MENSAJE
+00041b e1e8                      	LDI ZL, LOW(TABLA_ROM_MSJ2 <<1)
                                  	
                                  LOOP_1:
-000418 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-000419 3012                      	CPI R17, 2	;Se compara con el caracter final
-00041a f3c9                      	BREQ END_MESSAGE1	;Si termino la lectura se manda el siguiente mensaje
+00041c 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00041d 3012                      	CPI R17, 2	;Se compara con el caracter final
+00041e f3c9                      	BREQ END_MESSAGE1	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT1:
-00041b 9100 00c0                 	LDS R16,UCSR0A
-00041d ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-00041e cffc                      	RJMP TRANSMIT1		;Si no lo esta, se espera
-00041f 9310 00c6                 	STS UDR0,R17	
-000421 cff6                      	RJMP LOOP_1	
+00041f 9100 00c0                 	LDS R16,UCSR0A
+000421 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000422 cffc                      	RJMP TRANSMIT1		;Si no lo esta, se espera
+000423 9310 00c6                 	STS UDR0,R17	
+000425 cff6                      	RJMP LOOP_1	
                                  	
                                  
                                  ENCENDER_CUATROLEJOS:
-000422 940c 069d                 	JMP ENCENDER4		
-000424 940c 06a0                 	JMP APAGAR4
+000426 940c 06a1                 	JMP ENCENDER4		
+000428 940c 06a4                 	JMP APAGAR4
                                  
                                  ENCENDER_DOSLEJOS:
-000426 e0f4                          LDI ZH, HIGH(TABLA_ROM_MSJ3 <<1)	;Apunto hacia la tabla con MENSAJE
-000427 e2e8                      	LDI ZL, LOW(TABLA_ROM_MSJ3 <<1)
-000428 940e 042a                 	CALL LOOP2
+00042a e0f4                          LDI ZH, HIGH(TABLA_ROM_MSJ3 <<1)	;Apunto hacia la tabla con MENSAJE
+00042b e2ea                      	LDI ZL, LOW(TABLA_ROM_MSJ3 <<1)
+00042c 940e 042e                 	CALL LOOP2
                                  LOOP2:
-00042a 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-00042b 3012                      	CPI R17, 2	;Se compara con el caracter final
-00042c f039                      	BREQ MostrarConfiguraciones	;Si termino la lectura se manda el siguiente mensaje
+00042e 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00042f 3012                      	CPI R17, 2	;Se compara con el caracter final
+000430 f039                      	BREQ MostrarConfiguraciones	;Si termino la lectura se manda el siguiente mensaje
                                  TRANSMI2T:
-00042d 9100 00c0                 	LDS R16,UCSR0A
-00042f ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-000430 cffc                      	RJMP TRANSMI2T		;Si no lo esta, se espera
-000431 9310 00c6                 	STS UDR0,R17	
-000433 cff6                      	RJMP LOOP2
+000431 9100 00c0                 	LDS R16,UCSR0A
+000433 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000434 cffc                      	RJMP TRANSMI2T		;Si no lo esta, se espera
+000435 9310 00c6                 	STS UDR0,R17	
+000437 cff6                      	RJMP LOOP2
                                  MostrarConfiguraciones:
-000434 e441                      	 LDI R20, 'A'; Hasta aca bien
-000435 940e 0498                 	 CALL ESPERAR_TX
-000437 e54f                      	 LDI R20, '_'
-000438 940e 0498                 	 CALL ESPERAR_TX
-00043a e0f1                      	 ldi ZH, high(TemperaturaExteriorMinimaH)
-00043b e6ea                           ldi ZL, low(TemperaturaExteriorMinimaH)
-00043c 8140                      	 ld r20, Z
-00043d 9340 00c6                 	 sts UDR0, r20
-00043f 940e 0498                 	 CALL ESPERAR_TX
-000441 e0f1                      	 ldi ZH, high(TemperaturaExteriorMinimaL)
-000442 e6eb                           ldi ZL, low(TemperaturaExteriorMinimaL)
-000443 8140                      	 ld r20, Z
-000444 9340 00c6                 	 sts UDR0, r20
-000446 940e 0498                 	 CALL ESPERAR_TX
-000448 e04d                      	 LDI R20, 13
-000449 940e 0498                 	 CALL ESPERAR_TX
-00044b e04a                      	 LDI R20, 10
-00044c 940e 0498                 	 CALL ESPERAR_TX
-00044e e442                      	 LDI R20, 'B'; Hasta aca bien
-00044f 940e 0498                 	 CALL ESPERAR_TX
-000451 e54f                      	 LDI R20, '_'
-000452 940e 0498                 	 CALL ESPERAR_TX
-000454 e0f1                      	 ldi ZH, high(TemperaturaExteriorMaximaH)
-000455 e6ed                           ldi ZL, low(TemperaturaExteriorMaximaH)
-000456 8140                      	 ld r20, Z
-000457 9340 00c6                 	 sts UDR0, r20
-000459 940e 0498                 	 CALL ESPERAR_TX
-00045b e0f1                      	 ldi ZH, high(TemperaturaExteriorMaximaL)
-00045c e6ee                           ldi ZL, low(TemperaturaExteriorMaximaL)
-00045d 8140                      	 ld r20, Z
-00045e 9340 00c6                 	 sts UDR0, r20
-000460 940e 0498                 	 CALL ESPERAR_TX
+000438 e441                      	 LDI R20, 'A'; Hasta aca bien
+000439 940e 049c                 	 CALL ESPERAR_TX
+00043b e54f                      	 LDI R20, '_'
+00043c 940e 049c                 	 CALL ESPERAR_TX
+00043e e0f1                      	 ldi ZH, high(TemperaturaExteriorMinimaH)
+00043f e6ea                           ldi ZL, low(TemperaturaExteriorMinimaH)
+000440 8140                      	 ld r20, Z
+000441 9340 00c6                 	 sts UDR0, r20
+000443 940e 049c                 	 CALL ESPERAR_TX
+000445 e0f1                      	 ldi ZH, high(TemperaturaExteriorMinimaL)
+000446 e6eb                           ldi ZL, low(TemperaturaExteriorMinimaL)
+000447 8140                      	 ld r20, Z
+000448 9340 00c6                 	 sts UDR0, r20
+00044a 940e 049c                 	 CALL ESPERAR_TX
+00044c e04d                      	 LDI R20, 13
+00044d 940e 049c                 	 CALL ESPERAR_TX
+00044f e04a                      	 LDI R20, 10
+000450 940e 049c                 	 CALL ESPERAR_TX
+000452 e442                      	 LDI R20, 'B'; Hasta aca bien
+000453 940e 049c                 	 CALL ESPERAR_TX
+000455 e54f                      	 LDI R20, '_'
+000456 940e 049c                 	 CALL ESPERAR_TX
+000458 e0f1                      	 ldi ZH, high(TemperaturaExteriorMaximaH)
+000459 e6ed                           ldi ZL, low(TemperaturaExteriorMaximaH)
+00045a 8140                      	 ld r20, Z
+00045b 9340 00c6                 	 sts UDR0, r20
+00045d 940e 049c                 	 CALL ESPERAR_TX
+00045f e0f1                      	 ldi ZH, high(TemperaturaExteriorMaximaL)
+000460 e6ee                           ldi ZL, low(TemperaturaExteriorMaximaL)
+000461 8140                      	 ld r20, Z
+000462 9340 00c6                 	 sts UDR0, r20
+000464 940e 049c                 	 CALL ESPERAR_TX
                                  	 ; SEGUIMOS CON EL RESTo (?)
-000462 e240                      	 LDI R20, 32 
-000463 940e 0498                 	 CALL ESPERAR_TX
-000465 e240                      	 LDI R20, 32
-000466 940e 0498                 	 CALL ESPERAR_TX
-000468 e443                      	 LDI R20, 'C'; Hasta aca bien                                   BIEN
-000469 940e 0498                 	 CALL ESPERAR_TX
-00046b e54f                      	 LDI R20, '_'
-00046c 940e 0498                 	 CALL ESPERAR_TX
-00046e e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
-00046f e7e1                           ldi ZL, low(TemperaturaLCCMinimaH)
-000470 8140                      	 ld r20, Z
-000471 9340 00c6                 	 sts UDR0, r20
-000473 940e 0498                 	 CALL ESPERAR_TX
-000475 e0f1                      	 ldi ZH, high(TemperaturaLCCMinimaL)
-000476 e7e3                           ldi ZL, low(TemperaturaLCCMinimaL)
-000477 8140                      	 ld r20, Z
-000478 9340 00c6                 	 sts UDR0, r20
-00047a 940e 0498                 	 CALL ESPERAR_TX
+000466 e240                      	 LDI R20, 32 
+000467 940e 049c                 	 CALL ESPERAR_TX
+000469 e240                      	 LDI R20, 32
+00046a 940e 049c                 	 CALL ESPERAR_TX
+00046c e443                      	 LDI R20, 'C'; ACA ERROR DE SOBREESCRITURA <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+00046d 940e 049c                 	 CALL ESPERAR_TX
+00046f e54f                      	 LDI R20, '_'
+000470 940e 049c                 	 CALL ESPERAR_TX
+000472 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
+000473 e7e1                           ldi ZL, low(TemperaturaLCCMinimaH)
+000474 8140                      	 ld r20, Z
+000475 9340 00c6                 	 sts UDR0, r20
+000477 940e 049c                 	 CALL ESPERAR_TX
+000479 e0f1                      	 ldi ZH, high(TemperaturaLCCMinimaL)
+00047a e7e3                           ldi ZL, low(TemperaturaLCCMinimaL)
+00047b 8140                      	 ld r20, Z
+00047c 9340 00c6                 	 sts UDR0, r20
+00047e 940e 049c                 	 CALL ESPERAR_TX
                                  	 ; SEGUIMOS CON EL RESTo (?)
-00047c e240                      	 LDI R20, 32 
-00047d 940e 0498                 	 CALL ESPERAR_TX
-00047f e240                      	 LDI R20, 32
-000480 940e 0498                 	 CALL ESPERAR_TX
-000482 e444                      	  LDI R20, 'D'; Hasta aca bien                                   BIEN
-000483 940e 0498                 	 CALL ESPERAR_TX
-000485 e54f                      	 LDI R20, '_'
-000486 940e 0498                 	 CALL ESPERAR_TX
-000488 e0f1                      	ldi ZH, high(TemperaturaLCCMaximaH)
-000489 e7e7                           ldi ZL, low(TemperaturaLCCMaximaH)
-00048a 8140                      	 ld r20, Z
-00048b 9340 00c6                 	 sts UDR0, r20
-00048d 940e 0498                 	 CALL ESPERAR_TX
-00048f e0f1                      	 ldi ZH, high(TemperaturaLCCMaximaL)
-000490 e7e9                           ldi ZL, low(TemperaturaLCCMaximaL)
-000491 8140                      	 ld r20, Z
-000492 9340 00c6                 	 sts UDR0, r20
-000494 940e 0498                 	 CALL ESPERAR_TX
-000496 940c 03c3                 	 jmp READ
+000480 e240                      	 LDI R20, 32 
+000481 940e 049c                 	 CALL ESPERAR_TX
+000483 e240                      	 LDI R20, 32
+000484 940e 049c                 	 CALL ESPERAR_TX
+000486 e444                      	  LDI R20, 'D'; Hasta aca bien                                   BIEN
+000487 940e 049c                 	 CALL ESPERAR_TX
+000489 e54f                      	 LDI R20, '_'
+00048a 940e 049c                 	 CALL ESPERAR_TX
+00048c e0f1                      	ldi ZH, high(TemperaturaLCCMaximaH)
+00048d e7e7                           ldi ZL, low(TemperaturaLCCMaximaH)
+00048e 8140                      	 ld r20, Z
+00048f 9340 00c6                 	 sts UDR0, r20
+000491 940e 049c                 	 CALL ESPERAR_TX
+000493 e0f1                      	 ldi ZH, high(TemperaturaLCCMaximaL)
+000494 e7e9                           ldi ZL, low(TemperaturaLCCMaximaL)
+000495 8140                      	 ld r20, Z
+000496 9340 00c6                 	 sts UDR0, r20
+000498 940e 049c                 	 CALL ESPERAR_TX
+00049a 940c 03c4                 	 jmp READ
                                  ESPERAR_TX:
-000498 9100 00c0                 	  LDS  R16,UCSR0A
-00049a ff05                      	  SBRS R16,UDRE0
-00049b cffc                      	  RJMP ESPERAR_TX
-00049c 9340 00c6                 	  STS  UDR0,R20
-00049e 9508                      	  RET
+00049c 9100 00c0                 	  LDS  R16,UCSR0A
+00049e ff05                      	  SBRS R16,UDRE0
+00049f cffc                      	  RJMP ESPERAR_TX
+0004a0 9340 00c6                 	  STS  UDR0,R20
+0004a2 9508                      	  RET
                                  
                                  /*ENCENDER2:
                                  	RJMP READ
@@ -1958,597 +1961,680 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  	 CALL TRANSMMITF
                                  	 ; SEGUIMOS CON EL RESTo (?)*/
                                  ENCENDER_TRESLejos:	
-00049f c001                      	RJMP ENCENDER3			
-0004a0 c003                      	RJMP APAGAR3
+0004a3 c001                      	RJMP ENCENDER3			
+0004a4 c003                      	RJMP APAGAR3
                                  ENCENDER3:
-0004a1 940e 06a7                 	CALL DELAY
-0004a3 cf1f                      	RJMP READ
+0004a5 940e 06ab                 	CALL DELAY
+0004a7 cf1c                      	RJMP READ
                                  APAGAR3:
-0004a4 940e 06a7                 	CALL DELAY
-0004a6 cf1c                      	RJMP READ
+0004a8 940e 06ab                 	CALL DELAY
+0004aa cf19                      	RJMP READ
                                  PresionoALejos:
-0004a7 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-0004a8 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-0004a9 c000                      	RJMP LOOPA
+0004ab e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0004ac e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+0004ad c000                      	RJMP LOOPA
                                  
                                  LOOPA:
-0004aa 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-0004ab 3012                      	CPI R17, 2	;Se compara con el caracter final
-0004ac f039                      	BREQ END_MESSAGE2A	;Si termino la lectura se manda el siguiente mensaje
+0004ae 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0004af 3012                      	CPI R17, 2	;Se compara con el caracter final
+0004b0 f039                      	BREQ END_MESSAGE2A	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2:
-0004ad 9100 00c0                 	LDS R16,UCSR0A
-0004af ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-0004b0 cffc                      	RJMP TRANSMIT2		;Si no lo esta, se espera
-0004b1 9310 00c6                 	STS UDR0,R17	
-0004b3 cff6                      	RJMP LOOPA
+0004b1 9100 00c0                 	LDS R16,UCSR0A
+0004b3 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0004b4 cffc                      	RJMP TRANSMIT2		;Si no lo esta, se espera
+0004b5 9310 00c6                 	STS UDR0,R17	
+0004b7 cff6                      	RJMP LOOPA
                                  	
                                  END_MESSAGE2A: ;despues de mandar ese adorno:
                                  READPresionoAL: ; leeemos
-0004b4 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-0004b6 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0004b7 cffc                          RJMP READPresionoAL   ; Si no se ha recibido, espera.
-0004b8 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0004ba 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+0004b8 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0004ba ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004bb cffc                          RJMP READPresionoAL   ; Si no se ha recibido, espera.
+0004bc 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004be 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
                                  ; Configura Z para apuntar a la dirección de memoria 0x0157.
-0004bc e0f1                       ldi ZH, high(TemperaturaExteriorMinimaH)
-0004bd e6ea                       ldi ZL, low(TemperaturaExteriorMinimaH)
-0004be 8250                       st Z, r5; Almacena el valor de R5 en la dirección de memoria 0x0157.
+0004c0 e0f1                       ldi ZH, high(TemperaturaExteriorMinimaH)
+0004c1 e6ea                       ldi ZL, low(TemperaturaExteriorMinimaH)
+0004c2 8250                       st Z, r5; Almacena el valor de R5 en la dirección de memoria 0x0157.
                                  
                                  READPresionoAH:
-0004bf 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-0004c1 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0004c2 cffc                          RJMP READPresionoAH   ; Si no se ha recibido, espera.
-0004c3 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0004c5 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+0004c3 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0004c5 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004c6 cffc                          RJMP READPresionoAH   ; Si no se ha recibido, espera.
+0004c7 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004c9 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0004c7 e0f1                      ldi ZH, high(TemperaturaExteriorMinimaL)
-0004c8 e6eb                       ldi ZL, low(TemperaturaExteriorMinimaL)
-0004c9 8250                       st Z, r5
-0004ca 940c 0689                 JMP MensajeFinalDeCambiodevalor
+0004cb e0f1                      ldi ZH, high(TemperaturaExteriorMinimaL)
+0004cc e6eb                       ldi ZL, low(TemperaturaExteriorMinimaL)
+0004cd 8250                       st Z, r5
+0004ce 940c 068d                 JMP MensajeFinalDeCambiodevalor
                                  PresionoBLejos:
-0004cc e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-0004cd e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-0004ce c000                      	RJMP LOOP3
+0004d0 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0004d1 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+0004d2 c000                      	RJMP LOOP3
                                  
                                  LOOP3:
-0004cf 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-0004d0 3012                      	CPI R17, 2	;Se compara con el caracter final
-0004d1 f039                      	BREQ END_MESSAGE2B	;Si termino la lectura se manda el siguiente mensaje
+0004d3 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0004d4 3012                      	CPI R17, 2	;Se compara con el caracter final
+0004d5 f039                      	BREQ END_MESSAGE2B	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT_A:
-0004d2 9100 00c0                 	LDS R16,UCSR0A
-0004d4 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-0004d5 cffc                      	RJMP TRANSMIT_A		;Si no lo esta, se espera
-0004d6 9310 00c6                 	STS UDR0,R17	
-0004d8 cff6                      	RJMP LOOP3	
+0004d6 9100 00c0                 	LDS R16,UCSR0A
+0004d8 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0004d9 cffc                      	RJMP TRANSMIT_A		;Si no lo esta, se espera
+0004da 9310 00c6                 	STS UDR0,R17	
+0004dc cff6                      	RJMP LOOP3	
                                  END_MESSAGE2B:	
                                   ;despues de mandar ese adorno:
                                  READPresionoBL: ; leeemos
-0004d9 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-0004db ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0004dc cffc                          RJMP READPresionoBL   ; Si no se ha recibido, espera.
-0004dd 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0004df 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+0004dd 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0004df ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004e0 cffc                          RJMP READPresionoBL   ; Si no se ha recibido, espera.
+0004e1 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004e3 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0004e1 e0f1                      ldi ZH, high(TemperaturaExteriorMaximaH)
-0004e2 e6ed                       ldi ZL, low(TemperaturaExteriorMaximaH)
-0004e3 8250                       st Z, r5
+0004e5 e0f1                      ldi ZH, high(TemperaturaExteriorMaximaH)
+0004e6 e6ed                       ldi ZL, low(TemperaturaExteriorMaximaH)
+0004e7 8250                       st Z, r5
                                  READPresionoBH:
-0004e4 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-0004e6 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0004e7 cffc                          RJMP READPresionoBH   ; Si no se ha recibido, espera.
-0004e8 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0004ea 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+0004e8 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0004ea ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0004eb cffc                          RJMP READPresionoBH   ; Si no se ha recibido, espera.
+0004ec 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0004ee 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0004ec e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaL)
-0004ed e6ee                      	ldi ZL, low(TemperaturaExteriorMaximaL)
-0004ee 8250                      	st Z, r5
-0004ef 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+0004f0 e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaL)
+0004f1 e6ee                      	ldi ZL, low(TemperaturaExteriorMaximaL)
+0004f2 8250                      	st Z, r5
+0004f3 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  	PresionoCLejos:
-0004f1 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-0004f2 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-0004f3 c000                      	RJMP LOOPC
+0004f5 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0004f6 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+0004f7 c000                      	RJMP LOOPC
                                  
                                  LOOPC:
-0004f4 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-0004f5 3012                      	CPI R17, 2	;Se compara con el caracter final
-0004f6 f039                      	BREQ END_MESSAGE2C	;Si termino la lectura se manda el siguiente mensaje
+0004f8 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0004f9 3012                      	CPI R17, 2	;Se compara con el caracter final
+0004fa f039                      	BREQ END_MESSAGE2C	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2C:
-0004f7 9100 00c0                 	LDS R16,UCSR0A
-0004f9 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-0004fa cfb2                      	RJMP TRANSMIT2		;Si no lo esta, se espera
-0004fb 9310 00c6                 	STS UDR0,R17	
-0004fd cff6                      	RJMP LOOPC
+0004fb 9100 00c0                 	LDS R16,UCSR0A
+0004fd ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0004fe cfb2                      	RJMP TRANSMIT2		;Si no lo esta, se espera
+0004ff 9310 00c6                 	STS UDR0,R17	
+000501 cff6                      	RJMP LOOPC
                                  	
                                  END_MESSAGE2C: ;despues de mandar ese adorno:
                                  READPresionoCL: ; leeemos
-0004fe 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-000500 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000501 cffc                          RJMP READPresionoCL   ; Si no se ha recibido, espera.
-000502 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000504 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+000502 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000504 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000505 cffc                          RJMP READPresionoCL   ; Si no se ha recibido, espera.
+000506 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000508 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000506 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
-000507 e7e1                      	ldi ZL, low(TemperaturaLCCMinimaH)
-000508 8250                      	st Z, r5
+00050a e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
+00050b e7e1                      	ldi ZL, low(TemperaturaLCCMinimaH)
+00050c 8250                      	st Z, r5
                                  READPresionoCH:
-000509 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-00050b ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00050c cffc                          RJMP READPresionoCH   ; Si no se ha recibido, espera.
-00050d 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-00050f 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+00050d 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+00050f ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000510 cffc                          RJMP READPresionoCH   ; Si no se ha recibido, espera.
+000511 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000513 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000511 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaL)
-000512 e7e3                      	ldi ZL, low(TemperaturaLCCMinimaL)
-000513 8250                      	st Z, r5
-000514 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+000515 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaL)
+000516 e7e3                      	ldi ZL, low(TemperaturaLCCMinimaL)
+000517 8250                      	st Z, r5
+000518 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  PresionoDLejos:
-000516 e0f7                      LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-000517 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-000518 c000                      	RJMP LOOPD
+00051a e0f7                      LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+00051b e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+00051c c000                      	RJMP LOOPD
                                  
                                  LOOPD:
-000519 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-00051a 3012                      	CPI R17, 2	;Se compara con el caracter final
-00051b f039                      	BREQ END_MESSAGE2D	;Si termino la lectura se manda el siguiente mensaje
+00051d 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00051e 3012                      	CPI R17, 2	;Se compara con el caracter final
+00051f f039                      	BREQ END_MESSAGE2D	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMITD:
-00051c 9100 00c0                 	LDS R16,UCSR0A
-00051e ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-00051f cffc                      	RJMP TRANSMITD		;Si no lo esta, se espera
-000520 9310 00c6                 	STS UDR0,R17	
-000522 cff6                      	RJMP LOOPD
+000520 9100 00c0                 	LDS R16,UCSR0A
+000522 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000523 cffc                      	RJMP TRANSMITD		;Si no lo esta, se espera
+000524 9310 00c6                 	STS UDR0,R17	
+000526 cff6                      	RJMP LOOPD
                                  	
                                  END_MESSAGE2D: ;despues de mandar ese adorno:
                                  READPresionoDL: ; leeemos
-000523 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-000525 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000526 cffc                          RJMP READPresionoDL   ; Si no se ha recibido, espera.
-000527 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000529 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+000527 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000529 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00052a cffc                          RJMP READPresionoDL   ; Si no se ha recibido, espera.
+00052b 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00052d 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-00052b e0f1                      ldi ZH, high(TemperaturaLCCMaximaH)
-00052c e7e7                      ldi ZL, low(TemperaturaLCCMaximaH)
-00052d 8250                       st Z, r5
+00052f e0f1                      ldi ZH, high(TemperaturaLCCMaximaH)
+000530 e7e7                      ldi ZL, low(TemperaturaLCCMaximaH)
+000531 8250                       st Z, r5
                                  READPresionoDH:
-00052e 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-000530 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000531 cffc                          RJMP READPresionoDH   ; Si no se ha recibido, espera.
-000532 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000534 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+000532 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000534 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000535 cffc                          RJMP READPresionoDH   ; Si no se ha recibido, espera.
+000536 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000538 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000536 e0f1                      ldi ZH, high(TemperaturaLCCMaximaL)
-000537 e7e9                      ldi ZL, low(TemperaturaLCCMaximaL)
-000538 8250                       st Z, r5
-000539 940c 0689                 JMP MensajeFinalDeCambiodevalor
+00053a e0f1                      ldi ZH, high(TemperaturaLCCMaximaL)
+00053b e7e9                      ldi ZL, low(TemperaturaLCCMaximaL)
+00053c 8250                       st Z, r5
+00053d 940c 068d                 JMP MensajeFinalDeCambiodevalor
                                  PresionoELejos:
-00053b e0f7                      LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-00053c e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-00053d c000                      	RJMP LOOPE
+00053f e0f7                      LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000540 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+000541 c000                      	RJMP LOOPE
                                  
                                  LOOPE:
-00053e 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-00053f 3012                      	CPI R17, 2	;Se compara con el caracter final
-000540 f039                      	BREQ END_MESSAGE2E	;Si termino la lectura se manda el siguiente mensaje
+000542 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000543 3012                      	CPI R17, 2	;Se compara con el caracter final
+000544 f039                      	BREQ END_MESSAGE2E	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2E:
-000541 9100 00c0                 	LDS R16,UCSR0A
-000543 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-000544 cffc                      	RJMP TRANSMIT2E		;Si no lo esta, se espera
-000545 9310 00c6                 	STS UDR0,R17	
-000547 cff6                      	RJMP LOOPE
+000545 9100 00c0                 	LDS R16,UCSR0A
+000547 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000548 cffc                      	RJMP TRANSMIT2E		;Si no lo esta, se espera
+000549 9310 00c6                 	STS UDR0,R17	
+00054b cff6                      	RJMP LOOPE
                                  	
                                  END_MESSAGE2E: ;despues de mandar ese adorno:
                                  READPresionoEL: ; leeemos
-000548 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-00054a ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00054b cffc                          RJMP READPresionoEL   ; Si no se ha recibido, espera.
-00054c 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-00054e 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+00054c 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+00054e ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00054f cffc                          RJMP READPresionoEL   ; Si no se ha recibido, espera.
+000550 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000552 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000550 8258                      ST Y, R5
+000554 8258                      ST Y, R5
                                  READPresionoEH:
-000551 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-000553 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000554 cffc                          RJMP READPresionoEH   ; Si no se ha recibido, espera.
-000555 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000557 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+000555 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000557 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000558 cffc                          RJMP READPresionoEH   ; Si no se ha recibido, espera.
+000559 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00055b 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000559 8258                      ST Y, R5
-00055a 940c 0689                 JMP MensajeFinalDeCambiodevalor
+00055d 8258                      ST Y, R5
+00055e 940c 068d                 JMP MensajeFinalDeCambiodevalor
                                  PresionoFLejos:
-00055c e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-00055d e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-00055e c000                      	RJMP LOOPF
+000560 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000561 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+000562 c000                      	RJMP LOOPF
                                  
                                  LOOPF:
-00055f 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-000560 3012                      	CPI R17, 2	;Se compara con el caracter final
-000561 f039                      	BREQ END_MESSAGE2F	;Si termino la lectura se manda el siguiente mensaje
+000563 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000564 3012                      	CPI R17, 2	;Se compara con el caracter final
+000565 f039                      	BREQ END_MESSAGE2F	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMITF:
-000562 9100 00c0                 	LDS R16,UCSR0A
-000564 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-000565 cffc                      	RJMP TRANSMITF		;Si no lo esta, se espera
-000566 9310 00c6                 	STS UDR0,R17	
-000568 cff6                      	RJMP LOOPF
+000566 9100 00c0                 	LDS R16,UCSR0A
+000568 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000569 cffc                      	RJMP TRANSMITF		;Si no lo esta, se espera
+00056a 9310 00c6                 	STS UDR0,R17	
+00056c cff6                      	RJMP LOOPF
                                  	
                                  END_MESSAGE2F: ;despues de mandar ese adorno:
                                  READPresionoFL: ; leeemos
-000569 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-00056b ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00056c cf47                          RJMP READPresionoAL   ; Si no se ha recibido, espera.
-00056d 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-00056f 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+00056d 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+00056f ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000570 cf47                          RJMP READPresionoAL   ; Si no se ha recibido, espera.
+000571 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000573 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000571 8258                      ST Y, R5
+000575 8258                      ST Y, R5
                                  READPresionoFH:
-000572 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-000574 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000575 cffc                          RJMP READPresionoFH   ; Si no se ha recibido, espera.
-000576 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000578 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+000576 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000578 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000579 cffc                          RJMP READPresionoFH   ; Si no se ha recibido, espera.
+00057a 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00057c 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-00057a 8258                      ST Y, R5
-00057b 940c 0689                 JMP MensajeFinalDeCambiodevalor
+00057e 8258                      ST Y, R5
+00057f 940c 068d                 JMP MensajeFinalDeCambiodevalor
                                  PresionoGLejos:
-00057d e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-00057e e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-00057f c000                      	RJMP LOOPG
+000581 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000582 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+000583 c000                      	RJMP LOOPG
                                  
                                  LOOPG:
-000580 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-000581 3012                      	CPI R17, 2	;Se compara con el caracter final
-000582 f039                      	BREQ END_MESSAGE2G	;Si termino la lectura se manda el siguiente mensaje
+000584 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000585 3012                      	CPI R17, 2	;Se compara con el caracter final
+000586 f039                      	BREQ END_MESSAGE2G	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMITG:
-000583 9100 00c0                 	LDS R16,UCSR0A
-000585 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-000586 cffc                      	RJMP TRANSMITG		;Si no lo esta, se espera
-000587 9310 00c6                 	STS UDR0,R17	
-000589 cff6                      	RJMP LOOPG
+000587 9100 00c0                 	LDS R16,UCSR0A
+000589 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+00058a cffc                      	RJMP TRANSMITG		;Si no lo esta, se espera
+00058b 9310 00c6                 	STS UDR0,R17	
+00058d cff6                      	RJMP LOOPG
                                  	
                                  END_MESSAGE2G: ;despues de mandar ese adorno:
                                  READPresionoGL: ; leeemos
-00058a 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-00058c ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00058d cffc                          RJMP READPresionoGL   ; Si no se ha recibido, espera.
-00058e 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000590 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+00058e 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000590 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000591 cffc                          RJMP READPresionoGL   ; Si no se ha recibido, espera.
+000592 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000594 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000592 8258                      ST Y, R5
+000596 8258                      ST Y, R5
                                  READPresionoGH:
-000593 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-000595 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000596 cffc                          RJMP READPresionoGH   ; Si no se ha recibido, espera.
-000597 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000599 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+000597 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000599 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00059a cffc                          RJMP READPresionoGH   ; Si no se ha recibido, espera.
+00059b 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00059d 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-00059b 8258                      ST Y, R5
-00059c 940c 0689                 JMP MensajeFinalDeCambiodevalor
+00059f 8258                      ST Y, R5
+0005a0 940c 068d                 JMP MensajeFinalDeCambiodevalor
                                  PresionoHLejos:
-00059e e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-00059f e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-0005a0 c000                      	RJMP LOOPH
+0005a2 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0005a3 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+0005a4 c000                      	RJMP LOOPH
                                  
                                  LOOPH:
-0005a1 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-0005a2 3012                      	CPI R17, 2	;Se compara con el caracter final
-0005a3 f039                      	BREQ END_MESSAGE2H	;Si termino la lectura se manda el siguiente mensaje
+0005a5 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0005a6 3012                      	CPI R17, 2	;Se compara con el caracter final
+0005a7 f039                      	BREQ END_MESSAGE2H	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMITH:
-0005a4 9100 00c0                 	LDS R16,UCSR0A
-0005a6 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-0005a7 cffc                      	RJMP TRANSMITH		;Si no lo esta, se espera
-0005a8 9310 00c6                 	STS UDR0,R17	
-0005aa cff6                      	RJMP LOOPH
+0005a8 9100 00c0                 	LDS R16,UCSR0A
+0005aa ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0005ab cffc                      	RJMP TRANSMITH		;Si no lo esta, se espera
+0005ac 9310 00c6                 	STS UDR0,R17	
+0005ae cff6                      	RJMP LOOPH
                                  	
                                  END_MESSAGE2H: ;despues de mandar ese adorno:
                                  READPresionoHL: ; leeemos
-0005ab 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-0005ad ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0005ae cffc                          RJMP READPresionoHL   ; Si no se ha recibido, espera.
-0005af 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0005b1 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+0005af 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0005b1 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005b2 cffc                          RJMP READPresionoHL   ; Si no se ha recibido, espera.
+0005b3 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005b5 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0005b3 8258                      ST Y, R5
+0005b7 8258                      ST Y, R5
                                  READPresionoHH:
-0005b4 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-0005b6 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0005b7 cffc                          RJMP READPresionoHH   ; Si no se ha recibido, espera.
-0005b8 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0005ba 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+0005b8 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0005ba ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005bb cffc                          RJMP READPresionoHH   ; Si no se ha recibido, espera.
+0005bc 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005be 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0005bc 8258                      ST Y, R5
-0005bd 940c 0689                 JMP MensajeFinalDeCambiodevalor
+0005c0 8258                      ST Y, R5
+0005c1 940c 068d                 JMP MensajeFinalDeCambiodevalor
                                  PresionoILejos:
-0005bf e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-0005c0 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-0005c1 c000                      	RJMP LOOPI
+0005c3 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0005c4 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+0005c5 c000                      	RJMP LOOPI
                                  
                                  LOOPI:
-0005c2 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-0005c3 3012                      	CPI R17, 2	;Se compara con el caracter final
-0005c4 f039                      	BREQ END_MESSAGE2I	;Si termino la lectura se manda el siguiente mensaje
+0005c6 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0005c7 3012                      	CPI R17, 2	;Se compara con el caracter final
+0005c8 f039                      	BREQ END_MESSAGE2I	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2I:
-0005c5 9100 00c0                 	LDS R16,UCSR0A
-0005c7 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-0005c8 cffc                      	RJMP TRANSMIT2I		;Si no lo esta, se espera
-0005c9 9310 00c6                 	STS UDR0,R17	
-0005cb cff6                      	RJMP LOOPI
+0005c9 9100 00c0                 	LDS R16,UCSR0A
+0005cb ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0005cc cffc                      	RJMP TRANSMIT2I		;Si no lo esta, se espera
+0005cd 9310 00c6                 	STS UDR0,R17	
+0005cf cff6                      	RJMP LOOPI
                                  	
                                  END_MESSAGE2I: ;despues de mandar ese adorno:
                                  READPresionoIL: ; leeemos
-0005cc 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-0005ce ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0005cf cffc                          RJMP READPresionoIL   ; Si no se ha recibido, espera.
-0005d0 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0005d2 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+0005d0 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0005d2 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005d3 cffc                          RJMP READPresionoIL   ; Si no se ha recibido, espera.
+0005d4 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005d6 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0005d4 8258                      	ST Y, R5
+0005d8 8258                      	ST Y, R5
                                  READPresionoIH:
-0005d5 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-0005d7 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0005d8 cffc                          RJMP READPresionoIH   ; Si no se ha recibido, espera.
-0005d9 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0005db 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+0005d9 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0005db ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005dc cffc                          RJMP READPresionoIH   ; Si no se ha recibido, espera.
+0005dd 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005df 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0005dd 8258                      	ST Y, R5
-0005de 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+0005e1 8258                      	ST Y, R5
+0005e2 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  PresionoJLejos:
-0005e0 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-0005e1 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-0005e2 c000                      	RJMP LOOPJ
+0005e4 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+0005e5 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+0005e6 c000                      	RJMP LOOPJ
                                  LOOPJ:
-0005e3 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-0005e4 3012                      	CPI R17, 2	;Se compara con el caracter final
-0005e5 f039                      	BREQ END_MESSAGE2J	;Si termino la lectura se manda el siguiente mensaje
+0005e7 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+0005e8 3012                      	CPI R17, 2	;Se compara con el caracter final
+0005e9 f039                      	BREQ END_MESSAGE2J	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2J:
-0005e6 9100 00c0                 	LDS R16,UCSR0A
-0005e8 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-0005e9 cffc                      	RJMP TRANSMIT2J		;Si no lo esta, se espera
-0005ea 9310 00c6                 	STS UDR0,R17	
-0005ec cff6                      	RJMP LOOPJ
+0005ea 9100 00c0                 	LDS R16,UCSR0A
+0005ec ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+0005ed cffc                      	RJMP TRANSMIT2J		;Si no lo esta, se espera
+0005ee 9310 00c6                 	STS UDR0,R17	
+0005f0 cff6                      	RJMP LOOPJ
                                  	
                                  END_MESSAGE2J: ;despues de mandar ese adorno:
                                  READPresionoJL: ; leeemos
-0005ed 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-0005ef ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0005f0 cffc                          RJMP READPresionoJL   ; Si no se ha recibido, espera.
-0005f1 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0005f3 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+0005f1 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+0005f3 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005f4 cffc                          RJMP READPresionoJL   ; Si no se ha recibido, espera.
+0005f5 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+0005f7 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0005f5 8258                      	ST Y, R5
+0005f9 8258                      	ST Y, R5
                                  READPresionoJH:
-0005f6 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-0005f8 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-0005f9 cffc                          RJMP READPresionoJH   ; Si no se ha recibido, espera.
-0005fa 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-0005fc 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+0005fa 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+0005fc ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+0005fd cffc                          RJMP READPresionoJH   ; Si no se ha recibido, espera.
+0005fe 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000600 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-0005fe 8258                      	ST Y, R5
-0005ff 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+000602 8258                      	ST Y, R5
+000603 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  PresionoKLejos:
-000601 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-000602 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-000603 cfbe                      	RJMP LOOPI
+000605 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000606 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+000607 cfbe                      	RJMP LOOPI
                                  
                                  LOOPK:
-000604 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-000605 3012                      	CPI R17, 2	;Se compara con el caracter final
-000606 f039                      	BREQ END_MESSAGE2K	;Si termino la lectura se manda el siguiente mensaje
+000608 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000609 3012                      	CPI R17, 2	;Se compara con el caracter final
+00060a f039                      	BREQ END_MESSAGE2K	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2K:
-000607 9100 00c0                 	LDS R16,UCSR0A
-000609 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-00060a cffc                      	RJMP TRANSMIT2K		;Si no lo esta, se espera
-00060b 9310 00c6                 	STS UDR0,R17	
-00060d cff6                      	RJMP LOOPK
+00060b 9100 00c0                 	LDS R16,UCSR0A
+00060d ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+00060e cffc                      	RJMP TRANSMIT2K		;Si no lo esta, se espera
+00060f 9310 00c6                 	STS UDR0,R17	
+000611 cff6                      	RJMP LOOPK
                                  	
                                  END_MESSAGE2K: ;despues de mandar ese adorno:
                                  READPresionoKL: ; leeemos
-00060e 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-000610 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000611 cffc                          RJMP READPresionoKL   ; Si no se ha recibido, espera.
-000612 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000614 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+000612 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000614 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000615 cffc                          RJMP READPresionoKL   ; Si no se ha recibido, espera.
+000616 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000618 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000616 8258                      	ST Y, R5
+00061a 8258                      	ST Y, R5
                                  READPresionoKH:
-000617 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-000619 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00061a cffc                          RJMP READPresionoKH   ; Si no se ha recibido, espera.
-00061b 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-00061d 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+00061b 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+00061d ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00061e cffc                          RJMP READPresionoKH   ; Si no se ha recibido, espera.
+00061f 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000621 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-00061f 8258                      	ST Y, R5
-000620 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+000623 8258                      	ST Y, R5
+000624 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  PresionoMLejos:
-000622 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-000623 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-000624 c000                      	RJMP LOOPM
+000626 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000627 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+000628 c000                      	RJMP LOOPM
                                  
                                  LOOPM:
-000625 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-000626 3012                      	CPI R17, 2	;Se compara con el caracter final
-000627 f039                      	BREQ END_MESSAGE2M	;Si termino la lectura se manda el siguiente mensaje
+000629 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00062a 3012                      	CPI R17, 2	;Se compara con el caracter final
+00062b f039                      	BREQ END_MESSAGE2M	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2M:
-000628 9100 00c0                 	LDS R16,UCSR0A
-00062a ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-00062b cffc                      	RJMP TRANSMIT2M		;Si no lo esta, se espera
-00062c 9310 00c6                 	STS UDR0,R17	
-00062e cff6                      	RJMP LOOPM
+00062c 9100 00c0                 	LDS R16,UCSR0A
+00062e ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+00062f cffc                      	RJMP TRANSMIT2M		;Si no lo esta, se espera
+000630 9310 00c6                 	STS UDR0,R17	
+000632 cff6                      	RJMP LOOPM
                                  	
                                  END_MESSAGE2M: ;despues de mandar ese adorno:
                                  READPresionoML: ; leeemos
-00062f 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-000631 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000632 cffc                          RJMP READPresionoML   ; Si no se ha recibido, espera.
-000633 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000635 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+000633 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000635 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000636 cffc                          RJMP READPresionoML   ; Si no se ha recibido, espera.
+000637 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000639 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000637 8258                      	ST Y, R5
+00063b 8258                      	ST Y, R5
                                  READPresionoMH:
-000638 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-00063a ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00063b cffc                          RJMP READPresionoMH   ; Si no se ha recibido, espera.
-00063c 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-00063e 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+00063c 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+00063e ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+00063f cffc                          RJMP READPresionoMH   ; Si no se ha recibido, espera.
+000640 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000642 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000640 8258                      	ST Y, R5
-000641 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+000644 8258                      	ST Y, R5
+000645 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  PresionoLLejos:
-000643 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-000644 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-000645 c000                      	RJMP LOOPL
+000647 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000648 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+000649 c000                      	RJMP LOOPL
                                  
                                  LOOPL:
-000646 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-000647 3012                      	CPI R17, 2	;Se compara con el caracter final
-000648 f039                      	BREQ END_MESSAGE2L	;Si termino la lectura se manda el siguiente mensaje
+00064a 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00064b 3012                      	CPI R17, 2	;Se compara con el caracter final
+00064c f039                      	BREQ END_MESSAGE2L	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2L:
-000649 9100 00c0                 	LDS R16,UCSR0A
-00064b ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-00064c cffc                      	RJMP TRANSMIT2L		;Si no lo esta, se espera
-00064d 9310 00c6                 	STS UDR0,R17	
-00064f cff6                      	RJMP LOOPL
+00064d 9100 00c0                 	LDS R16,UCSR0A
+00064f ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000650 cffc                      	RJMP TRANSMIT2L		;Si no lo esta, se espera
+000651 9310 00c6                 	STS UDR0,R17	
+000653 cff6                      	RJMP LOOPL
                                  	
                                  END_MESSAGE2L: ;despues de mandar ese adorno:
                                  READPresionoLL: ; leeemos
-000650 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-000652 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000653 cffc                          RJMP READPresionoLL   ; Si no se ha recibido, espera.
-000654 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000656 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+000654 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000656 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000657 cffc                          RJMP READPresionoLL   ; Si no se ha recibido, espera.
+000658 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00065a 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000658 8258                      	ST Y, R5
+00065c 8258                      	ST Y, R5
                                  READPresionoLH:
-000659 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-00065b ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00065c cffc                          RJMP READPresionoLH   ; Si no se ha recibido, espera.
-00065d 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-00065f 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+00065d 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+00065f ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000660 cffc                          RJMP READPresionoLH   ; Si no se ha recibido, espera.
+000661 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000663 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000661 8258                      	ST Y, R5
-000662 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+000665 8258                      	ST Y, R5
+000666 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  PresionoOLejos:
-000664 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
-000665 e5e2                      	LDI ZL, LOW(CTEXTO <<1)
-000666 c000                      	RJMP LOOPO
+000668 e0f7                      	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
+000669 e5e4                      	LDI ZL, LOW(CTEXTO <<1)
+00066a c000                      	RJMP LOOPO
                                  
                                  LOOPO:
-000667 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-000668 3012                      	CPI R17, 2	;Se compara con el caracter final
-000669 f039                      	BREQ END_MESSAGE2O	;Si termino la lectura se manda el siguiente mensaje
+00066b 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+00066c 3012                      	CPI R17, 2	;Se compara con el caracter final
+00066d f039                      	BREQ END_MESSAGE2O	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT2O:
-00066a 9100 00c0                 	LDS R16,UCSR0A
-00066c ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-00066d cffc                      	RJMP TRANSMIT2O		;Si no lo esta, se espera
-00066e 9310 00c6                 	STS UDR0,R17	
-000670 cff6                      	RJMP LOOPO
+00066e 9100 00c0                 	LDS R16,UCSR0A
+000670 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000671 cffc                      	RJMP TRANSMIT2O		;Si no lo esta, se espera
+000672 9310 00c6                 	STS UDR0,R17	
+000674 cff6                      	RJMP LOOPO
                                  	
                                  END_MESSAGE2O: ;despues de mandar ese adorno:
                                  READPresionoOL: ; leeemos
-000671 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
-000673 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-000674 cf57                          RJMP READPresionoIL   ; Si no se ha recibido, espera.
-000675 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000677 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
+000675 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
+000677 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000678 cf57                          RJMP READPresionoIL   ; Si no se ha recibido, espera.
+000679 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+00067b 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
                                  	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000679 8258                      	ST Y, R5
+00067d 8258                      	ST Y, R5
                                  READPresionoOH:
-00067a 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
-00067c ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
-00067d cffc                          RJMP READPresionoOH   ; Si no se ha recibido, espera.
-00067e 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
-000680 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
+00067e 9100 00c0                     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
+000680 ff07                          SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
+000681 cffc                          RJMP READPresionoOH   ; Si no se ha recibido, espera.
+000682 9050 00c6                     LDS R5, UDR0      ; Cargar el byte recibido en R5.
+000684 9250 00c6                 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART.
                                  	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
                                  ; Guardar R5 en la dirección de memoria 0x312.
-000682 e0f3                      	LDI ZH, 0x03    ; Carga el byte alto (0x03) en el registro ZH
-000683 e7e8                          LDI ZL, 0x78    ; Carga el byte bajo (0x78) en el registro ZL
-000684 2c05                      	MOV R0,R5
-000685 2c15                      	MOV R1,R5
-000686 95e8                      	SPM
+000686 e0f3                      	LDI ZH, 0x03    ; Carga el byte alto (0x03) en el registro ZH
+000687 e7e8                          LDI ZL, 0x78    ; Carga el byte bajo (0x78) en el registro ZL
+000688 2c05                      	MOV R0,R5
+000689 2c15                      	MOV R1,R5
+00068a 95e8                      	SPM
                                  
-000687 940c 0689                 	JMP MensajeFinalDeCambiodevalor
+00068b 940c 068d                 	JMP MensajeFinalDeCambiodevalor
                                  END_MESSAGE2:
                                  MensajeFinalDeCambiodevalor:
-000689 e0f6                      	LDI ZH, HIGH(CambioDeValor <<1)	;Apunto hacia la tabla con MENSAJEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-00068a eeec                      	LDI ZL, LOW(CambioDeValor <<1)
-00068b c000                      	RJMP LOOP4
+00068d e0f6                      	LDI ZH, HIGH(CambioDeValor <<1)	;Apunto hacia la tabla con MENSAJEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+00068e eeee                      	LDI ZL, LOW(CambioDeValor <<1)
+00068f c000                      	RJMP LOOP4
                                  
                                  LOOP4:
-00068c 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
-00068d 3012                      	CPI R17, 2	;Se compara con el caracter final
-00068e f091                      	BREQ END_MESSAGE3	;Si termino la lectura se manda el siguiente mensaje
+000690 9115                      	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
+000691 3012                      	CPI R17, 2	;Se compara con el caracter final
+000692 f091                      	BREQ END_MESSAGE3	;Si termino la lectura se manda el siguiente mensaje
                                  
                                  TRANSMIT3:
-00068f 9100 00c0                 	LDS R16,UCSR0A
-000691 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-000692 cffc                      	RJMP TRANSMIT3		;Si no lo esta, se espera
-000693 9310 00c6                 	STS UDR0,R17	
-000695 cff6                      	RJMP LOOP4
-000696 9508                      	RET
+000693 9100 00c0                 	LDS R16,UCSR0A
+000695 ff05                      	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
+000696 cffc                      	RJMP TRANSMIT3		;Si no lo esta, se espera
+000697 9310 00c6                 	STS UDR0,R17	
+000699 cff6                      	RJMP LOOP4
+00069a 9508                      	RET
                                  READ4:
-000697 9100 00c0                 	LDS R16,UCSR0A  
-000699 ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
-00069a cffc                      	RJMP READ4			
-00069b 940c 03c7                 	JMP Options
+00069b 9100 00c0                 	LDS R16,UCSR0A  
+00069d ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
+00069e cffc                      	RJMP READ4			
+00069f 940c 03c8                 	JMP Options
                                  
                                  ENCENDER4:
-00069d 940e 06a7                     CALL DELAY
-00069f cd23                      	RJMP READ
+0006a1 940e 06ab                     CALL DELAY
+0006a3 cd20                      	RJMP READ
                                  APAGAR4:
-0006a0 cd22                      	RJMP READ
+0006a4 cd1f                      	RJMP READ
                                  	END_MESSAGE3:
-0006a1 9100 00c0                 	LDS R16,UCSR0A  
-0006a3 ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
-0006a4 cffc                      	RJMP END_MESSAGE3			
-0006a5 940c 03c7                 	JMP Options
+0006a5 9100 00c0                 	LDS R16,UCSR0A  
+0006a7 ff07                      	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
+0006a8 cffc                      	RJMP END_MESSAGE3			
+0006a9 940c 03c8                 	JMP Options
                                  
                                  DELAY:
                                  ; Delay 60 000 cycles
                                  ; 3.75ms at 16.0 MHz
-0006a7 e34c                         LDI  R20, 60
-0006a8 9508                         RET
+0006ab e34c                         LDI  R20, 60
+0006ac 9508                         RET
                                  
                                  .INCLUDE "Configuraciones.inc"
                                  
+                                 CONFIGURAR:
+0006ad e008                          LDI R16, HIGH(RAMEND)	
+0006ae bf0e                      	OUT SPH, R16
+0006af ef0f                      	LDI R16, LOW(RAMEND)
+0006b0 bf0d                      	OUT SPL, R16
+0006b1 ef0f                      	LDI R16, 0xFF
+0006b2 e10c                      	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
+0006b3 9300 00c1                 	STS UCSR0B, R16
+0006b5 e004                      	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
+0006b6 9300 00c2                 	STS UCSR0C, R16
+0006b8 e607                      	LDI R16, 103	; Baud Rate = 9600
+0006b9 9300 00c4                 	STS UBRR0L, R16
+                                 	; Configurar el ADC para 10 bits
+0006bb e400                      	ldi r16, (1<<REFS0) ; Establecer referencia AVCC
+0006bc 9300 007c                 	STS ADMUX, R16
+0006be ea06                      	ldi r16, (1<<ADEN)|(1<<ADATE)|(1<<ADPS2)|(1<<ADPS1) ; Habilitar ADC, prescaler a 64
+0006bf 9300 007a                 	STS ADCSRA, R16
+                                 	;-------------------------------------------------------------------------
+                                 	;| INICIO DE LA CONDIGURACIÓN PREDETERMINADA DE FUNCIONAMIENTO           |
+                                 	;-------------------------------------------------------------------------
+                                 	;A
+0006c1 e341                      	LDI R20, '1'
+0006c2 9340 016a                 	STS TemperaturaExteriorMinimaH,R20
+                                     
+0006c4 e342                      	LDI R20, '2'
+0006c5 e0f1                      	ldi ZH, high(TemperaturaExteriorMinimaL)
+0006c6 e6eb                          ldi ZL, low(TemperaturaExteriorMinimaL)
+0006c7 8340                      	ST Z, R20
+                                 	;B
+0006c8 e343                      	LDI R20, '3'
+0006c9 e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaH)
+0006ca e6ed                          ldi ZL, low(TemperaturaExteriorMaximaH)
+0006cb 8340                      	ST Z, R20
+0006cc e348                      	LDI R20, '8'
+0006cd e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaL)
+0006ce e6ee                          ldi ZL, low(TemperaturaExteriorMaximaL)
+0006cf 8340                      	ST Z, R20
+                                 	;C
+0006d0 e341                      	LDI R20, '1'
+0006d1 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
+0006d2 e7e1                          ldi ZL, low(TemperaturaLCCMinimaH)
+0006d3 8340                      	ST Z, R20
+0006d4 e348                      	LDI R20, '8'
+0006d5 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaL)
+0006d6 e7e3                          ldi ZL, low(TemperaturaLCCMinimaL)
+0006d7 8340                      	ST Z, R20
+0006d8 9478                      	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  ATENDIMIENTODEINTERRUPCIONES.INC
+0006d9 ccdd                      	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
+                                 	
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 /*
                                  ;CONFIGURACION DE LA INTERRUPCION EXTERNA (cruce por cero) - CONFIGURACION DE LA INTERRUPCION EXTERNA (pulsador SET)
                                  	CONFIGURACION_INT0:
                                  	   LDI  R16,(1<<ISC01)|(1<<ISC00)|(0<<ISC11)|(0<<ISC10)
@@ -2755,34 +2841,36 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 00017b                           Separador4: .byte 2 ;org 0x194
 00017d                           HisterisisTemperaturaLCCH: .byte 1
 00017e                           HisterisisTemperaturaLCCL: .byte 1
-00017f                           TemperaturaDormitorioMinimaH: .byte 1
-000180                           TemperaturaDormitorioMinimaL: .byte 1
-000181                           TemperaturaDormitorioMaximaH: .byte 1
-000182                           TemperaturaDormitorioMaximaL:.byte 1
-                                 
-                                 /*
-                                 Menu2_7: .DB "F-Temperatura Dormitorio Maxima __ ", 13, 10
-                                 Menu2_8: .DB "G-Temperatura Dormitorio Minima __", 13, 10
-                                 Menu2_9: .db " H-Histerisis de la temperatura del Dormitorio __", 13, 10
-                                 Menu2_A: .DB "Luces en Luxs:", 13, 10
-                                 	;ACA VAN LOS VALORES DE LA LUZ
-                                 Menu2_B: .DB "I-Luz Exterior Minima __0 ", 13, 10
-                                 Menu2_C: .DB "J-Valor deseado de la Iluminacion Interior __0 ",13, 10
-                                 Menu2_D: .DB "K-Histerisis de la luz interior  __0", 13, 10
-                                  Menu2_E: .DB "Esquema horario:", 13, 10
-                                 	;ACA VAN LOS VALORES DE LOS HORARIOS
-                                 Menu2_F: .DB " L-Hora de Inicio del Dia __:__ ", 13, 10
-                                 Menu2_10: .DB "M-Hora de Fin del Dia __:__ ", 13, 10
-                                 Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj __:__ ", 13, 10
-                                 Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10,2
-                                 */
+00017f                           Separador5: .byte 2
+000181                           TemperaturaDormitorioMinimaH: .byte 1
+000182                           TemperaturaDormitorioMinimaL: .byte 1
+000183                           Separador6: .byte 2
+000185                           TemperaturaDormitorioMaximaH: .byte 1
+000186                           TemperaturaDormitorioMaximaL:.byte 1
+000187                           Separador7: .byte 2
+                                 /*PARA TENER EN CUENTA, EL MENU DE SELECCION ES EL SIGUIENTE:
+                                  "A-Temperatura Exterior Minima"
+                                  "B-Temperatura Exterior Maxima"
+                                 "C-Temperatura Living/Comedor/Cocina Minima"
+                                 "D-Temperatura Living/Comedor/Cocina Maxima"
+                                  "E-Histerisis de la temperatura del Living/Comedor/Cocina:"
+                                  "F-Temperatura Dormitorio Maxima"
+                                  "G-Temperatura Dormitorio Minima"
+                                  " H-Histerisis de la temperatura del Dormitorio"
+                                  "I-Luz Exterior Minima"
+                                  "J-Valor deseado de la Iluminacion Interior "
+                                  "K-Histerisis de la luz interior"
+                                 " L-Hora de Inicio del Dia"
+                                 "M-Hora de Fin del Dia"
+                                 "O-Configurar Hora Actual/Actualizar Reloj"
+                                   */
                                  ;================================================
                                  ;|			INCIO	  DE   	EQUIVALENCIAS  	    |
                                  ;================================================
                                  .INCLUDE "AtendimientoDeInterrupciones.inc"
                                  
                                  EXT_INT0:
-0006a9 940c 06ac                   JMP EntroUnFlanco
+0006da 940c 06dd                   JMP EntroUnFlanco
                                  EXT_INT1:
                                  PC_INT0:
                                  PC_INT1:
@@ -2807,145 +2895,130 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  ANA_COMP:
                                  TWI:
                                  SPM_RDY:
-0006ab 9518                      reti
+0006dc 9518                      reti
                                  EntroUnFlanco:
-0006ac e0f1                      	ldi ZH, high(C50GesimoDeSegundoo) ;por cada flanco suma un 50°mo de segundo
-0006ad e0e8                          ldi ZL, low(C50GesimoDeSegundoo)
-0006ae 8100                      	ld r16, Z
-0006af 9503                      	inc r16 
-0006b0 8300                          st Z, r16
-0006b1 300a                      	Cpi r16,10
-0006b2 f009                      	breq SumarQuinto
-0006b3 9518                      	Reti
+0006dd e0f1                      	ldi ZH, high(C50GesimoDeSegundoo) ;por cada flanco suma un 50°mo de segundo
+0006de e0e8                          ldi ZL, low(C50GesimoDeSegundoo)
+0006df 8100                      	ld r16, Z
+0006e0 9503                      	inc r16 
+0006e1 8300                          st Z, r16
+0006e2 300a                      	Cpi r16,10
+0006e3 f009                      	breq SumarQuinto
+0006e4 9518                      	Reti
                                  	SumarQuinto:
-0006b4 e000                      	ldi r16,0x00  ; Reiciamos los 50°mos de segundo
-0006b5 8300                          st Z, r16
-0006b6 e0f1                      	ldi ZH, high(QuintoDeSegundo)
-0006b7 e0e7                          ldi ZL, low(QuintoDeSegundo)
-0006b8 8100                      	ld r16, Z
-0006b9 9503                      	inc r16 
-0006ba 8300                          st Z, r16
-0006bb 3005                      	Cpi r16,5
-0006bc f009                      	breq SumarSegundo
-0006bd 9518                      	RETI
-                                 	SumarSegundo:
-0006be e000                      	ldi r16,0x00  ; Reiciamos los 5°tos de segundo
-0006bf 8300                          st Z, r16
-0006c0 e0f1                      	ldi ZH, high(UnidadSegundo)
-0006c1 e0e6                          ldi ZL, low(UnidadSegundo)
-0006c2 8100                      	ld r16, Z
-0006c3 3309                      	Cpi r16,'9'
-0006c4 f019                      	breq SumarSegundo2
-0006c5 9503                      	inc r16 
-0006c6 8300                          st Z, r16
-0006c7 9518                      	RETI
-                                 	SumarSegundo2:
-0006c8 e300                      	ldi r16,'0'  ; Reiciamos las unidades de segundo
-0006c9 8300                          st Z, r16
-0006ca e0f1                      	ldi ZH, high(DecenaSegundo)
-0006cb e0e5                          ldi ZL, low(DecenaSegundo)
-0006cc 8100                      	ld r16, Z
-0006cd 3306                      	Cpi r16,'6'
-0006ce f019                      	breq SumarMinuto
-0006cf 9503                      	inc r16 
-0006d0 8300                          st Z, r16
-0006d1 9518                      	RETI
-                                 	SumarMinuto:
-0006d2 e300                      	ldi r16,'0'  ; Reiciamos los  segundos
-0006d3 8300                          st Z, r16
-0006d4 e0f1                      	ldi ZH, high(UnidadMinuto)
-0006d5 e0e3                          ldi ZL, low(UnidadMinuto)
-0006d6 8300                      	 st Z, r16
-0006d7 3309                      	Cpi r16,'9'
-0006d8 8100                      	ld r16, Z
-0006d9 9503                      	inc r16 
-0006da f009                      	breq SumarMinuto2
-0006db 9518                      	RETI
-                                 	SumarMinuto2:
-0006dc e300                      	ldi r16,'0'  ; Reiciamos las unidades de minuto
-0006dd 8300                          st Z, r16
-0006de e0f1                      	ldi ZH, high(DecenaMinuto)
-0006df e0e2                          ldi ZL, low(DecenaMinuto)
-0006e0 8100                      	ld r16, Z
-0006e1 8300                      	st Z, r16
-0006e2 3306                      	Cpi r16,'6'
-0006e3 f011                      	breq SumarHora
-0006e4 9503                      	inc r16 
-0006e5 9518                      	RETI
-                                 	SumarHora:
-0006e6 e300                      	ldi r16,'0'  ; Reiciamos los minutos
-0006e7 e0f1                      	ldi ZH, high(UnidadHora)
-0006e8 e0e1                          ldi ZL, low(UnidadHora)
+0006e5 e000                      	ldi r16,0x00  ; Reiciamos los 50°mos de segundo
+0006e6 8300                          st Z, r16
+0006e7 e0f1                      	ldi ZH, high(QuintoDeSegundo)
+0006e8 e0e7                          ldi ZL, low(QuintoDeSegundo)
 0006e9 8100                      	ld r16, Z
-0006ea 300a                      	Cpi r16,10
-0006eb f019                      	breq SumarHora2
-0006ec 9503                      	inc r16 
-0006ed 8300                          st Z, r16
+0006ea 9503                      	inc r16 
+0006eb 8300                          st Z, r16
+0006ec 3005                      	Cpi r16,5
+0006ed f009                      	breq SumarSegundo
 0006ee 9518                      	RETI
+                                 	SumarSegundo:
+0006ef e000                      	ldi r16,0x00  ; Reiciamos los 5°tos de segundo
+0006f0 8300                          st Z, r16
+0006f1 e0f1                      	ldi ZH, high(UnidadSegundo)
+0006f2 e0e6                          ldi ZL, low(UnidadSegundo)
+0006f3 8100                      	ld r16, Z
+0006f4 3309                      	Cpi r16,'9'
+0006f5 f019                      	breq SumarSegundo2
+0006f6 9503                      	inc r16 
+0006f7 8300                          st Z, r16
+0006f8 9518                      	RETI
+                                 	SumarSegundo2:
+0006f9 e300                      	ldi r16,'0'  ; Reiciamos las unidades de segundo
+0006fa 8300                          st Z, r16
+0006fb e0f1                      	ldi ZH, high(DecenaSegundo)
+0006fc e0e5                          ldi ZL, low(DecenaSegundo)
+0006fd 8100                      	ld r16, Z
+0006fe 3306                      	Cpi r16,'6'
+0006ff f019                      	breq SumarMinuto
+000700 9503                      	inc r16 
+000701 8300                          st Z, r16
+000702 9518                      	RETI
+                                 	SumarMinuto:
+000703 e300                      	ldi r16,'0'  ; Reiciamos los  segundos
+000704 8300                          st Z, r16
+000705 e0f1                      	ldi ZH, high(UnidadMinuto)
+000706 e0e3                          ldi ZL, low(UnidadMinuto)
+000707 8300                      	 st Z, r16
+000708 3309                      	Cpi r16,'9'
+000709 8100                      	ld r16, Z
+00070a 9503                      	inc r16 
+00070b f009                      	breq SumarMinuto2
+00070c 9518                      	RETI
+                                 	SumarMinuto2:
+00070d e300                      	ldi r16,'0'  ; Reiciamos las unidades de minuto
+00070e 8300                          st Z, r16
+00070f e0f1                      	ldi ZH, high(DecenaMinuto)
+000710 e0e2                          ldi ZL, low(DecenaMinuto)
+000711 8100                      	ld r16, Z
+000712 8300                      	st Z, r16
+000713 3306                      	Cpi r16,'6'
+000714 f011                      	breq SumarHora
+000715 9503                      	inc r16 
+000716 9518                      	RETI
+                                 	SumarHora:
+000717 e300                      	ldi r16,'0'  ; Reiciamos los minutos
+000718 e0f1                      	ldi ZH, high(UnidadHora)
+000719 e0e1                          ldi ZL, low(UnidadHora)
+00071a 8100                      	ld r16, Z
+00071b 300a                      	Cpi r16,10
+00071c f019                      	breq SumarHora2
+00071d 9503                      	inc r16 
+00071e 8300                          st Z, r16
+00071f 9518                      	RETI
                                  	SumarHora2:
-0006ef e0f1                      	ldi ZH, high(DecenaHora)
-0006f0 e0e0                          ldi ZL, low(DecenaHora)
-0006f1 8120                      	ld R18, Z
-0006f2 3322                      	CpI R18,'2'
-0006f3 f019                      	breq PreguntaDia
-0006f4 9523                      	inc r18 
-0006f5 8320                          st Z, r18
-0006f6 9518                      	RETI
+000720 e0f1                      	ldi ZH, high(DecenaHora)
+000721 e0e0                          ldi ZL, low(DecenaHora)
+000722 8120                      	ld R18, Z
+000723 3322                      	CpI R18,'2'
+000724 f019                      	breq PreguntaDia
+000725 9523                      	inc r18 
+000726 8320                          st Z, r18
+000727 9518                      	RETI
                                  	 PreguntaDia:
-0006f7 3004                      	 cpi r16,4
-0006f8 f009                      	 BREQ TerminoElDia
-0006f9 9518                      	 RETI
+000728 3004                      	 cpi r16,4
+000729 f009                      	 BREQ TerminoElDia
+00072a 9518                      	 RETI
                                  	 TerminoElDia:
-0006fa e0f1                      	 ldi ZH, high(DecenaHora)
-0006fb e0e0                          ldi ZL, low(DecenaHora)
-0006fc e300                          ldi r16,'0'  ; Reiciamos los 50°mos de segundo
-0006fd 8300                          st Z, r16
-0006fe 9508                      	 RET
+00072b e0f1                      	 ldi ZH, high(DecenaHora)
+00072c e0e0                          ldi ZL, low(DecenaHora)
+00072d e300                          ldi r16,'0'  ; Reiciamos los 50°mos de segundo
+00072e 8300                          st Z, r16
+00072f 9508                      	 RET
                                  
                                  ;Esto lo tenemos que ver si lo dejamos o no, sólo prende leds 
                                  .cseg
                                  .ORG 0x00
-000000 940c 0023                 JMP CONFIGURAR
-000002 940c 06a9                 jmp EXT_INT0 ; IRQ0 Handler
-000004 940c 06ab                 jmp EXT_INT1 ; IRQ1 Handler
-000006 940c 06ab                 jmp PC_INT0 ; PCINT0 Handler
-000008 940c 06ab                 jmp PC_INT1 ; PCINT1 Handler
-00000a 940c 06ab                 jmp PC_INT2 ; PCINT2 Handler
-00000c 940c 06ab                 jmp WDT ; Watchdog Timer Handler
-00000e 940c 06ab                 jmp TIM2_COMPA ; Timer2 Compare A Handler
-000010 940c 06ab                 jmp TIM2_COMPB ; Timer2 Compare B Handler
-000012 c698                      rjmp TIM2_OVF ; Timer2 Overflow Handler
-000013 c697                      rjmp TIM1_CAPT ; Timer1 Capture Handler
-000014 c696                      rjmp TIM1_COMPA ; Timer1 Compare A Handler
-000015 c695                      rjmp TIM1_COMPB ; Timer1 Compare B Handler
-000016 c694                      rjmp TIM1_OVF ; Timer1 Overflow Handler
-000017 c693                      rjmp TIM0_COMPA ; Timer0 Compare A Handler
-000018 c692                      rjmp TIM0_COMPB ; Timer0 Compare B Handler
-000019 c691                      rjmp TIM0_OVF ; Timer0 Overflow Handler
-00001a c690                      rjmp SPI_STC ; SPI Transfer Complete Handler
-00001b c68f                      rjmp USART_RXC ; USART, RX Complete Handler
-00001c c68e                      rjmp USART_UDRE ; USART, UDR Empty Handler
-00001d c68d                      rjmp USART_TXC ; USART, TX Complete Handler
-00001e c68c                      rjmp ADC_RDY ; ADC Conversion Complete Handler
-00001f c68b                      rjmp EE_RDY ; EEPROM Ready Handler
-000020 c68a                      rjmp ANA_COMP ; Analog Comparator Handler
-000021 c689                      rjmp TWI ; 2-wire Serial Interface Handler
-000022 c688                      rjmp SPM_RDY ; Store Program Memory Ready Handler
-                                 
-                                 CONFIGURAR:
-000023 e008                          LDI R16, HIGH(RAMEND)	
-000024 bf0e                      	OUT SPH, R16
-000025 ef0f                      	LDI R16, LOW(RAMEND)
-000026 bf0d                      	OUT SPL, R16
-000027 ef0f                      	LDI R16, 0xFF
-000028 e10c                      	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
-000029 9300 00c1                 	STS UCSR0B, R16
-00002b e004                      	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
-00002c 9300 00c2                 	STS UCSR0C, R16
-00002e e607                      	LDI R16, 103	; Baud Rate = 9600
-00002f 9300 00c4                 	STS UBRR0L, R16
-000031 9478                      	SEI
-000032 c383                      	RJMP MAIN
+000000 940c 06ad                 JMP CONFIGURAR
+000002 940c 06da                 jmp EXT_INT0 ; IRQ0 Handler
+000004 940c 06dc                 jmp EXT_INT1 ; IRQ1 Handler
+000006 940c 06dc                 jmp PC_INT0 ; PCINT0 Handler
+000008 940c 06dc                 jmp PC_INT1 ; PCINT1 Handler
+00000a 940c 06dc                 jmp PC_INT2 ; PCINT2 Handler
+00000c 940c 06dc                 jmp WDT ; Watchdog Timer Handler
+00000e 940c 06dc                 jmp TIM2_COMPA ; Timer2 Compare A Handler
+000010 940c 06dc                 jmp TIM2_COMPB ; Timer2 Compare B Handler
+000012 c6c9                      rjmp TIM2_OVF ; Timer2 Overflow Handler
+000013 c6c8                      rjmp TIM1_CAPT ; Timer1 Capture Handler
+000014 c6c7                      rjmp TIM1_COMPA ; Timer1 Compare A Handler
+000015 c6c6                      rjmp TIM1_COMPB ; Timer1 Compare B Handler
+000016 c6c5                      rjmp TIM1_OVF ; Timer1 Overflow Handler
+000017 c6c4                      rjmp TIM0_COMPA ; Timer0 Compare A Handler
+000018 c6c3                      rjmp TIM0_COMPB ; Timer0 Compare B Handler
+000019 c6c2                      rjmp TIM0_OVF ; Timer0 Overflow Handler
+00001a c6c1                      rjmp SPI_STC ; SPI Transfer Complete Handler
+00001b c6c0                      rjmp USART_RXC ; USART, RX Complete Handler
+00001c c6bf                      rjmp USART_UDRE ; USART, UDR Empty Handler
+00001d c6be                      rjmp USART_TXC ; USART, TX Complete Handler
+00001e c6bd                      rjmp ADC_RDY ; ADC Conversion Complete Handler
+00001f c6bc                      rjmp EE_RDY ; EEPROM Ready Handler
+000020 c6bb                      rjmp ANA_COMP ; Analog Comparator Handler
+000021 c6ba                      rjmp TWI ; 2-wire Serial Interface Handler
+000022 c6b9                      rjmp SPM_RDY ; Store Program Memory Ready Handler
 
 
 RESOURCE USE INFORMATION
@@ -2963,11 +3036,11 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   0 y  :  19 z  :  56 r0 :   1 r1 :   1 r2 :   0 r3 :   0 r4 :   0 
+x  :   0 y  :  19 z  :  61 r0 :   1 r1 :   1 r2 :   0 r3 :   0 r4 :   0 
 r5 :  85 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16: 153 r17:  54 r18:  24 r19:   0 r20:  32 
+r13:   0 r14:   0 r15:   0 r16: 157 r17:  56 r18:  24 r19:   0 r20:  44 
 r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
-r29:   0 r30:  44 r31:  44 
+r29:   0 r30:  49 r31:  49 
 Registers used: 11 out of 35 (31.4%)
 
 "ATmega328P" instruction use summary:
@@ -2981,22 +3054,22 @@ clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
 cpi   :  46 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
 fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   8 jmp   :  48 
-ld    :  16 ldd   :   0 ldi   : 116 lds   :  79 lpm   :  18 lsl   :   0 
+ld    :  16 ldd   :   0 ldi   : 135 lds   :  79 lpm   :  18 lsl   :   0 
 lsr   :   0 mov   :   2 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   2 pop   :   0 
 push  :   0 rcall :   0 ret   :   5 reti  :  10 rjmp  : 108 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  50 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
-sez   :   0 sleep :   0 spm   :   2 st    :  41 std   :   0 sts   :  58 
+sez   :   0 sleep :   0 spm   :   2 st    :  46 std   :   0 sts   :  62 
 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
 Instructions used: 19 out of 113 (16.8%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000dfe   1784   1228   3012   32768   9.2%
-[.dseg] 0x000100 0x000183      0     43     43    2048   2.1%
+[.cseg] 0x000000 0x000e60   1848   1230   3078   32768   9.4%
+[.dseg] 0x000100 0x000189      0     49     49    2048   2.4%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
 Assembly complete, 0 errors, 16 warnings

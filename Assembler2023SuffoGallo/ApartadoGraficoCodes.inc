@@ -26,6 +26,8 @@ READ:
 	RJMP READ			
 OPTIONS:                
 	LDS R18,UDR0        ;Leo el dato recibido y comparo
+	LDI R17,1
+	STS UCSR0A,R17
 	CPI R18, 0x31			
 	BREQ ENCENDER_UNO		
 	CPI R18, 0x32			
@@ -176,7 +178,7 @@ MostrarConfiguraciones:
 	 CALL ESPERAR_TX
 	 LDI R20, 32
 	 CALL ESPERAR_TX
-	 LDI R20, 'C'; Hasta aca bien                                   BIEN
+	 LDI R20, 'C'; ACA ERROR DE SOBREESCRITURA <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	 CALL ESPERAR_TX
 	 LDI R20, '_'
 	 CALL ESPERAR_TX

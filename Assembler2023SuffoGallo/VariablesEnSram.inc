@@ -39,27 +39,29 @@ TemperaturaLCCMaximaL: .byte 2 ;org 0x192
 Separador4: .byte 2 ;org 0x194
 HisterisisTemperaturaLCCH: .byte 1
 HisterisisTemperaturaLCCL: .byte 1
+Separador5: .byte 2
 TemperaturaDormitorioMinimaH: .byte 1
 TemperaturaDormitorioMinimaL: .byte 1
+Separador6: .byte 2
 TemperaturaDormitorioMaximaH: .byte 1
 TemperaturaDormitorioMaximaL:.byte 1
-
-/*
-Menu2_7: .DB "F-Temperatura Dormitorio Maxima __ ", 13, 10
-Menu2_8: .DB "G-Temperatura Dormitorio Minima __", 13, 10
-Menu2_9: .db " H-Histerisis de la temperatura del Dormitorio __", 13, 10
-Menu2_A: .DB "Luces en Luxs:", 13, 10
-	;ACA VAN LOS VALORES DE LA LUZ
-Menu2_B: .DB "I-Luz Exterior Minima __0 ", 13, 10
-Menu2_C: .DB "J-Valor deseado de la Iluminacion Interior __0 ",13, 10
-Menu2_D: .DB "K-Histerisis de la luz interior  __0", 13, 10
- Menu2_E: .DB "Esquema horario:", 13, 10
-	;ACA VAN LOS VALORES DE LOS HORARIOS
-Menu2_F: .DB " L-Hora de Inicio del Dia __:__ ", 13, 10
-Menu2_10: .DB "M-Hora de Fin del Dia __:__ ", 13, 10
-Menu2_11: .DB "O-Configurar Hora Actual/Actualizar Reloj __:__ ", 13, 10
-Menu2_12: .DB "5-VOLVER AL MENU ANTERIOR ", 13, 10,2
-*/
+Separador7: .byte 2
+/*PARA TENER EN CUENTA, EL MENU DE SELECCION ES EL SIGUIENTE:
+ "A-Temperatura Exterior Minima"
+ "B-Temperatura Exterior Maxima"
+"C-Temperatura Living/Comedor/Cocina Minima"
+"D-Temperatura Living/Comedor/Cocina Maxima"
+ "E-Histerisis de la temperatura del Living/Comedor/Cocina:"
+ "F-Temperatura Dormitorio Maxima"
+ "G-Temperatura Dormitorio Minima"
+ " H-Histerisis de la temperatura del Dormitorio"
+ "I-Luz Exterior Minima"
+ "J-Valor deseado de la Iluminacion Interior "
+ "K-Histerisis de la luz interior"
+" L-Hora de Inicio del Dia"
+"M-Hora de Fin del Dia"
+"O-Configurar Hora Actual/Actualizar Reloj"
+  */
 ;================================================
 ;|			INCIO	  DE   	EQUIVALENCIAS  	    |
 ;================================================

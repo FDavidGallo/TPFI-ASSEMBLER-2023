@@ -43,19 +43,3 @@ rjmp EE_RDY ; EEPROM Ready Handler
 rjmp ANA_COMP ; Analog Comparator Handler
 rjmp TWI ; 2-wire Serial Interface Handler
 rjmp SPM_RDY ; Store Program Memory Ready Handler
-
-CONFIGURAR:
-    LDI R16, HIGH(RAMEND)	
-	OUT SPH, R16
-	LDI R16, LOW(RAMEND)
-	OUT SPL, R16
-	LDI R16, 0xFF
-	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
-	STS UCSR0B, R16
-	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
-	STS UCSR0C, R16
-	LDI R16, 103	; Baud Rate = 9600
-	STS UBRR0L, R16
-	SEI
-	RJMP MAIN
-	
