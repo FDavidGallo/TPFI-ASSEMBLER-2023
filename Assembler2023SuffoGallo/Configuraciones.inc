@@ -22,7 +22,6 @@ CONFIGURAR:
 	;A
 	LDI R20, '1'
 	STS TemperaturaExteriorMinimaH,R20
-    
 	LDI R20, '2'
 	ldi ZH, high(TemperaturaExteriorMinimaL)
     ldi ZL, low(TemperaturaExteriorMinimaL)
@@ -45,6 +44,10 @@ CONFIGURAR:
 	ldi ZH, high(TemperaturaLCCMinimaL)
     ldi ZL, low(TemperaturaLCCMinimaL)
 	ST Z, R20
+	;-------------------------------------------------------------------------
+	;| "LIMPIEZA"      	DE		LAS		OTRAS		VARIABLES	DE	LA SRAM  |
+	;-------------------------------------------------------------------------
+	;UNA VEZ TODO CONFIGURADO, HABILITAMOS LAS INTERRUPCIONES, INICIANDO EL FUNCIONAMIENTO NORMAL DEL PROGRAMA
 	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  ATENDIMIENTODEINTERRUPCIONES.INC
 	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
 	

@@ -26,20 +26,20 @@ jmp PC_INT2 ; PCINT2 Handler
 jmp WDT ; Watchdog Timer Handler
 jmp TIM2_COMPA ; Timer2 Compare A Handler
 jmp TIM2_COMPB ; Timer2 Compare B Handler
-rjmp TIM2_OVF ; Timer2 Overflow Handler
-rjmp TIM1_CAPT ; Timer1 Capture Handler
-rjmp TIM1_COMPA ; Timer1 Compare A Handler
-rjmp TIM1_COMPB ; Timer1 Compare B Handler
-rjmp TIM1_OVF ; Timer1 Overflow Handler
-rjmp TIM0_COMPA ; Timer0 Compare A Handler
-rjmp TIM0_COMPB ; Timer0 Compare B Handler
-rjmp TIM0_OVF ; Timer0 Overflow Handler
-rjmp SPI_STC ; SPI Transfer Complete Handler
-rjmp USART_RXC ; USART, RX Complete Handler
-rjmp USART_UDRE ; USART, UDR Empty Handler
-rjmp USART_TXC ; USART, TX Complete Handler
-rjmp ADC_RDY ; ADC Conversion Complete Handler
-rjmp EE_RDY ; EEPROM Ready Handler
-rjmp ANA_COMP ; Analog Comparator Handler
-rjmp TWI ; 2-wire Serial Interface Handler
-rjmp SPM_RDY ; Store Program Memory Ready Handler
+jmp TIM2_OVF ; Timer2 Overflow Handler
+jmp TIM1_CAPT ; Timer1 Capture Handler
+jmp TIM1_COMPA ; Timer1 Compare A Handler
+jmp TIM1_COMPB ; Timer1 Compare B Handler
+jmp TIM1_OVF ; Timer1 Overflow Handler
+jmp TIM0_COMPA ; Timer0 Compare A Handler
+jmp TIM0_COMPB ; Timer0 Compare B Handler
+jmp TIM0_OVF ; Timer0 Overflow Handler
+jmp SPI_STC ; SPI Transfer Complete Handler
+jmp USART_RXC ; USART, RX Complete Handler
+jmp USART_UDRE ; USART, UDR Empty Handler
+jmp USART_TXC ; USART, TX Complete Handler
+jmp ADC_RDY ; ADC Conversion Complete Handler
+jmp EE_RDY ; EEPROM Ready Handler
+jmp ANA_COMP ; Analog Comparator Handler
+jmp TWI ; 2-wire Serial Interface Handler
+jmp SPM_RDY ; Store Program Memory Ready Handler
