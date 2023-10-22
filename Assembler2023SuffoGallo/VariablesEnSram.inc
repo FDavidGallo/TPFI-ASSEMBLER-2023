@@ -1,35 +1,64 @@
 ;Inicio de los menús, en su parte de texto
 ; Definir las variables que usaremos en la RAM
+; _____      ______    ____       __  __      ____       ______      _____       __  __           
+;/\  _  \    /\__  _\  /\  _`\    /\ \/\ \    /\  _`\    /\__  _\    /\  __`\    /\ \/\ \           EN SU MAYORIA, LAS VARIABLES EN SRAM
+;\ \ \L\ \   \/_/\ \/  \ \ \L\_\  \ \ `\\ \   \ \ \/\_\  \/_/\ \/    \ \ \/\ \   \ \ `\\ \    __    NO SE GUARDARÁN EN FORMATO "NUMERICO",
+; \ \  __ \     \ \ \   \ \  _\L   \ \ , ` \   \ \ \/_/_    \ \ \     \ \ \ \ \   \ \ , ` \  /\_\   SINO QUE EN ASCII, ESTO TIENE POR FINALIDAD
+;  \ \ \/\ \     \ \ \   \ \ \L\ \  \ \ \`\ \   \ \ \L\ \    \_\ \__   \ \ \_\ \   \ \ \`\ \ \/_/_  UNICA PODER VISUALIZARLOS MAS FACILMENTE SUS 
+;   \ \_\ \_\     \ \_\   \ \____/   \ \_\ \_\   \ \____/    /\_____\   \ \_____\   \ \_\ \_\  /\_\ VALORES, ESTO ES ESPECIALMENTE SI AL SIMULARSE
+;    \/_/\/_/      \/_/    \/___/     \/_/\/_/    \/___/     \/_____/    \/_____/    \/_/\/_/  \/_/ SE DESEA VER EL COMPORTAMIENTO DE LA SRAM
+
 ;=================================================
 ;|	   INCIO DE LAS VARIABLES DE MEDICIONES      |
 ;=================================================
 .dseg
 .org 0x0100
-DecenaHora: .byte 1 ;org 0x101
-UnidadHora: .byte 1	;org 0x102
-DecenaMinuto: .byte 1 ;org 0x103
-UnidadMinuto: .byte 1 ;org 0x104
-SeparadorMinuto: .byte 1 ;org 0x105
-DecenaSegundo: .byte 1 ;org 0x106
-UnidadSegundo: .byte 1 ;org 0x107
-QuintoDeSegundo: .BYTE 1; ORGX0108
-C50GesimoDeSegundoo: .byte 1 ;org 0x109
-MedTemperaturaExteriorH: .byte 1 ;org 0x111
-MedTemperaturaExteriorL: .byte 1 ;org 0x111
-MedTemperaturaLCCH: .byte 1 ;org 0x113
-MedTemperaturaLCCL: .byte 1 ;org 0x113
-MedTemperaturaDormitorioH: .byte 1 ;org 0x115
-MedTemperaturaDormitorioL: .byte 1 ;org 0x115
-MedLuzLCCH: .byte 1 ;org 0x117
-MedLuzLCCL: .byte 1 ;org 0x117
-MedLuzDormitorioH: .byte 1 ;org 0x117
-MedLuzDormitorioL: .byte 1 ;org 0x117
-MedLuzExteriorH: .byte 1 ;org 0x117
-MedLuzExteriorL: .byte 1 ;org 0x117
+DecenaHora: .byte 1 
+UnidadHora: .byte 1	
+SeparadorHora: .byte 1; ESTOS SEPARADOS TIENEN COMO FINALIDAD UNICA SEPARAR CADA "VARIABLE", SOLAMENTE ESTAN DE GUIA
+DecenaMinuto: .byte 1 
+UnidadMinuto: .byte 1 
+SeparadorMinuto: .byte 1 
+DecenaSegundo: .byte 1 
+UnidadSegundo: .byte 1 
+QuintoDeSegundo: .BYTE 1; 
+C50GesimoDeSegundoo: .byte 1 ;
+MedTemperaturaExteriorH: .byte 1 ;
+MedTemperaturaExteriorL: .byte 1 ;
+MedTemperaturaLCCH: .byte 1 ;
+MedTemperaturaLCCL: .byte 1 ;
+MedTemperaturaDormitorioH: .byte 1 ;
+MedTemperaturaDormitorioL: .byte 1 ;
+MedLuzLCCH: .byte 1 ;
+MedLuzLCCL: .byte 1 ;
+MedLuzDormitorioH: .byte 1 ;
+MedLuzDormitorioL: .byte 1 ;
+MedLuzExteriorH: .byte 1 ;
+MedLuzExteriorL: .byte 1 ;
 .dseg
 ;=================================================
 ;|	  INCIO DE LAS VARIABLES DE CONFIGURACIÓN    |
 ;=================================================
+/*PARA TENER EN CUENTA, EL MENU DE SELECCION ES EL SIGUIENTE:
+"A-Temperatura Exterior Minima", 13,10
+"B-Temperatura Exterior Maxima", 13,10
+"C-Temperatura Living/Comedor/Cocina Minima", 13,10
+"D-Temperatura Living/Comedor/Cocina Maxima", 13,10 
+"E-Temperatura Living/Comedor/Cocina deseada", 13,10 
+"F-Histerisis de la temperatura del Living/Comedor/Cocina:", 13, 10
+"G-Temperatura Dormitorio Maxima", 13, 10
+"H-Temperatura Dormitorio Minima", 13, 10
+"I-Temperatura Dormitorio Deseada", 13, 10
+"J-Histerisis de la temperatura del Dormitorio", 13, 10
+"K-Luz Exterior Minima", 13, 10
+"M-Valor deseado de la Iluminacion del dormitorio ",13, 10
+"L-Histerisis de la luz del dormitorio", 13, 10
+"O-Valor deseado de la Iluminacion del Living/Comedor/Cocina ",13, 10
+"P-Histerisis de la luz del Living/Comedor/Cocina", 13, 10
+"Q-Hora de Inicio del Dia", 13, 10
+"R-Hora de Fin del Dia", 13, 10
+"S-Configurar Hora Actual/Actualizar Reloj", 13, 10*/
+
 .org 0x0169
 Separador0: .BYTE 1 ;org 0x176
 TemperaturaExteriorMinimaH: .byte 1 ;	A
@@ -75,12 +104,12 @@ Separador14: .byte 2
 SetPointLuzLCCH: .byte 1;				O
 SetPointLuzLCCL: .byte 1;				O
 Separador15: .byte 2
-Separador16: .byte 2
 HisterisisLuzLCCH: .byte 1;				P
 HisterisisLuzLCCL: .byte 1;				P
 Separador17: .byte 2
 DecenaHoraInicioDia: .byte 1;			Q
 UnidadHoraInicioDia: .byte 1;			Q
+Separador16: .byte 2
 DecenaMinutoInicioDia: .byte 1;			Q
 UnidadMinutoInicioDia: .byte 1;			Q
 Separador18: .byte 2
@@ -91,31 +120,3 @@ UnidadMinutoFinDia: .byte 1;			R
 Separador19: .byte 2
 ConfiguracionesValidas: .byte 1;	'0'=Valido  'A'=Existe algo mal 
 Separador20: .byte 2
-/*PARA TENER EN CUENTA, EL MENU DE SELECCION ES EL SIGUIENTE:
- ; ACA VAN LOS VALORES DE TEMPERATURA
-Menu2_2: .DB "A-Temperatura Exterior Minima", 13,10
-Menu2_3: .DB "B-Temperatura Exterior Maxima", 13,10
-Menu2_4: .DB "C-Temperatura Living/Comedor/Cocina Minima", 13,10
-Menu2_5: .DB "D-Temperatura Living/Comedor/Cocina Maxima", 13,10 
-Menu2_5: .DB "E-Temperatura Living/Comedor/Cocina deseada", 13,10 
-Menu2_6: .DB "F-Histerisis de la temperatura del Living/Comedor/Cocina:", 13, 10
-Menu2_7: .DB "G-Temperatura Dormitorio Maxima", 13, 10
-Menu2_8: .DB "H-Temperatura Dormitorio Minima", 13, 10
-Menu2_8: .DB "I-Temperatura Dormitorio Deseada", 13, 10
-Menu2_9: .db "J-Histerisis de la temperatura del Dormitorio", 13, 10
-Menu2_A: .DB "Luces en Luxs:", 13, 10
-	;ACA VAN LOS VALORES DE LA LUZ
-Menu2_B: .DB "K-Luz Exterior Minima", 13, 10
-Menu2_C: .DB "M-Valor deseado de la Iluminacion del dormitorio ",13, 10
-Menu2_D: .DB "L-Histerisis de la luz del dormitorio", 13, 10
-Menu2_C: .DB "O-Valor deseado de la Iluminacion del Living/Comedor/Cocina ",13, 10
-Menu2_D: .DB "P-Histerisis de la luz del Living/Comedor/Cocina", 13, 10
- Menu2_E: .DB "Esquema horario:", 13, 10
-	;ACA VAN LOS VALORES DE LOS HORARIOS
-Menu2_F: .DB " Q-Hora de Inicio del Dia", 13, 10
-Menu2_10: .DB "R-Hora de Fin del Dia", 13, 10
-Menu2_11: .DB "S-Configurar Hora Actual/Actualizar Reloj", 13, 10
-  */
-;================================================
-;|			INCIO	  DE   	EQUIVALENCIAS  	    |
-;================================================

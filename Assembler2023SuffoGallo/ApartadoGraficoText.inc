@@ -121,6 +121,13 @@ ERROR:
 ;Datos del proyecto
 Datos:
 .DB 13,10,13,10,13,10
+.DB "                                             ____||____",13,10,0
+.DB"DOMOTICA DE DOS AMBIENTES:                  ///////////\",13,10
+.DB" Es un proyecto, en que con se controlan   ///////////  \",13,10,0
+.DB"      luz y temperatura de dos ambientes,  |    _    |  |",13,10,0
+.DB"  el dormitorio y el living/               |[] | | []|[]|",13,10,0
+.DB"comedor/cocina                             |   | |   |  |",13,10,0
+.DB 13,10,13,10,13,10
 .DB "                                 .*########+    ",13,10      
 .DB "                                =@@++++++++-    ",13,10      
 .DB "                              -%@*.              ",13,10,0
@@ -142,11 +149,5 @@ Datos:
 .DB "             =@@@@@@@@@@@@@@@@@@@@@%=                 ",13,10
 .DB "              .=%@@@@@@@@@@@@@@@@%=.                  ",13,10
 .DB "                .-=++++ ++++++=-.                     ",13,10
-.DB "                                             ____||____",13,10,0
-.DB"DOMOTICA DE DOS AMBIENTES                   ///////////\",13,10
-.DB" Es un proyecto, en que con se controlan   ///////////  \",13,10,0
-.DB"      luz y temperatura de dos ambientes,  |    _    |  |",13,10,0
-.DB"  el dormitorio y el living/               |[] | | []|[]|",13,10,0
-.DB"comedor/cocina                             |   | |   |  |",13,10,0
-
+.DB 13,10,13,10,13,10
 .DB "			5- Volver Al menu principal					",13,10,2

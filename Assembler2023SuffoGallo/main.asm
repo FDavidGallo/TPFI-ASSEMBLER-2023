@@ -2,7 +2,7 @@
 ; arrreglate.asm
 ;
 ; Created: 7/10/2023 15:22:21
-; Author : Usuario
+; Author : Fabricio David Gallo
 ;
 ;Incluimos nuestras librerias
 .cseg
@@ -14,7 +14,8 @@
 .INCLUDE "VariablesEnSram.inc"
 .INCLUDE "AtendimientoDeInterrupciones.inc"
 .INCLUDE "desarme.inc"
-
+.INCLUDE "Control.inc"
+;Vector de interrupciones
 .cseg
 .ORG 0x00
 JMP CONFIGURAR ;DIRIJASE A  "Configuraciones.inc"
@@ -43,3 +44,6 @@ jmp EE_RDY ; EEPROM Ready Handler
 jmp ANA_COMP ; Analog Comparator Handler
 jmp TWI ; 2-wire Serial Interface Handler
 jmp SPM_RDY ; Store Program Memory Ready Handler
+/*
+PARA MAYOR INFORMACION DIJASE A "AtendimientoDeInterrupciones.Inc"
+*/

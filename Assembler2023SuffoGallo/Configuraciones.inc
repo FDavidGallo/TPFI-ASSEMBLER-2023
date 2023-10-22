@@ -17,9 +17,11 @@ CONFIGURAR:
 	ldi r16,0b10000111
 	sts ADCSRA,r16
 	CALL ConfiguracionPredeterminada
-	;-------------------------------------------------------------------------
-	;| "LIMPIEZA"      	DE		LAS		OTRAS		VARIABLES	DE	LA SRAM  |
-	;-------------------------------------------------------------------------
+	ldi ZH, high(DecenaHora); Posicionamos Z en la primer variable de medición
+    ldi ZL, low(DecenaHora)
+	DEC ZL
+	LDI R19,33				; Cargamos en r19 la cantidad de mediciones a "Limpiar"
+	Call ReincioMedciones
 	;UNA VEZ TODO CONFIGURADO, HABILITAMOS LAS INTERRUPCIONES, INICIANDO EL FUNCIONAMIENTO NORMAL DEL PROGRAMA
 	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  ATENDIMIENTODEINTERRUPCIONES.INC
 	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
@@ -31,6 +33,25 @@ CONFIGURAR:
 	;-------------------------------------------------------------------------
 	;| INICIO DE LA CONDIGURACIÓN PREDETERMINADA DE FUNCIONAMIENTO           |
 	;-------------------------------------------------------------------------
+	/*PARA TENER EN CUENTA, EL MENU DE SELECCION ES EL SIGUIENTE:
+	"A-Temperatura Exterior Minima", 13,10
+	"B-Temperatura Exterior Maxima", 13,10
+	"C-Temperatura Living/Comedor/Cocina Minima", 13,10
+	"D-Temperatura Living/Comedor/Cocina Maxima", 13,10 
+	"E-Temperatura Living/Comedor/Cocina deseada", 13,10 
+	"F-Histerisis de la temperatura del Living/Comedor/Cocina:", 13, 10
+	"G-Temperatura Dormitorio Maxima", 13, 10
+	"H-Temperatura Dormitorio Minima", 13, 10
+	"I-Temperatura Dormitorio Deseada", 13, 10
+	"J-Histerisis de la temperatura del Dormitorio", 13, 10
+	"K-Luz Exterior Minima", 13, 10
+	"M-Valor deseado de la Iluminacion del dormitorio ",13, 10
+	"L-Histerisis de la luz del dormitorio", 13, 10
+	"O-Valor deseado de la Iluminacion del Living/Comedor/Cocina ",13, 10
+	"P-Histerisis de la luz del Living/Comedor/Cocina", 13, 10
+	"Q-Hora de Inicio del Dia", 13, 10
+	"R-Hora de Fin del Dia", 13, 10
+	"S-Configurar Hora Actual/Actualizar Reloj", 13, 10*/
 	;A
 	LDI R20, '1'
 	STS TemperaturaExteriorMinimaH,R20
@@ -148,9 +169,83 @@ CONFIGURAR:
 	ldi ZH, high(SetPointLuzDormitorioL)
     ldi ZL, low(SetPointLuzDormitorioL)
 	ST Z, R20
+	;L
+	LDI R20, '1'
+	ldi ZH, high(HisterisisLuzDormitorioH)
+    ldi ZL, low(HisterisisLuzDormitorioH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(HisterisisLuzDormitorioL)
+    ldi ZL, low(HisterisisLuzDormitorioL)
+	ST Z, R20
+	;O
+	LDI R20, '1'
+	ldi ZH, high(SetPointLuzLCCH)
+    ldi ZL, low(SetPointLuzLCCH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(SetPointLuzLCCL)
+    ldi ZL, low(SetPointLuzLCCL)
+	ST Z, R20
+	;P
+	LDI R20, '1'
+	ldi ZH, high(HisterisisLuzLCCH)
+    ldi ZL, low(HisterisisLuzLCCH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(HisterisisLuzLCCL)
+    ldi ZL, low(HisterisisLuzLCCL)
+	ST Z, R20
+		;Q
+	LDI R20, '1'
+	ldi ZH, high(DecenaHoraInicioDia)
+    ldi ZL, low(DecenaHoraInicioDia)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(UnidadHoraInicioDia)
+    ldi ZL, low(UnidadHoraInicioDia)
+	ST Z, R20
+	LDI R20, '1'
+	ldi ZH, high(DecenaMinutoInicioDia)
+    ldi ZL, low(DecenaMinutoInicioDia)
+	ST Z, R20
+	LDI R20, '1'
+	ldi ZH, high(UnidadMinutoInicioDia)
+    ldi ZL, low(UnidadMinutoInicioDia)
+	ST Z, R20
+		;R
+	LDI R20, '1'
+	ldi ZH, high(DecenaHoraFinDia)
+    ldi ZL, low(DecenaHoraFinDia)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(UnidadHoraFinDia)
+    ldi ZL, low(UnidadHoraFinDia)
+	ST Z, R20
+	LDI R20, '1'
+	ldi ZH, high(DecenaMinutoFinDia)
+    ldi ZL, low(DecenaMinutoFinDia)
+	ST Z, R20
+	LDI R20, '1'
+	ldi ZH, high(UnidadMinutoFinDia)
+    ldi ZL, low(UnidadMinutoFinDia)
+	ST Z, R20
 	RET
-
-
+	ReincioMedciones:
+	INC ZL
+	;-------------------------------------------------------------------------
+	;| "LIMPIEZA"      	DE		LAS		OTRAS		VARIABLES	DE	LA SRAM  |
+	;-------------------------------------------------------------------------
+	CPI R19,00
+	BREQ FinLimpieza
+	LDI R20, '0' ; POR DEFECTO NUESTRAS MEDICIONES COMIENZAN POR 0
+	ST Z, R20
+	DEC R19
+	rjmp ReincioMedciones
+	
+	
+	FinLimpieza:
+		RET
 
 
 

@@ -23,8 +23,8 @@ READ:
 	LDS R16,UCSR0A  
 	SBRS R16,RXC0	    ;Verifico si se recibio algun mensaje	
 	RJMP READ			
-OPTIONS:                
-	LDS R18,UDR0        ;Leo el dato recibido y comparo
+OPTIONS:         
+	LDS R18,UDR0        ;Leo el dato recibido y comparo  
 	CPI R18, 0x31			
 	BREQ ENCENDER_UNO		
 	CPI R18, 0x32			
@@ -71,6 +71,7 @@ OPTIONS:
 	BREQ PresionoS
 	CPI R18,'P'
 	BREQ PresionoP
+	JMP Control ;>>>> EN DESARROLLO   TODAVIA  
 	RJMP READ
 	ENCENDER_UNO:
 	JMP ENCENDER_UNOLEJOS	
@@ -80,6 +81,7 @@ OPTIONS:
 	JMP ENCENDER_TRESLejos
 	ENCENDER_CUATRO:
 	JMP ENCENDER_CUATROLEJOS
+
 	PresionoA:
 	JMP PresionoALejos
 	PresionoB:
