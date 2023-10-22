@@ -56,6 +56,7 @@ EntroUnFlanco:
 	breq SumarSegundo2
 	inc r16 
     st Z, r16
+	;jmp RecibirMediciones
 	RETI
 	SumarSegundo2:
 	ldi r16,'0'  ; Reiciamos las unidades de segundo

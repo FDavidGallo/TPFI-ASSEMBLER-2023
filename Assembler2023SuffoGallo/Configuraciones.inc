@@ -12,10 +12,10 @@ CONFIGURAR:
 	LDI R16, 103	; Baud Rate = 9600
 	STS UBRR0L, R16
 	; Configurar el ADC para 10 bits
-	ldi r16, (1<<REFS0) ; Establecer referencia AVCC
-	STS ADMUX, R16
-	ldi r16, (1<<ADEN)|(1<<ADATE)|(1<<ADPS2)|(1<<ADPS1) ; Habilitar ADC, prescaler a 64
-	STS ADCSRA, R16
+	ldi r16,0b01100000
+	sts ADMUX,r16
+	ldi r16,0b10000111
+	sts ADCSRA,r16
 	;-------------------------------------------------------------------------
 	;| INICIO DE LA CONDIGURACIÓN PREDETERMINADA DE FUNCIONAMIENTO           |
 	;-------------------------------------------------------------------------

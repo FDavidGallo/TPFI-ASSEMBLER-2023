@@ -123,15 +123,16 @@ ENCENDER_UNOLEJOS:
 LOOP_1:
 	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
 	CPI R17, 2	;Se compara con el caracter final
-    jmp MostrarMediciones	;Si termino la lectura se manda el siguiente mensaje
-
+   	;Si termino la lectura se manda el siguiente mensaje
+	BREQ MMM
 TRANSMIT1:
 	LDS R16,UCSR0A
 	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
 	RJMP TRANSMIT1		;Si no lo esta, se espera
 	STS UDR0,R17	
 	RJMP LOOP_1	
-	
+	MMM:
+	 jmp MostrarMediciones
 
 ENCENDER_CUATROLEJOS:
 	JMP ENCENDER4		
@@ -1350,6 +1351,7 @@ MostrarMediciones:
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
 	 CALL Espacio
+	 JMP Options
 DELAY:
 ; Delay 60 000 cycles
 ; 3.75ms at 16.0 MHz

@@ -13,7 +13,7 @@
 .INCLUDE "Configuraciones.inc"
 .INCLUDE "VariablesEnSram.inc"
 .INCLUDE "AtendimientoDeInterrupciones.inc"
-
+.INCLUDE "desarme.inc"
 ;Esto lo tenemos que ver si lo dejamos o no, sólo prende leds 
 .cseg
 .ORG 0x00
