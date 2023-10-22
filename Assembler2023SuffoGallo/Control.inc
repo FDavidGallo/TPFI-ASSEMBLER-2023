@@ -1,4 +1,4 @@
-;Las acciones de control van aca
+;Las acciones de control van acá
 ; las mismas se ejecutan en el menu options de "ApartadoGraficoCodes.inc"
 ; esto quiere decir que se ejecuta siempre y cuando el usuario no este modificando una de las variables de control,
 ; y que se ejecuta luego de que una se cambia.
@@ -26,4 +26,4 @@ Control:
 		POP R16
 		POP R12
 		POP R5
-		JMP READ
+		JMP READ ;Volvemos al apartado gráfico
