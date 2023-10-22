@@ -6,17 +6,18 @@
 TABLA_ROM_MSJ: .DB 0b00001010, "***>>>Seleccione la accion a realizar<<< ***", 0b00001010
 TABLA_ROM_OPT: .DB 0b00001010, "1-Mostrar Valores...", 13,0b00001010 , " 2-Configurar Valores...", 13, 0b00001010, "3-Datos Del proyecto... ",2
 TABLA_ROM_MSJ2: .DB 0b00001010, "*** MEDICIONES ***", 0b00001010
-TABLA_ROM_MSJ22: .DB "< Busque cada medición segun su Letra  >"
+TABLA_ROM_MSJ22: .DB "< Busque cada medicion segun su Letra  >"
 TABLA_ROM_OPT2: .DB "Hora de las mediciones: T "," Temperatura Exterior: U",13,10," Temperatura Living/Comedor/Cocina: V  ", "  Temperatura Dormitorio: W ",13,10," Luz Dormitorio:  X "," Luz Exterior:  Y "," Luz Living/Cocina/Comedor:  Z ",13,10,"	1-Refrescarar Valores... 5-VOLVER AL MENU ANTERIOR ", 13, 10
 TABLA_ROM_MSJ212: .DB "VALORES >",2
 ;ACA VAN LAS MEDICIONES
 TABLA_ROM_MSJ3: .DB 0b00001010, "ADVERTENCIA!", 0b00001010
 .DB " SI VA A CAMBIAR ALGO TENGA EL CUIDADO DE HACERLO DE FORMA COHERENTE, ",13,10
-.DB " TENIENDO EN CUENTA QUE: LA TEMPERATURA MINIMA A INGRESAR ES 00  Y LA MAXIMA 99;"
-.DB "EN CUANTO LOS LUXOMETROS, SU PRECISION ES DE 10 LUXES, POR LO QUE SOLO SE CONFIGURAN DE 10 EN DIEZ,",13,10," SIENDO EL VALOR MINIMO 010 Y EL MAXIMO 990"
-.DB 0b00001010,0,13,10
-.DB 0b00001010, "*** Ahora si, seleccione el valor a cambiar  ***", 0b00001010
-Menu2_1: .DB  "	Temperaturas en Grados Centigrados		", 0b00001010
+.DB " TENIENDO EN CUENTA QUE: LA TEMPERATURA MINIMA A INGRESAR ES 00 C  Y LA MAXIMA 64 C;"
+.DB "EN CUANTO LOS LUXOMETROS, SU PRECISION ES DE 10 LUXES, POR LO QUE SOLO SE CONFIGURAN DE 10 EN DIEZ,",13,10,0
+.db " SIENDO EL VALOR MINIMO 010 Luxs Y EL MAXIMO 640 Luxs,(esto basado en la norma IRAM-AADL J 20-06) ",13,10
+.DB 13,10
+.DB "*** Ahora si, seleccione el valor a cambiar  ***",13,10
+Menu2_1: .DB  "Temperaturas en Grados Centigrados ",13,10,0
 ; ACA VAN LOS VALORES DE TEMPERATURA
 Menu2_2: .DB "A-Temperatura Exterior Minima ", 13,10
 Menu2_3: .DB "B-Temperatura Exterior Maxima ", 13,10
@@ -52,8 +53,7 @@ CTEXTO:
 ERROR:
 .db "	Existe una configuración no válida. NO SE EJECUTARÁ NADA	"
 .db "	Por favor, ingrese una configuración válida o reinicie	",2,0
-
-
+;      ^SI LLEGO, LE IMPLEMENTO CONTROL DE ERRORES^
 
 
 
@@ -142,7 +142,7 @@ Datos:
 .DB "             =@@@@@@@@@@@@@@@@@@@@@%=                 ",13,10
 .DB "              .=%@@@@@@@@@@@@@@@@%=.                  ",13,10
 .DB "                .-=++++ ++++++=-.                     ",13,10
-.DB "                                             ____||____",13,10
+.DB "                                             ____||____",13,10,0
 .DB"DOMOTICA DE DOS AMBIENTES                   ///////////\",13,10
 .DB" Es un proyecto, en que con se controlan   ///////////  \",13,10,0
 .DB"      luz y temperatura de dos ambientes,  |    _    |  |",13,10,0

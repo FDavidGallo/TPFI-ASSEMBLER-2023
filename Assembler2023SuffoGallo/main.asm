@@ -14,10 +14,10 @@
 .INCLUDE "VariablesEnSram.inc"
 .INCLUDE "AtendimientoDeInterrupciones.inc"
 .INCLUDE "desarme.inc"
-;Esto lo tenemos que ver si lo dejamos o no, sólo prende leds 
+
 .cseg
 .ORG 0x00
-JMP CONFIGURAR
+JMP CONFIGURAR ;DIRIJASE A  "Configuraciones.inc"
 jmp EXT_INT0 ; IRQ0 Handler
 jmp EXT_INT1 ; IRQ1 Handler
 jmp PC_INT0 ; PCINT0 Handler

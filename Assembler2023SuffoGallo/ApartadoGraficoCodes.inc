@@ -66,10 +66,12 @@ OPTIONS:
 	CPI R18,'Q'
 	BREQ PresionoQ
 	CPI R18,'R'
-	BREQ PresionoR
-	RJMP READ		
+	BREQ PresionoR		
 	CPI R18,'S'
 	BREQ PresionoS
+	CPI R18,'P'
+	BREQ PresionoP
+	RJMP READ
 	ENCENDER_UNO:
 	JMP ENCENDER_UNOLEJOS	
 	ENCENDER_DOS:
@@ -424,6 +426,33 @@ MostrarConfiguraciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	  CALL ESPERAR_TX
+	  CALL Salto
+	    LDI R20, 'S'; 
+	 CALL ESPERAR_TX
+	 Call Guion
+	 ldi ZH, high(DecenaHora)
+     ldi ZL, low(DecenaHora)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ldi ZH, high(UnidadHora)
+     ldi ZL, low(UnidadHora)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 LDI R20, ':'; 
+	 CALL ESPERAR_TX
+	ldi ZH, high(DecenaMinuto)
+     ldi ZL, low(DecenaMinuto)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 ldi ZH, high(UnidadMinuto)
+     ldi ZL, low(UnidadMinuto)
+	 ld r20, Z
+	 sts UDR0, r20
+	  CALL ESPERAR_TX
+	 Call Espacio
 	 jmp READ
 ESPERAR_TX:
 	  LDS  R16,UCSR0A
@@ -1001,24 +1030,25 @@ READPresionoOH: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
     ; Guardar R5 en la dirección de memoria 0x312.
 	STS SetPointLuzLCCL,R5
+	JMP Options
 PresionoPLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
 	LDI ZL, LOW(CTEXTO <<1)
-	RJMP LOOPP
+	RJMP LP
 
-LOOPP:
+LP:
 	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
 	CPI R17, 2	;Se compara con el caracter final
-	BREQ END_MESSAGE2OP	;Si termino la lectura se manda el siguiente mensaje
+	BREQ END_P	;Si termino la lectura se manda el siguiente mensaje
 
 TRANSMIT2P:
 	LDS R16,UCSR0A
 	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
 	RJMP TRANSMIT2P		;Si no lo esta, se espera
 	STS UDR0,R17	
-	RJMP LOOPP
+	RJMP LP
 	
-END_MESSAGE2OP: ;despues de mandar ese adorno:
+END_P: ;despues de mandar ese adorno:
 READPresionoPL: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -1153,9 +1183,9 @@ READUnidadMinutoFinDia: ; leeemos
 PresionoSLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
 	LDI ZL, LOW(CTEXTO <<1)
-	RJMP LOOPS
+	RJMP LOOPSS
 
-LOOPS:
+LOOPSS:
 	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
 	CPI R17, 2	;Se compara con el caracter final
 	BREQ END_SS	;Si termino la lectura se manda el siguiente mensaje
@@ -1163,9 +1193,9 @@ LOOPS:
 TRANSMITSS:
 	LDS R16,UCSR0A
 	SBRS R16,UDRE0		;Esta el buffer listo para transmitir?
-	RJMP TRANSMIT2R		;Si no lo esta, se espera
+	RJMP TRANSMITSS		;Si no lo esta, se espera
 	STS UDR0,R17	
-	RJMP LOOPS
+	RJMP LOOPSS
 	
 END_SS: ;despues de mandar ese adorno:
 READDecenaHora: ; leeemos
@@ -1266,6 +1296,7 @@ MostrarMediciones:
 	 sts UDR0, r20
 	  CALL ESPERAR_TX
 	 Call Espacio
+	 CALL Salto
 	 LDI R20, 'U'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 Call Guion
@@ -1280,6 +1311,7 @@ MostrarMediciones:
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
 	 CALL Espacio
+	 Call Salto
 	 LDI R20, 'V'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
@@ -1294,6 +1326,7 @@ MostrarMediciones:
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
 	 CALL Espacio
+	 CALL Salto
 	 ;---------------------------------------------------------->
 	  LDI R20, 'W'; Hasta aca bien
 	 CALL ESPERAR_TX
@@ -1309,6 +1342,7 @@ MostrarMediciones:
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
 	 CALL Espacio
+	 CALL Salto
 	 LDI R20, 'X'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
@@ -1322,7 +1356,9 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
+	 CALL Cero
 	 CALL Espacio
+	 Call Salto
 	 LDI R20, 'Y'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
@@ -1336,7 +1372,9 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
+	 CALL Cero
 	 CALL Espacio
+	 Call Salto
 	 LDI R20, 'Z'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
@@ -1350,6 +1388,7 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
+	 CALL Cero
 	 CALL Espacio
 	 JMP Options
 DELAY:

@@ -16,6 +16,18 @@ CONFIGURAR:
 	sts ADMUX,r16
 	ldi r16,0b10000111
 	sts ADCSRA,r16
+	CALL ConfiguracionPredeterminada
+	;-------------------------------------------------------------------------
+	;| "LIMPIEZA"      	DE		LAS		OTRAS		VARIABLES	DE	LA SRAM  |
+	;-------------------------------------------------------------------------
+	;UNA VEZ TODO CONFIGURADO, HABILITAMOS LAS INTERRUPCIONES, INICIANDO EL FUNCIONAMIENTO NORMAL DEL PROGRAMA
+	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  ATENDIMIENTODEINTERRUPCIONES.INC
+	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
+	
+
+
+
+	ConfiguracionPredeterminada:
 	;-------------------------------------------------------------------------
 	;| INICIO DE LA CONDIGURACIÓN PREDETERMINADA DE FUNCIONAMIENTO           |
 	;-------------------------------------------------------------------------
@@ -44,20 +56,99 @@ CONFIGURAR:
 	ldi ZH, high(TemperaturaLCCMinimaL)
     ldi ZL, low(TemperaturaLCCMinimaL)
 	ST Z, R20
-	;-------------------------------------------------------------------------
-	;| "LIMPIEZA"      	DE		LAS		OTRAS		VARIABLES	DE	LA SRAM  |
-	;-------------------------------------------------------------------------
-	;UNA VEZ TODO CONFIGURADO, HABILITAMOS LAS INTERRUPCIONES, INICIANDO EL FUNCIONAMIENTO NORMAL DEL PROGRAMA
-	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  ATENDIMIENTODEINTERRUPCIONES.INC
-	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
-	
-
-
-
-
-
-
-
+	;------------------------------------>
+	;D
+	LDI R20, '3'
+	ldi ZH, high(TemperaturaLCCMaximaH)
+    ldi ZL, low(TemperaturaLCCMaximaH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(TemperaturaLCCMaximaL)
+    ldi ZL, low(TemperaturaLCCMaximaL)
+	ST Z, R20
+	;E
+	LDI R20, '1'
+	ldi ZH, high(SetPointTemperaturaLCCH)
+    ldi ZL, low(SetPointTemperaturaLCCH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(SetPointTemperaturaLCCL)
+    ldi ZL, low(SetPointTemperaturaLCCL)
+	ST Z, R20
+	;F
+	LDI R20, '3'
+	ldi ZH, high(HisterisisTemperaturaLCCH)
+    ldi ZL, low(HisterisisTemperaturaLCCH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(HisterisisTemperaturaLCCL)
+    ldi ZL, low(HisterisisTemperaturaLCCL)
+	ST Z, R20
+	;G
+	LDI R20, '1'
+	ldi ZH, high(TemperaturaDormitorioMaximaH)
+    ldi ZL, low(TemperaturaDormitorioMaximaH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(TemperaturaDormitorioMaximaL)
+    ldi ZL, low(TemperaturaDormitorioMaximaL)
+	ST Z, R20
+	;------
+	;H
+	LDI R20, '3'
+	ldi ZH, high(TemperaturaDormitorioMinimaH)
+    ldi ZL, low(TemperaturaDormitorioMinimaH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(TemperaturaDormitorioMinimaL)
+    ldi ZL, low(TemperaturaDormitorioMinimaL)
+	ST Z, R20
+	;I
+	LDI R20, '1'
+	ldi ZH, high(SetPointTemperaturaDormitorioH)
+    ldi ZL, low(SetPointTemperaturaDormitorioH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(SetPointTemperaturaDormitorioL)
+    ldi ZL, low(SetPointTemperaturaDormitorioL)
+	ST Z, R20
+	;J
+	LDI R20, '3'
+	ldi ZH, high(HisterisisTemperaturaDormitorioH)
+    ldi ZL, low(HisterisisTemperaturaDormitorioH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(HisterisisTemperaturaDormitorioL)
+    ldi ZL, low(HisterisisTemperaturaDormitorioL)
+	ST Z, R20
+	;K
+	LDI R20, '1'
+	ldi ZH, high(LuzExteriorMinimaH)
+    ldi ZL, low(LuzExteriorMinimaH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(LuzExteriorMinimaL)
+    ldi ZL, low(LuzExteriorMinimaL)
+	ST Z, R20
+	;J
+	LDI R20, '3'
+	ldi ZH, high(HisterisisTemperaturaDormitorioH)
+    ldi ZL, low(HisterisisTemperaturaDormitorioH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(HisterisisTemperaturaDormitorioL)
+    ldi ZL, low(HisterisisTemperaturaDormitorioL)
+	ST Z, R20
+	;M
+	LDI R20, '1'
+	ldi ZH, high(SetPointLuzDormitorioH)
+    ldi ZL, low(SetPointLuzDormitorioH)
+	ST Z, R20
+	LDI R20, '8'
+	ldi ZH, high(SetPointLuzDormitorioL)
+    ldi ZL, low(SetPointLuzDormitorioL)
+	ST Z, R20
+	RET
 
 
 
