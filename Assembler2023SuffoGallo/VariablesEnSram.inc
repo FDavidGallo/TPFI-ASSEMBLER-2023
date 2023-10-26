@@ -15,7 +15,7 @@
 .org 0x0100
 DecenaHora: .byte 1 
 UnidadHora: .byte 1	
-SeparadorHora: .byte 1; ESTOS SEPARADOS TIENEN COMO FINALIDAD UNICA SEPARAR CADA "VARIABLE", SOLAMENTE ESTAN DE GUIA
+SeparadorHora: .byte 1; ESTOS SEPARADOS TIENEN COMO FINALIDAD UNICA SEPARAR CADA "VARIABLE", SOLAMENTE ESTÁN DE GUIA
 DecenaMinuto: .byte 1 
 UnidadMinuto: .byte 1 
 SeparadorMinuto: .byte 1 
@@ -23,26 +23,32 @@ DecenaSegundo: .byte 1
 UnidadSegundo: .byte 1 
 QuintoDeSegundo: .BYTE 1; 
 C50GesimoDeSegundoo: .byte 1 ;
+MedTemperaturaExteriorHH: .byte 1 ;
 MedTemperaturaExteriorH: .byte 1 ;
 MedTemperaturaExteriorL: .byte 1 ;
 MedTemperaturaExteriorComa: .byte 1 ;
 separadorA: .byte 1 ;
+MedTemperaturaLCCHH: .byte 1 ;
 MedTemperaturaLCCH: .byte 1 ;
 MedTemperaturaLCCL: .byte 1 ;
 MedTemperaturaLCCComa: .byte 1 ;
 separadorB: .byte 1 ;
+MedTemperaturaDormitorioHH: .byte 1 ;
 MedTemperaturaDormitorioH: .byte 1 ;
 MedTemperaturaDormitorioL: .byte 1 ;
 MedTemperaturaDormitorioComa: .byte 1;
 separadorC: .byte 1 ;
+MedLuzLCCHH: .byte 1 ;
 MedLuzLCCH: .byte 1 ;
 MedLuzLCCL: .byte 1 ;
 MedLuzLCCDecena: .byte 1;
 separadorD: .byte 1 
+MedLuzDormitorioHH: .byte 1 ;
 MedLuzDormitorioH: .byte 1 ;
 MedLuzDormitorioL: .byte 1 ;
 MedLuzDormitorioDecena: .byte 1 ;
 separadorE: .byte 1 
+MedLuzExteriorHH: .byte 1 ;
 MedLuzExteriorH: .byte 1 ;
 MedLuzExteriorL: .byte 1 ;
 MedLuzExteriorDecena: .byte 1 ;

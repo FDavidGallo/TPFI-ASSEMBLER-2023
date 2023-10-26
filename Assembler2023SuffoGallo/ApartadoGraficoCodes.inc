@@ -1303,6 +1303,11 @@ MostrarMediciones:
 	 LDI R20, 'U'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 Call Guion
+	  ldi ZH, high(MedTemperaturaExteriorHH)
+     ldi ZL, low(MedTemperaturaExteriorHH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 ldi ZH, high(MedTemperaturaExteriorH)
      ldi ZL, low(MedTemperaturaExteriorH)
 	 ld r20, Z
@@ -1324,6 +1329,11 @@ MostrarMediciones:
 	 LDI R20, 'V'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
+	 ldi ZH, high(MedTemperaturaLCCHH)
+     ldi ZL, low(MedTemperaturaLCCHH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 ldi ZH, high(MedTemperaturaLCCH)
      ldi ZL, low(MedTemperaturaLCCH)
 	 ld r20, Z
@@ -1346,6 +1356,11 @@ MostrarMediciones:
 	  LDI R20, 'W'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 Call Guion
+	 ldi ZH, high(MedTemperaturaDormitorioHH)
+     ldi ZL, low(MedTemperaturaDormitorioHH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 ldi ZH, high(MedTemperaturaDormitorioH)
      ldi ZL, low(MedTemperaturaDormitorioH)
 	 ld r20, Z
@@ -1356,8 +1371,7 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 CALL Espacio
-	  Call Coma
+	 Call Coma
 	 ldi ZH, high(MedTemperaturaDormitorioComa)
      ldi ZL, low(MedTemperaturaDormitorioComa)
 	 ld r20, Z
@@ -1367,6 +1381,11 @@ MostrarMediciones:
 	 LDI R20, 'X'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
+	  ldi ZH, high(MedLuzDormitorioHH)
+     ldi ZL, low(MedLuzDormitorioHH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 ldi ZH, high(MedLuzDormitorioH)
      ldi ZL, low(MedLuzDormitorioH)
 	 ld r20, Z
@@ -1377,7 +1396,6 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 Call Coma
 	 ldi ZH, high(MedLuzDormitorioDecena)
      ldi ZL, low(MedLuzDormitorioDecena)
 	 ld r20, Z
@@ -1389,6 +1407,11 @@ MostrarMediciones:
 	 LDI R20, 'Y'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
+	  ldi ZH, high(MedLuzExteriorHH)
+     ldi ZL, low(MedLuzExteriorHH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 ldi ZH, high(MedLuzExteriorH)
      ldi ZL, low(MedLuzExteriorH)
 	 ld r20, Z
@@ -1399,7 +1422,6 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 Call Coma
 	 ldi ZH, high(MedLuzExteriorDecena)
      ldi ZL, low(MedLuzExteriorDecena)
 	 ld r20, Z
@@ -1421,7 +1443,6 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 Call Coma
 	 ldi ZH, high(MedLuzLCCDecena)
      ldi ZL, low(MedLuzLCCDecena)
 	 ld r20, Z

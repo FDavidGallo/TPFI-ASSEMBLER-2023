@@ -78,9 +78,13 @@ EntroUnFlanco:
 		ld r16, Z
 		inc r16 
 		st Z, r16
+		Cpi r16,1    ; Considerando una freuencia de 50Hz, se ejecutarán cada 200ms las variables de control,
+		breq _control ; razonable si se tiene en cuenta que una medición se hace cada un segundo.
 		Cpi r16,5
 		breq SumarSegundo
 		JMP EscupirTodo
+		_control:
+				call Control_Int
 	SumarSegundo:
 		ldi r16,0x00  ; Reiciamos los 5°tos de segundo
 		st Z, r16
@@ -91,7 +95,7 @@ EntroUnFlanco:
 		breq SumarSegundo2
 		inc r16 
 		st Z, r16
-	;jmp RecibirMediciones >>En desarrollo
+        Call Medir; Para mejor información, dirijase a "desarme.inc"
 		JMP EscupirTodo
 	SumarSegundo2:
 		ldi r16,'0'  ; Reiciamos las unidades de segundo

@@ -1,6 +1,6 @@
-;"LecturaAdc.inc", documentado y hecho por David Gallo, 
-; para todo el que quiera usarlo, para el microcontrolador Atmega328p, IDE: Microchip Studio.
-; Para incluir esto: >.include "LecturaAdc.inc"<.
+;"LecturaAdc.inc", documentado y hecho por David Gallo,para todo el que quiera usarlo,
+; para el microcontrolador Atmega328p, IDE: Microchip Studio.
+; Para incluir esto: >.include "LecturaAdc.inc"<, para llamarlo: >CALL InicioADC <
 ; Esto esta diseñado para leer una de las entradas analogicas
 ; Este algoritmo lo que hace es  ir cargando en las posiciones de Z (tres seguidas)
 ;  los valores  del adc (Conversor analogico digital) del Atmega328p.
@@ -33,8 +33,11 @@ InicioADC:
 			ldi decena, 0
 			ldi centena,0
 			ldi R18,0
-			ldi r16, 0b00000000 ;Opcional, limpiar puerto D
+			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
 			out DDRC, r16
+			lds r16,ADMUX ; CARGAMOS ADMUX A r16
+			or  r16,R5	; hacemos un or con sensor selecionado (via R5)
+			sts ADMUX, r16; indicamos en ADMUX que sensor medir
 			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
 
 CICLO_ADC:
@@ -61,7 +64,7 @@ CICLO_ADC:
 	ST Z, R18 ;guardamos la coma
 	jmp EscupirTodoADC; Que largue todo y volvamos a lo que estaba haciendo el micro
 
-ASCII: ;Vamos a obtener unidad, decena, centena y Coma:
+ASCII: ;Vamos a obtener unidad, decena, centena y "Coma":
 		L_CENTENA:
 				cpi r16,100  ; ¿El numero es menor a 100?
 				BRLO L_DECENA; Vaya a "L_Decena"
@@ -69,7 +72,7 @@ ASCII: ;Vamos a obtener unidad, decena, centena y Coma:
 				subi r16,100 ; Restele 100 al número
 				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
 				;Si todo fue realizarse correctamente, solamente podrá ejecutarse todo dos veces
-				; recuerde, en 8 bits, el número más grande a almacenar es el 256, contando el 0, 255.
+				; Recuerde: en 8 bits, el número más grande a almacenar es el 256, contando el 0, 255.
 		L_DECENA: ;Hace exactamente lo mismo que el anterior, solo que 100 en lugar de 10
 				cpi r16,10 
 				BRLO L_UNIDAD

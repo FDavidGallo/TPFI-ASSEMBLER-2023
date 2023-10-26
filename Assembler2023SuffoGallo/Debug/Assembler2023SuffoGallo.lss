@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Thu Oct 26 04:01:35 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Thu Oct 26 05:32:05 2023
 
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
@@ -3456,7 +3456,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000a45 cff6                      	RJMP LOOP	
 000a46 9508                      	RET
                                  END_MESSAGE:
-000a47 940c 11ce                 JMP Control ;>>>> EN DESARROLLO   TODAVIA  
+000a47 940c 120e                 JMP Control ;>>>> EN DESARROLLO   TODAVIA  
                                  ;LA SIGUIENTE SECCIÓN CONTIENE EL "CORAZÓN" DEL PROGRAMA
                                  ; CON READ SE LEE SI SE ENVIÓ ALGO POR LA UART, OPTIONS 
                                  READ:
@@ -3520,7 +3520,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000a82 940c 0c90                 	JMP ENCENDER_TRESLejos
                                  	ENCENDER_CUATRO:
 000a84 940c 0abc                 	JMP ENCENDER_CUATROLEJOS
-000a86 940c 11ce                 	JMP Control ;>>>> EN DESARROLLO   TODAVIA  
+000a86 940c 120e                 	JMP Control ;>>>> EN DESARROLLO   TODAVIA  
                                  	PresionoA:
 000a88 940c 0c9f                 	JMP PresionoALejos
                                  	PresionoB:
@@ -3598,7 +3598,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  MostrarConfiguraciones:
 000ace e441                      	 LDI R20, 'A'; Hasta aca bien
 000acf 940e 0c89                 	 CALL ESPERAR_TX
-000ad1 940e 107c                 	 Call Guion
+000ad1 940e 1097                 	 Call Guion
 000ad3 e0f1                      	 ldi ZH, high(TemperaturaExteriorMinimaH)
 000ad4 e6ea                           ldi ZL, low(TemperaturaExteriorMinimaH)
 000ad5 8140                      	 ld r20, Z
@@ -3609,10 +3609,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000adc 8140                      	 ld r20, Z
 000add 9340 00c6                 	 sts UDR0, r20
 000adf 940e 0c89                 	 CALL ESPERAR_TX
-000ae1 940e 106e                 	 CALL Espacio
+000ae1 940e 1089                 	 CALL Espacio
 000ae3 e442                      	 LDI R20, 'B'; Hasta aca bien
 000ae4 940e 0c89                 	 CALL ESPERAR_TX
-000ae6 940e 107c                 	 CALL Guion
+000ae6 940e 1097                 	 CALL Guion
 000ae8 e0f1                      	 ldi ZH, high(TemperaturaExteriorMaximaH)
 000ae9 e6ed                           ldi ZL, low(TemperaturaExteriorMaximaH)
 000aea 8140                      	 ld r20, Z
@@ -3624,10 +3624,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000af2 9340 00c6                 	 sts UDR0, r20
 000af4 940e 0c89                 	 CALL ESPERAR_TX
                                  	 ; SEGUIMOS CON EL RESTO (?)
-000af6 940e 106e                 	 CALL Espacio
+000af6 940e 1089                 	 CALL Espacio
 000af8 e443                      	 LDI R20, 'C'; 
 000af9 940e 0c89                 	 CALL ESPERAR_TX
-000afb 940e 107c                 	 CALL Guion
+000afb 940e 1097                 	 CALL Guion
 000afd e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
 000afe e7e0                           ldi ZL, low(TemperaturaLCCMinimaH)
 000aff 8140                      	 ld r20, Z
@@ -3639,10 +3639,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b07 9340 00c6                 	 sts UDR0, r20
 000b09 940e 0c89                 	 CALL ESPERAR_TX
                                  	 ; SEGUIMOS CON EL RESTo (?)
-000b0b 940e 1075                 	 CALL Salto
+000b0b 940e 1090                 	 CALL Salto
 000b0d e444                      	  LDI R20, 'D'; Hasta aca bien                                   BIEN
 000b0e 940e 0c89                 	 CALL ESPERAR_TX
-000b10 940e 107c                 	 Call Guion
+000b10 940e 1097                 	 Call Guion
 000b12 e0f1                      	ldi ZH, high(TemperaturaLCCMaximaH)
 000b13 e7e4                           ldi ZL, low(TemperaturaLCCMaximaH)
 000b14 8140                      	 ld r20, Z
@@ -3653,11 +3653,11 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b1b 8140                      	 ld r20, Z
 000b1c 9340 00c6                 	 sts UDR0, r20
 000b1e 940e 0c89                 	  CALL ESPERAR_TX
-000b20 940e 106e                 	 Call Espacio
+000b20 940e 1089                 	 Call Espacio
                                  	 ;-----------------------------------------------------------------------------------------
 000b22 e445                      	  LDI R20, 'E'; Hasta aca bien
 000b23 940e 0c89                 	 CALL ESPERAR_TX
-000b25 940e 107c                 	 Call Guion
+000b25 940e 1097                 	 Call Guion
 000b27 e0f1                      	 ldi ZH, high(SetPointTemperaturaLCCH)
 000b28 e7e8                           ldi ZL, low(SetPointTemperaturaLCCH)
 000b29 8140                      	 ld r20, Z
@@ -3668,10 +3668,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b30 8140                      	 ld r20, Z
 000b31 9340 00c6                 	 sts UDR0, r20
 000b33 940e 0c89                 	 CALL ESPERAR_TX
-000b35 940e 106e                 	 CALL Espacio
+000b35 940e 1089                 	 CALL Espacio
 000b37 e446                      	 LDI R20, 'F';
 000b38 940e 0c89                 	 CALL ESPERAR_TX
-000b3a 940e 107c                 	 CALL Guion
+000b3a 940e 1097                 	 CALL Guion
 000b3c e0f1                      	 ldi ZH, high(HisterisisTemperaturaLCCH)
 000b3d e7ec                           ldi ZL, low(HisterisisTemperaturaLCCH)
 000b3e 8140                      	 ld r20, Z
@@ -3682,10 +3682,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b45 8140                      	 ld r20, Z
 000b46 9340 00c6                 	 sts UDR0, r20
 000b48 940e 0c89                 	 CALL ESPERAR_TX
-000b4a 940e 106e                 	 CALL Espacio
+000b4a 940e 1089                 	 CALL Espacio
 000b4c e447                      	 LDI R20, 'G'; 
 000b4d 940e 0c89                 	 CALL ESPERAR_TX
-000b4f 940e 107c                 	 CALL Guion
+000b4f 940e 1097                 	 CALL Guion
 000b51 e0f1                      	ldi ZH, high(TemperaturaDormitorioMaximaH)
 000b52 e8e0                           ldi ZL, low(TemperaturaDormitorioMaximaH)
 000b53 8140                      	 ld r20, Z
@@ -3696,10 +3696,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b5a 8140                      	 ld r20, Z
 000b5b 9340 00c6                 	 sts UDR0, r20
 000b5d 940e 0c89                 	 CALL ESPERAR_TX
-000b5f 940e 1075                 	 CALL Salto
+000b5f 940e 1090                 	 CALL Salto
 000b61 e448                      	  LDI R20, 'H'; 
 000b62 940e 0c89                 	 CALL ESPERAR_TX
-000b64 940e 107c                 	 Call Guion
+000b64 940e 1097                 	 Call Guion
 000b66 e0f1                      	ldi ZH, high(TemperaturaDormitorioMinimaH)
 000b67 e8e4                           ldi ZL, low(TemperaturaDormitorioMinimaH)
 000b68 8140                      	 ld r20, Z
@@ -3710,10 +3710,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b6f 8140                      	 ld r20, Z
 000b70 9340 00c6                 	 sts UDR0, r20
 000b72 940e 0c89                 	 CALL ESPERAR_TX
-000b74 940e 106e                 	 CALL Espacio
+000b74 940e 1089                 	 CALL Espacio
 000b76 e449                      	   LDI R20, 'I'; 
 000b77 940e 0c89                 	 CALL ESPERAR_TX
-000b79 940e 107c                 	 Call Guion
+000b79 940e 1097                 	 Call Guion
 000b7b e0f1                      	 ldi ZH, high(SetPointTemperaturaDormitorioH)
 000b7c e8e8                           ldi ZL, low(SetPointTemperaturaDormitorioH)
 000b7d 8140                      	 ld r20, Z
@@ -3724,10 +3724,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b84 8140                      	 ld r20, Z
 000b85 9340 00c6                 	 sts UDR0, r20
 000b87 940e 0c89                 	 CALL ESPERAR_TX
-000b89 940e 106e                 	 CALL Espacio
+000b89 940e 1089                 	 CALL Espacio
 000b8b e44a                      	 LDI R20, 'J'; Hasta aca bien
 000b8c 940e 0c89                 	 CALL ESPERAR_TX
-000b8e 940e 107c                 	 CALL Guion
+000b8e 940e 1097                 	 CALL Guion
 000b90 e0f1                      	 ldi ZH, high(HisterisisTemperaturaDormitorioH)
 000b91 e8eb                           ldi ZL, low(HisterisisTemperaturaDormitorioH)
 000b92 8140                      	 ld r20, Z
@@ -3738,10 +3738,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000b99 8140                      	 ld r20, Z
 000b9a 9340 00c6                 	 sts UDR0, r20
 000b9c 940e 0c89                 	 CALL ESPERAR_TX
-000b9e 940e 106e                 	 CALL Espacio
+000b9e 940e 1089                 	 CALL Espacio
 000ba0 e44b                      	 LDI R20, 'K'; 
 000ba1 940e 0c89                 	 CALL ESPERAR_TX
-000ba3 940e 107c                 	 CALL Guion
+000ba3 940e 1097                 	 CALL Guion
 000ba5 e0f1                      	ldi ZH, high(LuzExteriorMinimaH)
 000ba6 e8ee                           ldi ZL, low(LuzExteriorMinimaH)
 000ba7 8140                      	 ld r20, Z
@@ -3752,12 +3752,12 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000bae 8140                      	 ld r20, Z
 000baf 9340 00c6                 	 sts UDR0, r20
 000bb1 940e 0c89                 	 CALL ESPERAR_TX
-000bb3 940e 1080                 	 CALL Cero
+000bb3 940e 109b                 	 CALL Cero
                                  	 ; SEGUIMOS CON EL RESTo (?)
-000bb5 940e 1075                 	 CALL Salto
+000bb5 940e 1090                 	 CALL Salto
 000bb7 e44d                      	  LDI R20, 'M'; Hasta aca bien   
 000bb8 940e 0c89                 	 CALL ESPERAR_TX
-000bba 940e 107c                 	 Call Guion
+000bba 940e 1097                 	 Call Guion
 000bbc e0f1                      	ldi ZH, high(SetPointLuzDormitorioH)
 000bbd e9e2                           ldi ZL, low(SetPointLuzDormitorioH)
 000bbe 8140                      	 ld r20, Z
@@ -3768,11 +3768,11 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000bc5 8140                      	 ld r20, Z
 000bc6 9340 00c6                 	 sts UDR0, r20
 000bc8 940e 0c89                 	  CALL ESPERAR_TX
-000bca 940e 1080                 	  CALL Cero
-000bcc 940e 106e                 	 Call Espacio
+000bca 940e 109b                 	  CALL Cero
+000bcc 940e 1089                 	 Call Espacio
 000bce e44c                      	   LDI R20, 'L'; 
 000bcf 940e 0c89                 	 CALL ESPERAR_TX
-000bd1 940e 107c                 	 Call Guion
+000bd1 940e 1097                 	 Call Guion
 000bd3 e0f1                      	ldi ZH, high(HisterisisLuzDormitorioH)
 000bd4 e9e6                           ldi ZL, low(HisterisisLuzDormitorioH)
 000bd5 8140                      	 ld r20, Z
@@ -3783,11 +3783,11 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000bdc 8140                      	 ld r20, Z
 000bdd 9340 00c6                 	 sts UDR0, r20
 000bdf 940e 0c89                 	  CALL ESPERAR_TX
-000be1 940e 1080                 	  CALL Cero
-000be3 940e 106e                 	  Call Espacio
+000be1 940e 109b                 	  CALL Cero
+000be3 940e 1089                 	  Call Espacio
 000be5 e44f                      	   LDI R20, 'O'; 
 000be6 940e 0c89                 	 CALL ESPERAR_TX
-000be8 940e 107c                 	 Call Guion
+000be8 940e 1097                 	 Call Guion
 000bea e0f1                      	ldi ZH, high(SetPointLuzLCCH)
 000beb e9ea                           ldi ZL, low(SetPointLuzLCCH)
 000bec 8140                      	 ld r20, Z
@@ -3798,11 +3798,11 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000bf3 8140                      	 ld r20, Z
 000bf4 9340 00c6                 	 sts UDR0, r20
 000bf6 940e 0c89                 	  CALL ESPERAR_TX
-000bf8 940e 1080                 	  CALL Cero
-000bfa 940e 106e                 	 Call Espacio
+000bf8 940e 109b                 	  CALL Cero
+000bfa 940e 1089                 	 Call Espacio
 000bfc e540                      	  LDI R20, 'P';
 000bfd 940e 0c89                 	 CALL ESPERAR_TX
-000bff 940e 107c                 	 Call Guion
+000bff 940e 1097                 	 Call Guion
 000c01 e0f1                      	ldi ZH, high(HisterisisLuzLCCH)
 000c02 e9ee                           ldi ZL, low(HisterisisLuzLCCH)
 000c03 8140                      	 ld r20, Z
@@ -3813,11 +3813,11 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000c0a 8140                      	 ld r20, Z
 000c0b 9340 00c6                 	 sts UDR0, r20
 000c0d 940e 0c89                 	  CALL ESPERAR_TX
-000c0f 940e 1080                 	 CALL Cero
-000c11 940e 106e                 	 Call Espacio
+000c0f 940e 109b                 	 CALL Cero
+000c11 940e 1089                 	 Call Espacio
 000c13 e541                      	  LDI R20, 'Q'; 
 000c14 940e 0c89                 	 CALL ESPERAR_TX
-000c16 940e 107c                 	 Call Guion
+000c16 940e 1097                 	 Call Guion
 000c18 e0f1                      	ldi ZH, high(DecenaHoraInicioDia)
 000c19 eae2                           ldi ZL, low(DecenaHoraInicioDia)
 000c1a 8140                      	 ld r20, Z
@@ -3840,11 +3840,11 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000c32 8140                      	 ld r20, Z
 000c33 9340 00c6                 	 sts UDR0, r20
 000c35 940e 0c89                 	  CALL ESPERAR_TX
-000c37 940e 106e                 	 Call Espacio
-000c39 940e 106e                 	  Call Espacio
+000c37 940e 1089                 	 Call Espacio
+000c39 940e 1089                 	  Call Espacio
 000c3b e542                      	  LDI R20, 'R'; 
 000c3c 940e 0c89                 	 CALL ESPERAR_TX
-000c3e 940e 107c                 	 Call Guion
+000c3e 940e 1097                 	 Call Guion
 000c40 e0f1                      	ldi ZH, high(DecenaHoraFinDia)
 000c41 eaea                           ldi ZL, low(DecenaHoraFinDia)
 000c42 8140                      	 ld r20, Z
@@ -3867,10 +3867,10 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000c5a 8140                      	 ld r20, Z
 000c5b 9340 00c6                 	 sts UDR0, r20
 000c5d 940e 0c89                 	  CALL ESPERAR_TX
-000c5f 940e 1075                 	  CALL Salto
+000c5f 940e 1090                 	  CALL Salto
 000c61 e543                      	    LDI R20, 'S'; 
 000c62 940e 0c89                 	 CALL ESPERAR_TX
-000c64 940e 107c                 	 Call Guion
+000c64 940e 1097                 	 Call Guion
 000c66 e0f1                      	 ldi ZH, high(DecenaHora)
 000c67 e0e0                           ldi ZL, low(DecenaHora)
 000c68 8140                      	 ld r20, Z
@@ -3893,7 +3893,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000c80 8140                      	 ld r20, Z
 000c81 9340 00c6                 	 sts UDR0, r20
 000c83 940e 0c89                 	  CALL ESPERAR_TX
-000c85 940e 106e                 	 Call Espacio
+000c85 940e 1089                 	 Call Espacio
 000c87 940c 0a49                 	 jmp READ
                                  ESPERAR_TX:
 000c89 9100 00c0                 	  LDS  R16,UCSR0A
@@ -4713,7 +4713,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  MostrarMediciones:
 000f7e e544                      	  LDI R20, 'T'; 
 000f7f 940e 0c89                 	 CALL ESPERAR_TX
-000f81 940e 107c                 	 Call Guion
+000f81 940e 1097                 	 Call Guion
 000f83 e0f1                      	 ldi ZH, high(DecenaHora)
 000f84 e0e0                           ldi ZL, low(DecenaHora)
 000f85 8140                      	 ld r20, Z
@@ -4736,204 +4736,222 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000f9d 8140                      	 ld r20, Z
 000f9e 9340 00c6                 	 sts UDR0, r20
 000fa0 940e 0c89                 	  CALL ESPERAR_TX
-000fa2 940e 106e                 	 Call Espacio
-000fa4 940e 1075                 	 CALL Salto
+000fa2 940e 1089                 	 Call Espacio
+000fa4 940e 1090                 	 CALL Salto
 000fa6 e545                      	 LDI R20, 'U'; Hasta aca bien
 000fa7 940e 0c89                 	 CALL ESPERAR_TX
-000fa9 940e 107c                 	 Call Guion
-000fab e0f1                      	 ldi ZH, high(MedTemperaturaExteriorH)
-000fac e0ea                           ldi ZL, low(MedTemperaturaExteriorH)
+000fa9 940e 1097                 	 Call Guion
+000fab e0f1                      	  ldi ZH, high(MedTemperaturaExteriorHH)
+000fac e0ea                           ldi ZL, low(MedTemperaturaExteriorHH)
 000fad 8140                      	 ld r20, Z
 000fae 9340 00c6                 	 sts UDR0, r20
 000fb0 940e 0c89                 	 CALL ESPERAR_TX
-000fb2 e0f1                      	 ldi ZH, high(MedTemperaturaExteriorL)
-000fb3 e0eb                           ldi ZL, low(MedTemperaturaExteriorL)
+000fb2 e0f1                      	 ldi ZH, high(MedTemperaturaExteriorH)
+000fb3 e0eb                           ldi ZL, low(MedTemperaturaExteriorH)
 000fb4 8140                      	 ld r20, Z
 000fb5 9340 00c6                 	 sts UDR0, r20
 000fb7 940e 0c89                 	 CALL ESPERAR_TX
-000fb9 940e 1084                 	 Call Coma
-000fbb e0f1                      	 ldi ZH, high(MedTemperaturaExteriorComa)
-000fbc e0ec                           ldi ZL, low(MedTemperaturaExteriorComa)
-000fbd 8140                      	 ld r20, Z
-000fbe 9340 00c6                 	 sts UDR0, r20
-000fc0 940e 0c89                 	 CALL ESPERAR_TX
-000fc2 940e 106e                 	 CALL Espacio
-000fc4 940e 1075                 	 Call Salto
-000fc6 e546                      	 LDI R20, 'V'; Hasta aca bien
+000fb9 e0f1                      	 ldi ZH, high(MedTemperaturaExteriorL)
+000fba e0ec                           ldi ZL, low(MedTemperaturaExteriorL)
+000fbb 8140                      	 ld r20, Z
+000fbc 9340 00c6                 	 sts UDR0, r20
+000fbe 940e 0c89                 	 CALL ESPERAR_TX
+000fc0 940e 109f                 	 Call Coma
+000fc2 e0f1                      	 ldi ZH, high(MedTemperaturaExteriorComa)
+000fc3 e0ed                           ldi ZL, low(MedTemperaturaExteriorComa)
+000fc4 8140                      	 ld r20, Z
+000fc5 9340 00c6                 	 sts UDR0, r20
 000fc7 940e 0c89                 	 CALL ESPERAR_TX
-000fc9 940e 107c                 	 CALL Guion
-000fcb e0f1                      	 ldi ZH, high(MedTemperaturaLCCH)
-000fcc e0ee                           ldi ZL, low(MedTemperaturaLCCH)
-000fcd 8140                      	 ld r20, Z
-000fce 9340 00c6                 	 sts UDR0, r20
-000fd0 940e 0c89                 	 CALL ESPERAR_TX
-000fd2 e0f1                      	 ldi ZH, high(MedTemperaturaLCCL)
-000fd3 e0ef                           ldi ZL, low(MedTemperaturaLCCL)
+000fc9 940e 1089                 	 CALL Espacio
+000fcb 940e 1090                 	 Call Salto
+000fcd e546                      	 LDI R20, 'V'; Hasta aca bien
+000fce 940e 0c89                 	 CALL ESPERAR_TX
+000fd0 940e 1097                 	 CALL Guion
+000fd2 e0f1                      	 ldi ZH, high(MedTemperaturaLCCHH)
+000fd3 e0ef                           ldi ZL, low(MedTemperaturaLCCHH)
 000fd4 8140                      	 ld r20, Z
 000fd5 9340 00c6                 	 sts UDR0, r20
 000fd7 940e 0c89                 	 CALL ESPERAR_TX
-000fd9 940e 1084                 	 Call Coma
-000fdb e0f1                      	 ldi ZH, high(MedTemperaturaLCCComa)
-000fdc e1e0                           ldi ZL, low(MedTemperaturaLCCComa)
-000fdd 8140                      	 ld r20, Z
-000fde 9340 00c6                 	 sts UDR0, r20
-000fe0 940e 0c89                 	 CALL ESPERAR_TX
-000fe2 940e 106e                 	 CALL Espacio
-000fe4 940e 1075                 	 CALL Salto
+000fd9 e0f1                      	 ldi ZH, high(MedTemperaturaLCCH)
+000fda e1e0                           ldi ZL, low(MedTemperaturaLCCH)
+000fdb 8140                      	 ld r20, Z
+000fdc 9340 00c6                 	 sts UDR0, r20
+000fde 940e 0c89                 	 CALL ESPERAR_TX
+000fe0 e0f1                      	 ldi ZH, high(MedTemperaturaLCCL)
+000fe1 e1e1                           ldi ZL, low(MedTemperaturaLCCL)
+000fe2 8140                      	 ld r20, Z
+000fe3 9340 00c6                 	 sts UDR0, r20
+000fe5 940e 0c89                 	 CALL ESPERAR_TX
+000fe7 940e 109f                 	 Call Coma
+000fe9 e0f1                      	 ldi ZH, high(MedTemperaturaLCCComa)
+000fea e1e2                           ldi ZL, low(MedTemperaturaLCCComa)
+000feb 8140                      	 ld r20, Z
+000fec 9340 00c6                 	 sts UDR0, r20
+000fee 940e 0c89                 	 CALL ESPERAR_TX
+000ff0 940e 1089                 	 CALL Espacio
+000ff2 940e 1090                 	 CALL Salto
                                  	 ;---------------------------------------------------------->
-000fe6 e547                      	  LDI R20, 'W'; Hasta aca bien
-000fe7 940e 0c89                 	 CALL ESPERAR_TX
-000fe9 940e 107c                 	 Call Guion
-000feb e0f1                      	 ldi ZH, high(MedTemperaturaDormitorioH)
-000fec e1e2                           ldi ZL, low(MedTemperaturaDormitorioH)
-000fed 8140                      	 ld r20, Z
-000fee 9340 00c6                 	 sts UDR0, r20
-000ff0 940e 0c89                 	 CALL ESPERAR_TX
-000ff2 e0f1                      	 ldi ZH, high(MedTemperaturaDormitorioL)
-000ff3 e1e3                           ldi ZL, low(MedTemperaturaDormitorioL)
-000ff4 8140                      	 ld r20, Z
-000ff5 9340 00c6                 	 sts UDR0, r20
-000ff7 940e 0c89                 	 CALL ESPERAR_TX
-000ff9 940e 106e                 	 CALL Espacio
-000ffb 940e 1084                 	  Call Coma
-000ffd e0f1                      	 ldi ZH, high(MedTemperaturaDormitorioComa)
-000ffe e1e4                           ldi ZL, low(MedTemperaturaDormitorioComa)
-000fff 8140                      	 ld r20, Z
-001000 9340 00c6                 	 sts UDR0, r20
-001002 940e 0c89                 	 CALL ESPERAR_TX
-001004 940e 1075                 	 CALL Salto
-001006 e548                      	 LDI R20, 'X'; Hasta aca bien
-001007 940e 0c89                 	 CALL ESPERAR_TX
-001009 940e 107c                 	 CALL Guion
-00100b e0f1                      	 ldi ZH, high(MedLuzDormitorioH)
-00100c e1ea                           ldi ZL, low(MedLuzDormitorioH)
-00100d 8140                      	 ld r20, Z
-00100e 9340 00c6                 	 sts UDR0, r20
-001010 940e 0c89                 	 CALL ESPERAR_TX
-001012 e0f1                      	 ldi ZH, high(MedLuzDormitorioL)
-001013 e1eb                           ldi ZL, low(MedLuzDormitorioL)
-001014 8140                      	 ld r20, Z
-001015 9340 00c6                 	 sts UDR0, r20
-001017 940e 0c89                 	 CALL ESPERAR_TX
-001019 940e 1084                 	 Call Coma
-00101b e0f1                      	 ldi ZH, high(MedLuzDormitorioDecena)
-00101c e1ec                           ldi ZL, low(MedLuzDormitorioDecena)
-00101d 8140                      	 ld r20, Z
-00101e 9340 00c6                 	 sts UDR0, r20
-001020 940e 0c89                 	 CALL ESPERAR_TX
-001022 940e 1080                 	 CALL Cero
-001024 940e 106e                 	 CALL Espacio
-001026 940e 1075                 	 Call Salto
-001028 e549                      	 LDI R20, 'Y'; Hasta aca bien
-001029 940e 0c89                 	 CALL ESPERAR_TX
-00102b 940e 107c                 	 CALL Guion
-00102d e0f1                      	 ldi ZH, high(MedLuzExteriorH)
-00102e e1ee                           ldi ZL, low(MedLuzExteriorH)
-00102f 8140                      	 ld r20, Z
-001030 9340 00c6                 	 sts UDR0, r20
-001032 940e 0c89                 	 CALL ESPERAR_TX
-001034 e0f1                      	 ldi ZH, high(MedLuzExteriorL)
-001035 e1ef                           ldi ZL, low(MedLuzExteriorL)
-001036 8140                      	 ld r20, Z
-001037 9340 00c6                 	 sts UDR0, r20
-001039 940e 0c89                 	 CALL ESPERAR_TX
-00103b 940e 1084                 	 Call Coma
-00103d e0f1                      	 ldi ZH, high(MedLuzExteriorDecena)
-00103e e2e0                           ldi ZL, low(MedLuzExteriorDecena)
-00103f 8140                      	 ld r20, Z
-001040 9340 00c6                 	 sts UDR0, r20
-001042 940e 0c89                 	 CALL ESPERAR_TX
-001044 940e 1080                 	 CALL Cero
-001046 940e 106e                 	 CALL Espacio
-001048 940e 1075                 	 Call Salto
-00104a e54a                      	 LDI R20, 'Z'; Hasta aca bien
-00104b 940e 0c89                 	 CALL ESPERAR_TX
-00104d 940e 107c                 	 CALL Guion
-00104f e0f1                      	 ldi ZH, high(MedLuzLCCH)
-001050 e1e6                           ldi ZL, low(MedLuzLCCH)
-001051 8140                      	 ld r20, Z
-001052 9340 00c6                 	 sts UDR0, r20
-001054 940e 0c89                 	 CALL ESPERAR_TX
-001056 e0f1                      	 ldi ZH, high(MedLuzLCCL)
-001057 e1e7                           ldi ZL, low(MedLuzLCCL)
-001058 8140                      	 ld r20, Z
-001059 9340 00c6                 	 sts UDR0, r20
-00105b 940e 0c89                 	 CALL ESPERAR_TX
-00105d 940e 1084                 	 Call Coma
-00105f e0f1                      	 ldi ZH, high(MedLuzLCCDecena)
-001060 e1e8                           ldi ZL, low(MedLuzLCCDecena)
-001061 8140                      	 ld r20, Z
-001062 9340 00c6                 	 sts UDR0, r20
-001064 940e 0c89                 	 CALL ESPERAR_TX
-001066 940e 1080                 	 CALL Cero
-001068 940e 106e                 	 CALL Espacio
-00106a 940c 0a4d                 	 JMP Options
+000ff4 e547                      	  LDI R20, 'W'; Hasta aca bien
+000ff5 940e 0c89                 	 CALL ESPERAR_TX
+000ff7 940e 1097                 	 Call Guion
+000ff9 e0f1                      	 ldi ZH, high(MedTemperaturaDormitorioHH)
+000ffa e1e4                           ldi ZL, low(MedTemperaturaDormitorioHH)
+000ffb 8140                      	 ld r20, Z
+000ffc 9340 00c6                 	 sts UDR0, r20
+000ffe 940e 0c89                 	 CALL ESPERAR_TX
+001000 e0f1                      	 ldi ZH, high(MedTemperaturaDormitorioH)
+001001 e1e5                           ldi ZL, low(MedTemperaturaDormitorioH)
+001002 8140                      	 ld r20, Z
+001003 9340 00c6                 	 sts UDR0, r20
+001005 940e 0c89                 	 CALL ESPERAR_TX
+001007 e0f1                      	 ldi ZH, high(MedTemperaturaDormitorioL)
+001008 e1e6                           ldi ZL, low(MedTemperaturaDormitorioL)
+001009 8140                      	 ld r20, Z
+00100a 9340 00c6                 	 sts UDR0, r20
+00100c 940e 0c89                 	 CALL ESPERAR_TX
+00100e 940e 109f                 	 Call Coma
+001010 e0f1                      	 ldi ZH, high(MedTemperaturaDormitorioComa)
+001011 e1e7                           ldi ZL, low(MedTemperaturaDormitorioComa)
+001012 8140                      	 ld r20, Z
+001013 9340 00c6                 	 sts UDR0, r20
+001015 940e 0c89                 	 CALL ESPERAR_TX
+001017 940e 1090                 	 CALL Salto
+001019 e548                      	 LDI R20, 'X'; Hasta aca bien
+00101a 940e 0c89                 	 CALL ESPERAR_TX
+00101c 940e 1097                 	 CALL Guion
+00101e e0f1                      	  ldi ZH, high(MedLuzDormitorioHH)
+00101f e1ee                           ldi ZL, low(MedLuzDormitorioHH)
+001020 8140                      	 ld r20, Z
+001021 9340 00c6                 	 sts UDR0, r20
+001023 940e 0c89                 	 CALL ESPERAR_TX
+001025 e0f1                      	 ldi ZH, high(MedLuzDormitorioH)
+001026 e1ef                           ldi ZL, low(MedLuzDormitorioH)
+001027 8140                      	 ld r20, Z
+001028 9340 00c6                 	 sts UDR0, r20
+00102a 940e 0c89                 	 CALL ESPERAR_TX
+00102c e0f1                      	 ldi ZH, high(MedLuzDormitorioL)
+00102d e2e0                           ldi ZL, low(MedLuzDormitorioL)
+00102e 8140                      	 ld r20, Z
+00102f 9340 00c6                 	 sts UDR0, r20
+001031 940e 0c89                 	 CALL ESPERAR_TX
+001033 e0f1                      	 ldi ZH, high(MedLuzDormitorioDecena)
+001034 e2e1                           ldi ZL, low(MedLuzDormitorioDecena)
+001035 8140                      	 ld r20, Z
+001036 9340 00c6                 	 sts UDR0, r20
+001038 940e 0c89                 	 CALL ESPERAR_TX
+00103a 940e 109b                 	 CALL Cero
+00103c 940e 1089                 	 CALL Espacio
+00103e 940e 1090                 	 Call Salto
+001040 e549                      	 LDI R20, 'Y'; Hasta aca bien
+001041 940e 0c89                 	 CALL ESPERAR_TX
+001043 940e 1097                 	 CALL Guion
+001045 e0f1                      	  ldi ZH, high(MedLuzExteriorHH)
+001046 e2e3                           ldi ZL, low(MedLuzExteriorHH)
+001047 8140                      	 ld r20, Z
+001048 9340 00c6                 	 sts UDR0, r20
+00104a 940e 0c89                 	 CALL ESPERAR_TX
+00104c e0f1                      	 ldi ZH, high(MedLuzExteriorH)
+00104d e2e4                           ldi ZL, low(MedLuzExteriorH)
+00104e 8140                      	 ld r20, Z
+00104f 9340 00c6                 	 sts UDR0, r20
+001051 940e 0c89                 	 CALL ESPERAR_TX
+001053 e0f1                      	 ldi ZH, high(MedLuzExteriorL)
+001054 e2e5                           ldi ZL, low(MedLuzExteriorL)
+001055 8140                      	 ld r20, Z
+001056 9340 00c6                 	 sts UDR0, r20
+001058 940e 0c89                 	 CALL ESPERAR_TX
+00105a e0f1                      	 ldi ZH, high(MedLuzExteriorDecena)
+00105b e2e6                           ldi ZL, low(MedLuzExteriorDecena)
+00105c 8140                      	 ld r20, Z
+00105d 9340 00c6                 	 sts UDR0, r20
+00105f 940e 0c89                 	 CALL ESPERAR_TX
+001061 940e 109b                 	 CALL Cero
+001063 940e 1089                 	 CALL Espacio
+001065 940e 1090                 	 Call Salto
+001067 e54a                      	 LDI R20, 'Z'; Hasta aca bien
+001068 940e 0c89                 	 CALL ESPERAR_TX
+00106a 940e 1097                 	 CALL Guion
+00106c e0f1                      	 ldi ZH, high(MedLuzLCCH)
+00106d e1ea                           ldi ZL, low(MedLuzLCCH)
+00106e 8140                      	 ld r20, Z
+00106f 9340 00c6                 	 sts UDR0, r20
+001071 940e 0c89                 	 CALL ESPERAR_TX
+001073 e0f1                      	 ldi ZH, high(MedLuzLCCL)
+001074 e1eb                           ldi ZL, low(MedLuzLCCL)
+001075 8140                      	 ld r20, Z
+001076 9340 00c6                 	 sts UDR0, r20
+001078 940e 0c89                 	 CALL ESPERAR_TX
+00107a e0f1                      	 ldi ZH, high(MedLuzLCCDecena)
+00107b e1ec                           ldi ZL, low(MedLuzLCCDecena)
+00107c 8140                      	 ld r20, Z
+00107d 9340 00c6                 	 sts UDR0, r20
+00107f 940e 0c89                 	 CALL ESPERAR_TX
+001081 940e 109b                 	 CALL Cero
+001083 940e 1089                 	 CALL Espacio
+001085 940c 0a4d                 	 JMP Options
                                  DELAY:
                                  ; Delay 60 000 cycles
                                  ; 3.75ms at 16.0 MHz
-00106c e34c                         LDI  R20, 60
-00106d 9508                         RET
+001087 e34c                         LDI  R20, 60
+001088 9508                         RET
                                  ;===========================================
                                  ;|    Elementos			gráficos		   |
                                  ;===========================================
                                  Espacio:
-00106e e240                           LDI R20, 32 
-00106f 940e 0c89                 	 CALL ESPERAR_TX
-001071 e240                      	 LDI R20, 32
-001072 940e 0c89                 	 CALL ESPERAR_TX
-001074 9508                         RET
+001089 e240                           LDI R20, 32 
+00108a 940e 0c89                 	 CALL ESPERAR_TX
+00108c e240                      	 LDI R20, 32
+00108d 940e 0c89                 	 CALL ESPERAR_TX
+00108f 9508                         RET
                                  Salto:
-001075 e04d                      	 LDI R20, 13
-001076 940e 0c89                 	 CALL ESPERAR_TX
-001078 e04a                      	 LDI R20, 10
-001079 940e 0c89                 	 CALL ESPERAR_TX
-00107b 9508                         RET
+001090 e04d                      	 LDI R20, 13
+001091 940e 0c89                 	 CALL ESPERAR_TX
+001093 e04a                      	 LDI R20, 10
+001094 940e 0c89                 	 CALL ESPERAR_TX
+001096 9508                         RET
                                  Guion:
-00107c e54f                      	 LDI R20, '_'
-00107d 940e 0c89                 	 CALL ESPERAR_TX
-00107f 9508                      	 RET
+001097 e54f                      	 LDI R20, '_'
+001098 940e 0c89                 	 CALL ESPERAR_TX
+00109a 9508                      	 RET
                                  Cero:
-001080 e340                      	 LDI R20, '0'
-001081 940e 0c89                 	 CALL ESPERAR_TX
-001083 9508                      	 RET
+00109b e340                      	 LDI R20, '0'
+00109c 940e 0c89                 	 CALL ESPERAR_TX
+00109e 9508                      	 RET
                                  Coma:
-001084 e24c                      	 LDI R20, ','
-001085 940e 0c89                 	 CALL ESPERAR_TX
+00109f e24c                      	 LDI R20, ','
+0010a0 940e 0c89                 	 CALL ESPERAR_TX
                                  .INCLUDE "Configuraciones.inc"
-001087 9508                      
+0010a2 9508                      
                                  CONFIGURAR:
-001088 e008                          LDI R16, HIGH(RAMEND)	
-001089 bf0e                      	OUT SPH, R16
-00108a ef0f                      	LDI R16, LOW(RAMEND)
-00108b bf0d                      	OUT SPL, R16
-00108c ef0f                      	LDI R16, 0xFF
-00108d e10c                      	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion
-00108e 9300 00c1                 	STS UCSR0B, R16
-001090 e004                      	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
-001091 9300 00c2                 	STS UCSR0C, R16
-001093 e607                      	LDI R16, 103	; Baud Rate = 9600
-001094 9300 00c4                 	STS UBRR0L, R16
+0010a3 e008                          LDI R16, HIGH(RAMEND)	;Configuramos la pila:
+0010a4 bf0e                      	OUT SPH, R16
+0010a5 ef0f                      	LDI R16, LOW(RAMEND)
+0010a6 bf0d                      	OUT SPL, R16
+0010a7 ef0f                      	LDI R16, 0xFF
+0010a8 e10c                      	LDI R16,(1<<RXEN0)|(1<<TXEN0)|(1<<UCSZ02) ;Se habilita transmision y recepcion de la Uart.
+0010a9 9300 00c1                 	STS UCSR0B, R16
+0010ab e004                      	LDI R16,(1<<UCSZ01)|(1<UCSZ00) ;Parity deshabilitado, 9 bits,
+0010ac 9300 00c2                 	STS UCSR0C, R16
+0010ae e607                      	LDI R16, 103	; Baud Rate = 9600
+0010af 9300 00c4                 	STS UBRR0L, R16
                                  	; Configurar el ADC para 10 bits, justificación izquierda, poniendo de paso todo el puerto D (usaremos todos para los sensores) en 0
-001096 e600                      	ldi r16,0b01100000 ; 5V del micro como referencia
-001097 9300 007c                 	sts ADMUX, r16
-001099 e807                      	ldi r16,0b10000111 ; lo cargue en binario, para cargar todo de una:
+0010b1 e600                      	ldi r16,0b01100000 ; 5V del micro como referencia
+0010b2 9300 007c                 	sts ADMUX, r16
+0010b4 e807                      	ldi r16,0b10000111 ; lo cargue en binario, para cargar todo de una:
                                  ; 10 bits, justificación izquierda, preescaler en 128
-00109a 9300 007a                 	sts ADCSRA, r16
-00109c e000                      	ldi r16, 0b00000000 ; Limpiamos el puerto C
-00109d b907                      	out DDRC, r16 
-00109e 940e 10a8                 	CALL ConfiguracionPredeterminada ;cargamos la configuración predeterminada
-0010a0 e0f1                      	ldi ZH, high(DecenaHora); Posicionamos Z en la primer variable de medición
-0010a1 e0e0                          ldi ZL, low(DecenaHora)
-0010a2 95ea                      	DEC ZL
-0010a3 e238                      	LDI R19,40				; Cargamos en r19 la cantidad de mediciones a "Limpiar"
-0010a4 940e 1148                 	Call ReincioMedciones
+0010b5 9300 007a                 	sts ADCSRA, r16
+0010b7 e000                      	ldi r16, 0b00000000 ; Limpiamos el puerto C
+0010b8 b907                      	out DDRC, r16 
+0010b9 940e 10c3                 	CALL ConfiguracionPredeterminada ;cargamos la configuración predeterminada
+0010bb e0f1                      	ldi ZH, high(DecenaHora); Posicionamos Z en la primer variable de medición
+0010bc e0e0                          ldi ZL, low(DecenaHora)
+0010bd 95ea                      	DEC ZL
+0010be e238                      	LDI R19,40				; Cargamos en r19 la cantidad de mediciones a "Limpiar"
+0010bf 940e 1163                 	Call ReincioMedciones
                                  	;UNA VEZ TODO CONFIGURADO, HABILITAMOS LAS INTERRUPCIONES, INICIANDO EL FUNCIONAMIENTO NORMAL DEL PROGRAMA
-0010a6 9478                      	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  ATENDIMIENTODEINTERRUPCIONES.INC
-0010a7 c992                      	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
+0010c1 9478                      	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  "ATENDIMIENTODEINTERRUPCIONES.INC"
+0010c2 c977                      	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
                                  	
-                                 
-                                 
-                                 
                                  	ConfiguracionPredeterminada:
                                  	;-------------------------------------------------------------------------
                                  	;| INICIO DE LA CONDIGURACIÓN PREDETERMINADA DE FUNCIONAMIENTO           |
@@ -4958,199 +4976,200 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  	"R-Hora de Fin del Dia", 13, 10
                                  	"S-Configurar Hora Actual/Actualizar Reloj", 13, 10*/
                                  	;A
-0010a8 e341                      	LDI R20, '1'
-0010a9 9340 016a                 	STS TemperaturaExteriorMinimaH,R20
-0010ab e342                      	LDI R20, '2'
-0010ac e0f1                      	ldi ZH, high(TemperaturaExteriorMinimaL)
-0010ad e6eb                          ldi ZL, low(TemperaturaExteriorMinimaL)
-0010ae 8340                      	ST Z, R20
+0010c3 e341                      	LDI R20, '1'
+0010c4 9340 016a                 	STS TemperaturaExteriorMinimaH,R20
+0010c6 e340                      	LDI R20, '0'
+0010c7 e0f1                      	ldi ZH, high(TemperaturaExteriorMinimaL)
+0010c8 e6eb                          ldi ZL, low(TemperaturaExteriorMinimaL)
+0010c9 8340                      	ST Z, R20
                                  	;B
-0010af e343                      	LDI R20, '3'
-0010b0 e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaH)
-0010b1 e6ed                          ldi ZL, low(TemperaturaExteriorMaximaH)
-0010b2 8340                      	ST Z, R20
-0010b3 e348                      	LDI R20, '8'
-0010b4 e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaL)
-0010b5 e6ee                          ldi ZL, low(TemperaturaExteriorMaximaL)
-0010b6 8340                      	ST Z, R20
+0010ca e343                      	LDI R20, '3'
+0010cb e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaH)
+0010cc e6ed                          ldi ZL, low(TemperaturaExteriorMaximaH)
+0010cd 8340                      	ST Z, R20
+0010ce e342                      	LDI R20, '2'
+0010cf e0f1                      	ldi ZH, high(TemperaturaExteriorMaximaL)
+0010d0 e6ee                          ldi ZL, low(TemperaturaExteriorMaximaL)
+0010d1 8340                      	ST Z, R20
                                  	;C
-0010b7 e341                      	LDI R20, '1'
-0010b8 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
-0010b9 e7e0                          ldi ZL, low(TemperaturaLCCMinimaH)
-0010ba 8340                      	ST Z, R20
-0010bb e348                      	LDI R20, '8'
-0010bc e0f1                      	ldi ZH, high(TemperaturaLCCMinimaL)
-0010bd e7e1                          ldi ZL, low(TemperaturaLCCMinimaL)
-0010be 8340                      	ST Z, R20
+0010d2 e341                      	LDI R20, '1'
+0010d3 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaH)
+0010d4 e7e0                          ldi ZL, low(TemperaturaLCCMinimaH)
+0010d5 8340                      	ST Z, R20
+0010d6 e348                      	LDI R20, '8'
+0010d7 e0f1                      	ldi ZH, high(TemperaturaLCCMinimaL)
+0010d8 e7e1                          ldi ZL, low(TemperaturaLCCMinimaL)
+0010d9 8340                      	ST Z, R20
                                  	;------------------------------------>
                                  	;D
-0010bf e343                      	LDI R20, '3'
-0010c0 e0f1                      	ldi ZH, high(TemperaturaLCCMaximaH)
-0010c1 e7e4                          ldi ZL, low(TemperaturaLCCMaximaH)
-0010c2 8340                      	ST Z, R20
-0010c3 e348                      	LDI R20, '8'
-0010c4 e0f1                      	ldi ZH, high(TemperaturaLCCMaximaL)
-0010c5 e7e5                          ldi ZL, low(TemperaturaLCCMaximaL)
-0010c6 8340                      	ST Z, R20
+0010da e342                      	LDI R20, '2'
+0010db e0f1                      	ldi ZH, high(TemperaturaLCCMaximaH)
+0010dc e7e4                          ldi ZL, low(TemperaturaLCCMaximaH)
+0010dd 8340                      	ST Z, R20
+0010de e346                      	LDI R20, '6'
+0010df e0f1                      	ldi ZH, high(TemperaturaLCCMaximaL)
+0010e0 e7e5                          ldi ZL, low(TemperaturaLCCMaximaL)
+0010e1 8340                      	ST Z, R20
                                  	;E
-0010c7 e341                      	LDI R20, '1'
-0010c8 e0f1                      	ldi ZH, high(SetPointTemperaturaLCCH)
-0010c9 e7e8                          ldi ZL, low(SetPointTemperaturaLCCH)
-0010ca 8340                      	ST Z, R20
-0010cb e348                      	LDI R20, '8'
-0010cc e0f1                      	ldi ZH, high(SetPointTemperaturaLCCL)
-0010cd e7e9                          ldi ZL, low(SetPointTemperaturaLCCL)
-0010ce 8340                      	ST Z, R20
+0010e2 e342                      	LDI R20, '2'
+0010e3 e0f1                      	ldi ZH, high(SetPointTemperaturaLCCH)
+0010e4 e7e8                          ldi ZL, low(SetPointTemperaturaLCCH)
+0010e5 8340                      	ST Z, R20
+0010e6 e344                      	LDI R20, '4'
+0010e7 e0f1                      	ldi ZH, high(SetPointTemperaturaLCCL)
+0010e8 e7e9                          ldi ZL, low(SetPointTemperaturaLCCL)
+0010e9 8340                      	ST Z, R20
                                  	;F
-0010cf e343                      	LDI R20, '3'
-0010d0 e0f1                      	ldi ZH, high(HisterisisTemperaturaLCCH)
-0010d1 e7ec                          ldi ZL, low(HisterisisTemperaturaLCCH)
-0010d2 8340                      	ST Z, R20
-0010d3 e348                      	LDI R20, '8'
-0010d4 e0f1                      	ldi ZH, high(HisterisisTemperaturaLCCL)
-0010d5 e7ed                          ldi ZL, low(HisterisisTemperaturaLCCL)
-0010d6 8340                      	ST Z, R20
+0010ea e340                      	LDI R20, '0'
+0010eb e0f1                      	ldi ZH, high(HisterisisTemperaturaLCCH)
+0010ec e7ec                          ldi ZL, low(HisterisisTemperaturaLCCH)
+0010ed 8340                      	ST Z, R20
+0010ee e341                      	LDI R20, '1'
+0010ef e0f1                      	ldi ZH, high(HisterisisTemperaturaLCCL)
+0010f0 e7ed                          ldi ZL, low(HisterisisTemperaturaLCCL)
+0010f1 8340                      	ST Z, R20
                                  	;G
-0010d7 e341                      	LDI R20, '1'
-0010d8 e0f1                      	ldi ZH, high(TemperaturaDormitorioMaximaH)
-0010d9 e8e0                          ldi ZL, low(TemperaturaDormitorioMaximaH)
-0010da 8340                      	ST Z, R20
-0010db e348                      	LDI R20, '8'
-0010dc e0f1                      	ldi ZH, high(TemperaturaDormitorioMaximaL)
-0010dd e8e1                          ldi ZL, low(TemperaturaDormitorioMaximaL)
-0010de 8340                      	ST Z, R20
+0010f2 e342                      	LDI R20, '2'
+0010f3 e0f1                      	ldi ZH, high(TemperaturaDormitorioMaximaH)
+0010f4 e8e0                          ldi ZL, low(TemperaturaDormitorioMaximaH)
+0010f5 8340                      	ST Z, R20
+0010f6 e346                      	LDI R20, '6'
+0010f7 e0f1                      	ldi ZH, high(TemperaturaDormitorioMaximaL)
+0010f8 e8e1                          ldi ZL, low(TemperaturaDormitorioMaximaL)
+0010f9 8340                      	ST Z, R20
                                  	;------
                                  	;H
-0010df e343                      	LDI R20, '3'
-0010e0 e0f1                      	ldi ZH, high(TemperaturaDormitorioMinimaH)
-0010e1 e8e4                          ldi ZL, low(TemperaturaDormitorioMinimaH)
-0010e2 8340                      	ST Z, R20
-0010e3 e348                      	LDI R20, '8'
-0010e4 e0f1                      	ldi ZH, high(TemperaturaDormitorioMinimaL)
-0010e5 e8e5                          ldi ZL, low(TemperaturaDormitorioMinimaL)
-0010e6 8340                      	ST Z, R20
+0010fa e341                      	LDI R20, '1'
+0010fb e0f1                      	ldi ZH, high(TemperaturaDormitorioMinimaH)
+0010fc e8e4                          ldi ZL, low(TemperaturaDormitorioMinimaH)
+0010fd 8340                      	ST Z, R20
+0010fe e348                      	LDI R20, '8'
+0010ff e0f1                      	ldi ZH, high(TemperaturaDormitorioMinimaL)
+001100 e8e5                          ldi ZL, low(TemperaturaDormitorioMinimaL)
+001101 8340                      	ST Z, R20
                                  	;I
-0010e7 e341                      	LDI R20, '1'
-0010e8 e0f1                      	ldi ZH, high(SetPointTemperaturaDormitorioH)
-0010e9 e8e8                          ldi ZL, low(SetPointTemperaturaDormitorioH)
-0010ea 8340                      	ST Z, R20
-0010eb e348                      	LDI R20, '8'
-0010ec e0f1                      	ldi ZH, high(SetPointTemperaturaDormitorioL)
-0010ed e8e9                          ldi ZL, low(SetPointTemperaturaDormitorioL)
-0010ee 8340                      	ST Z, R20
+001102 e342                      	LDI R20, '2'
+001103 e0f1                      	ldi ZH, high(SetPointTemperaturaDormitorioH)
+001104 e8e8                          ldi ZL, low(SetPointTemperaturaDormitorioH)
+001105 8340                      	ST Z, R20
+001106 e344                      	LDI R20, '4'
+001107 e0f1                      	ldi ZH, high(SetPointTemperaturaDormitorioL)
+001108 e8e9                          ldi ZL, low(SetPointTemperaturaDormitorioL)
+001109 8340                      	ST Z, R20
                                  	;J
-0010ef e343                      	LDI R20, '3'
-0010f0 e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioH)
-0010f1 e8eb                          ldi ZL, low(HisterisisTemperaturaDormitorioH)
-0010f2 8340                      	ST Z, R20
-0010f3 e348                      	LDI R20, '8'
-0010f4 e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioL)
-0010f5 e8ec                          ldi ZL, low(HisterisisTemperaturaDormitorioL)
-0010f6 8340                      	ST Z, R20
+00110a e340                      	LDI R20, '0'
+00110b e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioH)
+00110c e8eb                          ldi ZL, low(HisterisisTemperaturaDormitorioH)
+00110d 8340                      	ST Z, R20
+00110e e341                      	LDI R20, '1'
+00110f e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioL)
+001110 e8ec                          ldi ZL, low(HisterisisTemperaturaDormitorioL)
+001111 8340                      	ST Z, R20
                                  	;K
-0010f7 e341                      	LDI R20, '1'
-0010f8 e0f1                      	ldi ZH, high(LuzExteriorMinimaH)
-0010f9 e8ee                          ldi ZL, low(LuzExteriorMinimaH)
-0010fa 8340                      	ST Z, R20
-0010fb e348                      	LDI R20, '8'
-0010fc e0f1                      	ldi ZH, high(LuzExteriorMinimaL)
-0010fd e8ef                          ldi ZL, low(LuzExteriorMinimaL)
-0010fe 8340                      	ST Z, R20
+001112 e340                      	LDI R20, '0'
+001113 e0f1                      	ldi ZH, high(LuzExteriorMinimaH)
+001114 e8ee                          ldi ZL, low(LuzExteriorMinimaH)
+001115 8340                      	ST Z, R20
+001116 e341                      	LDI R20, '1' ; 10 luxes son el limite del crepusculo, fuente:
+                                 				 ; «Electro-Optics Handbook» (pdf). burle.com. pp. p. 63. Archivado desde el original el 20 de diciembre de 2008. Consultado el 26 de octubre de 2023.
+001117 e0f1                      	ldi ZH, high(LuzExteriorMinimaL)
+001118 e8ef                          ldi ZL, low(LuzExteriorMinimaL)
+001119 8340                      	ST Z, R20
                                  	;J
-0010ff e343                      	LDI R20, '3'
-001100 e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioH)
-001101 e8eb                          ldi ZL, low(HisterisisTemperaturaDormitorioH)
-001102 8340                      	ST Z, R20
-001103 e348                      	LDI R20, '8'
-001104 e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioL)
-001105 e8ec                          ldi ZL, low(HisterisisTemperaturaDormitorioL)
-001106 8340                      	ST Z, R20
+00111a e340                      	LDI R20, '0'
+00111b e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioH)
+00111c e8eb                          ldi ZL, low(HisterisisTemperaturaDormitorioH)
+00111d 8340                      	ST Z, R20
+00111e e341                      	LDI R20, '1'
+00111f e0f1                      	ldi ZH, high(HisterisisTemperaturaDormitorioL)
+001120 e8ec                          ldi ZL, low(HisterisisTemperaturaDormitorioL)
+001121 8340                      	ST Z, R20
                                  	;M
-001107 e341                      	LDI R20, '1'
-001108 e0f1                      	ldi ZH, high(SetPointLuzDormitorioH)
-001109 e9e2                          ldi ZL, low(SetPointLuzDormitorioH)
-00110a 8340                      	ST Z, R20
-00110b e348                      	LDI R20, '8'
-00110c e0f1                      	ldi ZH, high(SetPointLuzDormitorioL)
-00110d e9e3                          ldi ZL, low(SetPointLuzDormitorioL)
-00110e 8340                      	ST Z, R20
+001122 e345                      	LDI R20, '5'
+001123 e0f1                      	ldi ZH, high(SetPointLuzDormitorioH)
+001124 e9e2                          ldi ZL, low(SetPointLuzDormitorioH)
+001125 8340                      	ST Z, R20
+001126 e340                      	LDI R20, '0'
+001127 e0f1                      	ldi ZH, high(SetPointLuzDormitorioL)
+001128 e9e3                          ldi ZL, low(SetPointLuzDormitorioL)
+001129 8340                      	ST Z, R20
                                  	;L
-00110f e341                      	LDI R20, '1'
-001110 e0f1                      	ldi ZH, high(HisterisisLuzDormitorioH)
-001111 e9e6                          ldi ZL, low(HisterisisLuzDormitorioH)
-001112 8340                      	ST Z, R20
-001113 e348                      	LDI R20, '8'
-001114 e0f1                      	ldi ZH, high(HisterisisLuzDormitorioL)
-001115 e9e7                          ldi ZL, low(HisterisisLuzDormitorioL)
-001116 8340                      	ST Z, R20
+00112a e340                      	LDI R20, '0'
+00112b e0f1                      	ldi ZH, high(HisterisisLuzDormitorioH)
+00112c e9e6                          ldi ZL, low(HisterisisLuzDormitorioH)
+00112d 8340                      	ST Z, R20
+00112e e341                      	LDI R20, '1'
+00112f e0f1                      	ldi ZH, high(HisterisisLuzDormitorioL)
+001130 e9e7                          ldi ZL, low(HisterisisLuzDormitorioL)
+001131 8340                      	ST Z, R20
                                  	;O
-001117 e341                      	LDI R20, '1'
-001118 e0f1                      	ldi ZH, high(SetPointLuzLCCH)
-001119 e9ea                          ldi ZL, low(SetPointLuzLCCH)
-00111a 8340                      	ST Z, R20
-00111b e348                      	LDI R20, '8'
-00111c e0f1                      	ldi ZH, high(SetPointLuzLCCL)
-00111d e9eb                          ldi ZL, low(SetPointLuzLCCL)
-00111e 8340                      	ST Z, R20
+001132 e345                      	LDI R20, '5'
+001133 e0f1                      	ldi ZH, high(SetPointLuzLCCH)
+001134 e9ea                          ldi ZL, low(SetPointLuzLCCH)
+001135 8340                      	ST Z, R20
+001136 e340                      	LDI R20, '0'
+001137 e0f1                      	ldi ZH, high(SetPointLuzLCCL)
+001138 e9eb                          ldi ZL, low(SetPointLuzLCCL)
+001139 8340                      	ST Z, R20
                                  	;P
-00111f e341                      	LDI R20, '1'
-001120 e0f1                      	ldi ZH, high(HisterisisLuzLCCH)
-001121 e9ee                          ldi ZL, low(HisterisisLuzLCCH)
-001122 8340                      	ST Z, R20
-001123 e348                      	LDI R20, '8'
-001124 e0f1                      	ldi ZH, high(HisterisisLuzLCCL)
-001125 e9ef                          ldi ZL, low(HisterisisLuzLCCL)
-001126 8340                      	ST Z, R20
+00113a e340                      	LDI R20, '0'
+00113b e0f1                      	ldi ZH, high(HisterisisLuzLCCH)
+00113c e9ee                          ldi ZL, low(HisterisisLuzLCCH)
+00113d 8340                      	ST Z, R20
+00113e e347                      	LDI R20, '7'
+00113f e0f1                      	ldi ZH, high(HisterisisLuzLCCL)
+001140 e9ef                          ldi ZL, low(HisterisisLuzLCCL)
+001141 8340                      	ST Z, R20
                                  		;Q
-001127 e341                      	LDI R20, '1'
-001128 e0f1                      	ldi ZH, high(DecenaHoraInicioDia)
-001129 eae2                          ldi ZL, low(DecenaHoraInicioDia)
-00112a 8340                      	ST Z, R20
-00112b e348                      	LDI R20, '8'
-00112c e0f1                      	ldi ZH, high(UnidadHoraInicioDia)
-00112d eae3                          ldi ZL, low(UnidadHoraInicioDia)
-00112e 8340                      	ST Z, R20
-00112f e341                      	LDI R20, '1'
-001130 e0f1                      	ldi ZH, high(DecenaMinutoInicioDia)
-001131 eae6                          ldi ZL, low(DecenaMinutoInicioDia)
-001132 8340                      	ST Z, R20
-001133 e341                      	LDI R20, '1'
-001134 e0f1                      	ldi ZH, high(UnidadMinutoInicioDia)
-001135 eae7                          ldi ZL, low(UnidadMinutoInicioDia)
-001136 8340                      	ST Z, R20
+001142 e340                      	LDI R20, '0'
+001143 e0f1                      	ldi ZH, high(DecenaHoraInicioDia)
+001144 eae2                          ldi ZL, low(DecenaHoraInicioDia)
+001145 8340                      	ST Z, R20
+001146 e345                      	LDI R20, '5'
+001147 e0f1                      	ldi ZH, high(UnidadHoraInicioDia)
+001148 eae3                          ldi ZL, low(UnidadHoraInicioDia)
+001149 8340                      	ST Z, R20
+00114a e343                      	LDI R20, '3'
+00114b e0f1                      	ldi ZH, high(DecenaMinutoInicioDia)
+00114c eae6                          ldi ZL, low(DecenaMinutoInicioDia)
+00114d 8340                      	ST Z, R20
+00114e e340                      	LDI R20, '0'
+00114f e0f1                      	ldi ZH, high(UnidadMinutoInicioDia)
+001150 eae7                          ldi ZL, low(UnidadMinutoInicioDia)
+001151 8340                      	ST Z, R20
                                  		;R
-001137 e341                      	LDI R20, '1'
-001138 e0f1                      	ldi ZH, high(DecenaHoraFinDia)
-001139 eaea                          ldi ZL, low(DecenaHoraFinDia)
-00113a 8340                      	ST Z, R20
-00113b e348                      	LDI R20, '8'
-00113c e0f1                      	ldi ZH, high(UnidadHoraFinDia)
-00113d eaeb                          ldi ZL, low(UnidadHoraFinDia)
-00113e 8340                      	ST Z, R20
-00113f e341                      	LDI R20, '1'
-001140 e0f1                      	ldi ZH, high(DecenaMinutoFinDia)
-001141 eaec                          ldi ZL, low(DecenaMinutoFinDia)
-001142 8340                      	ST Z, R20
-001143 e341                      	LDI R20, '1'
-001144 e0f1                      	ldi ZH, high(UnidadMinutoFinDia)
-001145 eaed                          ldi ZL, low(UnidadMinutoFinDia)
-001146 8340                      	ST Z, R20
-001147 9508                      	RET
+001152 e341                      	LDI R20, '1'
+001153 e0f1                      	ldi ZH, high(DecenaHoraFinDia)
+001154 eaea                          ldi ZL, low(DecenaHoraFinDia)
+001155 8340                      	ST Z, R20
+001156 e349                      	LDI R20, '9'
+001157 e0f1                      	ldi ZH, high(UnidadHoraFinDia)
+001158 eaeb                          ldi ZL, low(UnidadHoraFinDia)
+001159 8340                      	ST Z, R20
+00115a e343                      	LDI R20, '3'
+00115b e0f1                      	ldi ZH, high(DecenaMinutoFinDia)
+00115c eaec                          ldi ZL, low(DecenaMinutoFinDia)
+00115d 8340                      	ST Z, R20
+00115e e340                      	LDI R20, '0'
+00115f e0f1                      	ldi ZH, high(UnidadMinutoFinDia)
+001160 eaed                          ldi ZL, low(UnidadMinutoFinDia)
+001161 8340                      	ST Z, R20
+001162 9508                      	RET
                                  	ReincioMedciones:
-001148 95e3                      	INC ZL
+001163 95e3                      	INC ZL
                                  	;-------------------------------------------------------------------------
                                  	;| "LIMPIEZA"      	DE		LAS		OTRAS		VARIABLES	DE	LA SRAM  |
                                  	;-------------------------------------------------------------------------
-001149 3030                      	CPI R19,00
-00114a f021                      	BREQ FinLimpieza
-00114b e340                      	LDI R20, '0' ; POR DEFECTO NUESTRAS MEDICIONES COMIENZAN POR 0
-00114c 8340                      	ST Z, R20
-00114d 953a                      	DEC R19
-00114e cff9                      	rjmp ReincioMedciones
+001164 3030                      	CPI R19,00
+001165 f021                      	BREQ FinLimpieza
+001166 e340                      	LDI R20, '0' ; POR DEFECTO NUESTRAS MEDICIONES COMIENZAN POR 0
+001167 8340                      	ST Z, R20
+001168 953a                      	DEC R19
+001169 cff9                      	rjmp ReincioMedciones
                                  	
                                  	
                                  	FinLimpieza:
-00114f 9508                      		RET
+00116a 9508                      		RET
                                  
                                  
                                  
@@ -5190,7 +5209,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  .org 0x0100
 000100                           DecenaHora: .byte 1 
 000101                           UnidadHora: .byte 1	
-000102                           SeparadorHora: .byte 1; ESTOS SEPARADOS TIENEN COMO FINALIDAD UNICA SEPARAR CADA "VARIABLE", SOLAMENTE ESTAN DE GUIA
+000102                           SeparadorHora: .byte 1; ESTOS SEPARADOS TIENEN COMO FINALIDAD UNICA SEPARAR CADA "VARIABLE", SOLAMENTE ESTÁN DE GUIA
 000103                           DecenaMinuto: .byte 1 
 000104                           UnidadMinuto: .byte 1 
 000105                           SeparadorMinuto: .byte 1 
@@ -5198,30 +5217,36 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000107                           UnidadSegundo: .byte 1 
 000108                           QuintoDeSegundo: .BYTE 1; 
 000109                           C50GesimoDeSegundoo: .byte 1 ;
-00010a                           MedTemperaturaExteriorH: .byte 1 ;
-00010b                           MedTemperaturaExteriorL: .byte 1 ;
-00010c                           MedTemperaturaExteriorComa: .byte 1 ;
-00010d                           separadorA: .byte 1 ;
-00010e                           MedTemperaturaLCCH: .byte 1 ;
-00010f                           MedTemperaturaLCCL: .byte 1 ;
-000110                           MedTemperaturaLCCComa: .byte 1 ;
-000111                           separadorB: .byte 1 ;
-000112                           MedTemperaturaDormitorioH: .byte 1 ;
-000113                           MedTemperaturaDormitorioL: .byte 1 ;
-000114                           MedTemperaturaDormitorioComa: .byte 1;
-000115                           separadorC: .byte 1 ;
-000116                           MedLuzLCCH: .byte 1 ;
-000117                           MedLuzLCCL: .byte 1 ;
-000118                           MedLuzLCCDecena: .byte 1;
-000119                           separadorD: .byte 1 
-00011a                           MedLuzDormitorioH: .byte 1 ;
-00011b                           MedLuzDormitorioL: .byte 1 ;
-00011c                           MedLuzDormitorioDecena: .byte 1 ;
-00011d                           separadorE: .byte 1 
-00011e                           MedLuzExteriorH: .byte 1 ;
-00011f                           MedLuzExteriorL: .byte 1 ;
-000120                           MedLuzExteriorDecena: .byte 1 ;
-000121                           SeparadorConfiguracion: .byte 1 ;
+00010a                           MedTemperaturaExteriorHH: .byte 1 ;
+00010b                           MedTemperaturaExteriorH: .byte 1 ;
+00010c                           MedTemperaturaExteriorL: .byte 1 ;
+00010d                           MedTemperaturaExteriorComa: .byte 1 ;
+00010e                           separadorA: .byte 1 ;
+00010f                           MedTemperaturaLCCHH: .byte 1 ;
+000110                           MedTemperaturaLCCH: .byte 1 ;
+000111                           MedTemperaturaLCCL: .byte 1 ;
+000112                           MedTemperaturaLCCComa: .byte 1 ;
+000113                           separadorB: .byte 1 ;
+000114                           MedTemperaturaDormitorioHH: .byte 1 ;
+000115                           MedTemperaturaDormitorioH: .byte 1 ;
+000116                           MedTemperaturaDormitorioL: .byte 1 ;
+000117                           MedTemperaturaDormitorioComa: .byte 1;
+000118                           separadorC: .byte 1 ;
+000119                           MedLuzLCCHH: .byte 1 ;
+00011a                           MedLuzLCCH: .byte 1 ;
+00011b                           MedLuzLCCL: .byte 1 ;
+00011c                           MedLuzLCCDecena: .byte 1;
+00011d                           separadorD: .byte 1 
+00011e                           MedLuzDormitorioHH: .byte 1 ;
+00011f                           MedLuzDormitorioH: .byte 1 ;
+000120                           MedLuzDormitorioL: .byte 1 ;
+000121                           MedLuzDormitorioDecena: .byte 1 ;
+000122                           separadorE: .byte 1 
+000123                           MedLuzExteriorHH: .byte 1 ;
+000124                           MedLuzExteriorH: .byte 1 ;
+000125                           MedLuzExteriorL: .byte 1 ;
+000126                           MedLuzExteriorDecena: .byte 1 ;
+000127                           SeparadorConfiguracion: .byte 1 ;
                                  .dseg
                                  ;=================================================
                                  ;|	  INCIO DE LAS VARIABLES DE CONFIGURACIÓN    |
@@ -5310,7 +5335,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  .INCLUDE "AtendimientoDeInterrupciones.inc"
                                  
                                  EXT_INT0:
-001150 940c 1153                   JMP EntroUnFlanco
+00116b 940c 116e                   JMP EntroUnFlanco
                                  EXT_INT1:
                                  PC_INT0:
                                  PC_INT1:
@@ -5335,175 +5360,234 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  ANA_COMP:
                                  TWI:
                                  SPM_RDY:
-001152 9518                      reti
+00116d 9518                      reti
                                  EntroUnFlanco:
-001153 e456                      	ldI R21,'F'; F DE FLANCO
-001154 940c 1156                 	jmp GuardarCosas
+00116e e456                      	ldI R21,'F'; F DE FLANCO
+00116f 940c 1171                 	jmp GuardarCosas
                                  
                                   GuardarCosas: ; Resulta de particular importancia que cuando se genere una interrupcion se guarde todo lo que el micro estaba
-001156 925f                      		PUSH R5    ; haciendo antes, para que, al momento de volver no se generen errroes
-001157 92cf                      		PUSH R12
-001158 930f                      		PUSH R16
-001159 931f                      		PUSH R17
-00115a 932f                      		PUSH R18
-00115b 933f                      		PUSH R19
-00115c 934f                      		PUSH R20
-00115d 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
-00115e 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
-00115f b71f                      		IN	R17,SREG ;
-001160 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+001171 925f                      		PUSH R5    ; haciendo antes, para que, al momento de volver no se generen errroes
+001172 92cf                      		PUSH R12
+001173 930f                      		PUSH R16
+001174 931f                      		PUSH R17
+001175 932f                      		PUSH R18
+001176 933f                      		PUSH R19
+001177 934f                      		PUSH R20
+001178 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
+001179 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
+00117a b71f                      		IN	R17,SREG ;
+00117b 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
                                  		;Procedemos a preguntar que se guardó en R21, para ver a que parte de la interrrupción toca volver
                                  		; ¿Porque no usar un call?  Porque modificaria la pila y es algo que no queremos.
-001161 3456                      		CPI R21,'F'
-001162 f001                      		BREQ VolverF
+00117c 3456                      		CPI R21,'F'
+00117d f001                      		BREQ VolverF
                                  					VolverF:
-001163 940c 1171                 							JMP EntroUnFlancoContinuacion ;Continuamos con "Entró un flanco"
+00117e 940c 118c                 							JMP EntroUnFlancoContinuacion ;Continuamos con "Entró un flanco"
                                   EscupirTodo: ;Es la función contraria a "Guardar cosas", como su  nombre indica devolvemos todo a su lugar
-001165 911f                      		POP R17
-001166 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-001167 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-001168 91ef                      		POP R30
-001169 914f                      		POP R20
-00116a 913f                      		POP R19
-00116b 912f                      		POP R18
-00116c 911f                      		POP R17
-00116d 910f                      		POP R16
-00116e 90cf                      		POP R12
-00116f 905f                      		POP R5
-001170 9518                      		RETI
+001180 911f                      		POP R17
+001181 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+001182 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+001183 91ef                      		POP R30
+001184 914f                      		POP R20
+001185 913f                      		POP R19
+001186 912f                      		POP R18
+001187 911f                      		POP R17
+001188 910f                      		POP R16
+001189 90cf                      		POP R12
+00118a 905f                      		POP R5
+00118b 9518                      		RETI
                                  	EntroUnFlancoContinuacion:
-001171 e0f1                      		 ldi ZH, high(C50GesimoDeSegundoo) ;por cada flanco suma un 50°mo de segundo
-001172 e0e9                      		 ldi ZL, low(C50GesimoDeSegundoo)
-001173 8100                      		ld r16, Z
-001174 9503                      		inc r16 
-001175 8300                      		st Z, r16
-001176 300a                      		Cpi r16,10
-001177 f011                      		breq SumarQuinto
-001178 940c 1165                 		JMP EscupirTodo
+00118c e0f1                      		 ldi ZH, high(C50GesimoDeSegundoo) ;por cada flanco suma un 50°mo de segundo
+00118d e0e9                      		 ldi ZL, low(C50GesimoDeSegundoo)
+00118e 8100                      		ld r16, Z
+00118f 9503                      		inc r16 
+001190 8300                      		st Z, r16
+001191 300a                      		Cpi r16,10
+001192 f011                      		breq SumarQuinto
+001193 940c 1180                 		JMP EscupirTodo
                                  	SumarQuinto:
-00117a e000                      		ldi r16,0x00  ; Reiciamos los 50°mos de segundo
-00117b 8300                      	    st Z, r16
-00117c e0f1                      		ldi ZH, high(QuintoDeSegundo)
-00117d e0e8                      		ldi ZL, low(QuintoDeSegundo)
-00117e 8100                      		ld r16, Z
-00117f 9503                      		inc r16 
-001180 8300                      		st Z, r16
-001181 3005                      		Cpi r16,5
-001182 f011                      		breq SumarSegundo
-001183 940c 1165                 		JMP EscupirTodo
+001195 e000                      		ldi r16,0x00  ; Reiciamos los 50°mos de segundo
+001196 8300                      	    st Z, r16
+001197 e0f1                      		ldi ZH, high(QuintoDeSegundo)
+001198 e0e8                      		ldi ZL, low(QuintoDeSegundo)
+001199 8100                      		ld r16, Z
+00119a 9503                      		inc r16 
+00119b 8300                      		st Z, r16
+00119c 3001                      		Cpi r16,1    ; Considerando una freuencia de 50Hz, se ejecutarán cada 200ms las variables de control,
+00119d f021                      		breq _control ; razonable si se tiene en cuenta que una medición se hace cada un segundo.
+00119e 3005                      		Cpi r16,5
+00119f f021                      		breq SumarSegundo
+0011a0 940c 1180                 		JMP EscupirTodo
+                                 		_control:
+0011a2 940e 1225                 				call Control_Int
                                  	SumarSegundo:
-001185 e000                      		ldi r16,0x00  ; Reiciamos los 5°tos de segundo
-001186 8300                      		st Z, r16
-001187 e0f1                      		ldi ZH, high(UnidadSegundo)
-001188 e0e7                      		ldi ZL, low(UnidadSegundo)
-001189 8100                      		ld r16, Z
-00118a 3309                      		Cpi r16,'9'
-00118b f021                      		breq SumarSegundo2
-00118c 9503                      		inc r16 
-00118d 8300                      		st Z, r16
-                                 	;jmp RecibirMediciones >>En desarrollo
-00118e 940c 1165                 		JMP EscupirTodo
+0011a4 e000                      		ldi r16,0x00  ; Reiciamos los 5°tos de segundo
+0011a5 8300                      		st Z, r16
+0011a6 e0f1                      		ldi ZH, high(UnidadSegundo)
+0011a7 e0e7                      		ldi ZL, low(UnidadSegundo)
+0011a8 8100                      		ld r16, Z
+0011a9 3309                      		Cpi r16,'9'
+0011aa f031                      		breq SumarSegundo2
+0011ab 9503                      		inc r16 
+0011ac 8300                      		st Z, r16
+0011ad 940e 11ef                         Call Medir; Para mejor información, dirijase a "desarme.inc"
+0011af 940c 1180                 		JMP EscupirTodo
                                  	SumarSegundo2:
-001190 e300                      		ldi r16,'0'  ; Reiciamos las unidades de segundo
-001191 8300                      		st Z, r16
-001192 e0f1                      		ldi ZH, high(DecenaSegundo)
-001193 e0e6                      		ldi ZL, low(DecenaSegundo)
-001194 8100                      		ld r16, Z
-001195 3306                      		Cpi r16,'6'
-001196 f021                      		breq SumarMinuto
-001197 9503                      		inc r16 
-001198 8300                      		st Z, r16
-001199 940c 1165                 		JMP EscupirTodo
+0011b1 e300                      		ldi r16,'0'  ; Reiciamos las unidades de segundo
+0011b2 8300                      		st Z, r16
+0011b3 e0f1                      		ldi ZH, high(DecenaSegundo)
+0011b4 e0e6                      		ldi ZL, low(DecenaSegundo)
+0011b5 8100                      		ld r16, Z
+0011b6 3306                      		Cpi r16,'6'
+0011b7 f021                      		breq SumarMinuto
+0011b8 9503                      		inc r16 
+0011b9 8300                      		st Z, r16
+0011ba 940c 1180                 		JMP EscupirTodo
                                  	SumarMinuto:
-00119b e300                      		ldi r16,'0'  ; Reiciamos los  segundos
-00119c 8300                      		st Z, r16
-00119d e0f1                      		ldi ZH, high(UnidadMinuto)
-00119e e0e4                      		ldi ZL, low(UnidadMinuto)
-00119f 8100                      		ld r16, Z
-0011a0 3309                      		Cpi r16,'9'
-0011a1 f021                      		breq SumarMinuto2
-0011a2 9503                      		inc r16 
-0011a3 8300                      		st Z, r16
-0011a4 940c 1165                 		JMP EscupirTodo
+0011bc e300                      		ldi r16,'0'  ; Reiciamos los  segundos
+0011bd 8300                      		st Z, r16
+0011be e0f1                      		ldi ZH, high(UnidadMinuto)
+0011bf e0e4                      		ldi ZL, low(UnidadMinuto)
+0011c0 8100                      		ld r16, Z
+0011c1 3309                      		Cpi r16,'9'
+0011c2 f021                      		breq SumarMinuto2
+0011c3 9503                      		inc r16 
+0011c4 8300                      		st Z, r16
+0011c5 940c 1180                 		JMP EscupirTodo
                                  	SumarMinuto2:
-0011a6 e300                      		ldi r16,'0'  ; Reiciamos las unidades de minuto
-0011a7 8300                      		st Z, r16
-0011a8 e0f1                      		ldi ZH, high(DecenaMinuto)
-0011a9 e0e3                      		ldi ZL, low(DecenaMinuto)
-0011aa 8100                      		ld r16, Z
-0011ab 3306                      		Cpi r16,'6'
-0011ac f021                      		breq SumarHora
-0011ad 8300                      		st Z, r16
-0011ae 9503                      		inc r16 
-0011af 940c 1165                 		JMP EscupirTodo
+0011c7 e300                      		ldi r16,'0'  ; Reiciamos las unidades de minuto
+0011c8 8300                      		st Z, r16
+0011c9 e0f1                      		ldi ZH, high(DecenaMinuto)
+0011ca e0e3                      		ldi ZL, low(DecenaMinuto)
+0011cb 8100                      		ld r16, Z
+0011cc 3306                      		Cpi r16,'6'
+0011cd f021                      		breq SumarHora
+0011ce 8300                      		st Z, r16
+0011cf 9503                      		inc r16 
+0011d0 940c 1180                 		JMP EscupirTodo
                                  	SumarHora:
-0011b1 e300                      		ldi r16,'0'  ; Reiciamos los minutos
-0011b2 e0f1                      		ldi ZH, high(UnidadHora)
-0011b3 e0e1                      		ldi ZL, low(UnidadHora)
-0011b4 8100                      		ld r16, Z
-0011b5 3301                      		Cpi r16,'1'
-0011b6 f021                      		breq SumarHora2
-0011b7 9503                      		inc r16 
-0011b8 8300                      		st Z, r16
-0011b9 940c 1165                 		JMP EscupirTodo
+0011d2 e300                      		ldi r16,'0'  ; Reiciamos los minutos
+0011d3 e0f1                      		ldi ZH, high(UnidadHora)
+0011d4 e0e1                      		ldi ZL, low(UnidadHora)
+0011d5 8100                      		ld r16, Z
+0011d6 3301                      		Cpi r16,'1'
+0011d7 f021                      		breq SumarHora2
+0011d8 9503                      		inc r16 
+0011d9 8300                      		st Z, r16
+0011da 940c 1180                 		JMP EscupirTodo
                                  	SumarHora2:
-0011bb e0f1                      		ldi ZH, high(DecenaHora)
-0011bc e0e0                      		ldi ZL, low(DecenaHora)
-0011bd 8120                      		ld R18, Z
-0011be 3322                      		CpI R18,'2'
-0011bf f021                      		breq PreguntaDia
-0011c0 9523                      		inc r18 
-0011c1 8320                      		st Z, r18
-0011c2 940c 1165                 		JMP EscupirTodo
+0011dc e0f1                      		ldi ZH, high(DecenaHora)
+0011dd e0e0                      		ldi ZL, low(DecenaHora)
+0011de 8120                      		ld R18, Z
+0011df 3322                      		CpI R18,'2'
+0011e0 f021                      		breq PreguntaDia
+0011e1 9523                      		inc r18 
+0011e2 8320                      		st Z, r18
+0011e3 940c 1180                 		JMP EscupirTodo
                                  	 PreguntaDia:
-0011c4 3304                      		cpi r16,'4'
-0011c5 f011                      		BREQ TerminoElDia
-0011c6 940c 1165                 		JMP EscupirTodo
+0011e5 3304                      		cpi r16,'4'
+0011e6 f011                      		BREQ TerminoElDia
+0011e7 940c 1180                 		JMP EscupirTodo
                                  	 TerminoElDia:
-0011c8 e0f1                      		ldi ZH, high(DecenaHora)
-0011c9 e0e0                      		ldi ZL, low(DecenaHora)
-0011ca e300                      		ldi r16,'0'  ; Reiciamos las decena de hora
-0011cb 8300                      		st Z, r16
-0011cc 940c 1165                 		JMP EscupirTodo
+0011e9 e0f1                      		ldi ZH, high(DecenaHora)
+0011ea e0e0                      		ldi ZL, low(DecenaHora)
+0011eb e300                      		ldi r16,'0'  ; Reiciamos las decena de hora
+0011ec 8300                      		st Z, r16
+0011ed 940c 1180                 		JMP EscupirTodo
                                  
                                  .INCLUDE "desarme.inc"
                                  
-                                 //
-                                 //
-                                 //
+                                 //      Termometro Dormitorio>0>PC0(A0)
+                                 //		Termometro Living/Comedor/Cocina>1>PC0(A1)
+                                 //		Termometro Exterior>2>PC0(A2)
+                                 //		Luxómetro Dormitorio>3>PC0(A3)
+                                 //		Luxómetro Living/Comedor/Cocina>4>PC0(A4)
+                                 //		Luxómetro Exterior>5>PC5(A5)
+                                 // Total de mediciones a hacer: 6
+                                 Medir:
+                                 		Leer0:
+0011ef 9050 0000                 			  Lds R5,0
+0011f1 e0f1                      			  ldi ZH, high(MedTemperaturaExteriorHH); Posicionamos Z en la primer variable de medición
+0011f2 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+                                 		Leer1:
+0011f4 9050 0001                 			  Lds R5,1
+0011f6 e0f1                      			  ldi ZH, high(MedTemperaturaLCCHH); Posicionamos Z en la primer variable de medición
+0011f7 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+                                 		Leer2:
+0011f9 9050 0002                 			  Lds R5,2
+0011fb e0f1                      			  ldi ZH, high(MedTemperaturaDormitorioHH); Posicionamos Z en la primer variable de medición
+0011fc 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+                                 		Leer3:
+0011fe 9050 0003                 			  Lds R5,3
+001200 e0f1                      			  ldi ZH, high(MedLuzLCCHH); Posicionamos Z en la primer variable de medición
+001201 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+                                 		Leer4:
+001203 9050 0004                 			  Lds R5,4
+001205 e0f1                      			  ldi ZH, high(MedLuzDormitorioHH); Posicionamos Z en la primer variable de medición
+001206 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+                                 		Leer4_medicion:
+001208 9050 0005                 			  Lds R5,5
+00120a e0f1                      			  ldi ZH, high(MedLuzExteriorHH); Posicionamos Z en la primer variable de medición
+00120b 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
                                  .INCLUDE "Control.inc"
-                                 
+00120d 9508                      
                                  ; las mismas se ejecutan en el menu options de "ApartadoGraficoCodes.inc"
                                  ; esto quiere decir que se ejecuta siempre y cuando el usuario no este modificando una de las variables de control,
                                  ; y que se ejecuta luego de que una se cambia.
                                  Control:
-0011ce 925f                      	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
-0011cf 92cf                      		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
-0011d0 930f                      		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL
-0011d1 931f                      		PUSH R17
-0011d2 932f                      		PUSH R18
-0011d3 933f                      		PUSH R19
-0011d4 934f                      		PUSH R20
-0011d5 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
-0011d6 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
-0011d7 b71f                      		IN	R17,SREG ;
-0011d8 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+00120e 925f                      	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
+00120f 92cf                      		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
+001210 930f                      		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL
+001211 931f                      		PUSH R17
+001212 932f                      		PUSH R18
+001213 933f                      		PUSH R19
+001214 934f                      		PUSH R20
+001215 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
+001216 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
+001217 b71f                      		IN	R17,SREG ;
+001218 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
                                  		;ACA SENTENCIAS DE CONTROL ;) ---> EN DESARROLLO
                                  		;	Devolvemos todo a su lugar
-0011d9 911f                      		POP R17
-0011da bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-0011db 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-0011dc 91ef                      		POP R30
-0011dd 914f                      		POP R20
-0011de 913f                      		POP R19
-0011df 912f                      		POP R18
-0011e0 910f                      		POP R16
-0011e1 90cf                      		POP R12
-0011e2 905f                      		POP R5
+001219 911f                      		POP R17
+00121a bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+00121b 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+00121c 91ef                      		POP R30
+00121d 914f                      		POP R20
+00121e 913f                      		POP R19
+00121f 912f                      		POP R18
+001220 910f                      		POP R16
+001221 90cf                      		POP R12
+001222 905f                      		POP R5
+001223 940c 0a49                 		JMP READ ;Volvemos al apartado gráfico
+                                 
+                                 Control_Int:
+001225 925f                      	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
+001226 92cf                      		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
+001227 930f                      		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL
+001228 931f                      		PUSH R17
+001229 932f                      		PUSH R18
+00122a 933f                      		PUSH R19
+00122b 934f                      		PUSH R20
+00122c 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
+00122d 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
+00122e b71f                      		IN	R17,SREG ;
+00122f 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+                                 		;ACA SENTENCIAS DE CONTROL ;) ---> EN DESARROLLO
+                                 		;	Devolvemos todo a su lugar
+001230 911f                      		POP R17
+001231 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+001232 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+001233 91ef                      		POP R30
+001234 914f                      		POP R20
+001235 913f                      		POP R19
+001236 912f                      		POP R18
+001237 910f                      		POP R16
+001238 90cf                      		POP R12
+001239 905f                      		POP R5
                                  .include "LecturaAdc.inc"
-0011e3 940c 0a49                 
-                                 ; para todo el que quiera usarlo, para el microcontrolador Atmega328p, IDE: Microchip Studio.
-                                 ; Para incluir esto: >.include "LecturaAdc.inc"<.
+00123a 9508                      
+                                 ; para el microcontrolador Atmega328p, IDE: Microchip Studio.
+                                 ; Para incluir esto: >.include "LecturaAdc.inc"<, para llamarlo: >CALL InicioADC <
                                  ; Esto esta diseñado para leer una de las entradas analogicas
                                  ; Este algoritmo lo que hace es  ir cargando en las posiciones de Z (tres seguidas)
                                  ;  los valores  del adc (Conversor analogico digital) del Atmega328p.
@@ -5530,87 +5614,90 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  .def centena = r22
                                  
                                  InicioADC:
-0011e5 940e 122a                 			CALL GuardarCosasAdc ;Guardamos lo que hacía el micro
+00123b 940e 1285                 			CALL GuardarCosasAdc ;Guardamos lo que hacía el micro
                                  								 ;Setemos todo a 0:
-0011e7 e040                      			ldi unidad,0
-0011e8 e050                      			ldi decena, 0
-0011e9 e060                      			ldi centena,0
-0011ea e020                      			ldi R18,0
-0011eb e000                      			ldi r16, 0b00000000 ;Opcional, limpiar puerto D
-0011ec b907                      			out DDRC, r16
-0011ed c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
+00123d e040                      			ldi unidad,0
+00123e e050                      			ldi decena, 0
+00123f e060                      			ldi centena,0
+001240 e020                      			ldi R18,0
+001241 e000                      			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
+001242 b907                      			out DDRC, r16
+001243 9100 007c                 			lds r16,ADMUX ; CARGAMOS ADMUX A r16
+001245 2905                      			or  r16,R5	; hacemos un or con sensor selecionado (via R5)
+001246 9300 007c                 			sts ADMUX, r16; indicamos en ADMUX que sensor medir
+001248 c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
                                  
                                  CICLO_ADC:
-0011ee 940e 1242                 	call LeerADC
-0011f0 940e 1249                 	call EsperarADC
-0011f2 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
-0011f4 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
-0011f6 e040                      	ldi unidad,0
-0011f7 e050                      	ldi decena,0
-0011f8 e060                      	ldi centena,0
-0011f9 2f03                      	mov r16,r19; Metemos a R16 ADCL
-0011fa 940e 1209                 	call ASCII		; Llamamos a la función ASCII 
-0011fc e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
-0011fd 0f41                      	add unidad, r17
-0011fe 0f51                      	add decena, r17
-0011ff 0f61                      	add centena,r17
+001249 940e 129d                 	call LeerADC
+00124b 940e 12a4                 	call EsperarADC
+00124d 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
+00124f 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
+001251 e040                      	ldi unidad,0
+001252 e050                      	ldi decena,0
+001253 e060                      	ldi centena,0
+001254 2f03                      	mov r16,r19; Metemos a R16 ADCL
+001255 940e 1264                 	call ASCII		; Llamamos a la función ASCII 
+001257 e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
+001258 0f41                      	add unidad, r17
+001259 0f51                      	add decena, r17
+00125a 0f61                      	add centena,r17
                                  	; Ahora, teniendo todo en ASCII, pasamos a guardarlas una por una en la memoria:
-001200 8340                      	ST Z, unidad
-001201 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-001202 8350                      	ST Z, decena
-001203 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-001204 8360                      	ST Z, centena
-001205 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-001206 8320                      	ST Z, R18 ;guardamos la coma
-001207 940c 1236                 	jmp EscupirTodoADC; Que largue todo y volvamos a lo que estaba haciendo el micro
+00125b 8340                      	ST Z, unidad
+00125c 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+00125d 8350                      	ST Z, decena
+00125e 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+00125f 8360                      	ST Z, centena
+001260 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+001261 8320                      	ST Z, R18 ;guardamos la coma
+001262 940c 1291                 	jmp EscupirTodoADC; Que largue todo y volvamos a lo que estaba haciendo el micro
                                  
-                                 ASCII: ;Vamos a obtener unidad, decena, centena y Coma:
+                                 ASCII: ;Vamos a obtener unidad, decena, centena y "Coma":
                                  		L_CENTENA:
-001209 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
-00120a f018                      				BRLO L_DECENA; Vaya a "L_Decena"
-00120b 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
-00120c 5604                      				subi r16,100 ; Restele 100 al número
-00120d cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
+001264 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
+001265 f018                      				BRLO L_DECENA; Vaya a "L_Decena"
+001266 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
+001267 5604                      				subi r16,100 ; Restele 100 al número
+001268 cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
                                  				;Si todo fue realizarse correctamente, solamente podrá ejecutarse todo dos veces
-                                 				; recuerde, en 8 bits, el número más grande a almacenar es el 256, contando el 0, 255.
+                                 				; Recuerde: en 8 bits, el número más grande a almacenar es el 256, contando el 0, 255.
                                  		L_DECENA: ;Hace exactamente lo mismo que el anterior, solo que 100 en lugar de 10
-00120e 300a                      				cpi r16,10 
-00120f f018                      				BRLO L_UNIDAD
-001210 9553                      				inc decena
-001211 500a                      				subi r16,10
-001212 cffb                      				rjmp L_DECENA
+001269 300a                      				cpi r16,10 
+00126a f018                      				BRLO L_UNIDAD
+00126b 9553                      				inc decena
+00126c 500a                      				subi r16,10
+00126d cffb                      				rjmp L_DECENA
                                  		L_UNIDAD: ;Idem con 1
-001213 3001                      				cpi r16,1
-001214 f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
-001215 9543                      				inc unidad
-001216 5001                      				subi r16,1
-001217 cffb                      				rjmp L_UNIDAD
+00126e 3001                      				cpi r16,1
+00126f f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
+001270 9543                      				inc unidad
+001271 5001                      				subi r16,1
+001272 cffb                      				rjmp L_UNIDAD
                                  		L_FIN:
-001218 c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
+001273 c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
                                  	    HCOMA:  ; Ahora, en la parte alta de la parte alta, tendremos nuestro "cuarto" de numero
                                  				; por lo que lo usaremos para guardar >0,00 >0,25 >0,50 >0,75
                                  				; por simplicidad, se los redondeó hacia abajo: >0,0 >0,2 >0,5 >0,7
-001219 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
-00121a f039                      				breq tres
-00121b 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
-00121c f039                      				breq dos
-00121d 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
-00121e f039                      				breq uno
-00121f 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
-001220 f039                      				breq cerooo
-001221 9508                      				RET ; Vuelva a CICLO_ADC
+001274 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
+001275 f039                      				breq tres
+001276 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
+001277 f039                      				breq dos
+001278 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
+001279 f039                      				breq uno
+00127a 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
+00127b f039                      				breq cerooo
+00127c 9508                      				RET ; Vuelva a CICLO_ADC
                                  tres:
-001222 e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
-001223 9508                      		ret ; Vuelva a CICLO_ADC
+00127d e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
+00127e 9508                      		ret ; Vuelva a CICLO_ADC
                                  dos:
-001224 e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
-001225 9508                      		ret ; Vuelva a CICLO_ADC
+00127f e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
+001280 9508                      		ret ; Vuelva a CICLO_ADC
                                  uno:
-001226 e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
-001227 9508                      		ret ; Vuelva a CICLO_ADC
+001281 e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
+001282 9508                      		ret ; Vuelva a CICLO_ADC
                                  cerooo:
-001228 e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
-001229 9508                      		ret ; Vuelva a CICLO_ADC
+001283 e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
+001284 9508                      		ret ; Vuelva a CICLO_ADC
                                  
                                  
                                  //////////////////////////////////////////////////////////////////
@@ -5619,81 +5706,81 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                   GuardarCosasAdc: ; Para que puedas usar esto sin modificar los registros de tu programa  y que
                                  			   ; sea 'Independiente' guardamos lo que el micro estaba
                                  			   ; haciendo antes, para que, al momento de volver no se generen errroes
-00122a 930f                      		PUSH R16
-00122b 931f                      		PUSH R17
-00122c 932f                      		PUSH R18
-00122d 933f                      		PUSH R19
-00122e 934f                      		PUSH R20
-00122f 935f                      		PUSH R21
-001230 936f                      		PUSH R22
-001231 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
-001232 93ff                      		PUSH R31 ; 
-001233 b71f                      		IN	R17,SREG ;
-001234 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
-001235 9508                      		RET
+001285 930f                      		PUSH R16
+001286 931f                      		PUSH R17
+001287 932f                      		PUSH R18
+001288 933f                      		PUSH R19
+001289 934f                      		PUSH R20
+00128a 935f                      		PUSH R21
+00128b 936f                      		PUSH R22
+00128c 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
+00128d 93ff                      		PUSH R31 ; 
+00128e b71f                      		IN	R17,SREG ;
+00128f 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+001290 9508                      		RET
                                   EscupirTodoADC: ;Es la función contraria a "Guardar cosas", como su  nombre indica devolvemos todo a su lugar
                                  		   ; haciendo antes, para que, al momento de volver no se generen errroes
-001236 911f                      		POP R17
-001237 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-001238 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-001239 91ef                      		POP R30
-00123a 916f                      		POP R22
-00123b 915f                      		POP R21
-00123c 914f                      		POP R20
-00123d 913f                      		POP R19
-00123e 912f                      		POP R18
-00123f 911f                      		POP R17
-001240 910f                      		POP R16
-001241 9508                      		Ret ; Volvemos a lo que estaba haciendo el micro 
+001291 911f                      		POP R17
+001292 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+001293 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+001294 91ef                      		POP R30
+001295 916f                      		POP R22
+001296 915f                      		POP R21
+001297 914f                      		POP R20
+001298 913f                      		POP R19
+001299 912f                      		POP R18
+00129a 911f                      		POP R17
+00129b 910f                      		POP R16
+00129c 9508                      		Ret ; Volvemos a lo que estaba haciendo el micro 
                                  
                                  ///////////////////////////////////////////
                                  ;		FUNCIONES	DE	CONTROL	DEL	ADC: 
                                  ///////////////////////////////////////////
                                  
                                  LeerADC:
-001242 e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
-001243 9110 007a                 lds r17,ADCSRA
-001245 2b10                      or r17,r16   
-001246 9310 007a                 sts ADCSRA, r17
-001248 9508                      ret
+00129d e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
+00129e 9110 007a                 lds r17,ADCSRA
+0012a0 2b10                      or r17,r16   
+0012a1 9310 007a                 sts ADCSRA, r17
+0012a3 9508                      ret
                                  
                                  EsperarADC:
-001249 9110 007a                 lds r17, ADCSRA 
-00124b ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
-00124c 940c 1249                 jmp EsperarADC ; Si no es así, espere.
-00124e e100                      ldi r16,0b00010000
-00124f 9110 007a                 lds r17, ADCSRA
-001251 2b10                      or r17,r16
-001252 9310 007a                 sts ADCSRA, r17
-001254 9508                      ;Vector de interrupciones
+0012a4 9110 007a                 lds r17, ADCSRA 
+0012a6 ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
+0012a7 940c 12a4                 jmp EsperarADC ; Si no es así, espere.
+0012a9 e100                      ldi r16,0b00010000
+0012aa 9110 007a                 lds r17, ADCSRA
+0012ac 2b10                      or r17,r16
+0012ad 9310 007a                 sts ADCSRA, r17
+0012af 9508                      ;Vector de interrupciones
                                  .cseg
                                  .ORG 0x00
-000000 940c 1088                 JMP CONFIGURAR ;DIRIJASE A  "Configuraciones.inc"
-000002 940c 1150                 jmp EXT_INT0 ; IRQ0 Handler
-000004 940c 1152                 jmp EXT_INT1 ; IRQ1 Handler
-000006 940c 1152                 jmp PC_INT0 ; PCINT0 Handler
-000008 940c 1152                 jmp PC_INT1 ; PCINT1 Handler
-00000a 940c 1152                 jmp PC_INT2 ; PCINT2 Handler
-00000c 940c 1152                 jmp WDT ; Watchdog Timer Handler
-00000e 940c 1152                 jmp TIM2_COMPA ; Timer2 Compare A Handler
-000010 940c 1152                 jmp TIM2_COMPB ; Timer2 Compare B Handler
-000012 940c 1152                 jmp TIM2_OVF ; Timer2 Overflow Handler
-000014 940c 1152                 jmp TIM1_CAPT ; Timer1 Capture Handler
-000016 940c 1152                 jmp TIM1_COMPA ; Timer1 Compare A Handler
-000018 940c 1152                 jmp TIM1_COMPB ; Timer1 Compare B Handler
-00001a 940c 1152                 jmp TIM1_OVF ; Timer1 Overflow Handler
-00001c 940c 1152                 jmp TIM0_COMPA ; Timer0 Compare A Handler
-00001e 940c 1152                 jmp TIM0_COMPB ; Timer0 Compare B Handler
-000020 940c 1152                 jmp TIM0_OVF ; Timer0 Overflow Handler
-000022 940c 1152                 jmp SPI_STC ; SPI Transfer Complete Handler
-000024 940c 1152                 jmp USART_RXC ; USART, RX Complete Handler
-000026 940c 1152                 jmp USART_UDRE ; USART, UDR Empty Handler
-000028 940c 1152                 jmp USART_TXC ; USART, TX Complete Handler
-00002a 940c 1152                 jmp ADC_RDY ; ADC Conversion Complete Handler
-00002c 940c 1152                 jmp EE_RDY ; EEPROM Ready Handler
-00002e 940c 1152                 jmp ANA_COMP ; Analog Comparator Handler
-000030 940c 1152                 jmp TWI ; 2-wire Serial Interface Handler
-000032 940c 1152                 jmp SPM_RDY ; Store Program Memory Ready Handler
+000000 940c 10a3                 JMP CONFIGURAR ;DIRIJASE A  "Configuraciones.inc"
+000002 940c 116b                 jmp EXT_INT0 ; IRQ0 Handler
+000004 940c 116d                 jmp EXT_INT1 ; IRQ1 Handler
+000006 940c 116d                 jmp PC_INT0 ; PCINT0 Handler
+000008 940c 116d                 jmp PC_INT1 ; PCINT1 Handler
+00000a 940c 116d                 jmp PC_INT2 ; PCINT2 Handler
+00000c 940c 116d                 jmp WDT ; Watchdog Timer Handler
+00000e 940c 116d                 jmp TIM2_COMPA ; Timer2 Compare A Handler
+000010 940c 116d                 jmp TIM2_COMPB ; Timer2 Compare B Handler
+000012 940c 116d                 jmp TIM2_OVF ; Timer2 Overflow Handler
+000014 940c 116d                 jmp TIM1_CAPT ; Timer1 Capture Handler
+000016 940c 116d                 jmp TIM1_COMPA ; Timer1 Compare A Handler
+000018 940c 116d                 jmp TIM1_COMPB ; Timer1 Compare B Handler
+00001a 940c 116d                 jmp TIM1_OVF ; Timer1 Overflow Handler
+00001c 940c 116d                 jmp TIM0_COMPA ; Timer0 Compare A Handler
+00001e 940c 116d                 jmp TIM0_COMPB ; Timer0 Compare B Handler
+000020 940c 116d                 jmp TIM0_OVF ; Timer0 Overflow Handler
+000022 940c 116d                 jmp SPI_STC ; SPI Transfer Complete Handler
+000024 940c 116d                 jmp USART_RXC ; USART, RX Complete Handler
+000026 940c 116d                 jmp USART_UDRE ; USART, UDR Empty Handler
+000028 940c 116d                 jmp USART_TXC ; USART, TX Complete Handler
+00002a 940c 116d                 jmp ADC_RDY ; ADC Conversion Complete Handler
+00002c 940c 116d                 jmp EE_RDY ; EEPROM Ready Handler
+00002e 940c 116d                 jmp ANA_COMP ; Analog Comparator Handler
+000030 940c 116d                 jmp TWI ; 2-wire Serial Interface Handler
+000032 940c 116d                 jmp SPM_RDY ; Store Program Memory Ready Handler
                                  /*
                                  PARA MAYOR INFORMACION DIRIJASE A "AtendimientoDeInterrupciones.Inc"
 
@@ -5713,40 +5800,40 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   0 y  :   0 z  : 169 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
-r5 : 130 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   4 
-r13:   0 r14:   0 r15:   0 r16: 216 r17:  98 r18:  45 r19:  11 r20: 259 
+x  :   0 y  :   0 z  : 174 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
+r5 : 139 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   6 
+r13:   0 r14:   0 r15:   0 r16: 222 r17: 103 r18:  47 r19:  13 r20: 271 
 r21:   9 r22:   7 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
-r29:   0 r30: 163 r31: 159 
+r29:   0 r30: 170 r31: 172 
 Registers used: 12 out of 35 (34.3%)
 
 "ATmega328P" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   3 adiw  :   0 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :  61 brge  :   0 brhc  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :  62 brge  :   0 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   3 brlt  :   0 brmi  :   0 
 brne  :   0 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
-brvs  :   0 bset  :   0 bst   :   0 call  : 178 cbi   :   0 cbr   :   0 
+brvs  :   0 bset  :   0 bst   :   0 call  : 187 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
-cpi   :  64 cpse  :   0 dec   :   2 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   3 inc   :  15 jmp   :  93 
-ld    :  72 ldd   :   0 ldi   : 416 lds   : 117 lpm   :  23 lsl   :   0 
+cpi   :  65 cpse  :   0 dec   :   2 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   4 inc   :  15 jmp   :  93 
+ld    :  77 ldd   :   0 ldi   : 432 lds   : 124 lpm   :  23 lsl   :   0 
 lsr   :   0 mov   :   1 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
-neg   :   0 nop   :   0 or    :   2 ori   :   0 out   :   7 pop   :  29 
-push  :  30 rcall :   0 ret   :  21 reti  :   2 rjmp  : 121 rol   :   0 
+neg   :   0 nop   :   0 or    :   3 ori   :   0 out   :   8 pop   :  38 
+push  :  40 rcall :   0 ret   :  23 reti  :   2 rjmp  : 121 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  70 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
-sez   :   0 sleep :   0 spm   :   0 st    :  74 std   :   0 sts   : 164 
+sez   :   0 sleep :   0 spm   :   0 st    :  74 std   :   0 sts   : 170 
 sub   :   0 subi  :   3 swap  :   0 tst   :   0 wdr   :   0 
 Instructions used: 26 out of 113 (23.0%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x0024aa   4254   4564   8818   32768  26.9%
-[.dseg] 0x000100 0x0001b3      0    108    108    2048   5.3%
+[.cseg] 0x000000 0x002560   4436   4564   9000   32768  27.5%
+[.dseg] 0x000100 0x0001b3      0    114    114    2048   5.6%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
 Assembly complete, 0 errors, 0 warnings
