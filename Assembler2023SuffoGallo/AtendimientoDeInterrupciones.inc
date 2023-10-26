@@ -56,6 +56,7 @@ EntroUnFlanco:
 		POP R20
 		POP R19
 		POP R18
+		POP R17
 		POP R16
 		POP R12
 		POP R5

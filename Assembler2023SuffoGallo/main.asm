@@ -1,5 +1,5 @@
 ;
-; arrreglate.asm
+; TrabajoPracticooGallo2023.asm
 ;
 ; Created: 7/10/2023 15:22:21
 ; Author : Fabricio David Gallo
@@ -15,6 +15,7 @@
 .INCLUDE "AtendimientoDeInterrupciones.inc"
 .INCLUDE "desarme.inc"
 .INCLUDE "Control.inc"
+.include "LecturaAdc.inc"
 ;Vector de interrupciones
 .cseg
 .ORG 0x00
@@ -45,5 +46,5 @@ jmp ANA_COMP ; Analog Comparator Handler
 jmp TWI ; 2-wire Serial Interface Handler
 jmp SPM_RDY ; Store Program Memory Ready Handler
 /*
-PARA MAYOR INFORMACION DIJASE A "AtendimientoDeInterrupciones.Inc"
+PARA MAYOR INFORMACION DIRIJASE A "AtendimientoDeInterrupciones.Inc"
 */

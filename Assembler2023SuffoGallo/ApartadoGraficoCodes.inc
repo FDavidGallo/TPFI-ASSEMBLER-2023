@@ -1313,6 +1313,12 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
+	 Call Coma
+	 ldi ZH, high(MedTemperaturaExteriorComa)
+     ldi ZL, low(MedTemperaturaExteriorComa)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 CALL Espacio
 	 Call Salto
 	 LDI R20, 'V'; Hasta aca bien
@@ -1325,6 +1331,12 @@ MostrarMediciones:
 	 CALL ESPERAR_TX
 	 ldi ZH, high(MedTemperaturaLCCL)
      ldi ZL, low(MedTemperaturaLCCL)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 Call Coma
+	 ldi ZH, high(MedTemperaturaLCCComa)
+     ldi ZL, low(MedTemperaturaLCCComa)
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
@@ -1345,6 +1357,12 @@ MostrarMediciones:
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
 	 CALL Espacio
+	  Call Coma
+	 ldi ZH, high(MedTemperaturaDormitorioComa)
+     ldi ZL, low(MedTemperaturaDormitorioComa)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 CALL Salto
 	 LDI R20, 'X'; Hasta aca bien
 	 CALL ESPERAR_TX
@@ -1356,6 +1374,12 @@ MostrarMediciones:
 	 CALL ESPERAR_TX
 	 ldi ZH, high(MedLuzDormitorioL)
      ldi ZL, low(MedLuzDormitorioL)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 Call Coma
+	 ldi ZH, high(MedLuzDormitorioDecena)
+     ldi ZL, low(MedLuzDormitorioDecena)
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
@@ -1375,6 +1399,12 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
+	 Call Coma
+	 ldi ZH, high(MedLuzExteriorDecena)
+     ldi ZL, low(MedLuzExteriorDecena)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 CALL Cero
 	 CALL Espacio
 	 Call Salto
@@ -1388,6 +1418,12 @@ MostrarMediciones:
 	 CALL ESPERAR_TX
 	 ldi ZH, high(MedLuzLCCL)
      ldi ZL, low(MedLuzLCCL)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
+	 Call Coma
+	 ldi ZH, high(MedLuzLCCDecena)
+     ldi ZL, low(MedLuzLCCDecena)
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
@@ -1420,5 +1456,9 @@ Guion:
 	 RET
 Cero:
 	 LDI R20, '0'
+	 CALL ESPERAR_TX
+	 RET
+Coma:
+	 LDI R20, ','
 	 CALL ESPERAR_TX
 	 RET
