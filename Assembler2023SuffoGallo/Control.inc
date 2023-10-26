@@ -2,7 +2,7 @@
 ; las mismas se ejecutan en el menu options de "ApartadoGraficoCodes.inc"
 ; esto quiere decir que se ejecuta siempre y cuando el usuario no este modificando una de las variables de control,
 ; y que se ejecuta luego de que una se cambia.
-Control:
+Controll:
 	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
 		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
 		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL

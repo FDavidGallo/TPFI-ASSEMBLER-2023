@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Thu Oct 26 05:32:05 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Thu Oct 26 06:58:04 2023
 
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(9): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\division.inc'
@@ -3456,7 +3456,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000a45 cff6                      	RJMP LOOP	
 000a46 9508                      	RET
                                  END_MESSAGE:
-000a47 940c 120e                 JMP Control ;>>>> EN DESARROLLO   TODAVIA  
+000a47 940c 12db                 JMP Controll ;>>>> EN DESARROLLO   TODAVIA  
                                  ;LA SIGUIENTE SECCIÓN CONTIENE EL "CORAZÓN" DEL PROGRAMA
                                  ; CON READ SE LEE SI SE ENVIÓ ALGO POR LA UART, OPTIONS 
                                  READ:
@@ -3520,7 +3520,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 000a82 940c 0c90                 	JMP ENCENDER_TRESLejos
                                  	ENCENDER_CUATRO:
 000a84 940c 0abc                 	JMP ENCENDER_CUATROLEJOS
-000a86 940c 120e                 	JMP Control ;>>>> EN DESARROLLO   TODAVIA  
+000a86 940c 12db                 	JMP Controll ;>>>> EN DESARROLLO   TODAVIA  
                                  	PresionoA:
 000a88 940c 0c9f                 	JMP PresionoALejos
                                  	PresionoB:
@@ -5419,7 +5419,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 00119f f021                      		breq SumarSegundo
 0011a0 940c 1180                 		JMP EscupirTodo
                                  		_control:
-0011a2 940e 1225                 				call Control_Int
+0011a2 940e 12f2                 				call Control_Int
                                  	SumarSegundo:
 0011a4 e000                      		ldi r16,0x00  ; Reiciamos los 5°tos de segundo
 0011a5 8300                      		st Z, r16
@@ -5508,84 +5508,344 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		Leer0:
 0011ef 9050 0000                 			  Lds R5,0
 0011f1 e0f1                      			  ldi ZH, high(MedTemperaturaExteriorHH); Posicionamos Z en la primer variable de medición
-0011f2 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+0011f2 940e 1308                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
                                  		Leer1:
 0011f4 9050 0001                 			  Lds R5,1
 0011f6 e0f1                      			  ldi ZH, high(MedTemperaturaLCCHH); Posicionamos Z en la primer variable de medición
-0011f7 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+0011f7 940e 1308                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
                                  		Leer2:
 0011f9 9050 0002                 			  Lds R5,2
 0011fb e0f1                      			  ldi ZH, high(MedTemperaturaDormitorioHH); Posicionamos Z en la primer variable de medición
-0011fc 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+0011fc 940e 1308                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
                                  		Leer3:
 0011fe 9050 0003                 			  Lds R5,3
 001200 e0f1                      			  ldi ZH, high(MedLuzLCCHH); Posicionamos Z en la primer variable de medición
-001201 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001201 940e 1308                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
                                  		Leer4:
 001203 9050 0004                 			  Lds R5,4
 001205 e0f1                      			  ldi ZH, high(MedLuzDormitorioHH); Posicionamos Z en la primer variable de medición
-001206 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001206 940e 1308                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
                                  		Leer4_medicion:
 001208 9050 0005                 			  Lds R5,5
 00120a e0f1                      			  ldi ZH, high(MedLuzExteriorHH); Posicionamos Z en la primer variable de medición
-00120b 940e 123b                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+00120b 940e 1308                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+00120d 9508                      		RET
+                                 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                 ; ANTES DE UTILIZAR LAS FUNCIONES "Reconstruir", se debe cargar el puntero Z con la posición incial de lo que se desea pasar de ASCII a 
+                                 ; decimal...
+                                  ReconstruirMedicion: ; esta funcion agarra lo que se encuentra en 3 bits ASCII, para guardarle en 1, en decimal.
+                                 			 ; Numero:  r18-r19-r20  a guardar en  r17
+                                 			 ; Estos registros deben ser cargados por lo que está en Z0, Z1 y Z2, respectivamente
+00120e e010                      			 LDI R17,0
+00120f 8120                      			 ld r18, Z
+001210 95e3                      			 inc R30 ; Siguiente posición de z
+001211 8130                      			 ld r19, Z
+001212 95e3                      			 inc R30 ; Siguiente posición de z
+001213 8140                      			 ld r20, Z
+                                 			 ;El procedimiento es el siguiente, explicado mediante un ejemplo:
+                                 			 ; '2' - '5' - '5'-> Comparece del 0 al 9,  sumese el valor correspondiente a R17
+                                 			 ReconstruirCentena:
+001214 3321                      			 Cpi R18,'1'
+001215 f031                      			 BREQ Cien		
+001216 3322                      			 Cpi R18,'2'
+001217 f009                      			 BREQ DOSCien
+001218 9508                      			 Ret
+                                 	  DOSCien:
+001219 ec08                      							LDI R16,200
+00121a 0f10                      							ADD R17,R16
+00121b c003                      							rjmp ReconstruirDecena
+                                       Cien:
+00121c e604                      							LDI R16,100
+00121d 0f10                      							ADD R17,R16
+00121e c000                      							rjmp ReconstruirDecena
+                                 			 ReconstruirDecena:
+00121f 3331                      			 Cpi R19,'1'
+001220 f0a1                      			 BREQ Diezzz	  
+001221 3332                      			 Cpi R19,'2'
+001222 f0a9                      			 BREQ Veinte	 
+001223 3333                      			 Cpi R19,'3'
+001224 f0b1                      			 BREQ Trenta	 
+001225 3334                      			 Cpi R19,'4'
+001226 f0b9                      			 BREQ Cuarenta	 
+001227 3335                      			 Cpi R19,'5'
+001228 f0c1                      			 BREQ Cincuenta	  
+001229 3336                      			 Cpi R19,'6'
+00122a f0c9                      			 BREQ Sesenta	
+00122b 3337                      			 Cpi R19,'7'
+00122c f0d1                      			 BREQ Setenta		
+00122d 3338                      			 Cpi R19,'8'
+00122e f0d9                      			 BREQ Ochenta	
+00122f 3339                      			 Cpi R19,'9'
+001230 f009                      			 BREQ Noventa
+001231 9508                      			 RET
+                                 Noventa:
+001232 e50a                      							LDI R16,90
+001233 0f10                      							ADD R17,R16
+001234 c018                      							rjmp ReconstruirUnidad
+                                 Diezzz:
+001235 e00a                      							LDI R16,10
+001236 0f10                      							ADD R17,R16
+001237 c015                      							rjmp ReconstruirUnidad
+                                 Veinte:
+001238 e104                      							LDI R16,20
+001239 0f10                      							ADD R17,R16
+00123a c012                      							rjmp ReconstruirUnidad
+                                 Trenta:
+00123b e10e                      							LDI R16,30
+00123c 0f10                      							ADD R17,R16
+00123d c00f                      							rjmp ReconstruirUnidad
+                                  Cuarenta:
+00123e e208                      							LDI R16,40
+00123f 0f10                      							ADD R17,R16
+001240 c00c                      							rjmp ReconstruirUnidad
+                                 Cincuenta:
+001241 e302                      							LDI R16,50
+001242 0f10                      							ADD R17,R16
+001243 c009                      							rjmp ReconstruirUnidad
+                                 Sesenta:
+001244 e30c                      							LDI R16,60
+001245 0f10                      							ADD R17,R16
+001246 c006                      							rjmp ReconstruirUnidad
+                                 Setenta:
+001247 e406                      							LDI R16,70
+001248 0f10                      							ADD R17,R16
+001249 c003                      							rjmp ReconstruirUnidad
+                                 Ochenta:
+00124a e500                      							LDI R16,80
+00124b 0f10                      							ADD R17,R16
+00124c c000                      							rjmp ReconstruirUnidad
+                                 ReconstruirUnidad:
+00124d 3341                      			 Cpi R20,'1'
+00124e f0a1                      			 BREQ Diezzzdiv10	  
+00124f 3342                      			 Cpi R20,'2'
+001250 f0a9                      			 BREQ Veintediv10 
+001251 3343                      			 Cpi R20,'3'
+001252 f0b1                      			 BREQ Trentadiv10 
+001253 3344                      			 Cpi R20,'4'
+001254 f0b9                      			 BREQ Cuarentadiv10 
+001255 3345                      			 Cpi R20,'5'
+001256 f0c1                      			 BREQ Cincuentadiv10  
+001257 3346                      			 Cpi R20,'6'
+001258 f0c9                      			 BREQ Sesentadiv10
+001259 3347                      			 Cpi R20,'7'
+00125a f0d1                      			 BREQ Setentadiv10		
+00125b 3348                      			 Cpi R20,'8'
+00125c f0d9                      			 BREQ Ochentadiv10	
+00125d 3349                      			 Cpi R20,'9'
+00125e f009                      			 BREQ Noventadiv10
+00125f 9508                      			 RET
+                                 Noventadiv10:
+001260 e009                      							LDI R16,9
+001261 0f10                      							ADD R17,R16
+001262 9508                      							RET ; LISTO
+                                 Diezzzdiv10:
+001263 e001                      							LDI R16,1
+001264 0f10                      							ADD R17,R16
+001265 9508                      							RET ; LISTO
+                                 Veintediv10:
+001266 e002                      							LDI R16,2
+001267 0f10                      							ADD R17,R16
+001268 9508                      						    RET ; LISTO
+                                 Trentadiv10:
+001269 e003                      							LDI R16,3
+00126a 0f10                      							ADD R17,R16
+00126b 9508                      							RET ; LISTO
+                                  Cuarentadiv10:
+00126c e004                      							LDI R16,4
+00126d 0f10                      							ADD R17,R16
+00126e 9508                      							RET ; LISTO
+                                 Cincuentadiv10:
+00126f e005                      							LDI R16,5
+001270 0f10                      							ADD R17,R16
+001271 9508                      						    RET ; LISTO
+                                 Sesentadiv10:
+001272 e006                      							LDI R16,6
+001273 0f10                      							ADD R17,R16
+001274 9508                      							RET ; LISTO
+                                 Setentadiv10:
+001275 e007                      							LDI R16,7
+001276 0f10                      							ADD R17,R16
+001277 9508                      							RET ; LISTO
+                                 Ochentadiv10:
+001278 e005                      							LDI R16,5
+001279 0f10                      							ADD R17,R16
+00127a 9508                      							RET ; LISTO
+                                 			
+                                 ReconstruirConf: ; esta funcion agarra lo que se encuentra en 2 bits ASCII, para guardarle en 1, en decimal.
+                                 			 ; Numero:  r19-r20  a guardar en  r25
+                                 			  ; Estos registros deben ser cargados por lo que está en Z0 y Z1  respectivamente
+00127b 8130                      			 ld r19, Z
+00127c 95e3                      			 inc R30 ; Siguiente posición de z
+00127d 8140                      			 ld r20, Z
+00127e e090                      			 LDI R25,0			
+                                 			 ReconstruirDecena2:
+00127f 3331                      			 Cpi R19,'1'
+001280 f0a1                      			 BREQ Diezzz2	  
+001281 3332                      			 Cpi R19,'2'
+001282 f0a9                      			 BREQ Veinte2	 
+001283 3333                      			 Cpi R19,'3'
+001284 f0b1                      			 BREQ Trenta2	 
+001285 3334                      			 Cpi R19,'4'
+001286 f0b9                      			 BREQ Cuarenta2	 
+001287 3335                      			 Cpi R19,'5'
+001288 f0c1                      			 BREQ Cincuenta2 
+001289 3336                      			 Cpi R19,'6'
+00128a f0c9                      			 BREQ Sesenta2	
+00128b 3337                      			 Cpi R19,'7'
+00128c f0d1                      			 BREQ Setenta2		
+00128d 3338                      			 Cpi R19,'8'
+00128e f0d9                      			 BREQ Ochenta2	
+00128f 3339                      			 Cpi R19,'9'
+001290 f009                      			 BREQ Noventa2
+001291 9508                      			 RET
+                                 Noventa2:
+001292 e59a                      							LDI R25,90
+001293 0f10                      							ADD R17,R16
+001294 c018                      							rjmp ReconstruirUnidad2
+                                 Diezzz2:
+001295 e00a                      							LDI R16,10
+001296 0f90                      							ADD R25,R16
+001297 c015                      							rjmp ReconstruirUnidad2
+                                 Veinte2:
+001298 e104                      							LDI R16,20
+001299 0f90                      							ADD R25,R16
+00129a c012                      							rjmp ReconstruirUnidad2
+                                 Trenta2:
+00129b e10e                      							LDI R16,30
+00129c 0f90                      							ADD R25,R16
+00129d c00f                      							rjmp ReconstruirUnidad2
+                                  Cuarenta2:
+00129e e208                      							LDI R16,40
+00129f 0f90                      							ADD R25,R16
+0012a0 c00c                      							rjmp ReconstruirUnidad2
+                                 Cincuenta2:
+0012a1 e302                      							LDI R16,50
+0012a2 0f90                      							ADD R25,R16
+0012a3 c009                      							rjmp ReconstruirUnidad2
+                                 Sesenta2:
+0012a4 e30c                      							LDI R16,60
+0012a5 0f90                      							ADD R25,R16
+0012a6 c006                      							rjmp ReconstruirUnidad2
+                                 Setenta2:
+0012a7 e406                      							LDI R16,70
+0012a8 0f90                      							ADD R25,R16
+0012a9 c003                      							rjmp ReconstruirUnidad2
+                                 Ochenta2:
+0012aa e500                      							LDI R16,80
+0012ab 0f90                      							ADD R25,R16
+0012ac c000                      							rjmp ReconstruirUnidad2
+                                 ReconstruirUnidad2:
+0012ad 3341                      			 Cpi R20,'1'
+0012ae f0a1                      			 BREQ Diezzzdiv102	  
+0012af 3342                      			 Cpi R20,'2'
+0012b0 f0a9                      			 BREQ Veintediv102
+0012b1 3343                      			 Cpi R20,'3'
+0012b2 f0b1                      			 BREQ Trentadiv102 
+0012b3 3344                      			 Cpi R20,'4'
+0012b4 f0b9                      			 BREQ Cuarentadiv102 
+0012b5 3345                      			 Cpi R20,'5'
+0012b6 f0c1                      			 BREQ Cincuentadiv102  
+0012b7 3346                      			 Cpi R20,'6'
+0012b8 f0c9                      			 BREQ Sesentadiv102
+0012b9 3347                      			 Cpi R20,'7'
+0012ba f0d1                      			 BREQ Setentadiv102		
+0012bb 3348                      			 Cpi R20,'8'
+0012bc f0d9                      			 BREQ Ochentadiv102
+0012bd 3349                      			 Cpi R20,'9'
+0012be f009                      			 BREQ Noventadiv102
+0012bf 9508                      			 RET
+                                 Noventadiv102:
+0012c0 e009                      							LDI R16,9
+0012c1 0f90                      							ADD R25,R16
+0012c2 9508                      							RET ; LISTO
+                                 Diezzzdiv102:
+0012c3 e001                      							LDI R16,1
+0012c4 0f90                      							ADD R25,R16
+0012c5 9508                      							RET ; LISTO
+                                 Veintediv102:
+0012c6 e002                      							LDI R16,2
+0012c7 0f90                      							ADD R25,R16
+0012c8 9508                      						    RET ; LISTO
+                                 Trentadiv102:
+0012c9 e003                      							LDI R16,3
+0012ca 0f90                      							ADD R25,R16
+0012cb 9508                      							RET ; LISTO
+                                  Cuarentadiv102:
+0012cc e004                      							LDI R16,4
+0012cd 0f90                      							ADD R25,R16
+0012ce 9508                      							RET ; LISTO
+                                 Cincuentadiv102:
+0012cf e005                      							LDI R16,5
+0012d0 0f90                      							ADD R25,R16
+0012d1 9508                      						    RET ; LISTO
+                                 Sesentadiv102:
+0012d2 e006                      							LDI R16,6
+0012d3 0f90                      							ADD R25,R16
+0012d4 9508                      							RET ; LISTO
+                                 Setentadiv102:
+0012d5 e007                      							LDI R16,7
+0012d6 0f90                      							ADD R25,R16
+0012d7 9508                      							RET ; LISTO
+                                 Ochentadiv102:
+0012d8 e005                      							LDI R16,5
+0012d9 0f90                      							ADD R25,R16
                                  .INCLUDE "Control.inc"
-00120d 9508                      
+0012da 9508                      
                                  ; las mismas se ejecutan en el menu options de "ApartadoGraficoCodes.inc"
                                  ; esto quiere decir que se ejecuta siempre y cuando el usuario no este modificando una de las variables de control,
                                  ; y que se ejecuta luego de que una se cambia.
-                                 Control:
-00120e 925f                      	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
-00120f 92cf                      		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
-001210 930f                      		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL
-001211 931f                      		PUSH R17
-001212 932f                      		PUSH R18
-001213 933f                      		PUSH R19
-001214 934f                      		PUSH R20
-001215 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
-001216 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
-001217 b71f                      		IN	R17,SREG ;
-001218 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+                                 Controll:
+0012db 925f                      	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
+0012dc 92cf                      		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
+0012dd 930f                      		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL
+0012de 931f                      		PUSH R17
+0012df 932f                      		PUSH R18
+0012e0 933f                      		PUSH R19
+0012e1 934f                      		PUSH R20
+0012e2 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
+0012e3 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
+0012e4 b71f                      		IN	R17,SREG ;
+0012e5 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
                                  		;ACA SENTENCIAS DE CONTROL ;) ---> EN DESARROLLO
                                  		;	Devolvemos todo a su lugar
-001219 911f                      		POP R17
-00121a bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-00121b 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-00121c 91ef                      		POP R30
-00121d 914f                      		POP R20
-00121e 913f                      		POP R19
-00121f 912f                      		POP R18
-001220 910f                      		POP R16
-001221 90cf                      		POP R12
-001222 905f                      		POP R5
-001223 940c 0a49                 		JMP READ ;Volvemos al apartado gráfico
+0012e6 911f                      		POP R17
+0012e7 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+0012e8 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+0012e9 91ef                      		POP R30
+0012ea 914f                      		POP R20
+0012eb 913f                      		POP R19
+0012ec 912f                      		POP R18
+0012ed 910f                      		POP R16
+0012ee 90cf                      		POP R12
+0012ef 905f                      		POP R5
+0012f0 940c 0a49                 		JMP READ ;Volvemos al apartado gráfico
                                  
                                  Control_Int:
-001225 925f                      	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
-001226 92cf                      		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
-001227 930f                      		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL
-001228 931f                      		PUSH R17
-001229 932f                      		PUSH R18
-00122a 933f                      		PUSH R19
-00122b 934f                      		PUSH R20
-00122c 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
-00122d 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
-00122e b71f                      		IN	R17,SREG ;
-00122f 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+0012f2 925f                      	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
+0012f3 92cf                      		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
+0012f4 930f                      		PUSH R16   ; ENTRE LA PARTE GRAFICA Y LA PARTE DE CONTROL
+0012f5 931f                      		PUSH R17
+0012f6 932f                      		PUSH R18
+0012f7 933f                      		PUSH R19
+0012f8 934f                      		PUSH R20
+0012f9 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
+0012fa 93ff                      		PUSH R31 ; puntero que se usa mucho en mi programa
+0012fb b71f                      		IN	R17,SREG ;
+0012fc 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
                                  		;ACA SENTENCIAS DE CONTROL ;) ---> EN DESARROLLO
                                  		;	Devolvemos todo a su lugar
-001230 911f                      		POP R17
-001231 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-001232 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-001233 91ef                      		POP R30
-001234 914f                      		POP R20
-001235 913f                      		POP R19
-001236 912f                      		POP R18
-001237 910f                      		POP R16
-001238 90cf                      		POP R12
-001239 905f                      		POP R5
+0012fd 911f                      		POP R17
+0012fe bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+0012ff 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+001300 91ef                      		POP R30
+001301 914f                      		POP R20
+001302 913f                      		POP R19
+001303 912f                      		POP R18
+001304 910f                      		POP R16
+001305 90cf                      		POP R12
+001306 905f                      		POP R5
                                  .include "LecturaAdc.inc"
-00123a 9508                      
+001307 9508                      
                                  ; para el microcontrolador Atmega328p, IDE: Microchip Studio.
                                  ; Para incluir esto: >.include "LecturaAdc.inc"<, para llamarlo: >CALL InicioADC <
                                  ; Esto esta diseñado para leer una de las entradas analogicas
@@ -5614,90 +5874,90 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  .def centena = r22
                                  
                                  InicioADC:
-00123b 940e 1285                 			CALL GuardarCosasAdc ;Guardamos lo que hacía el micro
+001308 940e 1352                 			CALL GuardarCosasAdc ;Guardamos lo que hacía el micro
                                  								 ;Setemos todo a 0:
-00123d e040                      			ldi unidad,0
-00123e e050                      			ldi decena, 0
-00123f e060                      			ldi centena,0
-001240 e020                      			ldi R18,0
-001241 e000                      			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
-001242 b907                      			out DDRC, r16
-001243 9100 007c                 			lds r16,ADMUX ; CARGAMOS ADMUX A r16
-001245 2905                      			or  r16,R5	; hacemos un or con sensor selecionado (via R5)
-001246 9300 007c                 			sts ADMUX, r16; indicamos en ADMUX que sensor medir
-001248 c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
+00130a e040                      			ldi unidad,0
+00130b e050                      			ldi decena, 0
+00130c e060                      			ldi centena,0
+00130d e020                      			ldi R18,0
+00130e e000                      			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
+00130f b907                      			out DDRC, r16
+001310 9100 007c                 			lds r16,ADMUX ; CARGAMOS ADMUX A r16
+001312 2905                      			or  r16,R5	; hacemos un or con sensor selecionado (via R5)
+001313 9300 007c                 			sts ADMUX, r16; indicamos en ADMUX que sensor medir
+001315 c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
                                  
                                  CICLO_ADC:
-001249 940e 129d                 	call LeerADC
-00124b 940e 12a4                 	call EsperarADC
-00124d 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
-00124f 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
-001251 e040                      	ldi unidad,0
-001252 e050                      	ldi decena,0
-001253 e060                      	ldi centena,0
-001254 2f03                      	mov r16,r19; Metemos a R16 ADCL
-001255 940e 1264                 	call ASCII		; Llamamos a la función ASCII 
-001257 e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
-001258 0f41                      	add unidad, r17
-001259 0f51                      	add decena, r17
-00125a 0f61                      	add centena,r17
+001316 940e 136a                 	call LeerADC
+001318 940e 1371                 	call EsperarADC
+00131a 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
+00131c 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
+00131e e040                      	ldi unidad,0
+00131f e050                      	ldi decena,0
+001320 e060                      	ldi centena,0
+001321 2f03                      	mov r16,r19; Metemos a R16 ADCL
+001322 940e 1331                 	call ASCII		; Llamamos a la función ASCII 
+001324 e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
+001325 0f41                      	add unidad, r17
+001326 0f51                      	add decena, r17
+001327 0f61                      	add centena,r17
                                  	; Ahora, teniendo todo en ASCII, pasamos a guardarlas una por una en la memoria:
-00125b 8340                      	ST Z, unidad
-00125c 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-00125d 8350                      	ST Z, decena
-00125e 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-00125f 8360                      	ST Z, centena
-001260 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-001261 8320                      	ST Z, R18 ;guardamos la coma
-001262 940c 1291                 	jmp EscupirTodoADC; Que largue todo y volvamos a lo que estaba haciendo el micro
+001328 8340                      	ST Z, unidad
+001329 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+00132a 8350                      	ST Z, decena
+00132b 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+00132c 8360                      	ST Z, centena
+00132d 95e3                      	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+00132e 8320                      	ST Z, R18 ;guardamos la coma
+00132f 940c 135e                 	jmp EscupirTodoADC; Que largue todo y volvamos a lo que estaba haciendo el micro
                                  
                                  ASCII: ;Vamos a obtener unidad, decena, centena y "Coma":
                                  		L_CENTENA:
-001264 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
-001265 f018                      				BRLO L_DECENA; Vaya a "L_Decena"
-001266 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
-001267 5604                      				subi r16,100 ; Restele 100 al número
-001268 cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
+001331 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
+001332 f018                      				BRLO L_DECENA; Vaya a "L_Decena"
+001333 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
+001334 5604                      				subi r16,100 ; Restele 100 al número
+001335 cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
                                  				;Si todo fue realizarse correctamente, solamente podrá ejecutarse todo dos veces
                                  				; Recuerde: en 8 bits, el número más grande a almacenar es el 256, contando el 0, 255.
                                  		L_DECENA: ;Hace exactamente lo mismo que el anterior, solo que 100 en lugar de 10
-001269 300a                      				cpi r16,10 
-00126a f018                      				BRLO L_UNIDAD
-00126b 9553                      				inc decena
-00126c 500a                      				subi r16,10
-00126d cffb                      				rjmp L_DECENA
+001336 300a                      				cpi r16,10 
+001337 f018                      				BRLO L_UNIDAD
+001338 9553                      				inc decena
+001339 500a                      				subi r16,10
+00133a cffb                      				rjmp L_DECENA
                                  		L_UNIDAD: ;Idem con 1
-00126e 3001                      				cpi r16,1
-00126f f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
-001270 9543                      				inc unidad
-001271 5001                      				subi r16,1
-001272 cffb                      				rjmp L_UNIDAD
+00133b 3001                      				cpi r16,1
+00133c f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
+00133d 9543                      				inc unidad
+00133e 5001                      				subi r16,1
+00133f cffb                      				rjmp L_UNIDAD
                                  		L_FIN:
-001273 c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
+001340 c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
                                  	    HCOMA:  ; Ahora, en la parte alta de la parte alta, tendremos nuestro "cuarto" de numero
                                  				; por lo que lo usaremos para guardar >0,00 >0,25 >0,50 >0,75
                                  				; por simplicidad, se los redondeó hacia abajo: >0,0 >0,2 >0,5 >0,7
-001274 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
-001275 f039                      				breq tres
-001276 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
-001277 f039                      				breq dos
-001278 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
-001279 f039                      				breq uno
-00127a 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
-00127b f039                      				breq cerooo
-00127c 9508                      				RET ; Vuelva a CICLO_ADC
+001341 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
+001342 f039                      				breq tres
+001343 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
+001344 f039                      				breq dos
+001345 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
+001346 f039                      				breq uno
+001347 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
+001348 f039                      				breq cerooo
+001349 9508                      				RET ; Vuelva a CICLO_ADC
                                  tres:
-00127d e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
-00127e 9508                      		ret ; Vuelva a CICLO_ADC
+00134a e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
+00134b 9508                      		ret ; Vuelva a CICLO_ADC
                                  dos:
-00127f e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
-001280 9508                      		ret ; Vuelva a CICLO_ADC
+00134c e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
+00134d 9508                      		ret ; Vuelva a CICLO_ADC
                                  uno:
-001281 e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
-001282 9508                      		ret ; Vuelva a CICLO_ADC
+00134e e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
+00134f 9508                      		ret ; Vuelva a CICLO_ADC
                                  cerooo:
-001283 e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
-001284 9508                      		ret ; Vuelva a CICLO_ADC
+001350 e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
+001351 9508                      		ret ; Vuelva a CICLO_ADC
                                  
                                  
                                  //////////////////////////////////////////////////////////////////
@@ -5706,53 +5966,53 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                   GuardarCosasAdc: ; Para que puedas usar esto sin modificar los registros de tu programa  y que
                                  			   ; sea 'Independiente' guardamos lo que el micro estaba
                                  			   ; haciendo antes, para que, al momento de volver no se generen errroes
-001285 930f                      		PUSH R16
-001286 931f                      		PUSH R17
-001287 932f                      		PUSH R18
-001288 933f                      		PUSH R19
-001289 934f                      		PUSH R20
-00128a 935f                      		PUSH R21
-00128b 936f                      		PUSH R22
-00128c 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
-00128d 93ff                      		PUSH R31 ; 
-00128e b71f                      		IN	R17,SREG ;
-00128f 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
-001290 9508                      		RET
+001352 930f                      		PUSH R16
+001353 931f                      		PUSH R17
+001354 932f                      		PUSH R18
+001355 933f                      		PUSH R19
+001356 934f                      		PUSH R20
+001357 935f                      		PUSH R21
+001358 936f                      		PUSH R22
+001359 93ef                      		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
+00135a 93ff                      		PUSH R31 ; 
+00135b b71f                      		IN	R17,SREG ;
+00135c 931f                      		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+00135d 9508                      		RET
                                   EscupirTodoADC: ;Es la función contraria a "Guardar cosas", como su  nombre indica devolvemos todo a su lugar
                                  		   ; haciendo antes, para que, al momento de volver no se generen errroes
-001291 911f                      		POP R17
-001292 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-001293 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-001294 91ef                      		POP R30
-001295 916f                      		POP R22
-001296 915f                      		POP R21
-001297 914f                      		POP R20
-001298 913f                      		POP R19
-001299 912f                      		POP R18
-00129a 911f                      		POP R17
-00129b 910f                      		POP R16
-00129c 9508                      		Ret ; Volvemos a lo que estaba haciendo el micro 
+00135e 911f                      		POP R17
+00135f bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+001360 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+001361 91ef                      		POP R30
+001362 916f                      		POP R22
+001363 915f                      		POP R21
+001364 914f                      		POP R20
+001365 913f                      		POP R19
+001366 912f                      		POP R18
+001367 911f                      		POP R17
+001368 910f                      		POP R16
+001369 9508                      		Ret ; Volvemos a lo que estaba haciendo el micro 
                                  
                                  ///////////////////////////////////////////
                                  ;		FUNCIONES	DE	CONTROL	DEL	ADC: 
                                  ///////////////////////////////////////////
                                  
                                  LeerADC:
-00129d e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
-00129e 9110 007a                 lds r17,ADCSRA
-0012a0 2b10                      or r17,r16   
-0012a1 9310 007a                 sts ADCSRA, r17
-0012a3 9508                      ret
+00136a e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
+00136b 9110 007a                 lds r17,ADCSRA
+00136d 2b10                      or r17,r16   
+00136e 9310 007a                 sts ADCSRA, r17
+001370 9508                      ret
                                  
                                  EsperarADC:
-0012a4 9110 007a                 lds r17, ADCSRA 
-0012a6 ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
-0012a7 940c 12a4                 jmp EsperarADC ; Si no es así, espere.
-0012a9 e100                      ldi r16,0b00010000
-0012aa 9110 007a                 lds r17, ADCSRA
-0012ac 2b10                      or r17,r16
-0012ad 9310 007a                 sts ADCSRA, r17
-0012af 9508                      ;Vector de interrupciones
+001371 9110 007a                 lds r17, ADCSRA 
+001373 ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
+001374 940c 1371                 jmp EsperarADC ; Si no es así, espere.
+001376 e100                      ldi r16,0b00010000
+001377 9110 007a                 lds r17, ADCSRA
+001379 2b10                      or r17,r16
+00137a 9310 007a                 sts ADCSRA, r17
+00137c 9508                      ;Vector de interrupciones
                                  .cseg
                                  .ORG 0x00
 000000 940c 10a3                 JMP CONFIGURAR ;DIRIJASE A  "Configuraciones.inc"
@@ -5800,28 +6060,28 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :   0 y  :   0 z  : 174 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
+x  :   0 y  :   0 z  : 179 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 : 139 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   6 
-r13:   0 r14:   0 r15:   0 r16: 222 r17: 103 r18:  47 r19:  13 r20: 271 
-r21:   9 r22:   7 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
-r29:   0 r30: 170 r31: 172 
-Registers used: 12 out of 35 (34.3%)
+r13:   0 r14:   0 r15:   0 r16: 297 r17: 125 r18:  50 r19:  33 r20: 291 
+r21:   9 r22:   7 r23:   0 r24:   0 r25:  19 r26:   0 r27:   0 r28:   0 
+r29:   0 r30: 173 r31: 172 
+Registers used: 13 out of 35 (37.1%)
 
 "ATmega328P" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :   0 add   :   3 adiw  :   0 and   :   0 
+.lds  :   0 .sts  :   0 adc   :   0 add   :  41 adiw  :   0 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :  62 brge  :   0 brhc  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  : 100 brge  :   0 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   3 brlt  :   0 brmi  :   0 
 brne  :   0 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  : 187 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
-cpi   :  65 cpse  :   0 dec   :   2 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   4 inc   :  15 jmp   :  93 
-ld    :  77 ldd   :   0 ldi   : 432 lds   : 124 lpm   :  23 lsl   :   0 
+cpi   : 103 cpse  :   0 dec   :   2 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   4 inc   :  18 jmp   :  93 
+ld    :  82 ldd   :   0 ldi   : 472 lds   : 124 lpm   :  23 lsl   :   0 
 lsr   :   0 mov   :   1 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   3 ori   :   0 out   :   8 pop   :  38 
-push  :  40 rcall :   0 ret   :  23 reti  :   2 rjmp  : 121 rol   :   0 
+push  :  40 rcall :   0 ret   :  46 reti  :   2 rjmp  : 141 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  70 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
@@ -5832,7 +6092,7 @@ Instructions used: 26 out of 113 (23.0%)
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x002560   4436   4564   9000   32768  27.5%
+[.cseg] 0x000000 0x0026fa   4846   4564   9410   32768  28.7%
 [.dseg] 0x000100 0x0001b3      0    114    114    2048   5.6%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
