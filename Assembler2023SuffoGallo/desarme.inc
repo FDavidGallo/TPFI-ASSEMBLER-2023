@@ -8,27 +8,33 @@
 // Total de mediciones a hacer: 6
 Medir:
 		Leer0:
-			  Lds R5,0
-			  ldi ZH, high(MedTemperaturaExteriorHH); Posicionamos Z en la primer variable de medición
-			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+			ldi r16,0b01100000 ; 5V del micro como referencia
+			sts ADMUX, r16
+			ldi ZH, high(MedTemperaturaExteriorHH); Posicionamos Z en la primer variable de medición
+			CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 		Leer1:
-			  Lds R5,1
+			  ldi r16,0b01100001 ; 5V del micro como referencia
+			sts ADMUX, r16
 			  ldi ZH, high(MedTemperaturaLCCHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 		Leer2:
-			  Lds R5,2
+			 ldi r16,0b01100010 ; 5V del micro como referencia
+			sts ADMUX, r16
 			  ldi ZH, high(MedTemperaturaDormitorioHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 		Leer3:
-			  Lds R5,3
+			 ldi r16,0b01100011 ; 5V del micro como referencia
+			sts ADMUX, r16
 			  ldi ZH, high(MedLuzLCCHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 		Leer4:
-			  Lds R5,4
+			  ldi r16,0b01100100 ; 5V del micro como referencia
+			sts ADMUX, r16
 			  ldi ZH, high(MedLuzDormitorioHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 		Leer4_medicion:
-			  Lds R5,5
+			  ldi r16,0b01100101 ; 5V del micro como referencia
+			sts ADMUX, r16
 			  ldi ZH, high(MedLuzExteriorHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 		RET

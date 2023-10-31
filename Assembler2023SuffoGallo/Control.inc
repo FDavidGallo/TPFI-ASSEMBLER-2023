@@ -2,6 +2,16 @@
 ; las mismas se ejecutan en el menu options de "ApartadoGraficoCodes.inc"
 ; esto quiere decir que se ejecuta siempre y cuando el usuario no este modificando una de las variables de control,
 ; y que se ejecuta luego de que una se cambia.
+; Metemos una equivalencia, para el código sea más comprensible
+.equ AbrirCortinaDormitorio=PORTB7
+.equ CerrarCortinaDormitorio=PORTB6
+.equ AbrirCortinaLCC=PORTB5
+.equ CerrarCortinaLCC=PORTB4
+.equ CalefacionDormitorio=PORTB3
+.equ CalefacionLCC=PORTB2
+.equ RefrigeracionDormitorio=PORTB1
+.equ RefrigeracionLCC=PORTB0
+; Bastará con ponerlas en 1 para que nuestro codigo funcione
 Controll:
 	    PUSH R5    ; ANTES DE HACER CUALQUIER COSA, GUARDAMOS EN PILA LO QUE SEA QUE ESTABA HACIENDO EL MICRO
 		PUSH R12   ; ESTO LO HAGO EXCLUSIVAMENTE PARA PODER EMPLEAR LO MISMOS REGISTROS DE FORMA "INDEPENDIENTE"
@@ -15,6 +25,7 @@ Controll:
 		IN	R17,SREG ;
 		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
 		;ACA SENTENCIAS DE CONTROL ;) ---> EN DESARROLLO
+;		call Esquema Horario
 		;	Devolvemos todo a su lugar
 		POP R17
 		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 

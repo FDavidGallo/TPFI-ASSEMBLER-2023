@@ -3,7 +3,7 @@
 MAIN:
 	LDI ZH, HIGH(TABLA_ROM_MSJ <<1)	;Apunto hacia la tabla con MENSAJE
 	LDI ZL, LOW(TABLA_ROM_MSJ <<1)
-
+	
 
 LOOP:
 	LPM R17, Z+		;Se almacena el valor de la tabla ROM en R17
@@ -75,6 +75,7 @@ OPTIONS:
 	BREQ PresionoP
 	RJMP READ
 	ENCENDER_UNO:
+	CALL Medir
 	JMP ENCENDER_UNOLEJOS	
 	ENCENDER_DOS:
 	JMP ENCENDER_DOSLEJOS
@@ -82,7 +83,7 @@ OPTIONS:
 	JMP ENCENDER_TRESLejos
 	ENCENDER_CUATRO:
 	JMP ENCENDER_CUATROLEJOS
-	JMP Controll ;>>>> EN DESARROLLO   TODAVIA  
+	;JMP Controll ;>>>> EN DESARROLLO   TODAVIA  
 	PresionoA:
 	JMP PresionoALejos
 	PresionoB:
@@ -1383,11 +1384,9 @@ MostrarMediciones:
 	 CALL Guion
 	  ldi ZH, high(MedLuzDormitorioHH)
      ldi ZL, low(MedLuzDormitorioHH)
-	 ld r20, Z
+	 ld r20, Z+
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 ldi ZH, high(MedLuzDormitorioH)
-     ldi ZL, low(MedLuzDormitorioH)
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX

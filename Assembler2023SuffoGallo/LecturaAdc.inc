@@ -55,12 +55,12 @@ CICLO_ADC:
 	add decena, r17
 	add centena,r17
 	; Ahora, teniendo todo en ASCII, pasamos a guardarlas una por una en la memoria:
-	ST Z, unidad
-	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-	ST Z, decena
-	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-	ST Z, centena
-	INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+	ST Z+, unidad
+	;INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+	ST Z+, decena
+	;INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
+	ST Z+, centena
+	;INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
 	ST Z, R18 ;guardamos la coma
 	jmp EscupirTodoADC; Que largue todo y volvamos a lo que estaba haciendo el micro
 
@@ -119,7 +119,7 @@ cerooo:
  GuardarCosasAdc: ; Para que puedas usar esto sin modificar los registros de tu programa  y que
 			   ; sea 'Independiente' guardamos lo que el micro estaba
 			   ; haciendo antes, para que, al momento de volver no se generen errroes
-		PUSH R16
+		/*PUSH R16
 		PUSH R17
 		PUSH R18
 		PUSH R19
@@ -129,21 +129,21 @@ cerooo:
 		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
 		PUSH R31 ; 
 		IN	R17,SREG ;
-		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO */
 		RET
  EscupirTodoADC: ;Es la función contraria a "Guardar cosas", como su  nombre indica devolvemos todo a su lugar
 		   ; haciendo antes, para que, al momento de volver no se generen errroes
-		POP R17
-		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-		POP R30
-		POP R22
-		POP R21
-		POP R20
-		POP R19
-		POP R18
-		POP R17
-		POP R16
+	;	POP R17
+	;	OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+	;	POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+	;	POP R30
+	;	POP R22
+	;	POP R21
+	;	POP R20
+	;	POP R19
+	;	POP R18
+	;	POP R17
+	;	POP R16
 		Ret ; Volvemos a lo que estaba haciendo el micro 
 
 ///////////////////////////////////////////
