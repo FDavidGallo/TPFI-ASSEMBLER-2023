@@ -512,7 +512,12 @@ READPresionoAL: ; leeemos
  ldi ZH, high(TemperaturaExteriorMinimaH)
  ldi ZL, low(TemperaturaExteriorMinimaH)
  st Z, r5; Almacena el valor de R5 en la dirección de memoria 0x0157.
-
+ ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts TemperaturaExteriorMinimaABS,r5
 READPresionoAH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -524,6 +529,11 @@ READPresionoAH:
 ldi ZH, high(TemperaturaExteriorMinimaL)
  ldi ZL, low(TemperaturaExteriorMinimaL)
  st Z, r5
+ ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+LDS R16,TemperaturaExteriorMinimaABS
+ADD R5,R16
+ sts TemperaturaExteriorMinimaABS,r5
 JMP MensajeFinalDeCambiodevalor
 PresionoBLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -554,6 +564,12 @@ READPresionoBL: ; leeemos
 ldi ZH, high(TemperaturaExteriorMaximaH)
  ldi ZL, low(TemperaturaExteriorMaximaH)
  st Z, r5
+ ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts TemperaturaExteriorMaximaABS,r5
 READPresionoBH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -565,6 +581,11 @@ READPresionoBH:
 	ldi ZH, high(TemperaturaExteriorMaximaL)
 	ldi ZL, low(TemperaturaExteriorMaximaL)
 	st Z, r5
+	ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+LDS R16,TemperaturaExteriorMaximaABS
+ADD R5,R16
+ sts TemperaturaExteriorMaximaABS,r5
 	JMP MensajeFinalDeCambiodevalor
 	
 PresionoCLejos:
@@ -596,6 +617,12 @@ READPresionoCL: ; leeemos
 	ldi ZH, high(TemperaturaLCCMinimaH)
 	ldi ZL, low(TemperaturaLCCMinimaH)
 	st Z, r5
+	 ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts TemperaturaLCCMinimaABS,r5
 READPresionoCH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -607,6 +634,11 @@ READPresionoCH:
 	ldi ZH, high(TemperaturaLCCMinimaL)
 	ldi ZL, low(TemperaturaLCCMinimaL)
 	st Z, r5
+	ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,TemperaturaLCCMinimaABS
+	ADD R5,R16
+	sts TemperaturaLCCMinimaABS,r5
 	JMP MensajeFinalDeCambiodevalor
 
 PresionoDLejos:
@@ -638,6 +670,12 @@ READPresionoDL: ; leeemos
 ldi ZH, high(TemperaturaLCCMaximaH)
 ldi ZL, low(TemperaturaLCCMaximaH)
  st Z, r5
+  ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts TemperaturaLCCMaximaABS,r5
 READPresionoDH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -649,6 +687,11 @@ READPresionoDH:
 	ldi ZH, high(TemperaturaLCCMaximaL)
 	ldi ZL, low(TemperaturaLCCMaximaL)
 	st Z, r5
+	ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,TemperaturaLCCMaximaABS
+	ADD R5,R16
+	sts TemperaturaLCCMaximaABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoELejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -679,6 +722,12 @@ READPresionoEL: ; leeemos
 	ldi ZH, high(SetPointTemperaturaLCCH)
 	ldi ZL, low(SetPointTemperaturaLCCH)
 	st Z, r5
+  ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts SetPointTemperaturaLCCABS,r5
 READPresionoEH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -690,6 +739,11 @@ READPresionoEH:
 	ldi ZH, high(SetPointTemperaturaLCCL)
 	ldi ZL, low(SetPointTemperaturaLCCL)
 	st Z, r5
+	ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,HisterisisTemperaturaLCCABS
+	ADD R5,R16
+	sts HisterisisTemperaturaLCCABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoFLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -720,6 +774,13 @@ READPresionoFL: ; leeemos
 	ldi ZH, high(HisterisisTemperaturaLCCH)
 	ldi ZL, low(HisterisisTemperaturaLCCH)
 	st Z, r5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts HisterisisTemperaturaLCCABS,r5
 READPresionoFH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -731,6 +792,12 @@ READPresionoFH:
 	ldi ZH, high(HisterisisTemperaturaLCCL)
 	ldi ZL, low(HisterisisTemperaturaLCCL)
 	st Z, r5
+	;Guardamos la parte baja absoluta
+	ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,HisterisisTemperaturaLCCABS
+	ADD R5,R16
+	sts HisterisisTemperaturaLCCABS,r5
 JMP MensajeFinalDeCambiodevalor
 PresionoGLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -761,6 +828,13 @@ READPresionoGL: ; leeemos
 	ldi ZH, high(TemperaturaDormitorioMaximaH)
 	ldi ZL, low(TemperaturaDormitorioMaximaH)
 	st Z, r5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts TemperaturaDormitorioMaximaABS,r5
 READPresionoGH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -772,6 +846,13 @@ READPresionoGH:
 	ldi ZH, high(TemperaturaDormitorioMaximaL)
 	ldi ZL, low(TemperaturaDormitorioMaximaL)
 	st Z, r5
+	
+;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,TemperaturaDormitorioMaximaABS
+	ADD R5,R16
+	sts TemperaturaDormitorioMaximaABS,r5
 JMP MensajeFinalDeCambiodevalor
 PresionoHLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -802,6 +883,14 @@ READPresionoHL: ; leeemos
 	ldi ZH, high(TemperaturaDormitorioMinimaH)
 	ldi ZL, low(TemperaturaDormitorioMinimaH)
 	st Z, r5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts TemperaturaDormitorioMinimaABS,r5
+
 READPresionoHH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -813,6 +902,12 @@ READPresionoHH:
 	ldi ZH, high(TemperaturaDormitorioMinimaL)
 	ldi ZL, low(TemperaturaDormitorioMinimaL)
 	st Z, r5
+	;Guardamos la parte baja absoluta
+    ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,TemperaturaDormitorioMinimaABS
+	ADD R5,R16
+	sts TemperaturaDormitorioMinimaABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoILejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -841,6 +936,14 @@ READPresionoIL: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS SetPointTemperaturaDormitorioH,R5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts SetPointTemperaturaDormitorioABS,r5
+
 READPresionoIH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -850,6 +953,12 @@ READPresionoIH:
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS SetPointTemperaturaDormitorioL,R5
+;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,SetPointTemperaturaDormitorioABS
+	ADD R5,R16
+	sts SetPointTemperaturaDormitorioABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoJLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -877,6 +986,14 @@ READPresionoJL: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
    STS HisterisisTemperaturaDormitorioH,R5
+   ;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts HisterisisTemperaturaDormitorioABS,r5
+
 READPresionoJH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -886,6 +1003,12 @@ READPresionoJH:
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS HisterisisTemperaturaDormitorioL,R5
+;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,HisterisisTemperaturaDormitorioABS
+	ADD R5,R16
+	sts HisterisisTemperaturaDormitorioABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoKLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -914,6 +1037,15 @@ READPresionoKL: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS LuzExteriorMinimaH,R5
+;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts LuzExteriorMinimaABS,r5
+
+
 READPresionoKH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -923,6 +1055,13 @@ READPresionoKH:
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS LuzExteriorMinimaL,R5
+	
+;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,LuzExteriorMinimaABS
+	ADD R5,R16
+	sts LuzExteriorMinimaABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoMLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -951,6 +1090,13 @@ READPresionoML: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS SetPointLuzDormitorioH,R5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts SetPointLuzDormitorioABS,r5
 READPresionoMH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -960,6 +1106,12 @@ READPresionoMH:
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS SetPointLuzDormitorioL,R5
+	;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,SetPointLuzDormitorioABS
+	ADD R5,R16
+	sts SetPointLuzDormitorioABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoLLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -988,6 +1140,13 @@ READPresionoLL: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS HisterisisLuzDormitorioH,R5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts HisterisisLuzDormitorioABS,r5
 READPresionoLH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -997,6 +1156,12 @@ READPresionoLH:
 	; R5 contiene el valor que deseas guardar en la posición de memoria 0x312.
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS HisterisisLuzDormitorioL,R5
+	;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,HisterisisLuzDormitorioABS
+	ADD R5,R16
+	sts HisterisisLuzDormitorioABS,r5
 	JMP MensajeFinalDeCambiodevalor
 PresionoOLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -1025,6 +1190,14 @@ READPresionoOL: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
     ; Guardar R5 en la dirección de memoria 0x312.
 	STS SetPointLuzLCCH,R5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts SetPointLuzLCCABS,r5
+
 READPresionoOH: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -1034,6 +1207,12 @@ READPresionoOH: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
     ; Guardar R5 en la dirección de memoria 0x312.
 	STS SetPointLuzLCCL,R5
+	;Guardamos la parte baja absoluta
+	ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,SetPointLuzLCCABS
+	ADD R5,R16
+	sts SetPointLuzLCCABS,r5
 	JMP Options
 PresionoPLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -1062,6 +1241,13 @@ READPresionoPL: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS HisterisisLuzLCCH,R5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts HisterisisLuzLCCABS,r5
 READPresionoPH:
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART.
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -1072,6 +1258,13 @@ READPresionoPH:
 ; Guardar R5 en la dirección de memoria 0x312.
 	LDI ZH, 0x03    ; Carga el byte alto (0x03) en el registro ZH
     STS HisterisisLuzLCCL,R5
+	;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,HisterisisLuzLCCABS
+	ADD R5,R16
+	sts HisterisisLuzLCCABS,r5
+	JMP MensajeFinalDeCambiodevalor
 	;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HORAS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 PresionoQLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
@@ -1100,6 +1293,13 @@ READDecenaHoraInicioDia: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS DecenaHoraInicioDia,R5
+	;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts HoraInicioDiaABS,r5
 READUnidadHoraInicioDia: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -1109,7 +1309,14 @@ READUnidadHoraInicioDia: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS UnidadHoraInicioDia,R5
-READDecenaMinutoInicioDia: ; leeemos
+	;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,HoraInicioDiaABS
+	ADD R5,R16
+	sts HoraInicioDiaABS,r5
+	JMP MensajeFinalDeCambiodevalor
+/*READDecenaMinutoInicioDia: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
     RJMP READDecenaMinutoInicioDia   ; Si no se ha recibido, espera.
@@ -1128,7 +1335,7 @@ READUnidadMinutoInicioDia: ; leeemos
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS UnidadMinutoInicioDia,R5
 	JMP MensajeFinalDeCambiodevalor
-
+	*/
 PresionoRLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
 	LDI ZL, LOW(CTEXTO <<1)
@@ -1155,7 +1362,15 @@ READDecenaHoraFinDia: ; leeemos
 	STS UDR0, R5  ; Transmite el valor en R5 a través de la UART, para que veamos que metio el usuario
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
-	STS DecenaHoraFinDia,R5
+	STS DecenaHoraFinDia,r5;Guardamos la parte alta absoluta
+ldi r16,48
+SUB r5, r16 ; lo quitamos de ASCII
+ ldi r30,10
+ mul r5,r30
+ mov r5,r0
+ sts HoraFinDiaABS,r5
+
+
 READUnidadHoraFinDia: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -1165,7 +1380,15 @@ READUnidadHoraFinDia: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS UnidadHoraFinDia,R5
-READDecenaMinutoFinDia: ; leeemos
+	
+;Guardamos la parte baja absoluta
+ldi r16,48
+	SUB r5, r16 ; lo quitamos de ASCII
+	LDS R16,HoraFinDiaABS
+	ADD R5,R16
+	sts HoraFinDiaABS,r5
+	JMP MensajeFinalDeCambiodevalor
+/*READDecenaMinutoFinDia: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
     RJMP READDecenaMinutoFinDia   ; Si no se ha recibido, espera.
@@ -1184,6 +1407,7 @@ READUnidadMinutoFinDia: ; leeemos
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS UnidadMinutoFinDia,R5
 	JMP MensajeFinalDeCambiodevalor
+	*/
 PresionoSLejos:
 	LDI ZH, HIGH(CTEXTO <<1)	;Mandamos  que mande el numero 
 	LDI ZL, LOW(CTEXTO <<1)

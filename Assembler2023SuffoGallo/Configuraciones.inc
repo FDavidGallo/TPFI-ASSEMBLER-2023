@@ -66,6 +66,9 @@ ldi r30,0
 	ldi ZH, high(TemperaturaExteriorMinimaL)
     ldi ZL, low(TemperaturaExteriorMinimaL)
 	ST Z, R20
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,10
+	 sts TemperaturaExteriorMinimaABS,r16
 	;B
 	LDI R20, '3'
 	ldi ZH, high(TemperaturaExteriorMaximaH)
@@ -75,6 +78,10 @@ ldi r30,0
 	ldi ZH, high(TemperaturaExteriorMaximaL)
     ldi ZL, low(TemperaturaExteriorMaximaL)
 	ST Z, R20
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,32
+	sts TemperaturaExteriorMaximaABS,r16
+
 	;C
 	LDI R20, '1'
 	ldi ZH, high(TemperaturaLCCMinimaH)
@@ -84,6 +91,9 @@ ldi r30,0
 	ldi ZH, high(TemperaturaLCCMinimaL)
     ldi ZL, low(TemperaturaLCCMinimaL)
 	ST Z, R20
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,18
+	sts TemperaturaLCCMinimaABS,r16
 	;------------------------------------>
 	;D
 	LDI R20, '2'
@@ -93,7 +103,11 @@ ldi r30,0
 	LDI R20, '6'
 	ldi ZH, high(TemperaturaLCCMaximaL)
     ldi ZL, low(TemperaturaLCCMaximaL)
-	ST Z, R20
+	ST Z, R20;>>>
+	
+	;Guardamos la variable ABSOLUTA DE CONTROL
+ldi r16,26
+ sts TemperaturaLCCMaximaABS,r16
 	;E
 	ldi r30,0
 	LDI R20, '2'
@@ -103,7 +117,12 @@ ldi r30,0
 	LDI R20, '4'
 	ldi ZH, high(SetPointTemperaturaLCCL)
     ldi ZL, low(SetPointTemperaturaLCCL)
-	ST Z, R20
+	ST Z, R20;>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+ldi r16,24
+ sts SetPointTemperaturaLCCABS,r16
+
+
 	;F
 	LDI R20, '0'
 	ldi ZH, high(HisterisisTemperaturaLCCH)
@@ -112,7 +131,12 @@ ldi r30,0
 	LDI R20, '1'
 	ldi ZH, high(HisterisisTemperaturaLCCL)
     ldi ZL, low(HisterisisTemperaturaLCCL)
-	ST Z, R20
+	ST Z, R20;>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+ldi r16,01
+ sts HisterisisTemperaturaLCCABS,r16
+
+
 	;G
 	LDI R20, '2'
 	ldi ZH, high(TemperaturaDormitorioMaximaH)
@@ -121,7 +145,12 @@ ldi r30,0
 	LDI R20, '6'
 	ldi ZH, high(TemperaturaDormitorioMaximaL)
     ldi ZL, low(TemperaturaDormitorioMaximaL)
-	ST Z, R20
+	ST Z, R20;>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+ldi r16,26
+ sts TemperaturaDormitorioMaximaABS,r16
+
+
 	;------
 	;H
 	LDI R20, '1'
@@ -131,7 +160,11 @@ ldi r30,0
 	LDI R20, '8'
 	ldi ZH, high(TemperaturaDormitorioMinimaL)
     ldi ZL, low(TemperaturaDormitorioMinimaL)
-	ST Z, R20
+	ST Z,r20;>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+    ldi r16,18
+    sts TemperaturaDormitorioMinimaABS,r16
+
 	;I
 	LDI R20, '2'
 	ldi ZH, high(SetPointTemperaturaDormitorioH)
@@ -140,7 +173,11 @@ ldi r30,0
 	LDI R20, '4'
 	ldi ZH, high(SetPointTemperaturaDormitorioL)
     ldi ZL, low(SetPointTemperaturaDormitorioL)
-	ST Z, R20
+	ST Z, R20;>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,24
+	 sts SetPointTemperaturaDormitorioABS,r16
+
 	;J
 	LDI R20, '0'
 	ldi ZH, high(HisterisisTemperaturaDormitorioH)
@@ -149,7 +186,10 @@ ldi r30,0
 	LDI R20, '1'
 	ldi ZH, high(HisterisisTemperaturaDormitorioL)
     ldi ZL, low(HisterisisTemperaturaDormitorioL)
-	ST Z, R20
+	ST Z, R20;>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,01
+	sts HisterisisTemperaturaDormitorioABS,r16
 	;K
 	LDI R20, '0'
 	ldi ZH, high(LuzExteriorMinimaH)
@@ -159,16 +199,11 @@ ldi r30,0
 				 ; «Electro-Optics Handbook» (pdf). burle.com. pp. p. 63. Archivado desde el original el 20 de diciembre de 2008. Consultado el 26 de octubre de 2023.
 	ldi ZH, high(LuzExteriorMinimaL)
     ldi ZL, low(LuzExteriorMinimaL)
-	ST Z, R20
-	;J
-	LDI R20, '0'
-	ldi ZH, high(HisterisisTemperaturaDormitorioH)
-    ldi ZL, low(HisterisisTemperaturaDormitorioH)
-	ST Z, R20
-	LDI R20, '1'
-	ldi ZH, high(HisterisisTemperaturaDormitorioL)
-    ldi ZL, low(HisterisisTemperaturaDormitorioL)
-	ST Z, R20
+	ST Z, R20;>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+ldi r16,01
+ sts LuzExteriorMinimaABS,r16
+
 	;M
 	LDI R20, '5'
 	ldi ZH, high(SetPointLuzDormitorioH)
@@ -177,7 +212,11 @@ ldi r30,0
 	LDI R20, '0'
 	ldi ZH, high(SetPointLuzDormitorioL)
     ldi ZL, low(SetPointLuzDormitorioL)
-	ST Z, R20
+	ST Z, R20;>>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,5
+	sts SetPointLuzDormitorioABS,r16
+
 	;L
 	LDI R20, '0'
 	ldi ZH, high(HisterisisLuzDormitorioH)
@@ -186,7 +225,11 @@ ldi r30,0
 	LDI R20, '1'
 	ldi ZH, high(HisterisisLuzDormitorioL)
     ldi ZL, low(HisterisisLuzDormitorioL)
-	ST Z, R20
+	ST Z, R20;>>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+ldi r16,1
+ sts HisterisisLuzDormitorioABS,r16
+
 	;O
 	LDI R20, '5'
 	ldi ZH, high(SetPointLuzLCCH)
@@ -195,7 +238,12 @@ ldi r30,0
 	LDI R20, '0'
 	ldi ZH, high(SetPointLuzLCCL)
     ldi ZL, low(SetPointLuzLCCL)
-	ST Z, R20
+	ST Z, R20;>>>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,50
+	sts SetPointLuzLCCABS,r16
+
+
 	;P
 	LDI R20, '0'
 	ldi ZH, high(HisterisisLuzLCCH)
@@ -204,24 +252,32 @@ ldi r30,0
 	LDI R20, '7'
 	ldi ZH, high(HisterisisLuzLCCL)
     ldi ZL, low(HisterisisLuzLCCL)
-	ST Z, R20
+	ST Z, R20;>>>>>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,7
+	 sts HisterisisLuzLCCABS,r16
+
 		;Q
 	LDI R20, '0'
 	ldi ZH, high(DecenaHoraInicioDia)
     ldi ZL, low(DecenaHoraInicioDia)
 	ST Z, R20
-	LDI R20, '5'
+	LDI R20, '6'
 	ldi ZH, high(UnidadHoraInicioDia)
     ldi ZL, low(UnidadHoraInicioDia)
 	ST Z, R20
-	LDI R20, '3'
+	LDI R20, '0'
 	ldi ZH, high(DecenaMinutoInicioDia)
     ldi ZL, low(DecenaMinutoInicioDia)
 	ST Z, R20
 	LDI R20, '0'
 	ldi ZH, high(UnidadMinutoInicioDia)
     ldi ZL, low(UnidadMinutoInicioDia)
-	ST Z, R20
+	ST Z, R20;>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,6
+	sts HoraInicioDiaABS,r16
+
 		;R
 	LDI R20, '1'
 	ldi ZH, high(DecenaHoraFinDia)
@@ -231,14 +287,17 @@ ldi r30,0
 	ldi ZH, high(UnidadHoraFinDia)
     ldi ZL, low(UnidadHoraFinDia)
 	ST Z, R20
-	LDI R20, '3'
+	LDI R20, '0'
 	ldi ZH, high(DecenaMinutoFinDia)
     ldi ZL, low(DecenaMinutoFinDia)
 	ST Z, R20
 	LDI R20, '0'
 	ldi ZH, high(UnidadMinutoFinDia)
     ldi ZL, low(UnidadMinutoFinDia)
-	ST Z, R20
+	ST Z, R20;>>>>>>
+	;Guardamos la variable ABSOLUTA DE CONTROL
+	ldi r16,19
+	sts HoraFinDiaABS,r16
 	RET
 	ReincioMedciones:
 	

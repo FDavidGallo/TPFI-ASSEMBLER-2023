@@ -16,6 +16,7 @@ Medir:
 				STS MedTemperaturaExteriorH, decena
 				STS MedTemperaturaExteriorL, unidad
 				STS MedTemperaturaExteriorComa, R18 ;guardamos la coma
+				STS MedTemperaturaExteriorABS, R19 ;guardamos la parte entera y absoluta del numero
 		Leer1:
 			  ldi r16,0b01100001 ; 5V del micro como referencia
 			sts ADMUX, r16
@@ -24,6 +25,7 @@ Medir:
 				STS MedTemperaturaLCCH, decena
 				STS MedTemperaturaLCCL, unidad
 				STS MedTemperaturaLCCComa, R18 
+				STS MedTemperaturaLCCABS, R19 ;guardamos la parte entera y absoluta del numero
 		Leer2:
 			 ldi r16,0b01100010 ; 5V del micro como referencia
 			sts ADMUX, r16
@@ -32,6 +34,7 @@ Medir:
 				STS MedTemperaturaDormitorioH, decena
 				STS MedTemperaturaDormitorioL, unidad
 				STS MedTemperaturaDormitorioComa, R18 ;guardamos la coma
+				STS MedTemperaturaDormitorioABS, R19 ;guardamos la parte entera y absoluta del numero
 		Leer3:
 			 ldi r16,0b01100011 ; 5V del micro como referencia
 			sts ADMUX, r16
@@ -40,6 +43,7 @@ Medir:
 				STS MedLuzLCCH, decena
 				STS MedLuzLCCL,unidad 
 				STS MedLuzLCCDecena, R18 ;guardamos la coma
+				STS MedLuzLCCABS, R19 ;guardamos la parte entera y absoluta del numero
 		Leer4:
 			  ldi r16,0b01100100 ; 5V del micro como referencia
 			sts ADMUX, r16
@@ -48,6 +52,7 @@ Medir:
 				STS MedLuzDormitorioH, decena
 				STS MedLuzDormitorioL,unidad 
 				STS MedLuzDormitorioDecena, R18 ;guardamos la coma
+				STS MedLuzDormitorioABS, R19 ;guardamos la parte entera y absoluta del numero
 		Leer4_medicion:
 			  ldi r16,0b0110010 ; 5V del micro como referencia
 			sts ADMUX, r16
@@ -56,6 +61,7 @@ Medir:
 			   STS MedLuzExteriorH, decena
 			   STS MedLuzExteriorL,unidad 
 			   STS MedLuzExteriorDecena, R18 ;guardamos la coma
+			   STS MedLuzExteriorABS, R19 ;guardamos la parte entera y absoluta del numero
 	RET
 		
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

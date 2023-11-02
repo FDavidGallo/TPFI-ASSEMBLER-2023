@@ -12,9 +12,8 @@
 ;|	   INCIO DE LAS VARIABLES DE MEDICIONES      |
 ;=================================================
 .dseg
-.org 0x0420
+.org 0x0280
 C50GesimoDeSegundoo: .byte 1 ;
-.org 0x320
 DecenaHora: .byte 1 
 HoraABS: .BYTE 1
 UnidadHora: .byte 1	
@@ -141,3 +140,71 @@ UnidadMinutoFinDia: .byte 1;			R
 Separador19: .byte 2
 ConfiguracionesValidas: .byte 1;	'0'=Valido  'A'=Existe algo mal 
 Separador20: .byte 2
+
+; _____      ______    ____       __  __      ____       ______      _____       __  __           
+;/\  _  \    /\__  _\  /\  _`\    /\ \/\ \    /\  _`\    /\__  _\    /\  __`\    /\ \/\ \           ESTAS ESTAN EN FORMATO DECIMAL
+;\ \ \L\ \   \/_/\ \/  \ \ \L\_\  \ \ `\\ \   \ \ \/\_\  \/_/\ \/    \ \ \/\ \   \ \ `\\ \    __    SON ABSOLUTAS
+; \ \  __ \     \ \ \   \ \  _\L   \ \ , ` \   \ \ \/_/_    \ \ \     \ \ \ \ \   \ \ , ` \  /\_\   SU FIN ES DE CONTROL
+;  \ \ \/\ \     \ \ \   \ \ \L\ \  \ \ \`\ \   \ \ \L\ \    \_\ \__   \ \ \_\ \   \ \ \`\ \ \/_/_  
+;   \ \_\ \_\     \ \_\   \ \____/   \ \_\ \_\   \ \____/    /\_____\   \ \_____\   \ \_\ \_\  /\_\ 
+;    \/_/\/_/      \/_/    \/___/     \/_/\/_/    \/___/     \/_____/    \/_____/    \/_/\/_/  \/_/
+
+;================================================================
+;|	   INCIO DE LAS VARIABLES DE MEDICIONES  PARA EL CONTROL    |
+;================================================================
+.dseg
+.org 0x0420
+MedTemperaturaExteriorABS: .byte 1 ;
+separador21: .byte 1 ;
+MedTemperaturaLCCABS: .byte 1 ;
+separador22: .byte 1 ;
+MedTemperaturaDormitorioABS: .byte 1 ;
+separador23: .byte 4 ;
+MedLuzLCCABS: .byte 1 ;
+separador24: .byte 5 
+MedLuzDormitorioABS: .byte 1 ;
+separador25: .byte 5 
+MedLuzExteriorABS: .byte 1 ;
+Separador26: .byte 1 ;
+
+;=====================================================================
+;|	   INCIO DE LAS VARIABLES DE CONFIGURACIONES  PARA EL CONTROL    |
+;=====================================================================
+.org 0x0480
+Separador27: .BYTE 1 ;org 0x176
+TemperaturaExteriorMinimaABS: .byte 1 ;	A
+Separador28: .BYTE 1 ;org 0x173
+TemperaturaExteriorMaximaABS: .byte 1;	B
+Separador29: .BYTE 1 ;org 0x182
+TemperaturaLCCMinimaABS:.byte 1 ;		C
+Separador30: .BYTE 2 ;org 0x188
+TemperaturaLCCMaximaABS: .byte 1 ;		D 
+Separador31: .byte 2
+SetPointTemperaturaLCCABS: .byte 1;		E
+Separador32: .byte 2
+HisterisisTemperaturaLCCABS: .byte 1;	F
+Separador33: .byte 2
+TemperaturaDormitorioMaximaABS: .byte 1;G
+Separador34: .byte 2
+TemperaturaDormitorioMinimaABS: .byte 1;H
+Separador35: .byte 2
+;--------------------------------------------------------------------------------------------------
+SetPointTemperaturaDormitorioABS: .byte 1 ;	I
+Separador36: .BYTE 1 ;org 0x173
+HisterisisTemperaturaDormitorioABS: .byte 1;J
+Separador37: .BYTE 1 ;org 0x182
+LuzExteriorMinimaABS:.byte 1 ;			K
+Separador38: .BYTE 2 ;org 0x188
+SetPointLuzDormitorioABS: .byte 1 ;		M
+Separador39: .byte 2
+HisterisisLuzDormitorioABS: .byte 1;	L
+Separador40: .byte 2
+SetPointLuzLCCABS: .byte 1;				O
+Separador41: .byte 2
+HisterisisLuzLCCABS: .byte 1;			P
+Separador42: .byte 2
+HoraInicioDiaABS: .byte 1;		    	Q
+Separador43: .byte 2
+HoraFinDiaABS: .byte 1;		     	    R
+Separador44: .byte 2
+
