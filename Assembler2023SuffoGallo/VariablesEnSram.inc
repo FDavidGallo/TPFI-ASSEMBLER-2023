@@ -12,8 +12,11 @@
 ;|	   INCIO DE LAS VARIABLES DE MEDICIONES      |
 ;=================================================
 .dseg
-.org 0x0100
+.org 0x0420
+C50GesimoDeSegundoo: .byte 1 ;
+.org 0x320
 DecenaHora: .byte 1 
+HoraABS: .BYTE 1
 UnidadHora: .byte 1	
 SeparadorHora: .byte 1; ESTOS SEPARADOS TIENEN COMO FINALIDAD UNICA SEPARAR CADA "VARIABLE", SOLAMENTE ESTÁN DE GUIA
 DecenaMinuto: .byte 1 
@@ -22,32 +25,32 @@ SeparadorMinuto: .byte 1
 DecenaSegundo: .byte 1 
 UnidadSegundo: .byte 1 
 QuintoDeSegundo: .BYTE 1; 
-C50GesimoDeSegundoo: .byte 1 ;
+
 MedTemperaturaExteriorHH: .byte 1 ;
 MedTemperaturaExteriorH: .byte 1 ;
 MedTemperaturaExteriorL: .byte 1 ;
-MedTemperaturaExteriorComa: .byte 1 ;
+MedTemperaturaExteriorComa: .byte 5 ;
 separadorA: .byte 1 ;
 MedTemperaturaLCCHH: .byte 1 ;
 MedTemperaturaLCCH: .byte 1 ;
 MedTemperaturaLCCL: .byte 1 ;
-MedTemperaturaLCCComa: .byte 1 ;
+MedTemperaturaLCCComa: .byte 5 ;
 separadorB: .byte 1 ;
 MedTemperaturaDormitorioHH: .byte 1 ;
 MedTemperaturaDormitorioH: .byte 1 ;
 MedTemperaturaDormitorioL: .byte 1 ;
 MedTemperaturaDormitorioComa: .byte 1;
-separadorC: .byte 1 ;
+separadorC: .byte 4 ;
 MedLuzLCCHH: .byte 1 ;
 MedLuzLCCH: .byte 1 ;
 MedLuzLCCL: .byte 1 ;
 MedLuzLCCDecena: .byte 1;
-separadorD: .byte 1 
+separadorD: .byte 5 
 MedLuzDormitorioHH: .byte 1 ;
 MedLuzDormitorioH: .byte 1 ;
 MedLuzDormitorioL: .byte 1 ;
 MedLuzDormitorioDecena: .byte 1 ;
-separadorE: .byte 1 
+separadorE: .byte 5 
 MedLuzExteriorHH: .byte 1 ;
 MedLuzExteriorH: .byte 1 ;
 MedLuzExteriorL: .byte 1 ;

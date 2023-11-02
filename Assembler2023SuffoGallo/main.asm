@@ -5,17 +5,8 @@
 ; Author : Fabricio David Gallo
 ;
 ;Incluimos nuestras librerias
-.cseg
- .INCLUDE "division.inc"
- .INCLUDE "ApartadoGraficoText.inc"
- .INCLUDE "division.inc"
- .INCLUDE "ApartadoGraficoCodes.inc"
-.INCLUDE "Configuraciones.inc"
-.INCLUDE "VariablesEnSram.inc"
-.INCLUDE "AtendimientoDeInterrupciones.inc"
-.INCLUDE "desarme.inc"
-.INCLUDE "Control.inc"
-.include "LecturaAdc.inc"
+
+ 
 ;Vector de interrupciones
 .cseg
 .ORG 0x00
@@ -45,6 +36,15 @@ jmp EE_RDY ; EEPROM Ready Handler
 jmp ANA_COMP ; Analog Comparator Handler
 jmp TWI ; 2-wire Serial Interface Handler
 jmp SPM_RDY ; Store Program Memory Ready Handler
+ .INCLUDE "ApartadoGraficoText.inc"
+ .INCLUDE "division.inc"
+ .INCLUDE "ApartadoGraficoCodes.inc"
+.INCLUDE "Configuraciones.inc"
+.INCLUDE "VariablesEnSram.inc"
+.INCLUDE "AtendimientoDeInterrupciones.inc"
+.INCLUDE "desarme.inc"
+.INCLUDE "Control.inc"
+.include "LecturaAdc.inc"
 /*
 PARA MAYOR INFORMACION DIRIJASE A "AtendimientoDeInterrupciones.Inc"
 */

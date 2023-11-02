@@ -6,38 +6,58 @@
 //		Luxómetro Living/Comedor/Cocina>4>PC0(A4)
 //		Luxómetro Exterior>5>PC5(A5)
 // Total de mediciones a hacer: 6
+
 Medir:
 		Leer0:
 			ldi r16,0b01100000 ; 5V del micro como referencia
 			sts ADMUX, r16
-			ldi ZH, high(MedTemperaturaExteriorHH); Posicionamos Z en la primer variable de medición
 			CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+				STS MedTemperaturaExteriorHH, centena
+				STS MedTemperaturaExteriorH, decena
+				STS MedTemperaturaExteriorL, unidad
+				STS MedTemperaturaExteriorComa, R18 ;guardamos la coma
 		Leer1:
 			  ldi r16,0b01100001 ; 5V del micro como referencia
 			sts ADMUX, r16
-			  ldi ZH, high(MedTemperaturaLCCHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+			  STS MedTemperaturaLCCHH, centena
+				STS MedTemperaturaLCCH, decena
+				STS MedTemperaturaLCCL, unidad
+				STS MedTemperaturaLCCComa, R18 
 		Leer2:
 			 ldi r16,0b01100010 ; 5V del micro como referencia
 			sts ADMUX, r16
-			  ldi ZH, high(MedTemperaturaDormitorioHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+			  STS MedTemperaturaDormitorioHH, centena
+				STS MedTemperaturaDormitorioH, decena
+				STS MedTemperaturaDormitorioL, unidad
+				STS MedTemperaturaDormitorioComa, R18 ;guardamos la coma
 		Leer3:
 			 ldi r16,0b01100011 ; 5V del micro como referencia
 			sts ADMUX, r16
-			  ldi ZH, high(MedLuzLCCHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+			    STS MedLuzLCCHH, centena
+				STS MedLuzLCCH, decena
+				STS MedLuzLCCL,unidad 
+				STS MedLuzLCCDecena, R18 ;guardamos la coma
 		Leer4:
 			  ldi r16,0b01100100 ; 5V del micro como referencia
 			sts ADMUX, r16
-			  ldi ZH, high(MedLuzDormitorioHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+			  STS MedLuzDormitorioHH, centena
+				STS MedLuzDormitorioH, decena
+				STS MedLuzDormitorioL,unidad 
+				STS MedLuzDormitorioDecena, R18 ;guardamos la coma
 		Leer4_medicion:
-			  ldi r16,0b01100101 ; 5V del micro como referencia
+			  ldi r16,0b0110010 ; 5V del micro como referencia
 			sts ADMUX, r16
-			  ldi ZH, high(MedLuzExteriorHH); Posicionamos Z en la primer variable de medición
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
-		RET
+			   STS MedLuzExteriorHH, centena
+			   STS MedLuzExteriorH, decena
+			   STS MedLuzExteriorL,unidad 
+			   STS MedLuzExteriorDecena, R18 ;guardamos la coma
+	RET
+		
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ; ANTES DE UTILIZAR LAS FUNCIONES "Reconstruir", se debe cargar el puntero Z con la posición incial de lo que se desea pasar de ASCII a 
 ; decimal...
@@ -297,4 +317,4 @@ Setentadiv102:
 Ochentadiv102:
 							LDI R16,5
 							ADD R25,R16
-							RET ; LISTO
+							RET ; LISTO */

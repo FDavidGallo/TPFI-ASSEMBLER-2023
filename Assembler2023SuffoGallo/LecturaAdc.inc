@@ -27,17 +27,16 @@
 .def centena = r22
 
 InicioADC:
-			CALL GuardarCosasAdc ;Guardamos lo que hacía el micro
-								 ;Setemos todo a 0:
+
+;			jmp GuardarCosasAdc ;Guardamos lo que hacía el micro
+							 ;Setemos todo a 0:
+								 InicioADC2:
 			ldi unidad,0
 			ldi decena, 0
 			ldi centena,0
 			ldi R18,0
 			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
 			out DDRC, r16
-			lds r16,ADMUX ; CARGAMOS ADMUX A r16
-			or  r16,R5	; hacemos un or con sensor selecionado (via R5)
-			sts ADMUX, r16; indicamos en ADMUX que sensor medir
 			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
 
 CICLO_ADC:
@@ -55,14 +54,8 @@ CICLO_ADC:
 	add decena, r17
 	add centena,r17
 	; Ahora, teniendo todo en ASCII, pasamos a guardarlas una por una en la memoria:
-	ST Z+, unidad
-	;INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-	ST Z+, decena
-	;INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-	ST Z+, centena
-	;INC R30 ;Siguiente posición de memoria (aumentando en uno el puntero Z)
-	ST Z, R18 ;guardamos la coma
-	jmp EscupirTodoADC; Que largue todo y volvamos a lo que estaba haciendo el micro
+
+	ret; Que largue todo y volvamos a lo que estaba haciendo el micro
 
 ASCII: ;Vamos a obtener unidad, decena, centena y "Coma":
 		L_CENTENA:
@@ -98,7 +91,7 @@ ASCII: ;Vamos a obtener unidad, decena, centena y "Coma":
 				breq uno
 				cpi r18,0 ; ¿El numero es 00 00 00 00?
 				breq cerooo
-				RET ; Vuelva a CICLO_ADC
+				jmp Main ; Vuelva a CICLO_ADC
 tres:
 		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
 		ret ; Vuelva a CICLO_ADC
@@ -112,39 +105,11 @@ cerooo:
 		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
 		ret ; Vuelva a CICLO_ADC
 
-
 //////////////////////////////////////////////////////////////////
 ;		FUNCIONES	DE	CONTROL	DE "INDEPENDENCIA"	VIA	PILA: 
 //////////////////////////////////////////////////////////////////
- GuardarCosasAdc: ; Para que puedas usar esto sin modificar los registros de tu programa  y que
-			   ; sea 'Independiente' guardamos lo que el micro estaba
-			   ; haciendo antes, para que, al momento de volver no se generen errroes
-		/*PUSH R16
-		PUSH R17
-		PUSH R18
-		PUSH R19
-		PUSH R20
-		PUSH R21
-		PUSH R22
-		PUSH R30 ; Estos dos resultan  de particular importancia, ya que: ZH:ZL son  R31:R30
-		PUSH R31 ; 
-		IN	R17,SREG ;
-		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO */
-		RET
- EscupirTodoADC: ;Es la función contraria a "Guardar cosas", como su  nombre indica devolvemos todo a su lugar
-		   ; haciendo antes, para que, al momento de volver no se generen errroes
-	;	POP R17
-	;	OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-	;	POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-	;	POP R30
-	;	POP R22
-	;	POP R21
-	;	POP R20
-	;	POP R19
-	;	POP R18
-	;	POP R17
-	;	POP R16
-		Ret ; Volvemos a lo que estaba haciendo el micro 
+ ;GuardarCosasAdc: ; Para que puedas usar esto sin modificar los registros de tu programa  y que
+			   ; sea 'Independiente' guardamos lo que el micro eVolvemos a lo que estaba haciendo el micro 
 
 ///////////////////////////////////////////
 ;		FUNCIONES	DE	CONTROL	DEL	ADC: 

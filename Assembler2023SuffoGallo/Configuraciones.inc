@@ -24,7 +24,6 @@ ldi r30,0
 	CALL ConfiguracionPredeterminada ;cargamos la configuración predeterminada
 	ldi ZH, high(DecenaHora); Posicionamos Z en la primer variable de medición
     ldi ZL, low(DecenaHora)
-	DEC ZL
 	LDI R19,40				; Cargamos en r19 la cantidad de mediciones a "Limpiar"
 	Call ReincioMedciones
 	LDI	R16, 0B11111111 ; Configuramos todo el puerto B como salida , tenemos 8 salidas, 8 actuadores...
@@ -33,7 +32,6 @@ ldi r30,0
 	STS	EICRA,R16
 	LDI	R16,(1<<INT0)
 	OUT	EIMSK,R16
-
 	;UNA VEZ TODO CONFIGURADO, HABILITAMOS LAS INTERRUPCIONES, INICIANDO EL FUNCIONAMIENTO NORMAL DEL PROGRAMA
 	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  "ATENDIMIENTODEINTERRUPCIONES.INC"
 	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
@@ -243,14 +241,16 @@ ldi r30,0
 	ST Z, R20
 	RET
 	ReincioMedciones:
-	INC ZL
+	
 	;-------------------------------------------------------------------------
 	;| "LIMPIEZA"      	DE		LAS		OTRAS		VARIABLES	DE	LA SRAM  |
 	;-------------------------------------------------------------------------
 	CPI R19,00
 	BREQ FinLimpieza
 	LDI R20, '0' ; POR DEFECTO NUESTRAS MEDICIONES COMIENZAN POR 0
+	
 	ST Z, R20
+	INC ZL
 	DEC R19
 	rjmp ReincioMedciones
 	

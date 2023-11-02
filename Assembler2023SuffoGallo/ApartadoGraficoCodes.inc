@@ -75,7 +75,6 @@ OPTIONS:
 	BREQ PresionoP
 	RJMP READ
 	ENCENDER_UNO:
-	CALL Medir
 	JMP ENCENDER_UNOLEJOS	
 	ENCENDER_DOS:
 	JMP ENCENDER_DOSLEJOS
@@ -465,6 +464,7 @@ ESPERAR_TX:
 	  STS  UDR0,R20
 	  RET
 ENCENDER_TRESLejos:	
+
 	LDI ZH, HIGH(Datos <<1)	;
 	LDI ZL, LOW(Datos <<1)
 LOOP3D:
@@ -1211,6 +1211,9 @@ READDecenaHora: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS DecenaHora,R5
+	ldi r16,10
+	mul r5,r16
+	STS HoraABS,R1
 READUnidadHora: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -1220,6 +1223,9 @@ READUnidadHora: ; leeemos
 	; R5 contiene el valor q  ue deseas guardar en la posición de memoria 0x312
 ; Guardar R5 en la dirección de memoria 0x312.
 	STS UnidadHora,R5
+	lds r16,HoraABS
+	ADD R16,R5
+	STS HoraABS,R16
 READDecenaMinuto: ; leeemos
     LDS R16, UCSR0A   ; Cargar el registro de estado de la UART
     SBRS R16, RXC0    ; ¿Se ha recibido un carácter?
@@ -1432,6 +1438,11 @@ MostrarMediciones:
 	 LDI R20, 'Z'; Hasta aca bien
 	 CALL ESPERAR_TX
 	 CALL Guion
+	 ldi ZH, high(MedLuzLCCHH)
+     ldi ZL, low(MedLuzLCCHH)
+	 ld r20, Z
+	 sts UDR0, r20
+	 CALL ESPERAR_TX
 	 ldi ZH, high(MedLuzLCCH)
      ldi ZL, low(MedLuzLCCH)
 	 ld r20, Z
