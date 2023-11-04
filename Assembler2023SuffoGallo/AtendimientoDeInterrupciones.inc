@@ -41,6 +41,7 @@ EXT_INT0:
 		PUSH R31 ; puntero que se usa mucho en mi programa
 		IN	R17,SREG ;
 		PUSH	R17	 ; GUARDAMOS EN PILA EL REGISTRO DE ESTADO
+		PUSH R5
 		;Procedemos a preguntar que se guardó en R21, para ver a que parte de la interrrupción toca volver
 		; ¿Porque no usar un call?  Porque modificaria la pila y es algo que no queremos.
 		
@@ -50,11 +51,11 @@ EXT_INT0:
 			cpi R17,50
 			Breq UnSegundo
 		sts C50GesimoDeSegundoo,r17
-		cpi R17,40   ; El control se realiza por cada 0,8 segundos, ligeramente más rapido que las mediciones
-			Breq Controlar
-			Jmp  EscupirTodo
-			Controlar:
-		;Call Control >>>> En desarrollo
+		cpi R17,40   ; El control se realiza por cada 1 segundo, pero desafasado 0,8 segundos (adelantado por unos mS a las mediciones)
+		Breq Controlar ; Esto es para que las interrupciones no se "Solapen" demasiado, empleando menos tiempo.
+		Jmp  EscupirTodo
+		Controlar:
+		Call Control; >>>> En desarrollo
 		jmp EscupirTodo
 		UnSegundo:
 		call Medir
@@ -123,6 +124,7 @@ SumarHora2:
 //	JMP VolverF
 					
  EscupirTodo: ;Es la función contraria a "Guardar cosas", como su  nombre indica devolvemos todo a su lugar
+		POP R5
 		POP R17
 		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
 		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 

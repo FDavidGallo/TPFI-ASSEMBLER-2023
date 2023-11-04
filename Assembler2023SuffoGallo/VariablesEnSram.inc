@@ -12,7 +12,7 @@
 ;|	   INCIO DE LAS VARIABLES DE MEDICIONES      |
 ;=================================================
 .dseg
-.org 0x0280
+.org 0x0150
 C50GesimoDeSegundoo: .byte 1 ;
 DecenaHora: .byte 1 
 HoraABS: .BYTE 1
@@ -79,7 +79,7 @@ SeparadorConfiguracion: .byte 1 ;
 "R-Hora de Fin del Dia", 13, 10
 "S-Configurar Hora Actual/Actualizar Reloj", 13, 10*/
 
-.org 0x0169
+.org 0x0212
 Separador0: .BYTE 1 ;org 0x176
 TemperaturaExteriorMinimaH: .byte 1 ;	A
 TemperaturaExteriorMinimaL: .byte 1 ;	A
@@ -153,7 +153,7 @@ Separador20: .byte 2
 ;|	   INCIO DE LAS VARIABLES DE MEDICIONES  PARA EL CONTROL    |
 ;================================================================
 .dseg
-.org 0x0420
+.org 0x0315
 MedTemperaturaExteriorABS: .byte 1 ;
 separador21: .byte 1 ;
 MedTemperaturaLCCABS: .byte 1 ;
@@ -170,7 +170,7 @@ Separador26: .byte 1 ;
 ;=====================================================================
 ;|	   INCIO DE LAS VARIABLES DE CONFIGURACIONES  PARA EL CONTROL    |
 ;=====================================================================
-.org 0x0480
+.org 0x0375
 Separador27: .BYTE 1 ;org 0x176
 TemperaturaExteriorMinimaABS: .byte 1 ;	A
 Separador28: .BYTE 1 ;org 0x173
@@ -207,4 +207,5 @@ HoraInicioDiaABS: .byte 1;		    	Q
 Separador43: .byte 2
 HoraFinDiaABS: .byte 1;		     	    R
 Separador44: .byte 2
-
+.org 0x0425
+EstadoBit: .byte 1

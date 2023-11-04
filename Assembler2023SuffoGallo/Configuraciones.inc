@@ -133,8 +133,8 @@ ldi r16,24
     ldi ZL, low(HisterisisTemperaturaLCCL)
 	ST Z, R20;>>>
 	;Guardamos la variable ABSOLUTA DE CONTROL
-ldi r16,01
- sts HisterisisTemperaturaLCCABS,r16
+     ldi r16,01
+     sts HisterisisTemperaturaLCCABS,r16
 
 
 	;G
@@ -147,8 +147,8 @@ ldi r16,01
     ldi ZL, low(TemperaturaDormitorioMaximaL)
 	ST Z, R20;>>
 	;Guardamos la variable ABSOLUTA DE CONTROL
-ldi r16,26
- sts TemperaturaDormitorioMaximaABS,r16
+    ldi r16,26
+    sts TemperaturaDormitorioMaximaABS,r16
 
 
 	;------

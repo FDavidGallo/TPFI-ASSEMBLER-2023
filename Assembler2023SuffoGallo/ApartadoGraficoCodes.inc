@@ -18,7 +18,7 @@ TRANSMIT:
 	RJMP LOOP	
 	RET
 END_MESSAGE:
-JMP Controll ;>>>> EN DESARROLLO   TODAVIA  
+;JMP Controll ;>>>> EN DESARROLLO   TODAVIA  
 ;LA SIGUIENTE SECCIÓN CONTIENE EL "CORAZÓN" DEL PROGRAMA
 ; CON READ SE LEE SI SE ENVIÓ ALGO POR LA UART, OPTIONS 
 READ:
@@ -1504,7 +1504,7 @@ APAGAR4:
 	JMP Options
 	jmp READ
 MostrarMediciones:
-	  LDI R20, 'T'; 
+	 LDI R20, 'T'; 
 	 CALL ESPERAR_TX
 	 Call Guion
 	 ldi ZH, high(DecenaHora)
@@ -1630,7 +1630,7 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 CALL Cero
+	 ;CALL Cero
 	 CALL Espacio
 	 Call Salto
 	 LDI R20, 'Y'; Hasta aca bien
@@ -1656,7 +1656,7 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 CALL Cero
+	 ;CALL Cero
 	 CALL Espacio
 	 Call Salto
 	 LDI R20, 'Z'; Hasta aca bien
@@ -1682,7 +1682,7 @@ MostrarMediciones:
 	 ld r20, Z
 	 sts UDR0, r20
 	 CALL ESPERAR_TX
-	 CALL Cero
+	 ;CALL Cero
 	 CALL Espacio
 	 JMP Options
 DELAY:
