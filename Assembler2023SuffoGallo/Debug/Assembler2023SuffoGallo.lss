@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Sat Nov 04 06:12:15 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Mon Nov 06 23:43:28 2023
 
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(39): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
@@ -5975,97 +5975,101 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		; ¿Porque no usar un call?  Porque modificaria la pila y es algo que no queremos.
                                  		
 001290 9110 0150                 		lds r17,C50GesimoDeSegundoo
-                                 	
 001292 9513                      		inc r17
-001293 3312                      			cpi R17,50
-001294 f051                      			Breq UnSegundo
+001293 3312                      		cpi R17,50
+001294 f081                      		Breq UnSegundo
 001295 9310 0150                 		sts C50GesimoDeSegundoo,r17
-001297 3218                      		cpi R17,40   ; El control se realiza por cada 1 segundo, pero desafasado 0,8 segundos (adelantado por unos mS a las mediciones)
-001298 f011                      		Breq Controlar ; Esto es para que las interrupciones no se "Solapen" demasiado, empleando menos tiempo.
-001299 940c 12ef                 		Jmp  EscupirTodo
-                                 		Controlar:
-00129b 940e 1428                 		Call Control; >>>> En desarrollo
-00129d 940c 12ef                 		jmp EscupirTodo
+001297 3218                      		cpi R17,40   ; El control de la luz se realiza por cada 1 segundo, pero desafasado 0,8 segundos (adelantado por unos mS a las mediciones)
+001298 f041                      		Breq ControlarLuz ; Esto es para que las interrupciones no se "Solapen" demasiado, empleando menos tiempo.
+001299 311e                      		Cpi R17,30
+00129a f011                      		Breq ControlarTemperatura; ; El control de la temperatura se realiza por cada 1 segundo, 
+00129b 940c 12f5                 		Jmp  EscupirTodo ;pero desafasado  (adelantado por unos mS al control de la luz)
+                                 		ControlarTemperatura:
+00129d 940e 14a9                 		Call ControlTemp; >>>> En desarrollo
+00129f 940c 12f5                 		jmp EscupirTodo
+                                 		ControlarLuz:
+0012a1 940e 142e                 		Call ControlLuz; >>>> En desarrollo
+0012a3 940c 12f5                 		jmp EscupirTodo
                                  		UnSegundo:
-00129f 940e 12fc                 		call Medir
-0012a1 e010                      		ldi r17,0
-0012a2 9310 0150                 		sts C50GesimoDeSegundoo,r17
-0012a4 9110 0159                 		lds r17,UnidadSegundo
-0012a6 9513                      		inc r17
-0012a7 331c                      	    cpi R17,60
-0012a8 f021                      		Breq SumarMinuto
-0012a9 9310 0159                 		sts UnidadSegundo,r17
+0012a5 940e 1302                 		call Medir
+0012a7 e010                      		ldi r17,0
+0012a8 9310 0150                 		sts C50GesimoDeSegundoo,r17
+0012aa 9110 0159                 		lds r17,UnidadSegundo
+0012ac 9513                      		inc r17
+0012ad 331c                      	    cpi R17,60
+0012ae f021                      		Breq SumarMinuto
+0012af 9310 0159                 		sts UnidadSegundo,r17
                                  		 ;jmp VERDADERO
                                  		;call medir
-0012ab 940c 12ef                 		Jmp  EscupirTodo
+0012b1 940c 12f5                 		Jmp  EscupirTodo
                                  
                                  		SumarMinuto:
-0012ad e010                      		ldi r17,0
-0012ae 9310 0159                 		sts UnidadSegundo,r17
-0012b0 9110 0156                 		lds r17,UnidadMinuto
-0012b2 9513                      		inc r17
-0012b3 3319                      	    cpi R17,'9'
-0012b4 f021                      		Breq SumarMinuto2
-0012b5 9310 0156                 		sts UnidadMinuto,r17
-0012b7 940c 12ef                 		Jmp  EscupirTodo
+0012b3 e010                      		ldi r17,0
+0012b4 9310 0159                 		sts UnidadSegundo,r17
+0012b6 9110 0156                 		lds r17,UnidadMinuto
+0012b8 9513                      		inc r17
+0012b9 3319                      	    cpi R17,'9'
+0012ba f021                      		Breq SumarMinuto2
+0012bb 9310 0156                 		sts UnidadMinuto,r17
+0012bd 940c 12f5                 		Jmp  EscupirTodo
                                  		SumarMinuto2:
-0012b9 e310                      		ldi r17,'0'
-0012ba 9310 0156                 		sts UnidadMinuto,r17
+0012bf e310                      		ldi r17,'0'
+0012c0 9310 0156                 		sts UnidadMinuto,r17
                                  		 
-0012bc 9110 0155                 		lds r17,DecenaMinuto
-0012be 3315                      		cpi R17,'5'
-0012bf f029                      		Breq SumarHora
-0012c0 9513                      		inc r17
-0012c1 9310 0155                 		sts DecenaMinuto,r17
-0012c3 940c 12ef                 		Jmp  EscupirTodo
+0012c2 9110 0155                 		lds r17,DecenaMinuto
+0012c4 3315                      		cpi R17,'5'
+0012c5 f029                      		Breq SumarHora
+0012c6 9513                      		inc r17
+0012c7 9310 0155                 		sts DecenaMinuto,r17
+0012c9 940c 12f5                 		Jmp  EscupirTodo
                                  SumarHora:
-0012c5 e310                      		ldi r17,'0'
-0012c6 9310 0155                 		sts DecenaMinuto,r17
-0012c8 9110 0152                 		lds r17,HoraABS
-0012ca 9513                      		 INC R17
-0012cb 3118                      		 cpi r17,24
-0012cc f4a8                      		 Brsh Finn
-0012cd 9310 0152                 		 STS HoraABS,R17
-0012cf 9110 0153                 		lds r17,UnidadHora
-0012d1 3319                      		cpi R17,'9'
-0012d2 f029                      		Breq SumarHora2
-0012d3 9513                      		inc r17
-0012d4 9310 0153                 		sts UnidadHora,r17
-0012d6 940c 12ef                 		Jmp  EscupirTodo
+0012cb e310                      		ldi r17,'0'
+0012cc 9310 0155                 		sts DecenaMinuto,r17
+0012ce 9110 0152                 		lds r17,HoraABS
+0012d0 9513                      		 INC R17
+0012d1 3118                      		 cpi r17,24
+0012d2 f4a8                      		 Brsh Finn
+0012d3 9310 0152                 		 STS HoraABS,R17
+0012d5 9110 0153                 		lds r17,UnidadHora
+0012d7 3319                      		cpi R17,'9'
+0012d8 f029                      		Breq SumarHora2
+0012d9 9513                      		inc r17
+0012da 9310 0153                 		sts UnidadHora,r17
+0012dc 940c 12f5                 		Jmp  EscupirTodo
                                  
                                  SumarHora2:
-0012d8 e310                      		ldi r17,'0'
-0012d9 9310 0153                 		sts UnidadHora,r17
-0012db 9110 0151                 		lds r17,DecenaHora
-0012dd 9513                      		inc r17
-0012de 9310 0151                 		sts DecenaHora,r17
-0012e0 940c 12ef                 		Jmp  EscupirTodo
+0012de e310                      		ldi r17,'0'
+0012df 9310 0153                 		sts UnidadHora,r17
+0012e1 9110 0151                 		lds r17,DecenaHora
+0012e3 9513                      		inc r17
+0012e4 9310 0151                 		sts DecenaHora,r17
+0012e6 940c 12f5                 		Jmp  EscupirTodo
                                  		Finn:
-0012e2 9110 0153                 		lds r17,UnidadHora
-0012e4 e310                      		ldi r17,'0'
-0012e5 9310 0153                 		sts UnidadHora,r17
-0012e7 e310                      		ldi r17,'0'
-0012e8 9310 0151                 		sts DecenaHora,r17
-0012ea e010                      				ldi r17,0
-0012eb 9310 0152                 		sts HoraABS,r17
-0012ed 940c 12ef                 		Jmp  EscupirTodo
+0012e8 9110 0153                 		lds r17,UnidadHora
+0012ea e310                      		ldi r17,'0'
+0012eb 9310 0153                 		sts UnidadHora,r17
+0012ed e310                      		ldi r17,'0'
+0012ee 9310 0151                 		sts DecenaHora,r17
+0012f0 e010                      				ldi r17,0
+0012f1 9310 0152                 		sts HoraABS,r17
+0012f3 940c 12f5                 		Jmp  EscupirTodo
                                  
                                  //	JMP VolverF
                                  					
                                   EscupirTodo: ;Es la función contraria a "Guardar cosas", como su  nombre indica devolvemos todo a su lugar
-0012ef 905f                      		POP R5
-0012f0 911f                      		POP R17
-0012f1 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
-0012f2 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
-0012f3 91ef                      		POP R30
-0012f4 914f                      		POP R20
-0012f5 913f                      		POP R19
-0012f6 912f                      		POP R18
-0012f7 911f                      		POP R17
-0012f8 910f                      		POP R16
-0012f9 90cf                      		POP R12
-0012fa 919f                      		POP R25
-0012fb 9518                      		RETI
+0012f5 905f                      		POP R5
+0012f6 911f                      		POP R17
+0012f7 bf1f                      		OUT SREG,R17 ; DEVOLVEMOS EL REGISTRO DE ESTADO A SU LUGAR 
+0012f8 91ff                      		POP R31 ; Por la naturaleza de la pila, se devuelven las cosas en orden inverso 
+0012f9 91ef                      		POP R30
+0012fa 914f                      		POP R20
+0012fb 913f                      		POP R19
+0012fc 912f                      		POP R18
+0012fd 911f                      		POP R17
+0012fe 910f                      		POP R16
+0012ff 90cf                      		POP R12
+001300 919f                      		POP R25
+001301 9518                      		RETI
                                  		
                                  .INCLUDE "desarme.inc"
                                  
@@ -6079,60 +6083,60 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  
                                  Medir:
                                  		Leer0:
-0012fc e600                      			ldi r16,0b01100000 ; 5V del micro como referencia
-0012fd 9300 007c                 			sts ADMUX, r16
-0012ff 940e 14a3                 			CALL InicioADC ;dirijase a:"LecturaAdc.inc"
-001301 9360 015b                 				STS MedTemperaturaExteriorHH, centena
-001303 9350 015c                 				STS MedTemperaturaExteriorH, decena
-001305 9340 015d                 				STS MedTemperaturaExteriorL, unidad
-001307 9320 015e                 				STS MedTemperaturaExteriorComa, R18 ;guardamos la coma
-001309 9330 0315                 				STS MedTemperaturaExteriorABS, R19 ;guardamos la parte entera y absoluta del numero
+001302 e600                      			ldi r16,0b01100000 ; 5V del micro como referencia
+001303 9300 007c                 			sts ADMUX, r16
+001305 940e 151e                 			CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001307 9360 015b                 				STS MedTemperaturaExteriorHH, centena
+001309 9350 015c                 				STS MedTemperaturaExteriorH, decena
+00130b 9340 015d                 				STS MedTemperaturaExteriorL, unidad
+00130d 9320 015e                 				STS MedTemperaturaExteriorComa, R18 ;guardamos la coma
+00130f 9330 0315                 				STS MedTemperaturaExteriorABS, R19 ;guardamos la parte entera y absoluta del numero
                                  		Leer1:
-00130b e601                      			  ldi r16,0b01100001 ; 5V del micro como referencia
-00130c 9300 007c                 			sts ADMUX, r16
-00130e 940e 14a3                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
-001310 9360 0164                 			  STS MedTemperaturaLCCHH, centena
-001312 9350 0165                 				STS MedTemperaturaLCCH, decena
-001314 9340 0166                 				STS MedTemperaturaLCCL, unidad
-001316 9320 0167                 				STS MedTemperaturaLCCComa, R18 
-001318 9330 0317                 				STS MedTemperaturaLCCABS, R19 ;guardamos la parte entera y absoluta del numero
+001311 e601                      			  ldi r16,0b01100001 ; 5V del micro como referencia
+001312 9300 007c                 			sts ADMUX, r16
+001314 940e 151e                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001316 9360 0164                 			  STS MedTemperaturaLCCHH, centena
+001318 9350 0165                 				STS MedTemperaturaLCCH, decena
+00131a 9340 0166                 				STS MedTemperaturaLCCL, unidad
+00131c 9320 0167                 				STS MedTemperaturaLCCComa, R18 
+00131e 9330 0317                 				STS MedTemperaturaLCCABS, R19 ;guardamos la parte entera y absoluta del numero
                                  		Leer2:
-00131a e602                      			 ldi r16,0b01100010 ; 5V del micro como referencia
-00131b 9300 007c                 			sts ADMUX, r16
-00131d 940e 14a3                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
-00131f 9360 016d                 			  STS MedTemperaturaDormitorioHH, centena
-001321 9350 016e                 				STS MedTemperaturaDormitorioH, decena
-001323 9340 016f                 				STS MedTemperaturaDormitorioL, unidad
-001325 9320 0170                 				STS MedTemperaturaDormitorioComa, R18 ;guardamos la coma
-001327 9330 0319                 				STS MedTemperaturaDormitorioABS, R19 ;guardamos la parte entera y absoluta del numero
+001320 e602                      			 ldi r16,0b01100010 ; 5V del micro como referencia
+001321 9300 007c                 			sts ADMUX, r16
+001323 940e 151e                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001325 9360 016d                 			  STS MedTemperaturaDormitorioHH, centena
+001327 9350 016e                 				STS MedTemperaturaDormitorioH, decena
+001329 9340 016f                 				STS MedTemperaturaDormitorioL, unidad
+00132b 9320 0170                 				STS MedTemperaturaDormitorioComa, R18 ;guardamos la coma
+00132d 9330 0319                 				STS MedTemperaturaDormitorioABS, R19 ;guardamos la parte entera y absoluta del numero
                                  		Leer3:
-001329 e603                      			 ldi r16,0b01100011 ; 5V del micro como referencia
-00132a 9300 007c                 			sts ADMUX, r16
-00132c 940e 14a3                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
-00132e 9360 0175                 			    STS MedLuzLCCHH, centena
-001330 9350 0176                 				STS MedLuzLCCH, decena
-001332 9340 0177                 				STS MedLuzLCCL,unidad 
-001334 9320 0178                 				STS MedLuzLCCDecena, R18 ;guardamos la coma
-001336 9330 031e                 				STS MedLuzLCCABS, R19 ;guardamos la parte entera y absoluta del numero
+00132f e603                      			 ldi r16,0b01100011 ; 5V del micro como referencia
+001330 9300 007c                 			sts ADMUX, r16
+001332 940e 151e                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001334 9360 0175                 			    STS MedLuzLCCHH, centena
+001336 9350 0176                 				STS MedLuzLCCH, decena
+001338 9340 0177                 				STS MedLuzLCCL,unidad 
+00133a 9320 0178                 				STS MedLuzLCCDecena, R18 ;guardamos la coma
+00133c 9330 031e                 				STS MedLuzLCCABS, R19 ;guardamos la parte entera y absoluta del numero
                                  		Leer4:
-001338 e604                      			  ldi r16,0b01100100 ; 5V del micro como referencia
-001339 9300 007c                 			sts ADMUX, r16
-00133b 940e 14a3                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
-00133d 9360 017e                 			  STS MedLuzDormitorioHH, centena
-00133f 9350 017f                 				STS MedLuzDormitorioH, decena
-001341 9340 0180                 				STS MedLuzDormitorioL,unidad 
-001343 9320 0181                 				STS MedLuzDormitorioDecena, R18 ;guardamos la coma
-001345 9330 0324                 				STS MedLuzDormitorioABS, R19 ;guardamos la parte entera y absoluta del numero
+00133e e604                      			  ldi r16,0b01100100 ; 5V del micro como referencia
+00133f 9300 007c                 			sts ADMUX, r16
+001341 940e 151e                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001343 9360 017e                 			  STS MedLuzDormitorioHH, centena
+001345 9350 017f                 				STS MedLuzDormitorioH, decena
+001347 9340 0180                 				STS MedLuzDormitorioL,unidad 
+001349 9320 0181                 				STS MedLuzDormitorioDecena, R18 ;guardamos la coma
+00134b 9330 0324                 				STS MedLuzDormitorioABS, R19 ;guardamos la parte entera y absoluta del numero
                                  		Leer4_medicion:
-001347 e302                      			  ldi r16,0b0110010 ; 5V del micro como referencia
-001348 9300 007c                 			sts ADMUX, r16
-00134a 940e 14a3                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
-00134c 9360 0187                 			   STS MedLuzExteriorHH, centena
-00134e 9350 0188                 			   STS MedLuzExteriorH, decena
-001350 9340 0189                 			   STS MedLuzExteriorL,unidad 
-001352 9320 018a                 			   STS MedLuzExteriorDecena, R18 ;guardamos la coma
-001354 9330 032a                 			   STS MedLuzExteriorABS, R19 ;guardamos la parte entera y absoluta del numero
-001356 9508                      	RET
+00134d e302                      			  ldi r16,0b0110010 ; 5V del micro como referencia
+00134e 9300 007c                 			sts ADMUX, r16
+001350 940e 151e                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001352 9360 0187                 			   STS MedLuzExteriorHH, centena
+001354 9350 0188                 			   STS MedLuzExteriorH, decena
+001356 9340 0189                 			   STS MedLuzExteriorL,unidad 
+001358 9320 018a                 			   STS MedLuzExteriorDecena, R18 ;guardamos la coma
+00135a 9330 032a                 			   STS MedLuzExteriorABS, R19 ;guardamos la parte entera y absoluta del numero
+00135c 9508                      	RET
                                  		
                                  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                  ; ANTES DE UTILIZAR LAS FUNCIONES "Reconstruir", se debe cargar el puntero Z con la posición incial de lo que se desea pasar de ASCII a 
@@ -6140,261 +6144,261 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                   ReconstruirMedicion: ; esta funcion agarra lo que se encuentra en 3 bits ASCII, para guardarle en 1, en decimal.
                                  			 ; Numero:  r18-r19-r20  a guardar en  r17
                                  			 ; Estos registros deben ser cargados por lo que está en Z0, Z1 y Z2, respectivamente
-001357 e010                      			 LDI R17,0
-001358 8120                      			 ld r18, Z
-001359 95e3                      			 inc R30 ; Siguiente posición de z
-00135a 8130                      			 ld r19, Z
-00135b 95e3                      			 inc R30 ; Siguiente posición de z
-00135c 8140                      			 ld r20, Z
+00135d e010                      			 LDI R17,0
+00135e 8120                      			 ld r18, Z
+00135f 95e3                      			 inc R30 ; Siguiente posición de z
+001360 8130                      			 ld r19, Z
+001361 95e3                      			 inc R30 ; Siguiente posición de z
+001362 8140                      			 ld r20, Z
                                  			 ;El procedimiento es el siguiente, explicado mediante un ejemplo:
                                  			 ; '2' - '5' - '5'-> Comparece del 0 al 9,  sumese el valor correspondiente a R17
                                  			 ReconstruirCentena:
-00135d 3321                      			 Cpi R18,'1'
-00135e f031                      			 BREQ Cien		
-00135f 3322                      			 Cpi R18,'2'
-001360 f009                      			 BREQ DOSCien
-001361 9508                      			 Ret
+001363 3321                      			 Cpi R18,'1'
+001364 f031                      			 BREQ Cien		
+001365 3322                      			 Cpi R18,'2'
+001366 f009                      			 BREQ DOSCien
+001367 9508                      			 Ret
                                  	  DOSCien:
-001362 ec08                      							LDI R16,200
-001363 0f10                      							ADD R17,R16
-001364 c003                      							rjmp ReconstruirDecena
+001368 ec08                      							LDI R16,200
+001369 0f10                      							ADD R17,R16
+00136a c003                      							rjmp ReconstruirDecena
                                        Cien:
-001365 e604                      							LDI R16,100
-001366 0f10                      							ADD R17,R16
-001367 c000                      							rjmp ReconstruirDecena
+00136b e604                      							LDI R16,100
+00136c 0f10                      							ADD R17,R16
+00136d c000                      							rjmp ReconstruirDecena
                                  			 ReconstruirDecena:
-001368 3331                      			 Cpi R19,'1'
-001369 f0a1                      			 BREQ Diezzz	  
-00136a 3332                      			 Cpi R19,'2'
-00136b f0a9                      			 BREQ Veinte	 
-00136c 3333                      			 Cpi R19,'3'
-00136d f0b1                      			 BREQ Trenta	 
-00136e 3334                      			 Cpi R19,'4'
-00136f f0b9                      			 BREQ Cuarenta	 
-001370 3335                      			 Cpi R19,'5'
-001371 f0c1                      			 BREQ Cincuenta	  
-001372 3336                      			 Cpi R19,'6'
-001373 f0c9                      			 BREQ Sesenta	
-001374 3337                      			 Cpi R19,'7'
-001375 f0d1                      			 BREQ Setenta		
-001376 3338                      			 Cpi R19,'8'
-001377 f0d9                      			 BREQ Ochenta	
-001378 3339                      			 Cpi R19,'9'
-001379 f009                      			 BREQ Noventa
-00137a 9508                      			 RET
+00136e 3331                      			 Cpi R19,'1'
+00136f f0a1                      			 BREQ Diezzz	  
+001370 3332                      			 Cpi R19,'2'
+001371 f0a9                      			 BREQ Veinte	 
+001372 3333                      			 Cpi R19,'3'
+001373 f0b1                      			 BREQ Trenta	 
+001374 3334                      			 Cpi R19,'4'
+001375 f0b9                      			 BREQ Cuarenta	 
+001376 3335                      			 Cpi R19,'5'
+001377 f0c1                      			 BREQ Cincuenta	  
+001378 3336                      			 Cpi R19,'6'
+001379 f0c9                      			 BREQ Sesenta	
+00137a 3337                      			 Cpi R19,'7'
+00137b f0d1                      			 BREQ Setenta		
+00137c 3338                      			 Cpi R19,'8'
+00137d f0d9                      			 BREQ Ochenta	
+00137e 3339                      			 Cpi R19,'9'
+00137f f009                      			 BREQ Noventa
+001380 9508                      			 RET
                                  Noventa:
-00137b e50a                      							LDI R16,90
-00137c 0f10                      							ADD R17,R16
-00137d c018                      							rjmp ReconstruirUnidad
-                                 Diezzz:
-00137e e00a                      							LDI R16,10
-00137f 0f10                      							ADD R17,R16
-001380 c015                      							rjmp ReconstruirUnidad
-                                 Veinte:
-001381 e104                      							LDI R16,20
+001381 e50a                      							LDI R16,90
 001382 0f10                      							ADD R17,R16
-001383 c012                      							rjmp ReconstruirUnidad
-                                 Trenta:
-001384 e10e                      							LDI R16,30
+001383 c018                      							rjmp ReconstruirUnidad
+                                 Diezzz:
+001384 e00a                      							LDI R16,10
 001385 0f10                      							ADD R17,R16
-001386 c00f                      							rjmp ReconstruirUnidad
-                                  Cuarenta:
-001387 e208                      							LDI R16,40
+001386 c015                      							rjmp ReconstruirUnidad
+                                 Veinte:
+001387 e104                      							LDI R16,20
 001388 0f10                      							ADD R17,R16
-001389 c00c                      							rjmp ReconstruirUnidad
-                                 Cincuenta:
-00138a e302                      							LDI R16,50
+001389 c012                      							rjmp ReconstruirUnidad
+                                 Trenta:
+00138a e10e                      							LDI R16,30
 00138b 0f10                      							ADD R17,R16
-00138c c009                      							rjmp ReconstruirUnidad
-                                 Sesenta:
-00138d e30c                      							LDI R16,60
+00138c c00f                      							rjmp ReconstruirUnidad
+                                  Cuarenta:
+00138d e208                      							LDI R16,40
 00138e 0f10                      							ADD R17,R16
-00138f c006                      							rjmp ReconstruirUnidad
-                                 Setenta:
-001390 e406                      							LDI R16,70
+00138f c00c                      							rjmp ReconstruirUnidad
+                                 Cincuenta:
+001390 e302                      							LDI R16,50
 001391 0f10                      							ADD R17,R16
-001392 c003                      							rjmp ReconstruirUnidad
-                                 Ochenta:
-001393 e500                      							LDI R16,80
+001392 c009                      							rjmp ReconstruirUnidad
+                                 Sesenta:
+001393 e30c                      							LDI R16,60
 001394 0f10                      							ADD R17,R16
-001395 c000                      							rjmp ReconstruirUnidad
+001395 c006                      							rjmp ReconstruirUnidad
+                                 Setenta:
+001396 e406                      							LDI R16,70
+001397 0f10                      							ADD R17,R16
+001398 c003                      							rjmp ReconstruirUnidad
+                                 Ochenta:
+001399 e500                      							LDI R16,80
+00139a 0f10                      							ADD R17,R16
+00139b c000                      							rjmp ReconstruirUnidad
                                  ReconstruirUnidad:
-001396 3341                      			 Cpi R20,'1'
-001397 f0a1                      			 BREQ Diezzzdiv10	  
-001398 3342                      			 Cpi R20,'2'
-001399 f0a9                      			 BREQ Veintediv10 
-00139a 3343                      			 Cpi R20,'3'
-00139b f0b1                      			 BREQ Trentadiv10 
-00139c 3344                      			 Cpi R20,'4'
-00139d f0b9                      			 BREQ Cuarentadiv10 
-00139e 3345                      			 Cpi R20,'5'
-00139f f0c1                      			 BREQ Cincuentadiv10  
-0013a0 3346                      			 Cpi R20,'6'
-0013a1 f0c9                      			 BREQ Sesentadiv10
-0013a2 3347                      			 Cpi R20,'7'
-0013a3 f0d1                      			 BREQ Setentadiv10		
-0013a4 3348                      			 Cpi R20,'8'
-0013a5 f0d9                      			 BREQ Ochentadiv10	
-0013a6 3349                      			 Cpi R20,'9'
-0013a7 f009                      			 BREQ Noventadiv10
-0013a8 9508                      			 RET
+00139c 3341                      			 Cpi R20,'1'
+00139d f0a1                      			 BREQ Diezzzdiv10	  
+00139e 3342                      			 Cpi R20,'2'
+00139f f0a9                      			 BREQ Veintediv10 
+0013a0 3343                      			 Cpi R20,'3'
+0013a1 f0b1                      			 BREQ Trentadiv10 
+0013a2 3344                      			 Cpi R20,'4'
+0013a3 f0b9                      			 BREQ Cuarentadiv10 
+0013a4 3345                      			 Cpi R20,'5'
+0013a5 f0c1                      			 BREQ Cincuentadiv10  
+0013a6 3346                      			 Cpi R20,'6'
+0013a7 f0c9                      			 BREQ Sesentadiv10
+0013a8 3347                      			 Cpi R20,'7'
+0013a9 f0d1                      			 BREQ Setentadiv10		
+0013aa 3348                      			 Cpi R20,'8'
+0013ab f0d9                      			 BREQ Ochentadiv10	
+0013ac 3349                      			 Cpi R20,'9'
+0013ad f009                      			 BREQ Noventadiv10
+0013ae 9508                      			 RET
                                  Noventadiv10:
-0013a9 e009                      							LDI R16,9
-0013aa 0f10                      							ADD R17,R16
-0013ab 9508                      							RET ; LISTO
-                                 Diezzzdiv10:
-0013ac e001                      							LDI R16,1
-0013ad 0f10                      							ADD R17,R16
-0013ae 9508                      							RET ; LISTO
-                                 Veintediv10:
-0013af e002                      							LDI R16,2
+0013af e009                      							LDI R16,9
 0013b0 0f10                      							ADD R17,R16
-0013b1 9508                      						    RET ; LISTO
-                                 Trentadiv10:
-0013b2 e003                      							LDI R16,3
+0013b1 9508                      							RET ; LISTO
+                                 Diezzzdiv10:
+0013b2 e001                      							LDI R16,1
 0013b3 0f10                      							ADD R17,R16
 0013b4 9508                      							RET ; LISTO
-                                  Cuarentadiv10:
-0013b5 e004                      							LDI R16,4
+                                 Veintediv10:
+0013b5 e002                      							LDI R16,2
 0013b6 0f10                      							ADD R17,R16
-0013b7 9508                      							RET ; LISTO
-                                 Cincuentadiv10:
-0013b8 e005                      							LDI R16,5
+0013b7 9508                      						    RET ; LISTO
+                                 Trentadiv10:
+0013b8 e003                      							LDI R16,3
 0013b9 0f10                      							ADD R17,R16
-0013ba 9508                      						    RET ; LISTO
-                                 Sesentadiv10:
-0013bb e006                      							LDI R16,6
+0013ba 9508                      							RET ; LISTO
+                                  Cuarentadiv10:
+0013bb e004                      							LDI R16,4
 0013bc 0f10                      							ADD R17,R16
 0013bd 9508                      							RET ; LISTO
-                                 Setentadiv10:
-0013be e007                      							LDI R16,7
+                                 Cincuentadiv10:
+0013be e005                      							LDI R16,5
 0013bf 0f10                      							ADD R17,R16
-0013c0 9508                      							RET ; LISTO
-                                 Ochentadiv10:
-0013c1 e005                      							LDI R16,5
+0013c0 9508                      						    RET ; LISTO
+                                 Sesentadiv10:
+0013c1 e006                      							LDI R16,6
 0013c2 0f10                      							ADD R17,R16
 0013c3 9508                      							RET ; LISTO
+                                 Setentadiv10:
+0013c4 e007                      							LDI R16,7
+0013c5 0f10                      							ADD R17,R16
+0013c6 9508                      							RET ; LISTO
+                                 Ochentadiv10:
+0013c7 e005                      							LDI R16,5
+0013c8 0f10                      							ADD R17,R16
+0013c9 9508                      							RET ; LISTO
                                  			
                                  ReconstruirConf: ; esta funcion agarra lo que se encuentra en 2 bits ASCII, para guardarle en 1, en decimal.
                                  			 ; Numero:  r19-r20  a guardar en  r25
                                  			  ; Estos registros deben ser cargados por lo que está en Z0 y Z1  respectivamente
-0013c4 8130                      			 ld r19, Z
-0013c5 95e3                      			 inc R30 ; Siguiente posición de z
-0013c6 8140                      			 ld r20, Z
-0013c7 e090                      			 LDI R25,0			
+0013ca 8130                      			 ld r19, Z
+0013cb 95e3                      			 inc R30 ; Siguiente posición de z
+0013cc 8140                      			 ld r20, Z
+0013cd e090                      			 LDI R25,0			
                                  			 ReconstruirDecena2:
-0013c8 3331                      			 Cpi R19,'1'
-0013c9 f0a1                      			 BREQ Diezzz2	  
-0013ca 3332                      			 Cpi R19,'2'
-0013cb f0a9                      			 BREQ Veinte2	 
-0013cc 3333                      			 Cpi R19,'3'
-0013cd f0b1                      			 BREQ Trenta2	 
-0013ce 3334                      			 Cpi R19,'4'
-0013cf f0b9                      			 BREQ Cuarenta2	 
-0013d0 3335                      			 Cpi R19,'5'
-0013d1 f0c1                      			 BREQ Cincuenta2 
-0013d2 3336                      			 Cpi R19,'6'
-0013d3 f0c9                      			 BREQ Sesenta2	
-0013d4 3337                      			 Cpi R19,'7'
-0013d5 f0d1                      			 BREQ Setenta2		
-0013d6 3338                      			 Cpi R19,'8'
-0013d7 f0d9                      			 BREQ Ochenta2	
-0013d8 3339                      			 Cpi R19,'9'
-0013d9 f009                      			 BREQ Noventa2
-0013da 9508                      			 RET
+0013ce 3331                      			 Cpi R19,'1'
+0013cf f0a1                      			 BREQ Diezzz2	  
+0013d0 3332                      			 Cpi R19,'2'
+0013d1 f0a9                      			 BREQ Veinte2	 
+0013d2 3333                      			 Cpi R19,'3'
+0013d3 f0b1                      			 BREQ Trenta2	 
+0013d4 3334                      			 Cpi R19,'4'
+0013d5 f0b9                      			 BREQ Cuarenta2	 
+0013d6 3335                      			 Cpi R19,'5'
+0013d7 f0c1                      			 BREQ Cincuenta2 
+0013d8 3336                      			 Cpi R19,'6'
+0013d9 f0c9                      			 BREQ Sesenta2	
+0013da 3337                      			 Cpi R19,'7'
+0013db f0d1                      			 BREQ Setenta2		
+0013dc 3338                      			 Cpi R19,'8'
+0013dd f0d9                      			 BREQ Ochenta2	
+0013de 3339                      			 Cpi R19,'9'
+0013df f009                      			 BREQ Noventa2
+0013e0 9508                      			 RET
                                  Noventa2:
-0013db e59a                      							LDI R25,90
-0013dc 0f10                      							ADD R17,R16
-0013dd c018                      							rjmp ReconstruirUnidad2
+0013e1 e59a                      							LDI R25,90
+0013e2 0f10                      							ADD R17,R16
+0013e3 c018                      							rjmp ReconstruirUnidad2
                                  Diezzz2:
-0013de e00a                      							LDI R16,10
-0013df 0f90                      							ADD R25,R16
-0013e0 c015                      							rjmp ReconstruirUnidad2
-                                 Veinte2:
-0013e1 e104                      							LDI R16,20
-0013e2 0f90                      							ADD R25,R16
-0013e3 c012                      							rjmp ReconstruirUnidad2
-                                 Trenta2:
-0013e4 e10e                      							LDI R16,30
+0013e4 e00a                      							LDI R16,10
 0013e5 0f90                      							ADD R25,R16
-0013e6 c00f                      							rjmp ReconstruirUnidad2
-                                  Cuarenta2:
-0013e7 e208                      							LDI R16,40
+0013e6 c015                      							rjmp ReconstruirUnidad2
+                                 Veinte2:
+0013e7 e104                      							LDI R16,20
 0013e8 0f90                      							ADD R25,R16
-0013e9 c00c                      							rjmp ReconstruirUnidad2
-                                 Cincuenta2:
-0013ea e302                      							LDI R16,50
+0013e9 c012                      							rjmp ReconstruirUnidad2
+                                 Trenta2:
+0013ea e10e                      							LDI R16,30
 0013eb 0f90                      							ADD R25,R16
-0013ec c009                      							rjmp ReconstruirUnidad2
-                                 Sesenta2:
-0013ed e30c                      							LDI R16,60
+0013ec c00f                      							rjmp ReconstruirUnidad2
+                                  Cuarenta2:
+0013ed e208                      							LDI R16,40
 0013ee 0f90                      							ADD R25,R16
-0013ef c006                      							rjmp ReconstruirUnidad2
-                                 Setenta2:
-0013f0 e406                      							LDI R16,70
+0013ef c00c                      							rjmp ReconstruirUnidad2
+                                 Cincuenta2:
+0013f0 e302                      							LDI R16,50
 0013f1 0f90                      							ADD R25,R16
-0013f2 c003                      							rjmp ReconstruirUnidad2
-                                 Ochenta2:
-0013f3 e500                      							LDI R16,80
+0013f2 c009                      							rjmp ReconstruirUnidad2
+                                 Sesenta2:
+0013f3 e30c                      							LDI R16,60
 0013f4 0f90                      							ADD R25,R16
-0013f5 c000                      							rjmp ReconstruirUnidad2
+0013f5 c006                      							rjmp ReconstruirUnidad2
+                                 Setenta2:
+0013f6 e406                      							LDI R16,70
+0013f7 0f90                      							ADD R25,R16
+0013f8 c003                      							rjmp ReconstruirUnidad2
+                                 Ochenta2:
+0013f9 e500                      							LDI R16,80
+0013fa 0f90                      							ADD R25,R16
+0013fb c000                      							rjmp ReconstruirUnidad2
                                  ReconstruirUnidad2:
-0013f6 3341                      			 Cpi R20,'1'
-0013f7 f0a1                      			 BREQ Diezzzdiv102	  
-0013f8 3342                      			 Cpi R20,'2'
-0013f9 f0a9                      			 BREQ Veintediv102
-0013fa 3343                      			 Cpi R20,'3'
-0013fb f0b1                      			 BREQ Trentadiv102 
-0013fc 3344                      			 Cpi R20,'4'
-0013fd f0b9                      			 BREQ Cuarentadiv102 
-0013fe 3345                      			 Cpi R20,'5'
-0013ff f0c1                      			 BREQ Cincuentadiv102  
-001400 3346                      			 Cpi R20,'6'
-001401 f0c9                      			 BREQ Sesentadiv102
-001402 3347                      			 Cpi R20,'7'
-001403 f0d1                      			 BREQ Setentadiv102		
-001404 3348                      			 Cpi R20,'8'
-001405 f0d9                      			 BREQ Ochentadiv102
-001406 3349                      			 Cpi R20,'9'
-001407 f009                      			 BREQ Noventadiv102
-001408 9508                      			 RET
+0013fc 3341                      			 Cpi R20,'1'
+0013fd f0a1                      			 BREQ Diezzzdiv102	  
+0013fe 3342                      			 Cpi R20,'2'
+0013ff f0a9                      			 BREQ Veintediv102
+001400 3343                      			 Cpi R20,'3'
+001401 f0b1                      			 BREQ Trentadiv102 
+001402 3344                      			 Cpi R20,'4'
+001403 f0b9                      			 BREQ Cuarentadiv102 
+001404 3345                      			 Cpi R20,'5'
+001405 f0c1                      			 BREQ Cincuentadiv102  
+001406 3346                      			 Cpi R20,'6'
+001407 f0c9                      			 BREQ Sesentadiv102
+001408 3347                      			 Cpi R20,'7'
+001409 f0d1                      			 BREQ Setentadiv102		
+00140a 3348                      			 Cpi R20,'8'
+00140b f0d9                      			 BREQ Ochentadiv102
+00140c 3349                      			 Cpi R20,'9'
+00140d f009                      			 BREQ Noventadiv102
+00140e 9508                      			 RET
                                  Noventadiv102:
-001409 e009                      							LDI R16,9
-00140a 0f90                      							ADD R25,R16
-00140b 9508                      							RET ; LISTO
-                                 Diezzzdiv102:
-00140c e001                      							LDI R16,1
-00140d 0f90                      							ADD R25,R16
-00140e 9508                      							RET ; LISTO
-                                 Veintediv102:
-00140f e002                      							LDI R16,2
+00140f e009                      							LDI R16,9
 001410 0f90                      							ADD R25,R16
-001411 9508                      						    RET ; LISTO
-                                 Trentadiv102:
-001412 e003                      							LDI R16,3
+001411 9508                      							RET ; LISTO
+                                 Diezzzdiv102:
+001412 e001                      							LDI R16,1
 001413 0f90                      							ADD R25,R16
 001414 9508                      							RET ; LISTO
-                                  Cuarentadiv102:
-001415 e004                      							LDI R16,4
+                                 Veintediv102:
+001415 e002                      							LDI R16,2
 001416 0f90                      							ADD R25,R16
-001417 9508                      							RET ; LISTO
-                                 Cincuentadiv102:
-001418 e005                      							LDI R16,5
+001417 9508                      						    RET ; LISTO
+                                 Trentadiv102:
+001418 e003                      							LDI R16,3
 001419 0f90                      							ADD R25,R16
-00141a 9508                      						    RET ; LISTO
-                                 Sesentadiv102:
-00141b e006                      							LDI R16,6
+00141a 9508                      							RET ; LISTO
+                                  Cuarentadiv102:
+00141b e004                      							LDI R16,4
 00141c 0f90                      							ADD R25,R16
 00141d 9508                      							RET ; LISTO
-                                 Setentadiv102:
-00141e e007                      							LDI R16,7
+                                 Cincuentadiv102:
+00141e e005                      							LDI R16,5
 00141f 0f90                      							ADD R25,R16
-001420 9508                      							RET ; LISTO
-                                 Ochentadiv102:
-001421 e005                      							LDI R16,5
+001420 9508                      						    RET ; LISTO
+                                 Sesentadiv102:
+001421 e006                      							LDI R16,6
 001422 0f90                      							ADD R25,R16
+001423 9508                      							RET ; LISTO
+                                 Setentadiv102:
+001424 e007                      							LDI R16,7
+001425 0f90                      							ADD R25,R16
+001426 9508                      							RET ; LISTO
+                                 Ochentadiv102:
+001427 e005                      							LDI R16,5
+001428 0f90                      							ADD R25,R16
                                  .INCLUDE "Control.inc"
-001423 9508                      
+001429 9508                      
                                  ; las mismas se ejecutan en el menu options de "ApartadoGraficoCodes.inc"
                                  ; esto quiere decir que se ejecuta siempre y cuando el usuario no este modificando una de las variables de control,
                                  ; y que se ejecuta luego de que una se cambia.
@@ -6418,137 +6422,259 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  .equ NRefrigeracionLCC=1
                                  ; Bastará con ponerlas en 1 para que nuestro codigo funcione
                                  Lectura:                  //	Para leer el estado de Bit debemos tener en
-001424 9100 0425                 		LDS R16,EstadoBit //	R17  el bit que queremos leer; le hacemos
-001426 2310                      		AND R17,R16		  //	un AND  para averiguar si se encuentra en
-001427 9508                      		RET				  //	0 o 1 ...
-                                 Control:				  //
-001428 940e 1430                 		Call  IluminacionLCC
-00142a 940e 146c                 		Call  IluminacionDormitorio
-00142c b113                      		IN	R17, 	PINB
-00142d 9310 0425                 		STS EstadoBit,R17;Actualizamos el estado de bit
-00142f 9508                      		ret
+00142a 9100 0425                 		LDS R16,EstadoBit //	R17  el bit que queremos leer; le hacemos
+00142c 2310                      		AND R17,R16		  //	un AND  para averiguar si se encuentra en
+00142d 9508                      		RET				  //	0 o 1 ...
+                                 ControlLuz:				  //	Call  TemperaturaLCC call TemperaturaDormitorio
+00142e 940e 1436                 		Call  IluminacionLCC
+001430 940e 1472                 		Call  IluminacionDormitorio
+001432 b113                      		IN	R17, 	PINB
+001433 9310 0425                 		STS EstadoBit,R17;Actualizamos el estado de bit
+001435 9508                      		ret
                                  
                                  ;=================================================
                                  ;|	   INCIO DE LAS SUBRUTINAS   DE   CONTROL    |
                                  ;=================================================
                                  IluminacionLCC:
-001430 9050 0390                 	LDS	R5, LuzExteriorMinimaABS
-001432 9120 031e                 	LDS R18,MedLuzLCCABS
-001434 1652                      	CP R5,R18 ; Si la luz exterior es menor a la del interior, toodavia no es necesario
-001435 f090                      	BRLO  TodaviaNo; abrir las cortinas (Afuera está muy oscuro).
-001436 9050 039f                 	LDS	R5, HoraInicioDiaABS ; si no es así, seguimos preguntando sobre el horario.
-001438 9120 0152                 	LDS R18,HoraABS
-00143a 1525                      	CP R18,R5
-00143b f418                      	BRSH ComenzoEldiaLCC ; La hora actual es mayor al Inicio del día? Entonces Inició el DIA
-00143c 1525                      	CP r18,r5
-00143d f050                      	BRLO TodaviaNo  ; La hora actual es menor al Inicio del día? Entonces todavía no
-00143e 9508                      RET
+001436 9050 0390                 	LDS	R5, LuzExteriorMinimaABS
+001438 9120 031e                 	LDS R18,MedLuzLCCABS
+00143a 1652                      	CP R5,R18 ; Si la luz exterior es menor a la del interior, toodavia no es necesario
+00143b f090                      	BRLO  TodaviaNo; abrir las cortinas (Afuera está muy oscuro).
+00143c 9050 039f                 	LDS	R5, HoraInicioDiaABS ; si no es así, seguimos preguntando sobre el horario.
+00143e 9120 0152                 	LDS R18,HoraABS
+001440 1525                      	CP R18,R5
+001441 f418                      	BRSH ComenzoEldiaLCC ; La hora actual es mayor al Inicio del día? Entonces Inició el DIA
+001442 1525                      	CP r18,r5
+001443 f050                      	BRLO TodaviaNo  ; La hora actual es menor al Inicio del día? Entonces todavía no
+001444 9508                      RET
                                  ComenzoEldiaLCC:
-00143f 9050 03a2                 			LDS	R5, HoraFinDiaABS
-001441 9120 0152                 			LDS R18,HoraABS
-001443 1525                      			CP r18,r5
-001444 f418                      			BRSH TodaviaNo ; La hora actual es mayor al fin del día? Entonces no hay que prender nada (Hay que apagar todo), terminó
-001445 1525                      			CP r18,r5	   ; el día.
-001446 f030                      			BRLO PreguntaRefrigeracion  ; La hora actual es menor al fin del día? Entonces hay que preguntar si 
-001447 9508                      			RET
+001445 9050 03a2                 			LDS	R5, HoraFinDiaABS
+001447 9120 0152                 			LDS R18,HoraABS
+001449 1525                      			CP r18,r5
+00144a f418                      			BRSH TodaviaNo ; La hora actual es mayor al fin del día? Entonces no hay que prender nada (Hay que apagar todo), terminó
+00144b 1525                      			CP r18,r5	   ; el día.
+00144c f030                      			BRLO PreguntaRefrigeracion  ; La hora actual es menor al fin del día? Entonces hay que preguntar si 
+00144d 9508                      			RET
                                  TodaviaNo:
-001448 982f                      			CBI	PORTB, AbrirCortinaDormitorio ;Apagamos
-001449 982d                      			CBI	PORTB, AbrirCortinaLCC ;Apagamos 
-00144a 9a2e                      			SBI	PORTB, CerrarCortinaDormitorio ;Prendemos
-00144b 9a2c                      			SBI	PORTB, CerrarCortinaLCC ;Prendemos
-00144c 9508                      			RET
+00144e 982f                      			CBI	PORTB, AbrirCortinaDormitorio ;Apagamos
+00144f 982d                      			CBI	PORTB, AbrirCortinaLCC ;Apagamos 
+001450 9a2e                      			SBI	PORTB, CerrarCortinaDormitorio ;Prendemos
+001451 9a2c                      			SBI	PORTB, CerrarCortinaLCC ;Prendemos
+001452 9508                      			RET
                                  PreguntaRefrigeracion:
-00144d e011                      					  LDI R17,NRefrigeracionLCC
-00144e 940e 1424                 					  Call Lectura
-001450 3011                      					  Cpi R17,NRefrigeracionLCC
-001451 f019                      					  BreQ ControlHisterisisIluminacionLCC ; Si el Bit se encuentra en 1,la refrigeración del ambiente esta prendida
+001453 e011                      					  LDI R17,NRefrigeracionLCC
+001454 940e 142a                 					  Call Lectura
+001456 3011                      					  Cpi R17,NRefrigeracionLCC
+001457 f019                      					  BreQ ControlHisterisisIluminacionLCC ; Si el Bit se encuentra en 1,la refrigeración del ambiente esta prendida
                                  					 									   ; y debemos hacer el  Control de  histerisis de su cortina, caso contrario
-001452 9a2d                      					  SBI	PORTB, AbrirCortinaLCC		   ;Abrimos  la cortina del Living/Comedor/Cocina
-001453 982c                      					  CBI	PORTB, CerrarCortinaLCC ; y nos aseguramos de que no se cierre
-001454 9508                      					  RET
+001458 9a2d                      					  SBI	PORTB, AbrirCortinaLCC		   ;Abrimos  la cortina del Living/Comedor/Cocina
+001459 982c                      					  CBI	PORTB, CerrarCortinaLCC ; y nos aseguramos de que no se cierre
+00145a 9508                      					  RET
                                  
                                  ControlHisterisisIluminacionLCC:
-001455 9100 031e                 								LDS R16,MedLuzLCCABS
-001457 9110 0399                 								LDS R17,SetPointLuzLCCABS
-001459 9120 039c                 								LDS R18,HisterisisLuzLCCABS
-00145b e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-00145c 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-00145d 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-00145e 1709                      								CP R16,R25   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
-00145f f430                      								BRSH CerrarCortinaLCCAhora ; Entonces hay  que cerrar la cortina
-001460 e090                      								LDI R25,0   ;Colocamos el 0 en R5
-001461 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-001462 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-001463 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+00145b 9100 031e                 								LDS R16,MedLuzLCCABS
+00145d 9110 0399                 								LDS R17,SetPointLuzLCCABS
+00145f 9120 039c                 								LDS R18,HisterisisLuzLCCABS
+001461 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+001462 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+001463 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+001464 1709                      								CP R16,R25   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
+001465 f430                      								BRSH CerrarCortinaLCCAhora ; Entonces hay  que cerrar la cortina
+001466 e090                      								LDI R25,0   ;Colocamos el 0 en R5
+001467 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+001468 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+001469 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor a el setpoint menos su histerisis?
-001464 f420                      								BRSH AbrirCortinaLCCAhora; entonces es momento de abrir la cortina
-001465 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+00146a f420                      								BRSH AbrirCortinaLCCAhora; entonces es momento de abrir la cortina
+00146b 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  
                                  CerrarCortinaLCCAhora:
-001466 982d                      					  CBI	PORTB, AbrirCortinaLCC ;Apagamos 
-001467 9a2c                      					  SBI	PORTB, CerrarCortinaLCC ;Prendemos
-001468 9508                      					  RET
+00146c 982d                      					  CBI	PORTB, AbrirCortinaLCC ;Apagamos 
+00146d 9a2c                      					  SBI	PORTB, CerrarCortinaLCC ;Prendemos
+00146e 9508                      					  RET
                                  AbrirCortinaLCCAhora:
-001469 9a2d                      					 SBI	PORTB, AbrirCortinaLCC ;Prendemos
-00146a 982c                      					 CBI	PORTB, CerrarCortinaLCC ;Apagamos
-00146b 9508                      					 RET
+00146f 9a2d                      					 SBI	PORTB, AbrirCortinaLCC ;Prendemos
+001470 982c                      					 CBI	PORTB, CerrarCortinaLCC ;Apagamos
+001471 9508                      					 RET
                                  
                                  IluminacionDormitorio:
-00146c 9050 0390                 					  LDS	R5, LuzExteriorMinimaABS
-00146e 9120 0324                 					  LDS R18,MedLuzDormitorioABS
-001470 1652                      					  CP R5,R18 ; Si la luz exterior es menor a la del interior, toodavia no es necesario
-001471 f2b0                      					  BRLO  TodaviaNo; abrir las cortinas (Afuera está muy oscuro).
-001472 9050 039f                 					  LDS	R5, HoraInicioDiaABS ; si no es así, seguimos preguntando sobre el horario.
-001474 9120 0152                 					  LDS R18,HoraABS
-001476 1525                      					  CP R18,R5
-001477 f418                      					  BRSH ComenzoEldiaDormitorio ; La hora actual es mayor al Inicio del día? Entonces Inició el DIA
-001478 1525                      					  CP r18,r5
-001479 f270                      					  BRLO TodaviaNo  ; La hora actual es menor al Inicio del día? Entonces todavía no
-00147a 9508                      					  RET
+001472 9050 0390                 					  LDS	R5, LuzExteriorMinimaABS
+001474 9120 0324                 					  LDS R18,MedLuzDormitorioABS
+001476 1652                      					  CP R5,R18 ; Si la luz exterior es menor a la del interior, toodavia no es necesario
+001477 f2b0                      					  BRLO  TodaviaNo; abrir las cortinas (Afuera está muy oscuro).
+001478 9050 039f                 					  LDS	R5, HoraInicioDiaABS ; si no es así, seguimos preguntando sobre el horario.
+00147a 9120 0152                 					  LDS R18,HoraABS
+00147c 1525                      					  CP R18,R5
+00147d f418                      					  BRSH ComenzoEldiaDormitorio ; La hora actual es mayor al Inicio del día? Entonces Inició el DIA
+00147e 1525                      					  CP r18,r5
+00147f f270                      					  BRLO TodaviaNo  ; La hora actual es menor al Inicio del día? Entonces todavía no
+001480 9508                      					  RET
                                  ComenzoEldiaDormitorio:
-00147b 9050 03a2                 			LDS	R5, HoraFinDiaABS
-00147d 9120 0152                 			LDS R18,HoraABS
-00147f 1525                      			CP r18,r5
-001480 f638                      			BRSH TodaviaNo ; La hora actual es mayor al fin del día? Entonces no hay que prender nada (Hay que apagar todo), terminó
-001481 1525                      			CP r18,r5	   ; el día.
-001482 f008                      			BRLO PreguntaRefrigeracionD  ; ¿La hora actual es menor al fin del día? Entonces hay que preguntar si 
-001483 9508                      			RET
+001481 9050 03a2                 			LDS	R5, HoraFinDiaABS
+001483 9120 0152                 			LDS R18,HoraABS
+001485 1525                      			CP r18,r5
+001486 f638                      			BRSH TodaviaNo ; La hora actual es mayor al fin del día? Entonces no hay que prender nada (Hay que apagar todo), terminó
+001487 1525                      			CP r18,r5	   ; el día.
+001488 f008                      			BRLO PreguntaRefrigeracionD  ; ¿La hora actual es menor al fin del día? Entonces hay que preguntar si 
+001489 9508                      			RET
                                  PreguntaRefrigeracionD:
-001484 e012                      					  LDI R17,NRefrigeracionDormitorio
-001485 940e 1424                 					  Call Lectura
-001487 3012                      					  Cpi R17,NRefrigeracionDormitorio
-001488 f019                      					  BreQ ControlHisterisisIluminacionD ; Si el Bit se encuentra en 1,la refrigeración del ambiente esta prendida
+00148a e012                      					  LDI R17,NRefrigeracionDormitorio
+00148b 940e 142a                 					  Call Lectura
+00148d 3012                      					  Cpi R17,NRefrigeracionDormitorio
+00148e f019                      					  BreQ ControlHisterisisIluminacionD ; Si el Bit se encuentra en 1,la refrigeración del ambiente esta prendida
                                  														   ; y debemos hacer el  Control de  histerisis de su cortina, caso contrario
-001489 9a2f                      					SBI	PORTB, AbrirCortinaDormitorio	   ;Abrimos  la cortina del Living/Comedor/Cocina
-00148a 982e                      					CBI	PORTB, CerrarCortinaDormitorio	   ; y nos aseguramos de que no se cierre
-00148b 9508                      					RET
+00148f 9a2f                      					SBI	PORTB, AbrirCortinaDormitorio	   ;Abrimos  la cortina del Living/Comedor/Cocina
+001490 982e                      					CBI	PORTB, CerrarCortinaDormitorio	   ; y nos aseguramos de que no se cierre
+001491 9508                      					RET
                                  
                                  ControlHisterisisIluminacionD:
-00148c 9100 0324                 								LDS R16,MedLuzDormitorioABS
-00148e 9110 0393                 								LDS R17,SetPointLuzDormitorioABS
-001490 9120 0396                 								LDS R18,HisterisisLuzDormitorioABS
-001492 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-001493 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-001494 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-001495 1709                      								CP R16,R25   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
-001496 f678                      								BRSH CerrarCortinaLCCAhora ; Entonces hay  que cerrar la cortina
-001497 e090                      								LDI R25,0   ;Colocamos el 0 en R5
-001498 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-001499 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-00149a 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+001492 9100 0324                 								LDS R16,MedLuzDormitorioABS
+001494 9110 0393                 								LDS R17,SetPointLuzDormitorioABS
+001496 9120 0396                 								LDS R18,HisterisisLuzDormitorioABS
+001498 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+001499 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+00149a 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+00149b 1709                      								CP R16,R25   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
+00149c f678                      								BRSH CerrarCortinaLCCAhora ; Entonces hay  que cerrar la cortina
+00149d e090                      								LDI R25,0   ;Colocamos el 0 en R5
+00149e 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+00149f 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+0014a0 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor a el setpoint menos su histerisis?
-00149b f420                      								BRSH AbrirCortinaDAhora; entonces es momento de abrir la cortina
-00149c 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+0014a1 f420                      								BRSH AbrirCortinaDAhora; entonces es momento de abrir la cortina
+0014a2 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  
                                  CerrarCortinaDAhora:
-00149d 982f                      					  CBI	PORTB, AbrirCortinaDormitorio ;Apagamos 
-00149e 9a2e                      					  SBI	PORTB, CerrarCortinaDormitorio;Prendemos
-00149f 9508                      					  RET
+0014a3 982f                      					  CBI	PORTB, AbrirCortinaDormitorio ;Apagamos 
+0014a4 9a2e                      					  SBI	PORTB, CerrarCortinaDormitorio;Prendemos
+0014a5 9508                      					  RET
                                  AbrirCortinaDAhora:
-0014a0 9a2d                      					 SBI	PORTB, AbrirCortinaLCC ;Prendemos
-0014a1 982c                      					 CBI	PORTB, CerrarCortinaLCC ;Apagamos
+0014a6 9a2d                      					 SBI	PORTB, AbrirCortinaLCC ;Prendemos
+0014a7 982c                      					 CBI	PORTB, CerrarCortinaLCC ;Apagamos
+0014a8 9508                      					 RET
+                                 // Estamos suponiendo que la temperatura exterior minima  y la maxima son Distintas
+                                 ControlTemp:
+0014a9 940e 14af                 		Call  PreguntaTemperatura
+0014ab b113                      		IN	R17, 	PINB
+0014ac 9310 0425                 		STS EstadoBit,R17;Actualizamos el estado de bit
+0014ae 9508                      		ret
+                                 PreguntaTemperatura:
+0014af 9050 0376                 				LDS	R5,TemperaturaExteriorMinimaABS  
+0014b1 9120 0315                 				LDS R18,MedTemperaturaExteriorABS
+0014b3 1652                      				CP R5,R18 ; Si la temperatura exterior minima es mayor a la medida, es preciso calefacionar
+0014b4 f460                      				BRSH  Calefaccion; calefaccionar (hace frio).
+0014b5 9120 0378                 			    LDS	R18,TemperaturaExteriorMaximaABS  
+0014b7 9050 0315                 				LDS R5,MedTemperaturaExteriorABS
+0014b9 1652                      				CP R5,R18 ; Si la temperatura exterior medida es mayor a la del maxima, es preciso Refrigerar
+0014ba f408                      				BRSH  Refrigeracion; refrigerar (hace calor).
+0014bb 9508                      				RET ; Caso contrario, no hacer nada
+                                 Refrigeracion:
+0014bc 940e 14c6                 					Call RefrigerarLcc
+0014be 940e 14dc                 					Call RefrigerarDormitorio
+0014c0 9508                      					Ret
+                                 Calefaccion:
+0014c1 940e 14f2                 			CALL SubCalefaccionDormitorio
+0014c3 940e 1508                 			CALL SubCalefaccionLCC
+0014c5 9508                      			RET
+                                 RefrigerarLcc:
+0014c6 9100 0317                 								LDS R16,MedTemperaturaLCCABS
+0014c8 9110 0380                 								LDS R17,SetPointTemperaturaLCCABS
+0014ca 9120 0383                 								LDS R18,HisterisisTemperaturaLCCABS
+0014cc e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+0014cd 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+0014ce 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+0014cf 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+0014d0 f430                      								BRSH PRefriLCC ; Entonces hay  que apagar la calefaccion
+0014d1 e090                      								LDI R25,0   ;Colocamos el 0 en R5
+0014d2 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+0014d3 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+0014d4 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+                                 								            ; medicion menor a el setpoint menos su histerisis?
+0014d5 f420                      								BRSH ApagarRefriLCC; entonces es momento de abrir la cortina
+0014d6 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+                                 
+                                 PRefriLCC:
+0014d7 9a28                      					  SBI	PORTB, RefrigeracionLCC ;Prendemos
+0014d8 982a                      					  CBI	PORTB, CalefacionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+0014d9 9508                      					  RET
+                                 ApagarRefriLCC:
+0014da 9828                      					 CBI	PORTB, RefrigeracionLCC ;Apagamos
+0014db 9508                      					 RET
+                                 	
+                                 RefrigerarDormitorio:
+0014dc 9100 0319                 								LDS R16,MedTemperaturaDormitorioABS
+0014de 9110 038c                 								LDS R17,SetPointTemperaturaDormitorioABS
+0014e0 9120 038e                 								LDS R18,HisterisisTemperaturaDormitorioABS
+0014e2 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+0014e3 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+0014e4 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+0014e5 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+0014e6 f430                      								BRSH PRefriDormitorio ; Entonces hay  que prender el aire
+0014e7 e090                      								LDI R25,0   ;Colocamos el 0 en R5
+0014e8 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+0014e9 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+0014ea 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+                                 								            ; medicion menor al setpoint menos su histerisis?
+0014eb f420                      								BRSH ApagarRefriDormitorio; entonces es momento de abrir la cortina
+0014ec 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+                                 
+                                 PRefriDormitorio:
+0014ed 9a29                      					  SBI	PORTB,RefrigeracionDormitorio  ;Prendemos
+0014ee 982b                      					  CBI	PORTB, CalefacionDormitorio ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+0014ef 9508                      					  RET
+                                 ApagarRefriDormitorio:
+0014f0 9829                      					 CBI	PORTB, RefrigeracionDormitorio ;Apagamos
+0014f1 9508                      					 RET
+                                 SubCalefaccionDormitorio:
+0014f2 9100 0319                 								LDS R16,MedTemperaturaDormitorioABS
+0014f4 9110 038c                 								LDS R17,SetPointTemperaturaDormitorioABS
+0014f6 9120 038e                 								LDS R18,HisterisisTemperaturaDormitorioABS
+0014f8 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+0014f9 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+0014fa 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+0014fb 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+0014fc f448                      								BRSH NOCalentarDormitorio ; Entonces hay  que apagar la calefaccion
+0014fd e090                      								LDI R25,0   ;Colocamos el 0 en R5
+0014fe 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+0014ff 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+001500 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+                                 								            ; medicion menor al setpoint menos su histerisis?
+001501 f408                      								BRSH CalentarDormitorio; Entonces hay que prender la calefaccion
+001502 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+                                 
+                                 CalentarDormitorio:
+001503 9a2b                      					  SBI	PORTB,CalefacionDormitorio  ;Prendemos
+001504 9829                      					  CBI	PORTB, RefrigeracionDormitorio ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+001505 9508                      					  RET
+                                 NOCalentarDormitorio:
+001506 982b                      					 CBI	PORTB, CalefacionDormitorio ;Apagamos
+001507 9508                      					 RET
+                                 SubCalefaccionLCC:
+001508 9100 0317                 								LDS R16,MedTemperaturaLCCABS
+00150a 9110 0380                 								LDS R17,SetPointTemperaturaLCCABS
+00150c 9120 0383                 								LDS R18,HisterisisTemperaturaLCCABS
+00150e e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+00150f 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+001510 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+001511 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+001512 f448                      								BRSH NOCalentarLCC ; Entonces hay  que apagar la calefaccion
+001513 e090                      								LDI R25,0   ;Colocamos el 0 en R5
+001514 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+001515 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+001516 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+                                 								            ; medicion menor al setpoint menos su histerisis?
+001517 f408                      								BRSH CalentarLCC; Entonces hay que prender la calefaccion
+001518 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+                                 
+                                 CalentarLCC:
+001519 9a2a                      					  SBI	PORTB,CalefacionLCC  ;Prendemos
+00151a 9828                      					  CBI	PORTB, RefrigeracionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+00151b 9508                      					  RET
+                                 NOCalentarLCC:
+00151c 982a                      					 CBI	PORTB, CalefacionLCC ;Apagamos
+00151d 9508                      					 RET
                                  .include "LecturaAdc.inc"
-0014a2 9508                      
+                                 
                                  ; para el microcontrolador Atmega328p, IDE: Microchip Studio.
                                  ; Para incluir esto: >.include "LecturaAdc.inc"<, para llamarlo: >CALL InicioADC <
                                  ; Esto esta diseñado para leer una de las entradas analogicas
@@ -6581,79 +6707,79 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  ;			jmp GuardarCosasAdc ;Guardamos lo que hacía el micro
                                  							 ;Setemos todo a 0:
                                  								 InicioADC2:
-0014a3 e040                      			ldi unidad,0
-0014a4 e050                      			ldi decena, 0
-0014a5 e060                      			ldi centena,0
-0014a6 e020                      			ldi R18,0
-0014a7 e000                      			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
-0014a8 b907                      			out DDRC, r16
-0014a9 c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
+00151e e040                      			ldi unidad,0
+00151f e050                      			ldi decena, 0
+001520 e060                      			ldi centena,0
+001521 e020                      			ldi R18,0
+001522 e000                      			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
+001523 b907                      			out DDRC, r16
+001524 c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
                                  
                                  CICLO_ADC:
-0014aa 940e 14df                 	call LeerADC
-0014ac 940e 14e6                 	call EsperarADC
-0014ae 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
-0014b0 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
-0014b2 e040                      	ldi unidad,0
-0014b3 e050                      	ldi decena,0
-0014b4 e060                      	ldi centena,0
-0014b5 2f03                      	mov r16,r19; Metemos a R16 ADCL
-0014b6 940e 14bd                 	call ASCII		; Llamamos a la función ASCII 
-0014b8 e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
-0014b9 0f41                      	add unidad, r17
-0014ba 0f51                      	add decena, r17
-0014bb 0f61                      	add centena,r17
+001525 940e 155a                 	call LeerADC
+001527 940e 1561                 	call EsperarADC
+001529 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
+00152b 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
+00152d e040                      	ldi unidad,0
+00152e e050                      	ldi decena,0
+00152f e060                      	ldi centena,0
+001530 2f03                      	mov r16,r19; Metemos a R16 ADCL
+001531 940e 1538                 	call ASCII		; Llamamos a la función ASCII 
+001533 e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
+001534 0f41                      	add unidad, r17
+001535 0f51                      	add decena, r17
+001536 0f61                      	add centena,r17
                                  	; Ahora, teniendo todo en ASCII, pasamos a guardarlas una por una en la memoria:
                                  
-0014bc 9508                      	ret; Que largue todo y volvamos a lo que estaba haciendo el micro
+001537 9508                      	ret; Que largue todo y volvamos a lo que estaba haciendo el micro
                                  
                                  ASCII: ;Vamos a obtener unidad, decena, centena y "Coma":
                                  		L_CENTENA:
-0014bd 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
-0014be f018                      				BRLO L_DECENA; Vaya a "L_Decena"
-0014bf 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
-0014c0 5604                      				subi r16,100 ; Restele 100 al número
-0014c1 cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
+001538 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
+001539 f018                      				BRLO L_DECENA; Vaya a "L_Decena"
+00153a 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
+00153b 5604                      				subi r16,100 ; Restele 100 al número
+00153c cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
                                  				;Si todo fue realizarse correctamente, solamente podrá ejecutarse todo dos veces
                                  				; Recuerde: en 8 bits, el número más grande a almacenar es el 256, contando el 0, 255.
                                  		L_DECENA: ;Hace exactamente lo mismo que el anterior, solo que 100 en lugar de 10
-0014c2 300a                      				cpi r16,10 
-0014c3 f018                      				BRLO L_UNIDAD
-0014c4 9553                      				inc decena
-0014c5 500a                      				subi r16,10
-0014c6 cffb                      				rjmp L_DECENA
+00153d 300a                      				cpi r16,10 
+00153e f018                      				BRLO L_UNIDAD
+00153f 9553                      				inc decena
+001540 500a                      				subi r16,10
+001541 cffb                      				rjmp L_DECENA
                                  		L_UNIDAD: ;Idem con 1
-0014c7 3001                      				cpi r16,1
-0014c8 f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
-0014c9 9543                      				inc unidad
-0014ca 5001                      				subi r16,1
-0014cb cffb                      				rjmp L_UNIDAD
+001542 3001                      				cpi r16,1
+001543 f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
+001544 9543                      				inc unidad
+001545 5001                      				subi r16,1
+001546 cffb                      				rjmp L_UNIDAD
                                  		L_FIN:
-0014cc c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
+001547 c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
                                  	    HCOMA:  ; Ahora, en la parte alta de la parte alta, tendremos nuestro "cuarto" de numero
                                  				; por lo que lo usaremos para guardar >0,00 >0,25 >0,50 >0,75
                                  				; por simplicidad, se los redondeó hacia abajo: >0,0 >0,2 >0,5 >0,7
-0014cd 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
-0014ce f041                      				breq tres
-0014cf 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
-0014d0 f041                      				breq dos
-0014d1 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
-0014d2 f041                      				breq uno
-0014d3 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
-0014d4 f041                      				breq cerooo
-0014d5 940c 0a4f                 				jmp Main ; Vuelva a CICLO_ADC
+001548 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
+001549 f041                      				breq tres
+00154a 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
+00154b f041                      				breq dos
+00154c 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
+00154d f041                      				breq uno
+00154e 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
+00154f f041                      				breq cerooo
+001550 940c 0a4f                 				jmp Main ; Vuelva a CICLO_ADC
                                  tres:
-0014d7 e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
-0014d8 9508                      		ret ; Vuelva a CICLO_ADC
+001552 e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
+001553 9508                      		ret ; Vuelva a CICLO_ADC
                                  dos:
-0014d9 e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
-0014da 9508                      		ret ; Vuelva a CICLO_ADC
+001554 e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
+001555 9508                      		ret ; Vuelva a CICLO_ADC
                                  uno:
-0014db e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
-0014dc 9508                      		ret ; Vuelva a CICLO_ADC
+001556 e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
+001557 9508                      		ret ; Vuelva a CICLO_ADC
                                  cerooo:
-0014dd e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
-0014de 9508                      		ret ; Vuelva a CICLO_ADC
+001558 e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
+001559 9508                      		ret ; Vuelva a CICLO_ADC
                                  
                                  //////////////////////////////////////////////////////////////////
                                  ;		FUNCIONES	DE	CONTROL	DE "INDEPENDENCIA"	VIA	PILA: 
@@ -6666,21 +6792,21 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  ///////////////////////////////////////////
                                  
                                  LeerADC:
-0014df e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
-0014e0 9110 007a                 lds r17,ADCSRA
-0014e2 2b10                      or r17,r16   
-0014e3 9310 007a                 sts ADCSRA, r17
-0014e5 9508                      ret
+00155a e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
+00155b 9110 007a                 lds r17,ADCSRA
+00155d 2b10                      or r17,r16   
+00155e 9310 007a                 sts ADCSRA, r17
+001560 9508                      ret
                                  
                                  EsperarADC:
-0014e6 9110 007a                 lds r17, ADCSRA 
-0014e8 ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
-0014e9 940c 14e6                 jmp EsperarADC ; Si no es así, espere.
-0014eb e100                      ldi r16,0b00010000
-0014ec 9110 007a                 lds r17, ADCSRA
-0014ee 2b10                      or r17,r16
-0014ef 9310 007a                 sts ADCSRA, r17
-0014f1 9508                      ret
+001561 9110 007a                 lds r17, ADCSRA 
+001563 ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
+001564 940c 1561                 jmp EsperarADC ; Si no es así, espere.
+001566 e100                      ldi r16,0b00010000
+001567 9110 007a                 lds r17, ADCSRA
+001569 2b10                      or r17,r16
+00156a 9310 007a                 sts ADCSRA, r17
+00156c 9508                      ret
                                  /*
                                  PARA MAYOR INFORMACION DIRIJASE A "AtendimientoDeInterrupciones.Inc"
 
@@ -6701,38 +6827,38 @@ counted separately from r26..r31 here.
 
 "ATmega328P" register use summary:
 x  :   0 y  :   0 z  : 152 r0 :  17 r1 :   1 r2 :   0 r3 :   0 r4 :   0 
-r5 : 253 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   2 
-r13:   0 r14:   0 r15:   0 r16: 404 r17: 167 r18:  67 r19:  33 r20: 288 
-r21:  11 r22:  10 r23:   0 r24:   0 r25:  37 r26:   0 r27:   0 r28:   0 
+r5 : 257 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   2 
+r13:   0 r14:   0 r15:   0 r16: 416 r17: 182 r18:  83 r19:  33 r20: 288 
+r21:  11 r22:  10 r23:   0 r24:   0 r25:  69 r26:   0 r27:   0 r28:   0 
 r29:   0 r30: 188 r31: 149 
 Registers used: 15 out of 35 (42.9%)
 
 "ATmega328P" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :   0 add   :  65 adiw  :   0 and   :   1 
+.lds  :   0 .sts  :   0 adc   :   0 add   :  77 adiw  :   0 and   :   1 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :  97 brge  :   0 brhc  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :  98 brge  :   0 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   9 brlt  :   0 brmi  :   0 
-brne  :   0 brpl  :   0 brsh  :   9 brtc  :   0 brts  :   0 brvc  :   0 
-brvs  :   0 bset  :   0 bst   :   0 call  : 188 cbi   :   8 cbr   :   0 
+brne  :   0 brpl  :   0 brsh  :  19 brtc  :   0 brts  :   0 brvc  :   0 
+brvs  :   0 bset  :   0 bst   :   0 call  : 194 cbi   :  16 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
-clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :  14 cpc   :   0 
-cpi   : 101 cpse  :   0 dec   :   1 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   2 inc   :  14 jmp   :  86 
-ld    :  75 ldd   :   0 ldi   : 529 lds   : 154 lpm   :  23 lsl   :   0 
+clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :  24 cpc   :   0 
+cpi   : 102 cpse  :   0 dec   :   1 eor   :   0 fmul  :   0 fmuls :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   3 inc   :  14 jmp   :  87 
+ld    :  75 ldd   :   0 ldi   : 537 lds   : 170 lpm   :  23 lsl   :   0 
 lsr   :   0 mov   :  18 movw  :   0 mul   :  18 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   2 ori   :   0 out   :   7 pop   :  11 
-push  :  11 rcall :   0 ret   :  58 reti  :   5 rjmp  : 137 rol   :   0 
-ror   :   0 sbc   :   0 sbci  :   0 sbi   :   8 sbic  :   0 sbis  :   0 
+push  :  11 rcall :   0 ret   :  74 reti  :   5 rjmp  : 137 rol   :   0 
+ror   :   0 sbc   :   0 sbci  :   0 sbi   :  12 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  66 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
-sez   :   0 sleep :   0 spm   :   0 st    :  54 std   :   0 sts   : 268 
-sub   :  36 subi  :   3 swap  :   0 tst   :   0 wdr   :   0 
+sez   :   0 sleep :   0 spm   :   0 st    :  54 std   :   0 sts   : 269 
+sub   :  40 subi  :   3 swap  :   0 tst   :   0 wdr   :   0 
 Instructions used: 33 out of 113 (29.2%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x0029e4   5550   4606  10156   32768  31.0%
+[.cseg] 0x000000 0x002ada   5796   4606  10402   32768  31.7%
 [.dseg] 0x000100 0x000426      0    206    206    2048  10.1%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 

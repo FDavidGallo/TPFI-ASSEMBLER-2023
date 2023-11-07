@@ -46,16 +46,20 @@ EXT_INT0:
 		; ¿Porque no usar un call?  Porque modificaria la pila y es algo que no queremos.
 		
 		lds r17,C50GesimoDeSegundoo
-	
 		inc r17
-			cpi R17,50
-			Breq UnSegundo
+		cpi R17,50
+		Breq UnSegundo
 		sts C50GesimoDeSegundoo,r17
-		cpi R17,40   ; El control se realiza por cada 1 segundo, pero desafasado 0,8 segundos (adelantado por unos mS a las mediciones)
-		Breq Controlar ; Esto es para que las interrupciones no se "Solapen" demasiado, empleando menos tiempo.
-		Jmp  EscupirTodo
-		Controlar:
-		Call Control; >>>> En desarrollo
+		cpi R17,40   ; El control de la luz se realiza por cada 1 segundo, pero desafasado 0,8 segundos (adelantado por unos mS a las mediciones)
+		Breq ControlarLuz ; Esto es para que las interrupciones no se "Solapen" demasiado, empleando menos tiempo.
+		Cpi R17,30
+		Breq ControlarTemperatura; ; El control de la temperatura se realiza por cada 1 segundo, 
+		Jmp  EscupirTodo ;pero desafasado  (adelantado por unos mS al control de la luz)
+		ControlarTemperatura:
+		Call ControlTemp; >>>> En desarrollo
+		jmp EscupirTodo
+		ControlarLuz:
+		Call ControlLuz; >>>> En desarrollo
 		jmp EscupirTodo
 		UnSegundo:
 		call Medir

@@ -25,7 +25,7 @@ Lectura:                  //	Para leer el estado de Bit debemos tener en
 		LDS R16,EstadoBit //	R17  el bit que queremos leer; le hacemos
 		AND R17,R16		  //	un AND  para averiguar si se encuentra en
 		RET				  //	0 o 1 ...
-Control:				  //
+ControlLuz:				  //	Call  TemperaturaLCC call TemperaturaDormitorio
 		Call  IluminacionLCC
 		Call  IluminacionDormitorio
 		IN	R17, 	PINB
@@ -152,3 +152,125 @@ AbrirCortinaDAhora:
 					 SBI	PORTB, AbrirCortinaLCC ;Prendemos
 					 CBI	PORTB, CerrarCortinaLCC ;Apagamos
 					 RET
+// Estamos suponiendo que la temperatura exterior minima  y la maxima son Distintas
+ControlTemp:
+		Call  PreguntaTemperatura
+		IN	R17, 	PINB
+		STS EstadoBit,R17;Actualizamos el estado de bit
+		ret
+PreguntaTemperatura:
+				LDS	R5,TemperaturaExteriorMinimaABS  
+				LDS R18,MedTemperaturaExteriorABS
+				CP R5,R18 ; Si la temperatura exterior minima es mayor a la medida, es preciso calefacionar
+				BRSH  Calefaccion; calefaccionar (hace frio).
+			    LDS	R18,TemperaturaExteriorMaximaABS  
+				LDS R5,MedTemperaturaExteriorABS
+				CP R5,R18 ; Si la temperatura exterior medida es mayor a la del maxima, es preciso Refrigerar
+				BRSH  Refrigeracion; refrigerar (hace calor).
+				RET ; Caso contrario, no hacer nada
+Refrigeracion:
+					Call RefrigerarLcc
+					Call RefrigerarDormitorio
+					Ret
+Calefaccion:
+			CALL SubCalefaccionDormitorio
+			CALL SubCalefaccionLCC
+			RET
+RefrigerarLcc:
+								LDS R16,MedTemperaturaLCCABS
+								LDS R17,SetPointTemperaturaLCCABS
+								LDS R18,HisterisisTemperaturaLCCABS
+								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+								BRSH PRefriLCC ; Entonces hay  que apagar la calefaccion
+								LDI R25,0   ;Colocamos el 0 en R5
+								ADD R25,R17 ; Le sumamos el setpoint
+								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+								            ; medicion menor a el setpoint menos su histerisis?
+								BRSH ApagarRefriLCC; entonces es momento de abrir la cortina
+								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+
+PRefriLCC:
+					  SBI	PORTB, RefrigeracionLCC ;Prendemos
+					  CBI	PORTB, CalefacionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+					  RET
+ApagarRefriLCC:
+					 CBI	PORTB, RefrigeracionLCC ;Apagamos
+					 RET
+	
+RefrigerarDormitorio:
+								LDS R16,MedTemperaturaDormitorioABS
+								LDS R17,SetPointTemperaturaDormitorioABS
+								LDS R18,HisterisisTemperaturaDormitorioABS
+								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+								BRSH PRefriDormitorio ; Entonces hay  que prender el aire
+								LDI R25,0   ;Colocamos el 0 en R5
+								ADD R25,R17 ; Le sumamos el setpoint
+								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+								            ; medicion menor al setpoint menos su histerisis?
+								BRSH ApagarRefriDormitorio; entonces es momento de abrir la cortina
+								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+
+PRefriDormitorio:
+					  SBI	PORTB,RefrigeracionDormitorio  ;Prendemos
+					  CBI	PORTB, CalefacionDormitorio ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+					  RET
+ApagarRefriDormitorio:
+					 CBI	PORTB, RefrigeracionDormitorio ;Apagamos
+					 RET
+SubCalefaccionDormitorio:
+								LDS R16,MedTemperaturaDormitorioABS
+								LDS R17,SetPointTemperaturaDormitorioABS
+								LDS R18,HisterisisTemperaturaDormitorioABS
+								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+								BRSH NOCalentarDormitorio ; Entonces hay  que apagar la calefaccion
+								LDI R25,0   ;Colocamos el 0 en R5
+								ADD R25,R17 ; Le sumamos el setpoint
+								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+								            ; medicion menor al setpoint menos su histerisis?
+								BRSH CalentarDormitorio; Entonces hay que prender la calefaccion
+								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+
+CalentarDormitorio:
+					  SBI	PORTB,CalefacionDormitorio  ;Prendemos
+					  CBI	PORTB, RefrigeracionDormitorio ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+					  RET
+NOCalentarDormitorio:
+					 CBI	PORTB, CalefacionDormitorio ;Apagamos
+					 RET
+SubCalefaccionLCC:
+								LDS R16,MedTemperaturaLCCABS
+								LDS R17,SetPointTemperaturaLCCABS
+								LDS R18,HisterisisTemperaturaLCCABS
+								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+								BRSH NOCalentarLCC ; Entonces hay  que apagar la calefaccion
+								LDI R25,0   ;Colocamos el 0 en R5
+								ADD R25,R17 ; Le sumamos el setpoint
+								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+								            ; medicion menor al setpoint menos su histerisis?
+								BRSH CalentarLCC; Entonces hay que prender la calefaccion
+								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+
+CalentarLCC:
+					  SBI	PORTB,CalefacionLCC  ;Prendemos
+					  CBI	PORTB, RefrigeracionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+					  RET
+NOCalentarLCC:
+					 CBI	PORTB, CalefacionLCC ;Apagamos
+					 RET
+						
