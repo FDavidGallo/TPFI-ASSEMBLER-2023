@@ -98,9 +98,9 @@ SumarHora:
 		sts DecenaMinuto,r17
 		lds r17,HoraABS
 		 INC R17
+		  STS HoraABS,R17
 		 cpi r17,24
 		 Brsh Finn
-		 STS HoraABS,R17
 		lds r17,UnidadHora
 		cpi R17,'9'
 		Breq SumarHora2

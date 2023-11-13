@@ -15,7 +15,7 @@
 .org 0x0150
 C50GesimoDeSegundoo: .byte 1 ;
 DecenaHora: .byte 1 
-HoraABS: .BYTE 1
+
 UnidadHora: .byte 1	
 SeparadorHora: .byte 1; ESTOS SEPARADOS TIENEN COMO FINALIDAD UNICA SEPARAR CADA "VARIABLE", SOLAMENTE ESTÁN DE GUIA
 DecenaMinuto: .byte 1 
@@ -140,7 +140,9 @@ UnidadMinutoFinDia: .byte 1;			R
 Separador19: .byte 2
 ConfiguracionesValidas: .byte 1;	'0'=Valido  'A'=Existe algo mal 
 Separador20: .byte 2
-
+IRefrigeracionDormitorio: .Byte 1
+Separadito: .byte 8
+IRefrigeracionLCC: .Byte 1
 ; _____      ______    ____       __  __      ____       ______      _____       __  __           
 ;/\  _  \    /\__  _\  /\  _`\    /\ \/\ \    /\  _`\    /\__  _\    /\  __`\    /\ \/\ \           ESTAS ESTAN EN FORMATO DECIMAL
 ;\ \ \L\ \   \/_/\ \/  \ \ \L\_\  \ \ `\\ \   \ \ \/\_\  \/_/\ \/    \ \ \/\ \   \ \ `\\ \    __    SON ABSOLUTAS
@@ -171,6 +173,7 @@ Separador26: .byte 1 ;
 ;|	   INCIO DE LAS VARIABLES DE CONFIGURACIONES  PARA EL CONTROL    |
 ;=====================================================================
 .org 0x0375
+HoraABS: .BYTE 1
 Separador27: .BYTE 1 ;org 0x176
 TemperaturaExteriorMinimaABS: .byte 1 ;	A
 Separador28: .BYTE 1 ;org 0x173

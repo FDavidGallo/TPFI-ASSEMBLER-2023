@@ -3,14 +3,14 @@
 
 .cseg
 .ORG 0X150
-TABLA_ROM_MSJ: .DB 13,10, 0b00001010, "***>>>Seleccione la accion a realizar<<< ***", 0b00001010,13,10
+TABLA_ROM_MSJ: .DB 12,0,13,10, 0b00001010, "***>>>Seleccione la accion a realizar<<< ***", 0b00001010,13,10
 TABLA_ROM_OPT: .DB 13,10, "1-Mostrar Valores...", 13,10,"2-Configurar Valores...", 13, 0b00001010, "3-Datos Del proyecto... ",2
-TABLA_ROM_MSJ2: .DB 13,10, "*** MEDICIONES ***",13,10
+TABLA_ROM_MSJ2: .DB 12,13,10, "*** MEDICIONES ***",13,10,0
 TABLA_ROM_MSJ22: .DB "< Busque cada medicion segun su Letra  >",13,10
 TABLA_ROM_OPT2: .DB "Hora de las mediciones: T "," Temperatura Exterior: U",13,10," Temperatura Living/Comedor/Cocina: V  ", "  Temperatura Dormitorio: W ",13,10," Luz Dormitorio:  X "," Luz Exterior:  Y "," Luz Living/Cocina/Comedor:  Z ",13,10,"	1-Refrescarar Valores... 5-VOLVER AL MENU ANTERIOR ", 13, 10
 TABLA_ROM_MSJ212: .DB "VALORES >",2
 ;ACA VAN LAS MEDICIONES
-TABLA_ROM_MSJ3: .DB 0b00001010, "ADVERTENCIA!", 0b00001010
+TABLA_ROM_MSJ3: .DB 12,0,0b00001010, "ADVERTENCIA!", 0b00001010
 .DB " SI VA A CAMBIAR ALGO TENGA EL CUIDADO DE HACERLO DE FORMA COHERENTE, ",13,10
 .DB "TENIENDO EN CUENTA QUE: LA TEMPERATURA MINIMA A INGRESAR ES 00 *F  Y LA MAXIMA 99 *F; LAS HORAS VAN DE 00 A 24 HORAS",13,10
 .DB "EN CUANTO LOS LUXOMETROS, SU PRECISION ES DE 10 LUXES, POR LO QUE SOLO SE CONFIGURAN DE 10 EN DIEZ,",13,10,0
@@ -120,7 +120,8 @@ ERROR:
 
 ;Datos del proyecto
 Datos:
-.DB 13,10,13,10,13,10
+.DB 12,0,13,10
+.DB"================================================================",13,10
 .DB "                                             ____||____",13,10,0
 .DB"DOMOTICA DE DOS AMBIENTES:                  ///////////\",13,10
 .DB" Es un proyecto, en que con se controlan   ///////////  \",13,10,0

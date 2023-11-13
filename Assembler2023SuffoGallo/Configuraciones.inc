@@ -26,13 +26,16 @@ ldi r30,0
     ldi ZL, low(DecenaHora)
 	LDI R19,40				; Cargamos en r19 la cantidad de mediciones a "Limpiar"
 	Call ReincioMedciones
-	LDI	R16, 0B11111111 ; Configuramos todo el puerto B como salida , tenemos 8 salidas, 8 actuadores...
+	LDI	R16, 0B11111100 ; Configuramos todo el puerto B como salida , tenemos 8 salidas, 8 actuadores...
 	OUT 	DDRB,	R16
+    LDI	R16, 0B1111111 ; Configuramos todo el puerto B como salida , tenemos 8 salidas, 8 actuadores...
+	OUT 	DDRD,	R16
 	LDI	R16,(1<<ISC01)|(1<<ISC00) ; cONFIGURAMOS EICRA, POR FLANCO ASCENDENTE
 	STS	EICRA,R16
 	LDI	R16,(1<<INT0)
 	OUT	EIMSK,R16
 	;UNA VEZ TODO CONFIGURADO, HABILITAMOS LAS INTERRUPCIONES, INICIANDO EL FUNCIONAMIENTO NORMAL DEL PROGRAMA
+	CALL Medir ; Medicion inicial, no se porque, pero esto arregla un bug
 	SEI  ; HABILITACIÓN GLOBAL DE INTERRUPCIONES, PARA MAYOR INFORMACIÓN DIRIGIRSE A  "ATENDIMIENTODEINTERRUPCIONES.INC"
 	RJMP MAIN  // CONTINUA EN "APARTADOGRAFICOCODES.INC" Y "APARTADOGRAFICOTEXT.INC"
 	
@@ -62,12 +65,12 @@ ldi r30,0
 	;A
 	LDI R20, '1'
 	STS TemperaturaExteriorMinimaH,R20
-	LDI R20, '0'
+	LDI R20, '8'
 	ldi ZH, high(TemperaturaExteriorMinimaL)
     ldi ZL, low(TemperaturaExteriorMinimaL)
 	ST Z, R20
 	;Guardamos la variable ABSOLUTA DE CONTROL
-	ldi r16,10
+	ldi r16,18
 	 sts TemperaturaExteriorMinimaABS,r16
 	;B
 	LDI R20, '3'
