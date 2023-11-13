@@ -31,6 +31,7 @@ InicioDia:
 			LDS R16,LuzExteriorMinimaABS
 		    CP r5,r16	
 			Brsh IluminacionOk
+			RET
 FinDia:
 			CBI	PORTD, AbrirCortinaDormitorio ;Apagamos
 			CBI	PORTD, AbrirCortinaLCC ;Apagamos 
@@ -38,17 +39,16 @@ FinDia:
 			SBI	PORTD, CerrarCortinaLCC ;Prendemos
 			RET
 IluminacionOk:
-		
-			LDS R5, HoraABS
-			LDS R16,HoraFinDiaABS
-		    CP R16,R5	
-			BrSH FinDia
 			SBI	PORTD, AbrirCortinaDormitorio ;Apagamos
 			sBI	PORTD, AbrirCortinaLCC ;Apagamos 
 			cBI	PORTD, CerrarCortinaDormitorio ;Prendemos
 			cBI	PORTD, CerrarCortinaLCC ;Prendemos
 				CALL PreguntarRefrigeracion
 				CALL  ssalva 
+			LDS R5, HoraABS
+			LDS R16,HoraFinDiaABS
+		    CP R5,R16	
+			BrSH FinDia
 			RET
 
 			Frio:

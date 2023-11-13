@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Sun Nov 12 21:00:09 2023
+AVRASM ver. 2.2.8  C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm Mon Nov 13 01:54:25 2023
 
 [builtin](2): Including file 'C:/Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\microchipstudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\main.asm(39): Including file 'C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPFI-Assembler-2023\TPFI-ASSEMBLER-2023\Assembler2023SuffoGallo\ApartadoGraficoText.inc'
@@ -6026,7 +6026,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 0012c1 f011                      		Breq ControlarTemperatura; ; El control de la temperatura se realiza por cada 1 segundo, 
 0012c2 940c 131c                 		Jmp  EscupirTodo ;pero desafasado  (adelantado por unos mS al control de la luz)
                                  		ControlarTemperatura:
-0012c4 940e 148e                 		Call ControlTemp; >>>> En desarrollo
+0012c4 940e 148f                 		Call ControlTemp; >>>> En desarrollo
 0012c6 940c 131c                 		jmp EscupirTodo
                                  		ControlarLuz:
 0012c8 940e 1451                 		Call ControlLuz; >>>> En desarrollo
@@ -6126,7 +6126,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		Leer0:
 001329 e600                      			ldi r16,0b01100000 ; 5V del micro como referencia
 00132a 9300 007c                 			sts ADMUX, r16
-00132c 940e 1541                 			CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+00132c 940e 1542                 			CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 00132e 9360 015a                 				STS MedTemperaturaExteriorHH, centena
 001330 9350 015b                 				STS MedTemperaturaExteriorH, decena
 001332 9340 015c                 				STS MedTemperaturaExteriorL, unidad
@@ -6135,7 +6135,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		Leer1:
 001338 e601                      			  ldi r16,0b01100001 ; 5V del micro como referencia
 001339 9300 007c                 			sts ADMUX, r16
-00133b 940e 1541                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+00133b 940e 1542                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 00133d 9360 0163                 			  STS MedTemperaturaLCCHH, centena
 00133f 9350 0164                 				STS MedTemperaturaLCCH, decena
 001341 9340 0165                 				STS MedTemperaturaLCCL, unidad
@@ -6144,7 +6144,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		Leer2:
 001347 e602                      			 ldi r16,0b01100010 ; 5V del micro como referencia
 001348 9300 007c                 			sts ADMUX, r16
-00134a 940e 1541                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+00134a 940e 1542                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 00134c 9360 016c                 			  STS MedTemperaturaDormitorioHH, centena
 00134e 9350 016d                 				STS MedTemperaturaDormitorioH, decena
 001350 9340 016e                 				STS MedTemperaturaDormitorioL, unidad
@@ -6153,7 +6153,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		Leer3:
 001356 e603                      			 ldi r16,0b01100011 ; 5V del micro como referencia
 001357 9300 007c                 			sts ADMUX, r16
-001359 940e 1541                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001359 940e 1542                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 00135b 9360 0174                 			    STS MedLuzLCCHH, centena
 00135d 9350 0175                 				STS MedLuzLCCH, decena
 00135f 9340 0176                 				STS MedLuzLCCL,unidad 
@@ -6162,7 +6162,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		Leer4:
 001365 e604                      			  ldi r16,0b01100100 ; 5V del micro como referencia
 001366 9300 007c                 			sts ADMUX, r16
-001368 940e 1541                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001368 940e 1542                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 00136a 9360 017d                 			  STS MedLuzDormitorioHH, centena
 00136c 9350 017e                 				STS MedLuzDormitorioH, decena
 00136e 9340 017f                 				STS MedLuzDormitorioL,unidad 
@@ -6171,7 +6171,7 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  		Leer4_medicion:
 001374 e305                      			  ldi r16,0b0110101 ; 5V del micro como referencia
 001375 9300 007c                 			sts ADMUX, r16
-001377 940e 1541                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
+001377 940e 1542                 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 001379 9360 0186                 			   STS MedLuzExteriorHH, centena
 00137b 9350 0187                 			   STS MedLuzExteriorH, decena
 00137d 9340 0188                 			   STS MedLuzExteriorL,unidad 
@@ -6471,245 +6471,245 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
 001458 9050 032a                 			LDS R5, MedLuzExteriorABS
 00145a 9100 0391                 			LDS R16,LuzExteriorMinimaABS
 00145c 1650                      		    CP r5,r16	
-00145d f428                      			Brsh IluminacionOk
+00145d f430                      			Brsh IluminacionOk
+00145e 9508                      			RET
                                  FinDia:
-00145e 985e                      			CBI	PORTD, AbrirCortinaDormitorio ;Apagamos
-00145f 985c                      			CBI	PORTD, AbrirCortinaLCC ;Apagamos 
-001460 9a5d                      			SBI	PORTD, CerrarCortinaDormitorio ;Prendemos
-001461 9a5b                      			SBI	PORTD, CerrarCortinaLCC ;Prendemos
-001462 9508                      			RET
+00145f 985e                      			CBI	PORTD, AbrirCortinaDormitorio ;Apagamos
+001460 985c                      			CBI	PORTD, AbrirCortinaLCC ;Apagamos 
+001461 9a5d                      			SBI	PORTD, CerrarCortinaDormitorio ;Prendemos
+001462 9a5b                      			SBI	PORTD, CerrarCortinaLCC ;Prendemos
+001463 9508                      			RET
                                  IluminacionOk:
-                                 		
-001463 9050 0375                 			LDS R5, HoraABS
-001465 9100 03a3                 			LDS R16,HoraFinDiaABS
-001467 1505                      		    CP R16,R5	
-001468 f7a8                      			BrSH FinDia
-001469 9a5e                      			SBI	PORTD, AbrirCortinaDormitorio ;Apagamos
-00146a 9a5c                      			sBI	PORTD, AbrirCortinaLCC ;Apagamos 
-00146b 985d                      			cBI	PORTD, CerrarCortinaDormitorio ;Prendemos
-00146c 985b                      			cBI	PORTD, CerrarCortinaLCC ;Prendemos
-00146d 940e 1508                 				CALL PreguntarRefrigeracion
-00146f 940e 150c                 				CALL  ssalva 
-001471 9508                      			RET
+001464 9a5e                      			SBI	PORTD, AbrirCortinaDormitorio ;Apagamos
+001465 9a5c                      			sBI	PORTD, AbrirCortinaLCC ;Apagamos 
+001466 985d                      			cBI	PORTD, CerrarCortinaDormitorio ;Prendemos
+001467 985b                      			cBI	PORTD, CerrarCortinaLCC ;Prendemos
+001468 940e 1509                 				CALL PreguntarRefrigeracion
+00146a 940e 150d                 				CALL  ssalva 
+00146c 9050 0375                 			LDS R5, HoraABS
+00146e 9100 03a3                 			LDS R16,HoraFinDiaABS
+001470 1650                      		    CP R5,R16	
+001471 f768                      			BrSH FinDia
+001472 9508                      			RET
                                  
                                  			Frio:
                                  ; por defecto, cuando hay frio se prende la calefaccion, luego, si corresponde apagamos algo
-001472 9a2b                      SBI PORTB, CalefacionDormitorio
-001473 9a2a                      SBI PORTB, CalefacionLCC
-001474 9829                      CBI PORTB, RefrigeracionDormitorio
-001475 9828                      CBI PORTB, RefrigeracionLCC
-001476 e318                      LDI R17,'8'
-001477 9310 025c                 STS IRefrigeracionDormitorio,R17
-001479 9310 0265                 STS IRefrigeracionLCC,R17
-00147b 940e 14ef                 Call CalorHDormitorio
-00147d 940e 149d                 Call  CalorHLCC
-00147f 9508                      RET
+001473 9a2b                      SBI PORTB, CalefacionDormitorio
+001474 9a2a                      SBI PORTB, CalefacionLCC
+001475 9829                      CBI PORTB, RefrigeracionDormitorio
+001476 9828                      CBI PORTB, RefrigeracionLCC
+001477 e318                      LDI R17,'8'
+001478 9310 025c                 STS IRefrigeracionDormitorio,R17
+00147a 9310 0265                 STS IRefrigeracionLCC,R17
+00147c 940e 14f0                 Call CalorHDormitorio
+00147e 940e 149e                 Call  CalorHLCC
+001480 9508                      RET
                                  Caloo:
                                  ; por defecto, cuando hay calor se prende la refrigeracion, luego, si corresponde apagamos algo
-001480 982b                      CBI PORTB, CalefacionDormitorio
-001481 982a                      CBI PORTB, CalefacionLCC
-001482 9a29                      SBI PORTB, RefrigeracionDormitorio
-001483 9a28                      SBI PORTB, RefrigeracionLCC
-001484 e416                      LDI R17,'F'
-001485 9310 025c                 STS IRefrigeracionDormitorio,R17
-001487 9310 0265                 STS IRefrigeracionLCC,R17
-001489 940e 14d3                 CALL FrioHDormitorio
-00148b 940e 14b6                 CALL FrioHLCC 
-00148d 9508                      RET
+001481 982b                      CBI PORTB, CalefacionDormitorio
+001482 982a                      CBI PORTB, CalefacionLCC
+001483 9a29                      SBI PORTB, RefrigeracionDormitorio
+001484 9a28                      SBI PORTB, RefrigeracionLCC
+001485 e416                      LDI R17,'F'
+001486 9310 025c                 STS IRefrigeracionDormitorio,R17
+001488 9310 0265                 STS IRefrigeracionLCC,R17
+00148a 940e 14d4                 CALL FrioHDormitorio
+00148c 940e 14b7                 CALL FrioHLCC 
+00148e 9508                      RET
                                  						
                                  ControlTemp:
-00148e 9050 0315                 			LDS R5, MedTemperaturaExteriorABS
-001490 9100 0377                 			LDS R16,TemperaturaExteriorMinimaABS
-001492 1650                      		    CP R5,R16	
-001493 f2f0                      			BrLO Frio
-001494 9050 0315                 			LDS R5, MedTemperaturaExteriorABS
-001496 9100 0379                 			LDS R16,TemperaturaExteriorMaximaABS
-001498 1505                      			 CP r16,R5
-001499 f330                      			BrLO Caloo
-00149a 9508                                  RET
-00149b 9508                      			RET
+00148f 9050 0315                 			LDS R5, MedTemperaturaExteriorABS
+001491 9100 0377                 			LDS R16,TemperaturaExteriorMinimaABS
+001493 1650                      		    CP R5,R16	
+001494 f2f0                      			BrLO Frio
+001495 9050 0315                 			LDS R5, MedTemperaturaExteriorABS
+001497 9100 0379                 			LDS R16,TemperaturaExteriorMaximaABS
+001499 1505                      			 CP r16,R5
+00149a f330                      			BrLO Caloo
+00149b 9508                                  RET
 00149c 9508                      			RET
+00149d 9508                      			RET
                                  
                                  
                                  CalorHLCC:
-00149d 9100 0317                 								LDS R16,MedTemperaturaLCCABS
-00149f 9110 0381                 								LDS R17,SetPointTemperaturaLCCABS
-0014a1 9120 0384                 								LDS R18,HisterisisTemperaturaLCCABS
-0014a3 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-0014a4 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-0014a5 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-0014a6 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
-0014a7 f460                      								BRSH NOCalentarLCC ; Entonces hay  que apagar la calefaccion
-0014a8 e090                      								LDI R25,0   ;Colocamos el 0 en R5
-0014a9 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-0014aa 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-0014ab 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+00149e 9100 0317                 								LDS R16,MedTemperaturaLCCABS
+0014a0 9110 0381                 								LDS R17,SetPointTemperaturaLCCABS
+0014a2 9120 0384                 								LDS R18,HisterisisTemperaturaLCCABS
+0014a4 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+0014a5 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+0014a6 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+0014a7 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+0014a8 f460                      								BRSH NOCalentarLCC ; Entonces hay  que apagar la calefaccion
+0014a9 e090                      								LDI R25,0   ;Colocamos el 0 en R5
+0014aa 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+0014ab 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+0014ac 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor al setpoint menos su histerisis?
-0014ac f408                      								BRSH CalentarLCC; Entonces hay que prender la calefaccion
-0014ad 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+0014ad f408                      								BRSH CalentarLCC; Entonces hay que prender la calefaccion
+0014ae 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  
                                  CalentarLCC:
-0014ae 9a2a                      					  SBI	PORTB,CalefacionLCC  ;Prendemos
-0014af 9828                      					  CBI	PORTB, RefrigeracionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
-0014b0 e318                      					  LDI R17,'8'
-0014b1 9310 0265                 					  STS IRefrigeracionLCC,R17
-0014b3 9508                      					  RET
+0014af 9a2a                      					  SBI	PORTB,CalefacionLCC  ;Prendemos
+0014b0 9828                      					  CBI	PORTB, RefrigeracionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+0014b1 e318                      					  LDI R17,'8'
+0014b2 9310 0265                 					  STS IRefrigeracionLCC,R17
+0014b4 9508                      					  RET
                                  NOCalentarLCC:
-0014b4 982a                      					 CBI	PORTB, CalefacionLCC ;Apagamos
-0014b5 9508                      					 RET
+0014b5 982a                      					 CBI	PORTB, CalefacionLCC ;Apagamos
+0014b6 9508                      					 RET
                                  						
                                  FrioHLCC:
-0014b6 9100 0317                 LDS R16,MedTemperaturaLCCABS
-0014b8 9110 0381                 								LDS R17,SetPointTemperaturaLCCABS
-0014ba 9120 0384                 								LDS R18,HisterisisTemperaturaLCCABS
-0014bc e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-0014bd 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-0014be 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-0014bf 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
-0014c0 f430                      								BRSH PRefriLCC ; Entonces hay  que apagar la calefaccion
-0014c1 e090                      								LDI R25,0   ;Colocamos el 0 en R5
-0014c2 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-0014c3 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-0014c4 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+0014b7 9100 0317                 LDS R16,MedTemperaturaLCCABS
+0014b9 9110 0381                 								LDS R17,SetPointTemperaturaLCCABS
+0014bb 9120 0384                 								LDS R18,HisterisisTemperaturaLCCABS
+0014bd e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+0014be 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+0014bf 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+0014c0 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+0014c1 f430                      								BRSH PRefriLCC ; Entonces hay  que apagar la calefaccion
+0014c2 e090                      								LDI R25,0   ;Colocamos el 0 en R5
+0014c3 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+0014c4 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+0014c5 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor a el setpoint menos su histerisis?
-0014c5 f438                      								BRSH ApagarRefriLCC; entonces es momento de abrir la cortina
-0014c6 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+0014c6 f438                      								BRSH ApagarRefriLCC; entonces es momento de abrir la cortina
+0014c7 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  
                                  PRefriLCC:
-0014c7 9a28                      					  SBI	PORTB, RefrigeracionLCC ;Prendemos
-0014c8 982a                      					  CBI	PORTB, CalefacionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
-0014c9 e416                      					  LDI R17,'F'
-0014ca 9310 0265                 					  STS IRefrigeracionLCC,R17
-0014cc 9508                      					  RET
+0014c8 9a28                      					  SBI	PORTB, RefrigeracionLCC ;Prendemos
+0014c9 982a                      					  CBI	PORTB, CalefacionLCC ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+0014ca e416                      					  LDI R17,'F'
+0014cb 9310 0265                 					  STS IRefrigeracionLCC,R17
+0014cd 9508                      					  RET
                                  ApagarRefriLCC:
-0014cd 9828                      					 CBI	PORTB, RefrigeracionLCC ;Apagamos
-0014ce e318                      					 LDI R17,'8'
-0014cf 9310 0265                 				      STS IRefrigeracionLCC,R17
-0014d1 9508                      					 RET
+0014ce 9828                      					 CBI	PORTB, RefrigeracionLCC ;Apagamos
+0014cf e318                      					 LDI R17,'8'
+0014d0 9310 0265                 				      STS IRefrigeracionLCC,R17
+0014d2 9508                      					 RET
                                  	
-0014d2 9508                      				RET
+0014d3 9508                      				RET
                                  FrioHDormitorio:
                                  
-0014d3 9100 0319                 								LDS R16,MedTemperaturaDormitorioABS
-0014d5 9110 038d                 								LDS R17,SetPointTemperaturaDormitorioABS
-0014d7 9120 038f                 								LDS R18,HisterisisTemperaturaDormitorioABS
-0014d9 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-0014da 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-0014db 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-0014dc 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
-0014dd f430                      								BRSH PRefriDormitorio ; Entonces hay  que prender el aire
-0014de e090                      								LDI R25,0   ;Colocamos el 0 en R5
-0014df 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-0014e0 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-0014e1 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+0014d4 9100 0319                 								LDS R16,MedTemperaturaDormitorioABS
+0014d6 9110 038d                 								LDS R17,SetPointTemperaturaDormitorioABS
+0014d8 9120 038f                 								LDS R18,HisterisisTemperaturaDormitorioABS
+0014da e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+0014db 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+0014dc 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+0014dd 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+0014de f430                      								BRSH PRefriDormitorio ; Entonces hay  que prender el aire
+0014df e090                      								LDI R25,0   ;Colocamos el 0 en R5
+0014e0 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+0014e1 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+0014e2 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor al setpoint menos su histerisis?
-0014e2 f438                      								BRSH ApagarRefriDormitorio; entonces es momento de abrir la cortina
-0014e3 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+0014e3 f438                      								BRSH ApagarRefriDormitorio; entonces es momento de abrir la cortina
+0014e4 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  
                                  PRefriDormitorio:
-0014e4 9a29                      					  SBI	PORTB,RefrigeracionDormitorio  ;Prendemos
-0014e5 982b                      					  CBI	PORTB, CalefacionDormitorio ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
-0014e6 e416                      					  LDI R17,'F'
-0014e7 9310 025c                 STS IRefrigeracionDormitorio,R17
-0014e9 9508                      					  RET
+0014e5 9a29                      					  SBI	PORTB,RefrigeracionDormitorio  ;Prendemos
+0014e6 982b                      					  CBI	PORTB, CalefacionDormitorio ;Apagamos ¡No tiene sentido tener la calefaccion y el aire prendido!
+0014e7 e416                      					  LDI R17,'F'
+0014e8 9310 025c                 STS IRefrigeracionDormitorio,R17
+0014ea 9508                      					  RET
                                  ApagarRefriDormitorio:
-0014ea 9829                      					 CBI	PORTB, RefrigeracionDormitorio ;Apagamos
-0014eb e318                      					 LDI R17,'8'
-0014ec 9310 025c                 STS IRefrigeracionDormitorio,R17
-0014ee 9508                      					 RET
+0014eb 9829                      					 CBI	PORTB, RefrigeracionDormitorio ;Apagamos
+0014ec e318                      					 LDI R17,'8'
+0014ed 9310 025c                 STS IRefrigeracionDormitorio,R17
+0014ef 9508                      					 RET
                                   CalorHDormitorio:
-0014ef 9100 0319                 								 LDS R16,MedTemperaturaDormitorioABS
-0014f1 9110 038d                 								LDS R17,SetPointTemperaturaDormitorioABS
-0014f3 9120 038f                 								LDS R18,HisterisisTemperaturaDormitorioABS
-0014f5 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-0014f6 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-0014f7 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-0014f8 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
-0014f9 f430                      								BRSH NOCalentarDormitorio ; Entonces hay  que apagar la calefaccion
-0014fa e090                      								LDI R25,0   ;Colocamos el 0 en R5
-0014fb 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-0014fc 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-0014fd 1709                      								CP R16,R25   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+0014f0 9100 0319                 								 LDS R16,MedTemperaturaDormitorioABS
+0014f2 9110 038d                 								LDS R17,SetPointTemperaturaDormitorioABS
+0014f4 9120 038f                 								LDS R18,HisterisisTemperaturaDormitorioABS
+0014f6 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+0014f7 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+0014f8 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+0014f9 1709                      								CP R16,R25   ; ¿Es la TEMP del ambiente  mayor al setpoint y su histerisis?
+0014fa f430                      								BRSH NOCalentarDormitorio ; Entonces hay  que apagar la calefaccion
+0014fb e090                      								LDI R25,0   ;Colocamos el 0 en R5
+0014fc 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+0014fd 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+0014fe 1709                      								CP R16,R25   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor al setpoint menos su histerisis?
-0014fe f018                      								BRLO CalentarDormitorio; Entonces hay que prender la calefaccion
-0014ff 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+0014ff f018                      								BRLO CalentarDormitorio; Entonces hay que prender la calefaccion
+001500 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  			
                                  			NOCalentarDormitorio:
-001500 982b                      			CBI PORTB, CalefacionDormitorio
-001501 9508                      			RET
+001501 982b                      			CBI PORTB, CalefacionDormitorio
+001502 9508                      			RET
                                  			CalentarDormitorio:
-001502 9a2b                      			sBI PORTB, CalefacionDormitorio
-001503 9829                      			CBI	PORTB,RefrigeracionDormitorio  ; APGAMOS
-001504 e318                      			LDI R17,'8'
-001505 9310 025c                 			STS IRefrigeracionDormitorio,R17
-001507 9508                      			RET
+001503 9a2b                      			sBI PORTB, CalefacionDormitorio
+001504 9829                      			CBI	PORTB,RefrigeracionDormitorio  ; APGAMOS
+001505 e318                      			LDI R17,'8'
+001506 9310 025c                 			STS IRefrigeracionDormitorio,R17
+001508 9508                      			RET
                                  	
                                  	PreguntarRefrigeracion:
-001508 9110 025c                 	lds r17,IRefrigeracionDormitorio
-00150a 3416                      	cpi r17,'F'
-00150b f029                      	BREQ LuzHDormitorio
+001509 9110 025c                 	lds r17,IRefrigeracionDormitorio
+00150b 3416                      	cpi r17,'F'
+00150c f029                      	BREQ LuzHDormitorio
                                  	ssalva:
-00150c 9110 0265                 	lds r17,IRefrigeracionLCC
-00150e 3416                      	cpi r17,'F'
-00150f f0c9                      	BREQ LuzHLCC
-001510 9508                      	RET				
+00150d 9110 0265                 	lds r17,IRefrigeracionLCC
+00150f 3416                      	cpi r17,'F'
+001510 f0c9                      	BREQ LuzHLCC
+001511 9508                      	RET				
                                  
                                  
                                  	LuzHDormitorio:
-001511 9100 0324                 	LDS R16,MedLuzDormitorioABS
-001513 9110 0394                 								LDS R17,SetPointLuzDormitorioABS
-001515 9120 0397                 								LDS R18,HisterisisLuzDormitorioABS
-001517 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-001518 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-001519 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-00151a 1790                      								CP R25,R16   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
-00151b f030                      								BRLO CerrarCortinaDAhora ; Entonces hay  que cerrar la cortina
-00151c e090                      								LDI R25,0   ;Colocamos el 0 en R5
-00151d 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-00151e 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-00151f 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+001512 9100 0324                 	LDS R16,MedLuzDormitorioABS
+001514 9110 0394                 								LDS R17,SetPointLuzDormitorioABS
+001516 9120 0397                 								LDS R18,HisterisisLuzDormitorioABS
+001518 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+001519 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+00151a 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+00151b 1790                      								CP R25,R16   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
+00151c f030                      								BRLO CerrarCortinaDAhora ; Entonces hay  que cerrar la cortina
+00151d e090                      								LDI R25,0   ;Colocamos el 0 en R5
+00151e 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+00151f 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+001520 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor a el setpoint menos su histerisis?
-001520 f420                      								BRSH AbrirCortinaDAhora; entonces es momento de abrir la cortina
-001521 cfea                      								rjmp ssalva ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+001521 f420                      								BRSH AbrirCortinaDAhora; entonces es momento de abrir la cortina
+001522 cfea                      								rjmp ssalva ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  
                                  CerrarCortinaDAhora:
-001522 985e                      					  CBI	PORTD, AbrirCortinaDormitorio ;Apagamos 
-001523 9a5d                      					  SBI	PORTD, CerrarCortinaDormitorio;Prendemos
-001524 cfe7                      					  rjmp ssalva 
+001523 985e                      					  CBI	PORTD, AbrirCortinaDormitorio ;Apagamos 
+001524 9a5d                      					  SBI	PORTD, CerrarCortinaDormitorio;Prendemos
+001525 cfe7                      					  rjmp ssalva 
                                  AbrirCortinaDAhora:
-001525 9a5c                      					 SBI	PORTD, AbrirCortinaLCC ;Prendemos
-001526 985b                      					 CBI	PORTD, CerrarCortinaLCC ;Apagamos
-001527 9508                      					 RET
-001528 cfe3                      					rjmp ssalva 
+001526 9a5c                      					 SBI	PORTD, AbrirCortinaLCC ;Prendemos
+001527 985b                      					 CBI	PORTD, CerrarCortinaLCC ;Apagamos
+001528 9508                      					 RET
+001529 cfe3                      					rjmp ssalva 
                                  
                                      LuzHLCC:
-001529 9100 031e                 								LDS R16,MedLuzLCCABS
-00152b 9110 039a                 								LDS R17,SetPointLuzLCCABS
-00152d 9120 039d                 								LDS R18,HisterisisLuzLCCABS
-00152f e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
-001530 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
-001531 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
-001532 1790                      								CP R25,R16   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
-001533 f030                      								BRLO CerrarCortinaLCCAhora ; Entonces hay  que cerrar la cortina
-001534 e090                      								LDI R25,0   ;Colocamos el 0 en R5
-001535 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
-001536 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
-001537 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
+00152a 9100 031e                 								LDS R16,MedLuzLCCABS
+00152c 9110 039a                 								LDS R17,SetPointLuzLCCABS
+00152e 9120 039d                 								LDS R18,HisterisisLuzLCCABS
+001530 e090                      								LDI R25,0    ; COLOCAMOS UN 0 EN R25, LO USAREMOS PARA HACER CUENTAS
+001531 0f91                      								ADD R25,R17  ; LE SUMAMOS EL SETPOINT
+001532 0f92                      								ADD R25,R18  ;LE SUMAMOS LA HISTERISIS
+001533 1790                      								CP R25,R16   ; ¿Es la luz del ambiente  mayor al setpoint y su histerisis?
+001534 f030                      								BRLO CerrarCortinaLCCAhora ; Entonces hay  que cerrar la cortina
+001535 e090                      								LDI R25,0   ;Colocamos el 0 en R5
+001536 0f91                      								ADD R25,R17 ; Le sumamos el setpoint
+001537 1b92                      								SUB R25,R18 ; Al setpoint le restamos la Histerisis
+001538 1790                      								CP R25,R16   ; ¿Es el setpoint menos la histerirsis mayor que la medición actual? o lo que es igual ¿es la 
                                  								            ; medicion menor a el setpoint menos su histerisis?
-001538 f420                      								BRSH AbrirCortinaLCCAhora; entonces es momento de abrir la cortina
-001539 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
+001539 f420                      								BRSH AbrirCortinaLCCAhora; entonces es momento de abrir la cortina
+00153a 9508                      								RET ;Caso contrario, no hacer nada (estamos en la banda diferencial).
                                  
                                  CerrarCortinaLCCAhora:
-00153a 985c                      					  CBI	PORTD, AbrirCortinaLCC ;Apagamos 
-00153b 9a5b                      					  SBI	PORTD, CerrarCortinaLCC ;Prendemos
-00153c 9508                      					  RET
+00153b 985c                      					  CBI	PORTD, AbrirCortinaLCC ;Apagamos 
+00153c 9a5b                      					  SBI	PORTD, CerrarCortinaLCC ;Prendemos
+00153d 9508                      					  RET
                                  AbrirCortinaLCCAhora:
-00153d 9a5c                      					 SBI	PORTD, AbrirCortinaLCC ;Prendemos
-00153e 985b                      					 CBI	PORTD, CerrarCortinaLCC ;Apagamos
-00153f 9508                      					 RET
+00153e 9a5c                      					 SBI	PORTD, AbrirCortinaLCC ;Prendemos
+00153f 985b                      					 CBI	PORTD, CerrarCortinaLCC ;Apagamos
+001540 9508                      					 RET
                                  
                                  .include "LecturaAdc.inc"
-001540 9508                      
+001541 9508                      
                                  ; para el microcontrolador Atmega328p, IDE: Microchip Studio.
                                  ; Para incluir esto: >.include "LecturaAdc.inc"<, para llamarlo: >CALL InicioADC <
                                  ; Esto esta diseñado para leer una de las entradas analogicas
@@ -6742,79 +6742,79 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  ;			jmp GuardarCosasAdc ;Guardamos lo que hacía el micro
                                  							 ;Setemos todo a 0:
                                  								 InicioADC2:
-001541 e040                      			ldi unidad,0
-001542 e050                      			ldi decena, 0
-001543 e060                      			ldi centena,0
-001544 e020                      			ldi R18,0
-001545 e000                      			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
-001546 b907                      			out DDRC, r16
-001547 c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
+001542 e040                      			ldi unidad,0
+001543 e050                      			ldi decena, 0
+001544 e060                      			ldi centena,0
+001545 e020                      			ldi R18,0
+001546 e000                      			ldi r16, 0b00000000 ;Opcional, limpiar el puerto D
+001547 b907                      			out DDRC, r16
+001548 c000                      			rjmp CICLO_ADC ;Este es nuestro ciclo de conversión
                                  
                                  CICLO_ADC:
-001548 940e 157d                 	call LeerADC
-00154a 940e 1584                 	call EsperarADC
-00154c 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
-00154e 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
-001550 e040                      	ldi unidad,0
-001551 e050                      	ldi decena,0
-001552 e060                      	ldi centena,0
-001553 2f03                      	mov r16,r19; Metemos a R16 ADCL
-001554 940e 155b                 	call ASCII		; Llamamos a la función ASCII 
-001556 e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
-001557 0f41                      	add unidad, r17
-001558 0f51                      	add decena, r17
-001559 0f61                      	add centena,r17
+001549 940e 157e                 	call LeerADC
+00154b 940e 1585                 	call EsperarADC
+00154d 9120 0078                 	lds r18,ADCL ;Cargamos en R18 la parte Baja del ADC, contiene los dos bits menos significativos o nuestra "COMA"
+00154f 9130 0079                 	lds r19,ADCH ;Cargamos en R18 la parte alta del ADC , contiene los 8 bits más significativo, va de 000 a 255
+001551 e040                      	ldi unidad,0
+001552 e050                      	ldi decena,0
+001553 e060                      	ldi centena,0
+001554 2f03                      	mov r16,r19; Metemos a R16 ADCL
+001555 940e 155c                 	call ASCII		; Llamamos a la función ASCII 
+001557 e310                      	ldi r17,48		; le sumamos la diferencia entre el ASCII Y DECIMAL, PARA QUE SE GUARDE EN ASCII
+001558 0f41                      	add unidad, r17
+001559 0f51                      	add decena, r17
+00155a 0f61                      	add centena,r17
                                  	; Ahora, teniendo todo en ASCII, pasamos a guardarlas una por una en la memoria:
                                  
-00155a 9508                      	ret; Que largue todo y volvamos a lo que estaba haciendo el micro
+00155b 9508                      	ret; Que largue todo y volvamos a lo que estaba haciendo el micro
                                  
                                  ASCII: ;Vamos a obtener unidad, decena, centena y "Coma":
                                  		L_CENTENA:
-00155b 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
-00155c f018                      				BRLO L_DECENA; Vaya a "L_Decena"
-00155d 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
-00155e 5604                      				subi r16,100 ; Restele 100 al número
-00155f cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
+00155c 3604                      				cpi r16,100  ; ¿El numero es menor a 100?
+00155d f018                      				BRLO L_DECENA; Vaya a "L_Decena"
+00155e 9563                      				inc centena  ; Si no es así, incremente en uno las centenas
+00155f 5604                      				subi r16,100 ; Restele 100 al número
+001560 cffb                      				rjmp L_CENTENA ;Repita, hasta que el numero sea menor a 100
                                  				;Si todo fue realizarse correctamente, solamente podrá ejecutarse todo dos veces
                                  				; Recuerde: en 8 bits, el número más grande a almacenar es el 256, contando el 0, 255.
                                  		L_DECENA: ;Hace exactamente lo mismo que el anterior, solo que 100 en lugar de 10
-001560 300a                      				cpi r16,10 
-001561 f018                      				BRLO L_UNIDAD
-001562 9553                      				inc decena
-001563 500a                      				subi r16,10
-001564 cffb                      				rjmp L_DECENA
+001561 300a                      				cpi r16,10 
+001562 f018                      				BRLO L_UNIDAD
+001563 9553                      				inc decena
+001564 500a                      				subi r16,10
+001565 cffb                      				rjmp L_DECENA
                                  		L_UNIDAD: ;Idem con 1
-001565 3001                      				cpi r16,1
-001566 f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
-001567 9543                      				inc unidad
-001568 5001                      				subi r16,1
-001569 cffb                      				rjmp L_UNIDAD
+001566 3001                      				cpi r16,1
+001567 f018                      				BRLO L_FIN ; Esta indica que se terminó de leer la parte baja del ADC
+001568 9543                      				inc unidad
+001569 5001                      				subi r16,1
+00156a cffb                      				rjmp L_UNIDAD
                                  		L_FIN:
-00156a c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
+00156b c000                      				RJMP HCOMA; Leemos lo que está en la parte alta, nuestra "COMA"
                                  	    HCOMA:  ; Ahora, en la parte alta de la parte alta, tendremos nuestro "cuarto" de numero
                                  				; por lo que lo usaremos para guardar >0,00 >0,25 >0,50 >0,75
                                  				; por simplicidad, se los redondeó hacia abajo: >0,0 >0,2 >0,5 >0,7
-00156b 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
-00156c f041                      				breq tres
-00156d 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
-00156e f041                      				breq dos
-00156f 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
-001570 f041                      				breq uno
-001571 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
-001572 f041                      				breq cerooo
-001573 940c 0a72                 				jmp Main ; Vuelva a CICLO_ADC
+00156c 3c20                      				cpi r18,192 ; ¿El numero es 11 00 00 00?
+00156d f041                      				breq tres
+00156e 3820                      				cpi r18,128; ¿El numero es 10 00 00 00?
+00156f f041                      				breq dos
+001570 3420                      				cpi r18,64 ; ¿El numero es 01 00 00 00?
+001571 f041                      				breq uno
+001572 3020                      				cpi r18,0 ; ¿El numero es 00 00 00 00?
+001573 f041                      				breq cerooo
+001574 940c 0a72                 				jmp Main ; Vuelva a CICLO_ADC
                                  tres:
-001575 e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
-001576 9508                      		ret ; Vuelva a CICLO_ADC
+001576 e327                      		ldi r18, '7' ; Guarde el valor correspondiente en ascii ahí
+001577 9508                      		ret ; Vuelva a CICLO_ADC
                                  dos:
-001577 e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
-001578 9508                      		ret ; Vuelva a CICLO_ADC
+001578 e325                      		ldi r18, '5' ; Guarde el valor correspondiente en ascii ahí
+001579 9508                      		ret ; Vuelva a CICLO_ADC
                                  uno:
-001579 e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
-00157a 9508                      		ret ; Vuelva a CICLO_ADC
+00157a e322                      		ldi r18, '2' ; Guarde el valor correspondiente en ascii ahí
+00157b 9508                      		ret ; Vuelva a CICLO_ADC
                                  cerooo:
-00157b e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
-00157c 9508                      		ret ; Vuelva a CICLO_ADC
+00157c e320                      		ldi r18, '0' ; Guarde el valor correspondiente en ascii ahí
+00157d 9508                      		ret ; Vuelva a CICLO_ADC
                                  
                                  //////////////////////////////////////////////////////////////////
                                  ;		FUNCIONES	DE	CONTROL	DE "INDEPENDENCIA"	VIA	PILA: 
@@ -6827,21 +6827,21 @@ C:\Users\Usuario\Desktop\clases\UADER\4to cuatrimestre\Sistemas digitales IV\TPF
                                  ///////////////////////////////////////////
                                  
                                  LeerADC:
-00157d e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
-00157e 9110 007a                 lds r17,ADCSRA
-001580 2b10                      or r17,r16   
-001581 9310 007a                 sts ADCSRA, r17
-001583 9508                      ret
+00157e e400                      ldi r16,0b01000000 ; El bit pa' leer siempre debe estar activo
+00157f 9110 007a                 lds r17,ADCSRA
+001581 2b10                      or r17,r16   
+001582 9310 007a                 sts ADCSRA, r17
+001584 9508                      ret
                                  
                                  EsperarADC:
-001584 9110 007a                 lds r17, ADCSRA 
-001586 ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
-001587 940c 1584                 jmp EsperarADC ; Si no es así, espere.
-001589 e100                      ldi r16,0b00010000
-00158a 9110 007a                 lds r17, ADCSRA
-00158c 2b10                      or r17,r16
-00158d 9310 007a                 sts ADCSRA, r17
-00158f 9508                      ret
+001585 9110 007a                 lds r17, ADCSRA 
+001587 ff14                      sbrs r17,4 ; ¿Recepción del ADC completa?
+001588 940c 1585                 jmp EsperarADC ; Si no es así, espere.
+00158a e100                      ldi r16,0b00010000
+00158b 9110 007a                 lds r17, ADCSRA
+00158d 2b10                      or r17,r16
+00158e 9310 007a                 sts ADCSRA, r17
+001590 9508                      ret
                                  /*
                                  PARA MAYOR INFORMACION DIRIJASE A "AtendimientoDeInterrupciones.Inc"
 
@@ -6882,7 +6882,7 @@ fmulsu:   0 icall :   0 ijmp  :   0 in    :   1 inc   :  14 jmp   :  87
 ld    :  75 ldd   :   0 ldi   : 544 lds   : 165 lpm   :  23 lsl   :   0 
 lsr   :   0 mov   :  18 movw  :   0 mul   :  18 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   2 ori   :   0 out   :   8 pop   :  11 
-push  :  11 rcall :   0 ret   :  70 reti  :   5 rjmp  : 140 rol   :   0 
+push  :  11 rcall :   0 ret   :  71 reti  :   5 rjmp  : 140 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :  16 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :  66 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
@@ -6893,7 +6893,7 @@ Instructions used: 32 out of 113 (28.3%)
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x002b20   5796   4676  10472   32768  32.0%
+[.cseg] 0x000000 0x002b22   5798   4676  10474   32768  32.0%
 [.dseg] 0x000100 0x000426      0    216    216    2048  10.5%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
