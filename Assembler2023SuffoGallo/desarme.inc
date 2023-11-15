@@ -54,7 +54,7 @@ Medir:
 				STS MedLuzDormitorioDecena, R18 ;guardamos la coma
 				STS MedLuzDormitorioABS, R19 ;guardamos la parte entera y absoluta del numero
 		Leer4_medicion:
-			  ldi r16,0b0110010 ; 5V del micro como referencia
+			  ldi r16,0b01100101 ; 5V del micro como referencia
 			sts ADMUX, r16
 			  CALL InicioADC ;dirijase a:"LecturaAdc.inc"
 			   STS MedLuzExteriorHH, centena
